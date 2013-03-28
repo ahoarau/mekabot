@@ -1,0 +1,7 @@
+option optimize_for = SPEED;
+
+enum SMOOTHING_MODE{
+		SMOOTHING_MODE_OFF = 0;					//Actuator off
+		SMOOTHING_MODE_SLEW = 1;					//Joint angle control (no force feedback)
+		SMOOTHING_MODE_MIN_JERK = 2;					//Gravity compensated joint angle control		
+}

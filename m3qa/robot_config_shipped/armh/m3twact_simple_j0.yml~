@@ -1,0 +1,77 @@
+adc_component: m3el3102_ec_ch0
+calib:
+  angle_df:
+    theta_df:
+      type: identity
+    thetadot_df:
+      cutoff_freq: 100
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+  cb_L0: 330.0
+  cb_amp_mA_per_mV: 0.2283
+  cb_dac_zero: 0.0
+  cb_lc_bias: 0
+  cb_lc_scale: 2.7999999999999998
+  cb_lin_qei_cpi: 2000
+  cb_motor_mNm_per_mA: 0.023400000000000001
+  cb_n: 2
+  cb_r: 0.44024342620849721
+  cb_rot_qei_cpr: 500.0
+  cb_theta_end: 200.0
+  cb_theta_start: 0
+  force_df:
+    theta_df:
+      type: identity
+    thetadot_df:
+      cutoff_freq: 100
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+  qlin_df:
+    theta_df:
+      type: identity
+    thetadot_df:
+      cutoff_freq: 100
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+dac_component: m3el4132_ec_ch1
+lin_qei_component: m3el5101_ec_ch1
+name: m3twact_simple_j0
+param:
+  dac_limit: 17000.0
+  kc_p: 800.0
+  kf_d: 0.0
+  kf_i: 0
+  kf_i_limit: 1500.0
+  kf_i_range: 100.0
+  kf_p: 0.001
+  kp_d: 0.01
+  kp_i: 0
+  kp_i_limit: 1500.0
+  kp_i_range: 100.0
+  kp_p: 20.0
+  kt_d: 0.001
+  kt_i: 0
+  kt_i_limit: 1500.0
+  kt_i_range: 100.0
+  kt_p: 0.10000000000000001
+  max_q: 0.0
+  max_tq: 0.0
+  min_q: 0.0
+  min_tq: 0.0
+rot_qei_component: m3el5101_ec_ch0
+version: default

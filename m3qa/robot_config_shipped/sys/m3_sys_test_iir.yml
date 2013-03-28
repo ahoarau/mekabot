@@ -1,0 +1,695 @@
+num_slaves: 23
+not_val:
+  m3actuator_ec_mh10_j0:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh10_j1:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh10_j2:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh10_j3:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh10_j4:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh11_j0:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh11_j1:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh11_j2:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh11_j3:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mh11_j4:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 
+  m3actuator_ec_mt4_j0:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_mt4_j1:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma14_j0:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma14_j1:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma14_j2:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma14_j3:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma14_j4:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma14_j5:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma14_j6:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma12_j0:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma12_j1:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma12_j2:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma12_j3:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_amp_temp'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma12_j4:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma12_j5:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+  m3actuator_ec_ma12_j6:
+  - method: 'get_qei_on'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_torque'
+    val: 0
+    nsteps: 5
+  - method: 'get_adc_ext_temp'
+    val: 0
+    nsteps: 5
+in_range:
+  m3joint_mh10_j0:
+  - method: 'get_torque_mNm'
+    min: -50
+    max: 50
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh10_j1:
+  - method: 'get_torque_mNm'
+    min: -100
+    max: 100
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh10_j2:
+  - method: 'get_torque_mNm'
+    min: -100
+    max: 100
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh10_j3:
+  - method: 'get_torque_mNm'
+    min: -100
+    max: 100
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh10_j4:
+  - method: 'get_torque_mNm'
+    min: -100
+    max: 100
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh11_j0:
+  - method: 'get_torque_mNm'
+    min: -50
+    max: 50
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh11_j1:
+  - method: 'get_torque_mNm'
+    min: -100
+    max: 100
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh11_j2:
+  - method: 'get_torque_mNm'
+    min: -100
+    max: 100
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh11_j3:
+  - method: 'get_torque_mNm'
+    min: -100
+    max: 100
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3joint_mh11_j4:
+  - method: 'get_torque_mNm'
+    min: -100
+    max: 100
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 40
+    nsteps: 5
+  m3loadx6_ma14_l0:
+  - method: 'get_Fx_Kg'
+    min: -0.5
+    max: 0.5
+    nsteps: 5
+  - method: 'get_Fy_Kg'
+    min: -0.5
+    max: 0.5
+    nsteps: 5
+  - method: 'get_Fz_Kg'
+    min: 0.5
+    max: 1.0
+    nsteps: 5
+  m3joint_mt4_j0:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_mt4_j1:
+  - method: 'get_theta_deg'
+    min: -5
+    max: 5
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma14_j0:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma14_j1:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma14_j2:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma14_j3:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma14_j4:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma14_j5:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma14_j6:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3loadx6_ma12_l0:
+  - method: 'get_Fx_Kg'
+    min: -0.5
+    max: 0.5
+    nsteps: 5
+  - method: 'get_Fy_Kg'
+    min: -0.5
+    max: 0.5
+    nsteps: 5
+  - method: 'get_Fz_Kg'
+    min: 0.5
+    max: 1.0
+    nsteps: 5
+  m3pwr_pwr015:
+  - method: 'get_bus_voltage_V'
+    min: 20.0
+    max: 30.0
+    nsteps: 5
+  m3pwr_pwr015:
+  - method: 'get_current_digital_mA'
+    min: 500.0
+    max: 1000.0
+    nsteps: 5
+  m3joint_ma12_j0:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma12_j1:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma12_j2:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma12_j3:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma12_j4:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma12_j5:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  m3joint_ma12_j6:
+  - method: 'get_theta_deg'
+    min: -40
+    max: 40
+    nsteps: 5
+  - method: 'get_torque_mNm'
+    min: -4000
+    max: 4000
+    nsteps: 5
+  - method: 'get_amp_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5
+  - method: 'get_current_mA'
+    min: 0
+    max: 200
+    nsteps: 5
+  - method: 'get_motor_temp_C'
+    min: 20
+    max: 35
+    nsteps: 5

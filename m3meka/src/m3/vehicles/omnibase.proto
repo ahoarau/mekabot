@@ -1,0 +1,125 @@
+// M3 -- Meka Robotics Robot Components
+// Copyright (c) 2010 Meka Robotics
+// Author: edsinger@mekabot.com (Aaron Edsinger)
+// 
+// M3 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// M3 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with M3.  If not, see <http://www.gnu.org/licenses/>.
+
+option optimize_for = SPEED;
+import "component_base.proto";
+
+enum OMNIBASE_CTRL_MODE{
+		OMNIBASE_CTRL_OFF = 0;			//Actuator off
+		OMNIBASE_CTRL_CALIBRATE = 1;		
+		OMNIBASE_CTRL_CASTER = 2;		// enables OMNIBASE_JOINT_MODE
+		OMNIBASE_CTRL_OPSPACE_FORCE = 3;	//Operation space control of force in local coords
+		OMNIBASE_CTRL_OPSPACE_TRAJ=4;		//Run a trajectory controller with underlying op-space control
+		OMNIBASE_CTRL_CART_LOCAL=5;		//Local cartesian control of x,dx,ddx in local coords
+		OMNIBASE_CTRL_CART_GLOBAL=6;		//Global cartesian control of x,dx,ddx in global coords		
+}
+
+//Requites OMNIBASE_CTRL_JOINT ctrl mode
+enum OMNIBASE_CASTER_MODE{
+		OMNIBASE_CASTER_OFF = 0;			//off
+		OMNIBASE_CASTER_TORQUE = 1;		//Direct joint Torque control
+		OMNIBASE_CASTER_VELOCITY = 2;		//Direct joint velocity control
+		OMNIBASE_CASTER_THETA = 3;		//Direct joint velocity control
+}
+
+//Requites OMNIBASE_MODE_OPSPACE_TRAJ ctrl mode
+enum OMNIBASE_TRAJ_MODE{
+		OMNIBASE_TRAJ_OFF = 0;			//off
+		OMNIBASE_TRAJ_JOYSTICK = 1;		//joystick control
+		OMNIBASE_TRAJ_GOAL = 2;		//send 1 waypoint and stop when there
+		OMNIBASE_TRAJ_VIAS = 3;		//iterate through multiple vias
+}
+
+
+message M3OmnibaseStatus
+{
+	optional M3BaseStatus		base=1;			//Reserved	
+	repeated int32 			calibrated=2;	//Flag if each caster has been calibrated
+	repeated double			global_position=3;
+	repeated double			global_velocity=4;
+	repeated double			local_velocity=5;		
+	repeated double			roll_torque_desired=6;	
+	repeated double			steer_torque_desired=7;
+	repeated double			steer_angle=8;	
+	repeated double			steer_velocity=9;
+	repeated double			roll_angle=10;	
+	repeated double			roll_velocity=11;	
+	repeated double			local_force=12;
+	repeated double			local_acceleration=13;		
+	repeated double			motor_torque_desired=14;	
+	repeated double			local_position=15;	
+	repeated double			position_desired=16;	
+	repeated double			velocity_desired=17;	
+	repeated double			acceleration_desired=18;	
+	optional int32			traj_goal_reached=19;
+	optional double			bus_voltage=20;
+	repeated double			position_error=21;	
+	repeated double			velocity_error=22;
+	repeated double			motor_current=23;
+	repeated double			roll_torque_internal=24;	
+	repeated double			steer_torque_internal=25;
+}
+
+message M3OmnibaseParam
+{	
+	repeated int32			enable_breakbeam=1;
+	optional double 		ks_i=2;
+	optional double 		ks_i_limit=3;
+	optional double 		ks_i_range=4;
+	optional double 		ks_p=5;	
+	optional double 		ks_d=6;
+}
+
+message M3OmnibaseCommand
+{
+	optional OMNIBASE_CTRL_MODE			ctrl_mode=1;
+	optional OMNIBASE_TRAJ_MODE			traj_mode=2;	
+	repeated double			roll_torque_desired=3;
+	repeated double			opspace_force_desired=4;
+	repeated double			local_position_desired=5;
+	repeated double			local_velocity_desired=6;
+	repeated double			local_acceleration_desired=7;
+	repeated double			global_position_desired=8;
+	repeated double			global_velocity_desired=9;
+	repeated double			global_acceleration_desired=10;
+	repeated double			steer_torque_desired=11;
+	optional double			joystick_x=12;
+	optional double			joystick_y=13;
+	optional double			joystick_yaw=14;	
+	repeated double			steer_velocity_desired=15;
+	repeated double			roll_velocity_desired=16;
+	optional int32			joystick_button=17;	
+	repeated OMNIBASE_CASTER_MODE	caster_mode=19;
+	repeated double			traj_goal=20;
+	repeated double			global_position=21;
+	repeated double			local_position=22;
+	optional int32			adjust_local_position=23;
+	optional int32			adjust_global_position=24;
+	repeated M3OmniVia		vias=25;	 				//Joint trajectory vias
+	optional double			max_linear_velocity=26;
+	optional double			max_rotation_velocity=27;
+	optional double			max_linear_acceleration=28;
+	optional double			max_rotation_acceleration=29;
+	repeated double			steer_theta_desired=30;
+}
+
+message M3OmniVia {
+	optional int32 idx=1;							//Id
+	repeated double position_desired=2;					//x,y,yaw (deg)
+	optional double lin_velocity_avg=3;						//velocity (m/s)
+	optional double ang_velocity_avg=4;						//velocity (deg/s)
+}

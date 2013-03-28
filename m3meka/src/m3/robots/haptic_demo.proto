@@ -1,0 +1,33 @@
+
+option optimize_for = SPEED;
+import "component_base.proto";
+
+
+message M3HapticDemoStatus
+{
+	optional M3BaseStatus	base=1;						//reserved
+	optional double		foo=2;						//sensor value
+}
+
+message M3HapticDemoParam
+{
+	optional double			max_fx=1;				//scale status value
+	optional double			max_fy=2;				//scale status value
+	optional double			max_fz=3;				//scale status value
+	optional double			x_k=4;
+	optional double			y_k=5;
+	optional double			z_k=6;
+	optional double			x_desired=7;
+	optional double			y_desired=8;
+	optional double			z_desired=9;
+	optional double			x_k_d=10;
+	optional double			y_k_d=11;
+	optional double			z_k_d=12;
+}
+
+message M3HapticDemoCommand
+{
+	optional bool			enable=1;				//turn  on/off
+	
+}
+

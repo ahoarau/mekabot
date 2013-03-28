@@ -1,0 +1,15 @@
+m3_msgs/M3BaseStatus base
+float32 motor_temp
+float32 amp_temp
+float32 current
+float32 torque
+float32 torquedot
+float32 theta
+float32 thetadot
+float32 thetadotdot
+float32 torque_gravity
+int32 pwm_cmd
+float32 ambient_temp
+float32 case_temp
+float32 power
+int32 flags

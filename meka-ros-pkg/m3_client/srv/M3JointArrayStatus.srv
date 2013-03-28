@@ -1,0 +1,13 @@
+int32 request
+---
+M3BaseStatus base
+float32[] motor_temp	#(F)
+float32[] amp_temp	#(F)
+float32[] current	#(mA)
+float32[] torque	#(mNm)
+float32[] torquedot	#(mNm)
+float32[] theta		#(Rad)
+float32[] thetadot	#(Rad/s)
+float32[] thetadotdot	#(Rad/s^2)
+int32 completed_spline_idx	#Last spline command completed
+int32[] pwm_cmd		#Current PWM command to motor

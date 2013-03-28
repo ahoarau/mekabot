@@ -1,0 +1,78 @@
+calib:
+  amp_temp:
+    cb_bias: -3.2574218749999986
+    cb_mV_at_25C: 750.0
+    cb_mV_per_C: 10.0
+    cb_scale: 1.0
+    name: Microchip TC1047
+    type: adc_linear_5V
+  angle_df:
+    theta_df:
+      cutoff_freq: 80
+      order: 3
+      type: butterworth
+    thetadot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+  current:
+    cb_bias: 0.0
+    cb_mV_per_A: 100.0
+    cb_scale: 1.0
+    cb_ticks_at_zero_a: 1951
+    cb_ticks_at_zero_b: 1953
+    name: Allegro ACS712-20
+    type: adc_linear_5V
+  motor:
+    gear_ratio: 100
+    max_winding_temp: 155
+    name: Maxon EC45 Flat 50W 24V
+    thermal_resistance_housing_ambient: 3.8999999999999999
+    thermal_resistance_rotor_housing: 5.2999999999999998
+    thermal_time_constant_winding: 11.699999999999999
+    winding_resistance: 1.03
+  motor_temp:
+    cb_bias: -2.97900390625
+    cb_mV_at_25C: 750.0
+    cb_mV_per_C: 10.0
+    cb_scale: 1.0
+    name: Microchip TC1047
+    type: adc_linear_3V3
+  theta:
+    cb_bias: -204.72074711591284
+    cb_scale: 1.0
+    name: ContElec VertX13
+    type: vertx_14bit
+  torque:
+    cb_bias: -3964.2919826455709
+    cb_inv_torque:
+    - 0.15380688011646271
+    - 8140.140625
+    cb_scale: 1.0
+    cb_torque:
+    - 6.4949908256530762
+    - -52870.125
+    name: ContElec VertX13
+    type: sea_vertx_14bit
+  torquedot_df:
+    cutoff_freq: 100
+    order: 3
+    type: diff_butterworth
+calibration_date: Fri Mar  5 10:45:34 2010
+description: max2_v0.1_seax2_v1.1
+ec_component: m3actuator_ec_ma5_j2
+ignore_bounds: 0
+joint_component: m3joint_ma5_j2
+name: m3actuator_ma5_j2
+param:
+  max_amp_temp: 100.0
+  max_current: 6000
+  max_motor_temp: 155.0
+  max_tq: 20000.0
+  min_tq: -20000.0
+  thetadot_deadband: 1.0

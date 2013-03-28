@@ -1,0 +1,7 @@
+#!/bin/sh
+
+/usr/local/bin/m3rt_insmods
+/usr/local/bin/m3rt_printer
+/usr/local/bin/m3rt_rmmods
+
+

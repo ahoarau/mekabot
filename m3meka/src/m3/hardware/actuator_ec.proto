@@ -1,0 +1,110 @@
+// M3 -- Meka Robotics Robot Components
+// Copyright (c) 2010 Meka Robotics
+// Author: edsinger@mekabot.com (Aaron Edsinger)
+// 
+// M3 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// M3 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with M3.  If not, see <http://www.gnu.org/licenses/>.
+
+option optimize_for = SPEED;
+import "component_base.proto";
+
+
+enum ACTUATOR_EC_MODE{
+		ACTUATOR_EC_MODE_OFF = 0;
+		ACTUATOR_EC_MODE_PWM = 1;
+		ACTUATOR_EC_MODE_TORQUE = 2;
+		ACTUATOR_EC_MODE_CURRENT = 3;
+		ACTUATOR_EC_MODE_BRAKE = 4;
+
+}
+
+//Mirrors m3ec_pdo_vX_def.h
+enum ACTUATOR_EC_FLAG{
+  ACTUATOR_EC_FLAG_POS_LIMITSWITCH=1;//Limit switch value pos direction
+  ACTUATOR_EC_FLAG_NEG_LIMITSWITCH=2;//Limit switch value neg direction
+  ACTUATOR_EC_FLAG_QEI_CALIBRATED=4;//Has limit switch calibration triggered
+  ACTUATOR_EC_FLAG_AUX_SWITCH=8;//Auxillary switch input
+  ACTUATOR_EC_FLAG_I_FAULT_CONT=16;//Auxillary switch input
+  ACTUATOR_EC_FLAG_I_FAULT_MOM=32;//Auxillary switch input
+}
+
+//Mirrors m3ec_pdo_vX_def.h
+enum ACTUATOR_EC_CONFIG{
+
+  ACTUATOR_EC_CONFIG_TORQUE_SMOOTH=2;//Use smoothing filter on torque sensor
+  ACTUATOR_EC_CONFIG_ENC_BOUNDS=16;//Limit PWM within QEI range
+  ACTUATOR_EC_CONFIG_PWM_FWD_SIGN=32;//Does +PWM => +QEI change
+  ACTUATOR_EC_CONFIG_BRAKE_OFF=64;//Turn brake off if present
+  ACTUATOR_EC_CONFIG_VERTX_FILTER_OFF=128;//Disable VertX filter
+  ACTUATOR_EC_CONFIG_LIMITSWITCH_STOP_POS=256;//Use limitswitch stop in +pwm direction
+  ACTUATOR_EC_CONFIG_LIMITSWITCH_STOP_NEG=512;//Use limitswitch stop in -pwm direction
+  ACTUATOR_EC_CONFIG_CALIB_QEI_LIMITSWITCH_POS=1024;//Use limitswitch stop in +pwm direction to calibrate encoder
+  ACTUATOR_EC_CONFIG_CALIB_QEI_LIMITSWITCH_NEG=2048;//Use limitswitch stop in -pwm direction to calibrate encoder
+  ACTUATOR_EC_CONFIG_TORQUE_FF=4096; //Incorporate torque feed-forward term into the DSP PID Controller
+  ACTUATOR_EC_CONFIG_CALIB_QEI_MANUAL=8192; //Zero encoder on low to high transition
+  ACTUATOR_EC_CONFIG_HAS_BRAKE=32768; //Set this bit if there is a brake on the actuator e.g. torso J1
+}
+
+message M3ActuatorEcStatus{
+	optional M3BaseStatus			base=1;						//Reserved
+	optional M3EtherCATStatus		ethercat =2;				//EtherCAT info
+	optional uint64				timestamp=3;				//Time in us
+	optional int32				qei_on=4;				//MA3 Encoder ticks
+	optional int32				qei_rollover=5;
+	optional int32				qei_period=6;				//MA3 Encoder ticks
+	optional int32				qei_err_cnt=7;
+	optional int32				debug=8;				//Reserved
+	optional int32				adc_torque=9;				//Torque input
+	optional int32				torque_err_cnt=10;			//Err
+	optional int32				adc_ext_temp=11;				//External temp sensor
+	optional int32				adc_amp_temp=12;			//Amplifier temp
+	optional int32				adc_current_a=13;			//Motor current leg A
+	optional int32				adc_current_b=14;			//Motor current leg B
+	optional int32				adc_ext_a=15;				//Auxillary adc input
+	optional int32				adc_ext_b=16;				//Auxillary adc input
+	optional int32				pwm_cmd=17;				//Current PWM command to motor
+	optional int32				flags=18;				//Reserved
+	optional int32				current_ma=19;				//Calibrated on amp (1 mA precision)
+	optional int32				motor_pos = 20;			// motor pos in hall effect transition counts
+	optional bool				motor_power_slewed_on = 21;			//Disable brake if present
+}
+
+message M3ActuatorEcCommand{
+	optional int32			t_desire=1;			//Desired joint torque, raw adc ticks
+	optional ACTUATOR_EC_MODE	mode=2;				//Slave control mode
+	optional bool			brake_off=3;			//Disable brake if present
+	optional int32			current_desired = 4;
+	optional int32			pwm_desired = 5;
+}
+
+message M3ActuatorEcParam{
+	optional int32			config=1;					//Reserved
+	optional int32			k_p=2;						//P gain, torque/current control
+	optional int32			k_i=3;						//I gain, torque/current control
+	optional int32			k_d=4;						//D gain, torque/current control
+	optional int32			k_p_shift=5;					//Shift scalar, torque/current control
+	optional int32			k_i_shift=6;					//Shift scalar, torque/current control
+	optional int32			k_d_shift=7;					//Shift scalar, torque/current control
+	optional int32			k_i_limit=8;					//Integral limit, torque/current control
+	optional int32			t_max=9;					//Max permissible torque/current
+	optional int32			t_min=10;					//Min permissible torque/current
+	optional int32			pwm_max=11;					//Max permissible pwm
+	optional int32			qei_max=12;					//Max permissible qei
+	optional int32			qei_min=13;					//Min permissible qei
+	optional int32			k_ff_zero=14;					//Zero point for ff term, torque control
+	optional int32			k_ff_shift=15;					//Shift scalar, torque control
+	optional int32			k_ff=16;					//Feedforward gain, torque control
+	optional int32			pwm_db=17;					//Deadband pwm
+	optional int32			bldc_mode=18;
+}
+

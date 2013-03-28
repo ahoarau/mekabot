@@ -1,0 +1,20 @@
+calibration_date: Fri Aug 21 19:00:27 2009
+name: m3gripper_digit_joint_mg0_j0
+param:
+  jtm_ratio: 1.0
+  kq_d: 0.050000000000000003
+  kq_g: 0.0
+  kq_i: 0.0
+  kq_i_limit: 0.0
+  kq_i_range: 0.0
+  kq_p: -3.5
+  kt_d: 0.0
+  kt_i: 0.0
+  kt_i_limit: 0.0
+  kt_i_range: 0.0
+  kt_p: 0.0
+  max_q: 316.93359375
+  min_q: 0.0
+  q_slew_rate: 200.0
+sea_component: m3gripper_digit_mg0_j0
+calib: {cb_drive_radius_m: 0.016250000000000001}

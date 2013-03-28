@@ -1,0 +1,12 @@
+#!/bin/sh
+
+
+/usr/local/bin/m3rt_insmods
+/usr/local/bin/m3rt_rotate_logs
+/usr/local/bin/m3rt_server.py $@
+/usr/local/bin/m3rt_rmmods
+
+
+
+
+

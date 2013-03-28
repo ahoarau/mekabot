@@ -1,0 +1,84 @@
+// M3 -- Meka Robotics Robot Components
+// Copyright (c) 2010 Meka Robotics
+// Author: edsinger@mekabot.com (Aaron Edsinger)
+// 
+// M3 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// M3 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with M3.  If not, see <http://www.gnu.org/licenses/>.
+
+option optimize_for = SPEED;
+
+import "component_base.proto";
+
+
+enum ACTUATOR_MODE{
+	ACTUATOR_MODE_OFF		= 0;				//Actuator off
+	ACTUATOR_MODE_PWM		= 1;				//Direct PWM control
+	ACTUATOR_MODE_TORQUE	= 2;			//Direct Torque control
+	ACTUATOR_MODE_CURRENT	= 3;			//Direct current control
+	ACTUATOR_MODE_BRAKE		= 4;			// shorted bridge
+}
+
+enum ACTUATOR_INPUT{
+	ACTUATOR_INPUT_PWM		= 0;				//Direct PWM control
+	ACTUATOR_INPUT_CURRENT	= 1;			//Direct current control
+}
+
+message M3ActuatorStatus{
+	optional M3BaseStatus	base			= 1;					//Reserved
+	optional double			motor_temp		= 2;			//(C)
+    optional double			amp_temp		= 3;			//(C)
+    optional double			current			= 4;			//(mA)
+    optional double		   	torque			= 5;			//(mNm)
+	optional double		   	torquedot		= 6;			//(mNm)
+   	optional double			theta			= 7;			//(Deg)
+    optional double			thetadot		= 8;			//(Deg/s)
+    optional double			thetadotdot		= 9;			//(Deg/s^2)
+    optional double		   	torque_error	= 10;			//(mNm)
+	optional int32			pwm_cmd			= 11;			//Current PWM command to motor
+	optional double			ambient_temp	= 12;			//(C)
+	optional double			case_temp		= 13;			//(C)
+	optional double			power			= 14;			//(W)
+	optional int32			flags			= 15;			//Status reported by DSP
+	optional double			ext_temp		= 16;			//(C)
+	optional double			tq_cmd			= 17;			//mNm
+	optional double			i_cmd			= 18;			//mA
+	optional double			mode_cmd		= 19;
+}
+
+message M3ActuatorParamPID{
+	optional double		k_p			= 1;	//P gain
+	optional double		k_i			= 2;	//I gain
+	optional double		k_d			= 3;	//D gain
+	optional double		k_i_limit	= 4;	//Integral limit
+	optional double		k_i_range	= 5;	//Integral range to accumulate error over
+}
+
+
+message M3ActuatorParam{
+	optional double					max_tq				= 1;	//Soft limit to controller (mNm)
+	optional double					min_tq				= 2;	//Soft limit to controller (mNm)
+	optional double					max_i				= 3;	//Soft limit to controller (mA), 
+	optional double					max_amp_current		= 4;	//Safety thresh (mA), thermal limit of amp
+	optional double 				max_overload_time	= 5;	//Safety thresh Allowed overload condition (S)
+	optional double					max_amp_temp		= 6;	//Safety thresh (C)
+	optional M3ActuatorParamPID		pid_torque			= 7;	//mode  
+	
+}
+ 
+message M3ActuatorCommand{
+	optional int32			pwm_desired	= 1;    			//Desired pwm (ticks)
+	optional double			tq_desired	= 2;     			//Desired torque (mNm)
+	optional double			i_desired	= 3;    			//Desired current (A)
+	optional ACTUATOR_MODE	ctrl_mode	= 4;				//Desired control mode
+	optional bool			brake_off	= 5;				//Disable brake if present
+}

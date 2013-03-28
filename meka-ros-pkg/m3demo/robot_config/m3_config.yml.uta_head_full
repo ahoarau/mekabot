@@ -1,0 +1,53 @@
+
+########### M3 CONFIG ######################
+hostname: uta-studio
+rt_components:
+  pwr:
+    m3pwr_pwr012: m3pwr
+  ms2:
+    m3actuator_ms2_j0: m3actuator
+    m3actuator_ms2_j1: m3actuator
+    m3actuator_ms2_j2: m3actuator
+    m3actuator_ms2_j3: m3actuator
+    m3actuator_ms2_j4: m3actuator
+    m3actuator_ms2_j5: m3actuator
+    m3actuator_ms2_j6: m3actuator
+    m3actuator_ms2_j7: m3actuator
+    m3actuator_ms2_j8: m3actuator
+    m3actuator_ms2_j9: m3actuator
+    m3actuator_ms2_j10: m3actuator
+    m3actuator_ms2_j11: m3actuator
+    m3joint_ms2_j0: m3joint
+    m3joint_ms2_j1: m3joint
+    m3joint_ms2_j2: m3joint
+    m3joint_ms2_j3: m3joint
+    m3joint_ms2_j4: m3joint
+    m3joint_ms2_j5: m3joint
+    m3joint_ms2_j6: m3joint
+    m3joint_ms2_j7: m3joint
+    m3joint_ms2_j8: m3joint
+    m3joint_ms2_j9: m3joint
+    m3joint_ms2_j10: m3joint
+    m3joint_ms2_j11: m3joint
+    m3dynamatics_s2r1_uta_ms2: m3dynamatics
+    m3head_ms2: m3head
+    m3head_s2csp_ctrl_ms2: m3head_s2csp_ctrl
+  mr8:
+    m3humanoid_head_mr8: m3humanoid
+ec_components:
+  pwr:
+    m3pwr_ec_pwr012: m3pwr_ec
+  ms2:
+    m3actuator_ec_ms2_j0: m3actuator_ec
+    m3actuator_ec_ms2_j1: m3actuator_ec
+    m3actuator_ec_ms2_j2: m3actuator_ec
+    m3actuator_ec_ms2_j3: m3actuator_ec
+    m3actuator_ec_ms2_j4: m3actuator_ec
+    m3actuator_ec_ms2_j5: m3actuator_ec
+    m3actuator_ec_ms2_j6: m3actuator_ec
+    m3actuator_ec_ms2_j7: m3actuator_ec
+    m3actuator_ec_ms2_j8: m3actuator_ec
+    m3actuator_ec_ms2_j9: m3actuator_ec
+    m3actuator_ec_ms2_j10: m3actuator_ec
+    m3actuator_ec_ms2_j11: m3actuator_ec
+    m3ledx2xn_ec_ms2_b0: m3ledx2xn_ec

@@ -1,0 +1,54 @@
+chains:
+  head:
+    base_rotation_in_parent:
+    - 0.0
+    - 0.0
+    - 1.0
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    base_translation_in_parent:
+    - 0.077850000000000003
+    - 0.0
+    - 0.0
+    chain_component: m3head_ms2
+  right_arm:
+    arm_model: a2r2_right
+    tool_translation_in_end: [0., 0., 0.]
+    tool_rotation_in_end: [-1., 0., 0., 0., -1., 0., 0., 0., 1.]
+    base_rotation_in_parent:
+    - 0.0
+    - 0.0
+    - 1.0
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    base_translation_in_parent:
+    - 0.0
+    - 0.0
+    - 0.0
+    chain_component: m3arm_ma10
+  torso:
+    base_rotation_in_parent:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    base_translation_in_parent:
+    - 0.0
+    - 0.0
+    - 0.0
+    chain_component: m3torso_mt3
+name: m3humanoid_right_arm_torso_head_mr8
+pwr_component: m3pwr_pwr012

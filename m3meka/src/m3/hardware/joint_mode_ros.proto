@@ -1,0 +1,8 @@
+option optimize_for = SPEED;
+
+enum JOINT_MODE_ROS{
+		JOINT_MODE_ROS_OFF = 0;					//Actuator off
+		JOINT_MODE_ROS_THETA = 1;					//Joint angle control (no force feedback)
+		JOINT_MODE_ROS_THETA_GC = 2;					//Gravity compensated joint angle control		
+		JOINT_MODE_ROS_TORQUE_GC = 3;					//Gravity compensated torque (hand only)
+}

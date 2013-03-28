@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       name="m3" >
+
+ <property name="M_PI" value="3.1415926535897931" />
+ <property name="R_ARM" value="ma8" />
+ <property name="L_ARM" value="ma9" />
+ <property name="TORSO" value="mt2" />
+ <property name="MESH" value="m3_description/meshes/low_res" />
+
+  <!-- generic simulator_gazebo plugins for starting mechanism control, ros time, ros battery -->
+  <include filename="$(find m3_full_description)/gazebo/gazebo.urdf.xacro" />
+
+  <include filename="$(find m3_full_description)/transmissions/m3.transmission.xacro" />
+
+  <!-- M3 Arm -->
+  <include filename="$(find m3_description)/urdf/A2R2_r_arm_defs.urdf.xacro" />
+  <include filename="$(find m3_description)/urdf/A2R2_l_arm_defs.urdf.xacro" />
+  <include filename="$(find m3_full_description)/transmissions/A2R2_r_arm_defs.transmission.xacro" />
+  <include filename="$(find m3_full_description)/transmissions/A2R2_l_arm_defs.transmission.xacro" />
+  
+  
+  <material name="GreyA"> <!-- darkest -->
+	  <color rgba="0.3 0.3 0.3 1.0"/>
+  </material>
+  
+  <material name="GreyB">
+	  <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+  
+  <material name="GreyC">
+	  <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  
+  <m3_r_arm side="r" reflect="1" parent="upper">
+	  <origin xyz="0.0 -0.18465 0.2337" rpy="0 0 0" />
+  </m3_r_arm>
+  
+  <m3_l_arm side="l" reflect="1" parent="upper">
+	  <origin xyz="0.0 0.18465 0.2337" rpy="0 0 0" />
+  </m3_l_arm>
+  
+  <m3_r_arm_transmission side="r" reflect="1" parent="upper"/>
+  <m3_l_arm_transmission side="l" reflect="1" parent="upper"/>
+  
+  <link name="world" />
+  
+  <!-- Solid Base -->
+  <joint name="base_joint" type="fixed">
+    <origin xyz="0 0 1" rpy="0 0 0" />
+    <parent link="world" />
+    <child link="panplate" />
+  </joint>
+  <link name="panplate">
+    <inertial>
+      <mass value="100" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <material name="GreyA" />
+      <origin xyz="0 0 0" rpy="0 0 0 " />
+      <geometry name="panplate_geom">
+	      <mesh filename="package://${MESH}/T2R2/T2R2_panplate.mesh" />
+      </geometry>  
+    </visual>     
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0 " />
+      <geometry name="base_collision_geom">
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="m3joint_${TORSO}_j0" type="continuous">
+    <dynamics damping="100.0"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 0 0.1493" rpy="0 0 0" />
+    <parent link="panplate" />
+    <child link="torso" />
+  </joint>
+  <link name="torso">
+    <inertial>
+      <mass value="100" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <material name="GreyC" />
+      <origin xyz="0 0 0" rpy="0 0 0 " />
+      <geometry name="torso_geom">
+	      <mesh filename="package://${MESH}/T2R2/T2R2_torso.mesh" />
+      </geometry>  
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0 " />
+      <geometry name="torso_collision_geom">
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="m3joint_${TORSO}_j1" type="continuous">
+    <dynamics damping="100.0"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />    
+    <parent link="torso" />
+    <child link="mid" />
+  </joint>
+  <link name="mid">
+    <inertial>
+      <mass value="100" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <material name="GreyB" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry name="mid_geom">
+	      <mesh filename="package://${MESH}/T2R2/T2R2_mid.mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0 " />
+      <geometry name="mid_collision_geom">
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint name="m3joint_slave_${TORSO}_j2" type="continuous">
+    <dynamics damping="100.0"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0 0 0.1397" rpy="0 0 0" />    
+    <parent link="mid" />
+    <child link="upper" />
+  </joint>
+  <link name="upper">
+    <inertial>
+      <mass value="100" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <material name="GreyC" />
+      <origin xyz="0 0 0" rpy="0 0 3.14159" />
+      <geometry name="upper_geom">
+	      <mesh filename="package://${MESH}/T2R2/T2R2_upper.mesh" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0.0 0.0 0.0 " />
+      <geometry name="upper_collision_geom">
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
+  </link>
+
+</robot>

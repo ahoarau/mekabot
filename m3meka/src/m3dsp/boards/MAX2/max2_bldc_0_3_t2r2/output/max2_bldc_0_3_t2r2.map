@@ -1,0 +1,1821 @@
+Microchip Technology Inc, vv3_30 (B) x
+
+Tool Name:
+  c:\program files (x86)\microchip\mplabc30\v3.30c\bin\bin\..\bin/pic30-coff-ld.exe
+
+Command:
+  -p33FJ32MC204 \
+  -ooutput\max2_bldc_0_3_t2r2.cof \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/.. \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib/PIC24E \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../support/PIC24E/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib/PIC24F \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../support/PIC24F/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib/PIC24H \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../support/PIC24H/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib/dsPIC30F \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../support/dsPIC30F/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib/dsPIC33E \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../support/dsPIC33E/gld \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib/dsPIC33F \
+  -Lc:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../support/dsPIC33F/gld \
+  temp\adc.o \
+  temp\bldc.o \
+  temp\brake.o \
+  temp\control.o \
+  temp\current.o \
+  temp\dio.o \
+  temp\encoder_vertx.o \
+  temp\ethercat.o \
+  temp\ethercat_appl.o \
+  temp\ethercat_hw.o \
+  temp\ethercat_slave_fsm.o \
+  temp\main.o \
+  temp\pwm.o \
+  temp\setup.o \
+  temp\timer1.o \
+  temp\timer3.o \
+  -Tp33FJ32MC204_APP.gld.00 \
+  --defsym=__MPLAB_BUILD=1 \
+  -Map=output\max2_bldc_0_3_t2r2.map \
+  --report-mem \
+  -start-group \
+  --library=pic30-coff \
+  --library=m-coff \
+  --library=c-coff \
+  -end-group \
+
+Archive member included because of file (symbol)
+
+c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
+                              (_resetPRI)
+c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
+                              c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o) (_data_init_standard)
+c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libm-coff.a(udivsi3.o)
+                              temp\ethercat_slave_fsm.o (__udivsi3)
+c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libc-coff.a(memset.XXo)
+                              temp\control.o (memset)
+
+
+Selected CodeGuard Options:
+  FGS:GWRP:OFF
+  FGS:GSS:OFF
+
+CodeGuard FLASH Memory:
+  boot    (none)
+  secure  (none)
+  general 0x1800 to 0x6dfe
+
+CodeGuard RAM Memory:
+  general 0x800 to 0xfff
+  secure  (none)
+  boot    (none)
+
+
+Program Memory  [Origin = 0x1800, Length = 0x5600]
+
+section                    address   length (PC units)   length (bytes) (dec)
+-------                    -------   -----------------   --------------------
+.text                       0x1800              0x3a92          0x57db  (22491)
+.dinit                      0x5292                0x6c            0xa2  (162)
+.isr                        0x52fe                 0x4             0x6  (6)
+
+                     Total program memory used (bytes):         0x5883  (22659) 68%
+
+
+Data Memory  [Origin = 0x800, Length = 0x800]
+
+section                    address      alignment gaps    total length  (dec)
+-------                    -------      --------------    -------------------
+.nbss                        0x800                   0           0x376  (886)
+.ndata                       0xb76                   0            0x20  (32)
+.nbss                        0xb96                   0            0x3e  (62)
+.ndata                       0xbd4                   0             0x4  (4)
+.nbss                        0xbd8                   0             0xa  (10)
+.ndata                       0xbe2                   0             0x2  (2)
+
+                        Total data memory used (bytes):          0x3e4  (996) 48%
+
+
+Dynamic Memory Usage
+
+region                     address                      maximum length  (dec)
+------                     -------                      ---------------------
+heap                             0                                   0  (0)
+stack                        0xbe4                               0x41c  (1052)
+
+                        Maximum dynamic memory (bytes):          0x41c  (1052)
+
+
+External Symbols in Data Memory (by address):
+
+                    0x0802                  _watchdog_expired
+                    0x0804                  _irq_cnt
+                    0x0806                  _adc_buffer_fast
+                    0x0826                  _adc_buffer
+                    0x0926                  _adc_idx_fast
+                    0x0928                  _adc_idx
+                    0x092a                  _adc_raw
+                    0x0934                  _i_fault_mom
+                    0x0936                  _i_fault_cont
+                    0x0938                  _i_state
+                    0x093a                  _i_rms_cont_idx
+                    0x093c                  _i_rms_mom_idx
+                    0x093e                  _i_rms_cont_sum
+                    0x0942                  _i_rms_mom_sum
+                    0x0946                  _i_rms_cont_ds
+                    0x0948                  _i_rms_mom_ds
+                    0x094a                  _i_fault_val
+                    0x094e                  _i_rms_mom_sq
+                    0x0952                  _i_rms_cont_sq
+                    0x0956                  _i_zero_sum_b
+                    0x0958                  _i_zero_sum_a
+                    0x095a                  _i_rms_cont_buf
+                    0x09da                  _i_rms_mom_buf
+                    0x0a1a                  _i_zero_cnt
+                    0x0a1c                  _i_zero_b
+                    0x0a1e                  _i_zero_a
+                    0x0a20                  _i_mA
+                    0x0a22                  _pdo_stat
+                    0x0a5e                  _pdo_cmd
+                    0x0a9a                  _ec_stat
+                    0x0aba                  _ec_cmd
+                    0x0ae0                  _ec_wd_timestamp
+                    0x0ae4                  _ec_wd_expired
+                    0x0ae6                  _ec_flags
+                    0x0ae8                  _ec_debug
+                    0x0aea                  _td_idx
+                    0x0aec                  _torque_prev
+                    0x0aee                  _torque_dot
+                    0x0af2                  _t_error_sum
+                    0x0af6                  _ramp_idx
+                    0x0af8                  _fsa_state
+                    0x0afa                  _torque_delta
+                    0x0b3a                  _gains
+                    0x0b60                  _result
+                    0x0b64                  _t_error
+                    0x0b66                  _ff_term
+                    0x0b6a                  _d_term
+                    0x0b6e                  _i_term
+                    0x0b72                  _p_term
+                    0x0b76                  _StateTableRev
+                    0x0b86                  _StateTableFwd
+                    0x0b96                  _bDcSyncActive
+                    0x0b98                  _nEscAddrInputData
+                    0x0b9a                  _nEscAddrOutputData
+                    0x0b9c                  _nStateTrans
+                    0x0b9d                  _bWdActive
+                    0x0b9e                  _u16WdCounter
+                    0x0ba0                  _u16WdValue
+                    0x0ba2                  _nAlStatusCode
+                    0x0ba3                  _nAlStatusFailed
+                    0x0ba4                  _nAlStatus
+                    0x0ba5                  _nAlControl
+                    0x0ba6                  _nMaxSyncMan
+                    0x0ba7                  _bSynchronMode
+                    0x0ba8                  _nPdOutputSize
+                    0x0baa                  _nPdInputSize
+                    0x0bac                  _bEcatFirstOutputsReceived
+                    0x0bad                  _bEcatInputUpdateRunning
+                    0x0bae                  _bEcatOutputUpdateRunning
+                    0x0bb0                  _vertx_error_buffer
+                    0x0bb4                  _vertx_buffer
+                    0x0bbc                  _vertx_idx
+                    0x0bbe                  _vertx_val
+                    0x0bc2                  _EscMbxReadEcatCtrl
+                    0x0bc4                  _TmpSyncMan
+                    0x0bcc                  _EscAlEvent
+                    0x0bd0                  _EscAlControl
+                    0x0bd2                  _bAlEventEnabled
+                    0x0bd4                  _last_status
+                    0x0bd6                  _wd_cnt
+                    0x0bd8                  _bldc_fwd
+                    0x0bda                  _bldc_hall_val
+                    0x0bdc                  _pwm_duty_buf
+                    0x0bde                  _pwm_cmd_buf
+                    0x0be0                  _bEcatWaitForInputUpdate
+                    0x0be2                  _actual_pwm
+
+External Symbols in Data Memory (by name):
+
+                    0x0bd0                  _EscAlControl
+                    0x0bcc                  _EscAlEvent
+                    0x0bc2                  _EscMbxReadEcatCtrl
+                    0x0b86                  _StateTableFwd
+                    0x0b76                  _StateTableRev
+                    0x0bc4                  _TmpSyncMan
+                    0x0be2                  _actual_pwm
+                    0x0826                  _adc_buffer
+                    0x0806                  _adc_buffer_fast
+                    0x0928                  _adc_idx
+                    0x0926                  _adc_idx_fast
+                    0x092a                  _adc_raw
+                    0x0bd2                  _bAlEventEnabled
+                    0x0b96                  _bDcSyncActive
+                    0x0bac                  _bEcatFirstOutputsReceived
+                    0x0bad                  _bEcatInputUpdateRunning
+                    0x0bae                  _bEcatOutputUpdateRunning
+                    0x0be0                  _bEcatWaitForInputUpdate
+                    0x0ba7                  _bSynchronMode
+                    0x0b9d                  _bWdActive
+                    0x0bd8                  _bldc_fwd
+                    0x0bda                  _bldc_hall_val
+                    0x0b6a                  _d_term
+                    0x0aba                  _ec_cmd
+                    0x0ae8                  _ec_debug
+                    0x0ae6                  _ec_flags
+                    0x0a9a                  _ec_stat
+                    0x0ae4                  _ec_wd_expired
+                    0x0ae0                  _ec_wd_timestamp
+                    0x0b66                  _ff_term
+                    0x0af8                  _fsa_state
+                    0x0b3a                  _gains
+                    0x0936                  _i_fault_cont
+                    0x0934                  _i_fault_mom
+                    0x094a                  _i_fault_val
+                    0x0a20                  _i_mA
+                    0x095a                  _i_rms_cont_buf
+                    0x0946                  _i_rms_cont_ds
+                    0x093a                  _i_rms_cont_idx
+                    0x0952                  _i_rms_cont_sq
+                    0x093e                  _i_rms_cont_sum
+                    0x09da                  _i_rms_mom_buf
+                    0x0948                  _i_rms_mom_ds
+                    0x093c                  _i_rms_mom_idx
+                    0x094e                  _i_rms_mom_sq
+                    0x0942                  _i_rms_mom_sum
+                    0x0938                  _i_state
+                    0x0b6e                  _i_term
+                    0x0a1e                  _i_zero_a
+                    0x0a1c                  _i_zero_b
+                    0x0a1a                  _i_zero_cnt
+                    0x0958                  _i_zero_sum_a
+                    0x0956                  _i_zero_sum_b
+                    0x0804                  _irq_cnt
+                    0x0bd4                  _last_status
+                    0x0ba5                  _nAlControl
+                    0x0ba4                  _nAlStatus
+                    0x0ba2                  _nAlStatusCode
+                    0x0ba3                  _nAlStatusFailed
+                    0x0b98                  _nEscAddrInputData
+                    0x0b9a                  _nEscAddrOutputData
+                    0x0ba6                  _nMaxSyncMan
+                    0x0baa                  _nPdInputSize
+                    0x0ba8                  _nPdOutputSize
+                    0x0b9c                  _nStateTrans
+                    0x0b72                  _p_term
+                    0x0a5e                  _pdo_cmd
+                    0x0a22                  _pdo_stat
+                    0x0bde                  _pwm_cmd_buf
+                    0x0bdc                  _pwm_duty_buf
+                    0x0af6                  _ramp_idx
+                    0x0b60                  _result
+                    0x0b64                  _t_error
+                    0x0af2                  _t_error_sum
+                    0x0aea                  _td_idx
+                    0x0afa                  _torque_delta
+                    0x0aee                  _torque_dot
+                    0x0aec                  _torque_prev
+                    0x0b9e                  _u16WdCounter
+                    0x0ba0                  _u16WdValue
+                    0x0bb4                  _vertx_buffer
+                    0x0bb0                  _vertx_error_buffer
+                    0x0bbc                  _vertx_idx
+                    0x0bbe                  _vertx_val
+                    0x0802                  _watchdog_expired
+                    0x0bd6                  _wd_cnt
+
+External Symbols in Program Memory (by address):
+
+                  0x001800                  __resetPRI
+                  0x001822                  __psv_init
+                  0x001832                  __data_init_standard
+                  0x001832                  __data_init
+                  0x001890                  ___udivsi3
+                  0x0018b0                  _memset
+                  0x0018be                  _get_avg_adc
+                  0x0018e0                  _get_avg_adc_torque
+                  0x0018fc                  _setup_adc
+                  0x001968                  __ADC1Interrupt
+                  0x001a3a                  _set_bldc_dir
+                  0x001a70                  __CNInterrupt
+                  0x001ab2                  _setup_bldc
+                  0x001ae8                  _ramp_pid_gains_up
+                  0x001bd6                  _ramp_pid_gains_down
+                  0x001c5c                  _setup_pid
+                  0x001caa                  _step_amp_out
+                  0x001cac                  _step_current_pid
+                  0x001cae                  _step_torque_pid
+                  0x001e38                  _setup_control
+                  0x001e6c                  _step_control
+                  0x00214e                  _current_fault_mom_flag
+                  0x002160                  _current_fault_cont_flag
+                  0x002172                  _get_current_ma
+                  0x002176                  _get_current_rms_mom_sq_ma
+                  0x00217c                  _get_current_rms_cont_sq_ma
+                  0x002182                  _get_current_state
+                  0x002186                  _correct_mA
+                  0x0021a2                  _reset_current_buf
+                  0x0021d4                  _setup_current
+                  0x00221a                  _step_current
+                  0x0024aa                  _setup_dio
+                  0x0024ac                  _ToggleHeartbeatLED
+                  0x0024c4                  _vertx_error
+                  0x0024cc                  _get_avg_vertx
+                  0x0024e8                  _vertx_error_filter
+                  0x002518                  _setup_vertx
+                  0x00252e                  _vertx_pos
+                  0x002536                  _step_vertx
+                  0x0040a8                  _eeprom_loaded
+                  0x0040ae                  _step_ethercat
+                  0x0040b2                  _isr_reset_outputs
+                  0x0040b4                  _isr_update_outputs
+                  0x0040d0                  _isr_update_input_pdo
+                  0x004132                  _isr_update_inputs
+                  0x004162                  _setup_spi
+                  0x00418e                  _setup_ethercat
+                  0x00421e                  __INT0Interrupt
+                  0x0042a0                  _APPL_StartMailboxHandler
+                  0x0042a2                  _APPL_StopMailboxHandler
+                  0x0042a4                  _APPL_GenerateMapping
+                  0x0042a6                  _APPL_StartInputHandler
+                  0x0042a8                  _APPL_StopInputHandler
+                  0x0042aa                  _APPL_StartOutputHandler
+                  0x0042ac                  _APPL_StopOutputHandler
+                  0x0042ae                  _GetInterruptRegister
+                  0x0042ea                  _ISR_GetInterruptRegister
+                  0x004310                  _AddressingEsc
+                  0x00433c                  _ISR_AddressingEsc
+                  0x004364                  _ISR_EscReadAccess
+                  0x0043c0                  _ISR_EscWriteAccess
+                  0x00440c                  _HW_EscReadAccess
+                  0x00445e                  _HW_EscWriteAccess
+                  0x0044b0                  _HW_Main
+                  0x004548                  _HW_GetSyncMan
+                  0x0045a6                  _HW_ResetIntMask
+                  0x004652                  _HW_SetIntMask
+                  0x0046fc                  _HW_SetAlStatus
+                  0x0047a2                  _HW_DisableSyncManChannel
+                  0x0047ea                  _HW_EnableSyncManChannel
+                  0x004830                  _CheckSmChannelParameters
+                  0x004902                  _StartInputHandler
+                  0x004960                  _StartOutputHandler
+                  0x0049d8                  _StopOutputHandler
+                  0x0049ee                  _StopInputHandler
+                  0x004a08                  _ECAT_Init
+                  0x004a28                  _ECAT_Main
+                  0x004a2a                  _CheckSmSettings
+                  0x004b42                  _AL_ControlInd
+                  0x004f32                  _main
+                  0x004f82                  _pwm_cmd
+                  0x004f8a                  _pwm_deadband
+                  0x004fb0                  _invert_and_clamp_pwm
+                  0x004ff0                  _clamp_pwm
+                  0x00501c                  _setup_pwm
+                  0x0050a2                  __MPWM1Interrupt
+                  0x0050a6                  _set_pwm
+                  0x005180                  _setup_interrupt_priorities
+                  0x0051ae                  _setup_oscillator
+                  0x0051c8                  _setup_ports
+                  0x005212                  _setup_peripheral_pin_select
+                  0x005256                  _us_delay
+                  0x00526a                  _ms_delay
+                  0x00527e                  _us100_delay
+                  0x0052fe                  __DefaultInterrupt
+                  0xf80004                  __FGS.sec
+
+External Symbols in Program Memory (by name):
+
+                  0x004b42                  _AL_ControlInd
+                  0x0042a4                  _APPL_GenerateMapping
+                  0x0042a6                  _APPL_StartInputHandler
+                  0x0042a0                  _APPL_StartMailboxHandler
+                  0x0042aa                  _APPL_StartOutputHandler
+                  0x0042a8                  _APPL_StopInputHandler
+                  0x0042a2                  _APPL_StopMailboxHandler
+                  0x0042ac                  _APPL_StopOutputHandler
+                  0x004310                  _AddressingEsc
+                  0x004830                  _CheckSmChannelParameters
+                  0x004a2a                  _CheckSmSettings
+                  0x004a08                  _ECAT_Init
+                  0x004a28                  _ECAT_Main
+                  0x0042ae                  _GetInterruptRegister
+                  0x0047a2                  _HW_DisableSyncManChannel
+                  0x0047ea                  _HW_EnableSyncManChannel
+                  0x00440c                  _HW_EscReadAccess
+                  0x00445e                  _HW_EscWriteAccess
+                  0x004548                  _HW_GetSyncMan
+                  0x0044b0                  _HW_Main
+                  0x0045a6                  _HW_ResetIntMask
+                  0x0046fc                  _HW_SetAlStatus
+                  0x004652                  _HW_SetIntMask
+                  0x00433c                  _ISR_AddressingEsc
+                  0x004364                  _ISR_EscReadAccess
+                  0x0043c0                  _ISR_EscWriteAccess
+                  0x0042ea                  _ISR_GetInterruptRegister
+                  0x004902                  _StartInputHandler
+                  0x004960                  _StartOutputHandler
+                  0x0049ee                  _StopInputHandler
+                  0x0049d8                  _StopOutputHandler
+                  0x0024ac                  _ToggleHeartbeatLED
+                  0x001968                  __ADC1Interrupt
+                  0x001a70                  __CNInterrupt
+                  0x0052fe                  __DefaultInterrupt
+                  0xf80004                  __FGS.sec
+                  0x00421e                  __INT0Interrupt
+                  0x0050a2                  __MPWM1Interrupt
+                  0x001890                  ___udivsi3
+                  0x001832                  __data_init
+                  0x001832                  __data_init_standard
+                  0x001822                  __psv_init
+                  0x001800                  __resetPRI
+                  0x004ff0                  _clamp_pwm
+                  0x002186                  _correct_mA
+                  0x002160                  _current_fault_cont_flag
+                  0x00214e                  _current_fault_mom_flag
+                  0x0040a8                  _eeprom_loaded
+                  0x0018be                  _get_avg_adc
+                  0x0018e0                  _get_avg_adc_torque
+                  0x0024cc                  _get_avg_vertx
+                  0x002172                  _get_current_ma
+                  0x00217c                  _get_current_rms_cont_sq_ma
+                  0x002176                  _get_current_rms_mom_sq_ma
+                  0x002182                  _get_current_state
+                  0x004fb0                  _invert_and_clamp_pwm
+                  0x0040b2                  _isr_reset_outputs
+                  0x0040d0                  _isr_update_input_pdo
+                  0x004132                  _isr_update_inputs
+                  0x0040b4                  _isr_update_outputs
+                  0x004f32                  _main
+                  0x0018b0                  _memset
+                  0x00526a                  _ms_delay
+                  0x004f82                  _pwm_cmd
+                  0x004f8a                  _pwm_deadband
+                  0x001bd6                  _ramp_pid_gains_down
+                  0x001ae8                  _ramp_pid_gains_up
+                  0x0021a2                  _reset_current_buf
+                  0x001a3a                  _set_bldc_dir
+                  0x0050a6                  _set_pwm
+                  0x0018fc                  _setup_adc
+                  0x001ab2                  _setup_bldc
+                  0x001e38                  _setup_control
+                  0x0021d4                  _setup_current
+                  0x0024aa                  _setup_dio
+                  0x00418e                  _setup_ethercat
+                  0x005180                  _setup_interrupt_priorities
+                  0x0051ae                  _setup_oscillator
+                  0x005212                  _setup_peripheral_pin_select
+                  0x001c5c                  _setup_pid
+                  0x0051c8                  _setup_ports
+                  0x00501c                  _setup_pwm
+                  0x004162                  _setup_spi
+                  0x002518                  _setup_vertx
+                  0x001caa                  _step_amp_out
+                  0x001e6c                  _step_control
+                  0x00221a                  _step_current
+                  0x001cac                  _step_current_pid
+                  0x0040ae                  _step_ethercat
+                  0x001cae                  _step_torque_pid
+                  0x002536                  _step_vertx
+                  0x00527e                  _us100_delay
+                  0x005256                  _us_delay
+                  0x0024c4                  _vertx_error
+                  0x0024e8                  _vertx_error_filter
+                  0x00252e                  _vertx_pos
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+data             0x000800           0x000800           a !xr
+reset            0x000000           0x000004  
+ivt              0x000004           0x0000fc  
+aivt             0x000104           0x0000fc  
+program          0x001800           0x005600           xr
+FBS              0xf80000           0x000002  
+FGS              0xf80004           0x000002  
+FOSCSEL          0xf80006           0x000002  
+FOSC             0xf80008           0x000002  
+FWDT             0xf8000a           0x000002  
+FPOR             0xf8000c           0x000002  
+FICD             0xf8000e           0x000002  
+FUID0            0xf80010           0x000002  
+FUID1            0xf80012           0x000002  
+FUID2            0xf80014           0x000002  
+FUID3            0xf80016           0x000002  
+*default*        0x000000           0xffffffff  
+
+Linker script and memory map
+
+LOAD temp\adc.o
+LOAD temp\bldc.o
+LOAD temp\brake.o
+LOAD temp\control.o
+LOAD temp\current.o
+LOAD temp\dio.o
+LOAD temp\encoder_vertx.o
+LOAD temp\ethercat.o
+LOAD temp\ethercat_appl.o
+LOAD temp\ethercat_hw.o
+LOAD temp\ethercat_slave_fsm.o
+LOAD temp\main.o
+LOAD temp\pwm.o
+LOAD temp\setup.o
+LOAD temp\timer1.o
+LOAD temp\timer3.o
+                    0xf80000                  __FBS = 0xf80000
+                    0xf80004                  __FGS = 0xf80004
+                    0xf80006                  __FOSCSEL = 0xf80006
+                    0xf80008                  __FOSC = 0xf80008
+                    0xf8000a                  __FWDT = 0xf8000a
+                    0xf8000c                  __FPOR = 0xf8000c
+                    0xf8000e                  __FICD = 0xf8000e
+                    0xf80010                  __FUID0 = 0xf80010
+                    0xf80012                  __FUID1 = 0xf80012
+                    0xf80014                  __FUID2 = 0xf80014
+                    0xf80016                  __FUID3 = 0xf80016
+                    0x0001                  __NO_HANDLES = 0x1
+                    0x0004                  __IVT_BASE = 0x4
+                    0x0104                  __AIVT_BASE = 0x104
+                    0x0800                  __DATA_BASE = 0x800
+                    0x0c00                  __YDATA_BASE = 0xc00
+                    0x1800                  __CODE_BASE = 0x1800
+
+.reset            0x000000          0x4
+                  0x000000          0x2 SHORT 0x1800 ABSOLUTE (__reset)
+                  0x000001          0x2 SHORT 0x4
+                  0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
+                  0x000003          0x2 SHORT 0x0
+
+.text             0x001800       0x3a92
+ *(.init)
+ .init            0x001800         0x32 c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
+                  0x001800                  _resetPRI
+                  0x001800                  _reset
+                  0x001822                  _psv_init
+ .init            0x001832         0x5e c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
+                  0x001832                  _data_init_standard
+                  0x001832                  _data_init
+ *(.handle)
+ *(.libc)
+ *(.libm)
+ .libm            0x001890         0x20 c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libm-coff.a(udivsi3.o)
+                  0x001890                  __udivsi3
+ *(.libdsp)
+ *(.lib*)
+ .libc.memset     0x0018b0          0xe c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libc-coff.a(memset.XXo)
+                  0x0018b0                  memset
+ *(.text)
+ .text            0x0018be        0x17c temp\adc.o
+                  0x0018be                  get_avg_adc
+                  0x0018e0                  get_avg_adc_torque
+                  0x0018fc                  setup_adc
+                  0x001968                  _ADC1Interrupt
+ .text            0x001a3a         0xae temp\bldc.o
+                  0x001a3a                  set_bldc_dir
+                  0x001a70                  _CNInterrupt
+                  0x001ab2                  setup_bldc
+ .text            0x001ae8        0x666 temp\control.o
+                  0x001ae8                  ramp_pid_gains_up
+                  0x001bd6                  ramp_pid_gains_down
+                  0x001c5c                  setup_pid
+                  0x001caa                  step_amp_out
+                  0x001cac                  step_current_pid
+                  0x001cae                  step_torque_pid
+                  0x001e38                  setup_control
+                  0x001e6c                  step_control
+ .text            0x00214e        0x35c temp\current.o
+                  0x00214e                  current_fault_mom_flag
+                  0x002160                  current_fault_cont_flag
+                  0x002172                  get_current_ma
+                  0x002176                  get_current_rms_mom_sq_ma
+                  0x00217c                  get_current_rms_cont_sq_ma
+                  0x002182                  get_current_state
+                  0x002186                  correct_mA
+                  0x0021a2                  reset_current_buf
+                  0x0021d4                  setup_current
+                  0x00221a                  step_current
+ .text            0x0024aa         0x1a temp\dio.o
+                  0x0024aa                  setup_dio
+                  0x0024ac                  ToggleHeartbeatLED
+ .text            0x0024c4       0x1be4 temp\encoder_vertx.o
+                  0x0024c4                  vertx_error
+                  0x0024cc                  get_avg_vertx
+                  0x0024e8                  vertx_error_filter
+                  0x002518                  setup_vertx
+                  0x00252e                  vertx_pos
+                  0x002536                  step_vertx
+ .text            0x0040a8        0x1f8 temp\ethercat.o
+                  0x0040a8                  eeprom_loaded
+                  0x0040ae                  step_ethercat
+                  0x0040b2                  isr_reset_outputs
+                  0x0040b4                  isr_update_outputs
+                  0x0040d0                  isr_update_input_pdo
+                  0x004132                  isr_update_inputs
+                  0x004162                  setup_spi
+                  0x00418e                  setup_ethercat
+                  0x00421e                  _INT0Interrupt
+ .text            0x0042a0          0xe temp\ethercat_appl.o
+                  0x0042a0                  APPL_StartMailboxHandler
+                  0x0042a2                  APPL_StopMailboxHandler
+                  0x0042a4                  APPL_GenerateMapping
+                  0x0042a6                  APPL_StartInputHandler
+                  0x0042a8                  APPL_StopInputHandler
+                  0x0042aa                  APPL_StartOutputHandler
+                  0x0042ac                  APPL_StopOutputHandler
+ .text            0x0042ae        0x582 temp\ethercat_hw.o
+                  0x0042ae                  GetInterruptRegister
+                  0x0042ea                  ISR_GetInterruptRegister
+                  0x004310                  AddressingEsc
+                  0x00433c                  ISR_AddressingEsc
+                  0x004364                  ISR_EscReadAccess
+                  0x0043c0                  ISR_EscWriteAccess
+                  0x00440c                  HW_EscReadAccess
+                  0x00445e                  HW_EscWriteAccess
+                  0x0044b0                  HW_Main
+                  0x004548                  HW_GetSyncMan
+                  0x0045a6                  HW_ResetIntMask
+                  0x004652                  HW_SetIntMask
+                  0x0046fc                  HW_SetAlStatus
+                  0x0047a2                  HW_DisableSyncManChannel
+                  0x0047ea                  HW_EnableSyncManChannel
+ .text            0x004830        0x702 temp\ethercat_slave_fsm.o
+                  0x004830                  CheckSmChannelParameters
+                  0x004902                  StartInputHandler
+                  0x004960                  StartOutputHandler
+                  0x0049d8                  StopOutputHandler
+                  0x0049ee                  StopInputHandler
+                  0x004a08                  ECAT_Init
+                  0x004a28                  ECAT_Main
+                  0x004a2a                  CheckSmSettings
+                  0x004b42                  AL_ControlInd
+ .text            0x004f32         0x50 temp\main.o
+                  0x004f32                  main
+ .text            0x004f82        0x1fe temp\pwm.o
+                  0x004f82                  pwm_cmd
+                  0x004f8a                  pwm_deadband
+                  0x004fb0                  invert_and_clamp_pwm
+                  0x004ff0                  clamp_pwm
+                  0x00501c                  setup_pwm
+                  0x0050a2                  _MPWM1Interrupt
+                  0x0050a6                  set_pwm
+ .text            0x005180        0x112 temp\setup.o
+                  0x005180                  setup_interrupt_priorities
+                  0x0051ae                  setup_oscillator
+                  0x0051c8                  setup_ports
+                  0x005212                  setup_peripheral_pin_select
+                  0x005256                  us_delay
+                  0x00526a                  ms_delay
+                  0x00527e                  us100_delay
+
+__FBS
+ *(__FBS.sec)
+
+__FGS             0xf80004          0x2
+ *(__FGS.sec)
+ __FGS.sec        0xf80004          0x2 FGS
+                  0xf80004                  _FGS.sec
+
+__FOSCSEL         0xf80006          0x2
+ *(__FOSCSEL.sec)
+ __FOSCSEL.sec    0xf80006          0x2 temp\main.o
+
+__FOSC            0xf80008          0x2
+ *(__FOSC.sec)
+ __FOSC.sec       0xf80008          0x2 temp\main.o
+
+__FWDT            0xf8000a          0x2
+ *(__FWDT.sec)
+ __FWDT.sec       0xf8000a          0x2 temp\main.o
+
+__FPOR            0xf8000c          0x2
+ *(__FPOR.sec)
+ __FPOR.sec       0xf8000c          0x2 temp\main.o
+
+__FICD            0xf8000e          0x2
+ *(__FICD.sec)
+ __FICD.sec       0xf8000e          0x2 temp\main.o
+
+__FUID0
+ *(__FUID0.sec)
+
+__FUID1
+ *(__FUID1.sec)
+
+__FUID2
+ *(__FUID2.sec)
+
+__FUID3
+ *(__FUID3.sec)
+
+.comment
+ *(.comment)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.ivt              0x000004         0xfc
+                  0x000004          0x4 LONG 0x52fe DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
+                  0x000006          0x4 LONG 0x52fe DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
+                  0x000008          0x4 LONG 0x52fe DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000a          0x4 LONG 0x52fe DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000c          0x4 LONG 0x52fe DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
+                  0x00000e          0x4 LONG 0x52fe DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt)
+                  0x000010          0x4 LONG 0x52fe DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
+                  0x000012          0x4 LONG 0x52fe DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
+                  0x000014          0x4 LONG 0x421e DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000016          0x4 LONG 0x52fe DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000018          0x4 LONG 0x52fe DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001a          0x4 LONG 0x52fe DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00001c          0x4 LONG 0x52fe DEFINED (__Interrupt4)?ABSOLUTE (__Interrupt4):ABSOLUTE (__DefaultInterrupt)
+                  0x00001e          0x4 LONG 0x52fe DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000020          0x4 LONG 0x52fe DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000022          0x4 LONG 0x52fe DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000024          0x4 LONG 0x52fe DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000026          0x4 LONG 0x52fe DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000028          0x4 LONG 0x52fe DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002a          0x4 LONG 0x52fe DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002c          0x4 LONG 0x52fe DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00002e          0x4 LONG 0x1968 DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000030          0x4 LONG 0x52fe DEFINED (__Interrupt14)?ABSOLUTE (__Interrupt14):ABSOLUTE (__DefaultInterrupt)
+                  0x000032          0x4 LONG 0x52fe DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
+                  0x000034          0x4 LONG 0x52fe DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000036          0x4 LONG 0x52fe DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000038          0x4 LONG 0x52fe DEFINED (__Interrupt18)?ABSOLUTE (__Interrupt18):ABSOLUTE (__DefaultInterrupt)
+                  0x00003a          0x4 LONG 0x1a70 DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003c          0x4 LONG 0x52fe DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00003e          0x4 LONG 0x52fe DEFINED (__Interrupt21)?ABSOLUTE (__Interrupt21):ABSOLUTE (__DefaultInterrupt)
+                  0x000040          0x4 LONG 0x52fe DEFINED (__IC7Interrupt)?ABSOLUTE (__IC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000042          0x4 LONG 0x52fe DEFINED (__IC8Interrupt)?ABSOLUTE (__IC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000044          0x4 LONG 0x52fe DEFINED (__Interrupt24)?ABSOLUTE (__Interrupt24):ABSOLUTE (__DefaultInterrupt)
+                  0x000046          0x4 LONG 0x52fe DEFINED (__Interrupt25)?ABSOLUTE (__Interrupt25):ABSOLUTE (__DefaultInterrupt)
+                  0x000048          0x4 LONG 0x52fe DEFINED (__Interrupt26)?ABSOLUTE (__Interrupt26):ABSOLUTE (__DefaultInterrupt)
+                  0x00004a          0x4 LONG 0x52fe DEFINED (__Interrupt27)?ABSOLUTE (__Interrupt27):ABSOLUTE (__DefaultInterrupt)
+                  0x00004c          0x4 LONG 0x52fe DEFINED (__Interrupt28)?ABSOLUTE (__Interrupt28):ABSOLUTE (__DefaultInterrupt)
+                  0x00004e          0x4 LONG 0x52fe DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000050          0x4 LONG 0x52fe DEFINED (__Interrupt30)?ABSOLUTE (__Interrupt30):ABSOLUTE (__DefaultInterrupt)
+                  0x000052          0x4 LONG 0x52fe DEFINED (__Interrupt31)?ABSOLUTE (__Interrupt31):ABSOLUTE (__DefaultInterrupt)
+                  0x000054          0x4 LONG 0x52fe DEFINED (__Interrupt32)?ABSOLUTE (__Interrupt32):ABSOLUTE (__DefaultInterrupt)
+                  0x000056          0x4 LONG 0x52fe DEFINED (__Interrupt33)?ABSOLUTE (__Interrupt33):ABSOLUTE (__DefaultInterrupt)
+                  0x000058          0x4 LONG 0x52fe DEFINED (__Interrupt34)?ABSOLUTE (__Interrupt34):ABSOLUTE (__DefaultInterrupt)
+                  0x00005a          0x4 LONG 0x52fe DEFINED (__Interrupt35)?ABSOLUTE (__Interrupt35):ABSOLUTE (__DefaultInterrupt)
+                  0x00005c          0x4 LONG 0x52fe DEFINED (__Interrupt36)?ABSOLUTE (__Interrupt36):ABSOLUTE (__DefaultInterrupt)
+                  0x00005e          0x4 LONG 0x52fe DEFINED (__Interrupt37)?ABSOLUTE (__Interrupt37):ABSOLUTE (__DefaultInterrupt)
+                  0x000060          0x4 LONG 0x52fe DEFINED (__Interrupt38)?ABSOLUTE (__Interrupt38):ABSOLUTE (__DefaultInterrupt)
+                  0x000062          0x4 LONG 0x52fe DEFINED (__Interrupt39)?ABSOLUTE (__Interrupt39):ABSOLUTE (__DefaultInterrupt)
+                  0x000064          0x4 LONG 0x52fe DEFINED (__Interrupt40)?ABSOLUTE (__Interrupt40):ABSOLUTE (__DefaultInterrupt)
+                  0x000066          0x4 LONG 0x52fe DEFINED (__Interrupt41)?ABSOLUTE (__Interrupt41):ABSOLUTE (__DefaultInterrupt)
+                  0x000068          0x4 LONG 0x52fe DEFINED (__Interrupt42)?ABSOLUTE (__Interrupt42):ABSOLUTE (__DefaultInterrupt)
+                  0x00006a          0x4 LONG 0x52fe DEFINED (__Interrupt43)?ABSOLUTE (__Interrupt43):ABSOLUTE (__DefaultInterrupt)
+                  0x00006c          0x4 LONG 0x52fe DEFINED (__Interrupt44)?ABSOLUTE (__Interrupt44):ABSOLUTE (__DefaultInterrupt)
+                  0x00006e          0x4 LONG 0x52fe DEFINED (__Interrupt45)?ABSOLUTE (__Interrupt45):ABSOLUTE (__DefaultInterrupt)
+                  0x000070          0x4 LONG 0x52fe DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt)
+                  0x000072          0x4 LONG 0x52fe DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt)
+                  0x000074          0x4 LONG 0x52fe DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt)
+                  0x000076          0x4 LONG 0x52fe DEFINED (__Interrupt49)?ABSOLUTE (__Interrupt49):ABSOLUTE (__DefaultInterrupt)
+                  0x000078          0x4 LONG 0x52fe DEFINED (__Interrupt50)?ABSOLUTE (__Interrupt50):ABSOLUTE (__DefaultInterrupt)
+                  0x00007a          0x4 LONG 0x52fe DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt)
+                  0x00007c          0x4 LONG 0x52fe DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt)
+                  0x00007e          0x4 LONG 0x52fe DEFINED (__Interrupt53)?ABSOLUTE (__Interrupt53):ABSOLUTE (__DefaultInterrupt)
+                  0x000080          0x4 LONG 0x52fe DEFINED (__Interrupt54)?ABSOLUTE (__Interrupt54):ABSOLUTE (__DefaultInterrupt)
+                  0x000082          0x4 LONG 0x52fe DEFINED (__Interrupt55)?ABSOLUTE (__Interrupt55):ABSOLUTE (__DefaultInterrupt)
+                  0x000084          0x4 LONG 0x52fe DEFINED (__Interrupt56)?ABSOLUTE (__Interrupt56):ABSOLUTE (__DefaultInterrupt)
+                  0x000086          0x4 LONG 0x50a2 DEFINED (__MPWM1Interrupt)?ABSOLUTE (__MPWM1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000088          0x4 LONG 0x52fe DEFINED (__QEIInterrupt)?ABSOLUTE (__QEIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00008a          0x4 LONG 0x52fe DEFINED (__Interrupt59)?ABSOLUTE (__Interrupt59):ABSOLUTE (__DefaultInterrupt)
+                  0x00008c          0x4 LONG 0x52fe DEFINED (__Interrupt60)?ABSOLUTE (__Interrupt60):ABSOLUTE (__DefaultInterrupt)
+                  0x00008e          0x4 LONG 0x52fe DEFINED (__Interrupt61)?ABSOLUTE (__Interrupt61):ABSOLUTE (__DefaultInterrupt)
+                  0x000090          0x4 LONG 0x52fe DEFINED (__Interrupt62)?ABSOLUTE (__Interrupt62):ABSOLUTE (__DefaultInterrupt)
+                  0x000092          0x4 LONG 0x52fe DEFINED (__FLTA1Interrupt)?ABSOLUTE (__FLTA1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000094          0x4 LONG 0x52fe DEFINED (__Interrupt64)?ABSOLUTE (__Interrupt64):ABSOLUTE (__DefaultInterrupt)
+                  0x000096          0x4 LONG 0x52fe DEFINED (__U1ErrInterrupt)?ABSOLUTE (__U1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000098          0x4 LONG 0x52fe DEFINED (__Interrupt66)?ABSOLUTE (__Interrupt66):ABSOLUTE (__DefaultInterrupt)
+                  0x00009a          0x4 LONG 0x52fe DEFINED (__Interrupt67)?ABSOLUTE (__Interrupt67):ABSOLUTE (__DefaultInterrupt)
+                  0x00009c          0x4 LONG 0x52fe DEFINED (__Interrupt68)?ABSOLUTE (__Interrupt68):ABSOLUTE (__DefaultInterrupt)
+                  0x00009e          0x4 LONG 0x52fe DEFINED (__Interrupt69)?ABSOLUTE (__Interrupt69):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a0          0x4 LONG 0x52fe DEFINED (__Interrupt70)?ABSOLUTE (__Interrupt70):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a2          0x4 LONG 0x52fe DEFINED (__Interrupt71)?ABSOLUTE (__Interrupt71):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a4          0x4 LONG 0x52fe DEFINED (__Interrupt72)?ABSOLUTE (__Interrupt72):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a6          0x4 LONG 0x52fe DEFINED (__MPWM2Interrupt)?ABSOLUTE (__MPWM2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000a8          0x4 LONG 0x52fe DEFINED (__FLTA2Interrupt)?ABSOLUTE (__FLTA2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0000aa          0x4 LONG 0x52fe DEFINED (__Interrupt75)?ABSOLUTE (__Interrupt75):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ac          0x4 LONG 0x52fe DEFINED (__Interrupt76)?ABSOLUTE (__Interrupt76):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ae          0x4 LONG 0x52fe DEFINED (__Interrupt77)?ABSOLUTE (__Interrupt77):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b0          0x4 LONG 0x52fe DEFINED (__Interrupt78)?ABSOLUTE (__Interrupt78):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b2          0x4 LONG 0x52fe DEFINED (__Interrupt79)?ABSOLUTE (__Interrupt79):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b4          0x4 LONG 0x52fe DEFINED (__Interrupt80)?ABSOLUTE (__Interrupt80):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b6          0x4 LONG 0x52fe DEFINED (__Interrupt81)?ABSOLUTE (__Interrupt81):ABSOLUTE (__DefaultInterrupt)
+                  0x0000b8          0x4 LONG 0x52fe DEFINED (__Interrupt82)?ABSOLUTE (__Interrupt82):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ba          0x4 LONG 0x52fe DEFINED (__Interrupt83)?ABSOLUTE (__Interrupt83):ABSOLUTE (__DefaultInterrupt)
+                  0x0000bc          0x4 LONG 0x52fe DEFINED (__Interrupt84)?ABSOLUTE (__Interrupt84):ABSOLUTE (__DefaultInterrupt)
+                  0x0000be          0x4 LONG 0x52fe DEFINED (__Interrupt85)?ABSOLUTE (__Interrupt85):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c0          0x4 LONG 0x52fe DEFINED (__Interrupt86)?ABSOLUTE (__Interrupt86):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c2          0x4 LONG 0x52fe DEFINED (__Interrupt87)?ABSOLUTE (__Interrupt87):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c4          0x4 LONG 0x52fe DEFINED (__Interrupt88)?ABSOLUTE (__Interrupt88):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c6          0x4 LONG 0x52fe DEFINED (__Interrupt89)?ABSOLUTE (__Interrupt89):ABSOLUTE (__DefaultInterrupt)
+                  0x0000c8          0x4 LONG 0x52fe DEFINED (__Interrupt90)?ABSOLUTE (__Interrupt90):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ca          0x4 LONG 0x52fe DEFINED (__Interrupt91)?ABSOLUTE (__Interrupt91):ABSOLUTE (__DefaultInterrupt)
+                  0x0000cc          0x4 LONG 0x52fe DEFINED (__Interrupt92)?ABSOLUTE (__Interrupt92):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ce          0x4 LONG 0x52fe DEFINED (__Interrupt93)?ABSOLUTE (__Interrupt93):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d0          0x4 LONG 0x52fe DEFINED (__Interrupt94)?ABSOLUTE (__Interrupt94):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d2          0x4 LONG 0x52fe DEFINED (__Interrupt95)?ABSOLUTE (__Interrupt95):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d4          0x4 LONG 0x52fe DEFINED (__Interrupt96)?ABSOLUTE (__Interrupt96):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d6          0x4 LONG 0x52fe DEFINED (__Interrupt97)?ABSOLUTE (__Interrupt97):ABSOLUTE (__DefaultInterrupt)
+                  0x0000d8          0x4 LONG 0x52fe DEFINED (__Interrupt98)?ABSOLUTE (__Interrupt98):ABSOLUTE (__DefaultInterrupt)
+                  0x0000da          0x4 LONG 0x52fe DEFINED (__Interrupt99)?ABSOLUTE (__Interrupt99):ABSOLUTE (__DefaultInterrupt)
+                  0x0000dc          0x4 LONG 0x52fe DEFINED (__Interrupt100)?ABSOLUTE (__Interrupt100):ABSOLUTE (__DefaultInterrupt)
+                  0x0000de          0x4 LONG 0x52fe DEFINED (__Interrupt101)?ABSOLUTE (__Interrupt101):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e0          0x4 LONG 0x52fe DEFINED (__Interrupt102)?ABSOLUTE (__Interrupt102):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e2          0x4 LONG 0x52fe DEFINED (__Interrupt103)?ABSOLUTE (__Interrupt103):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e4          0x4 LONG 0x52fe DEFINED (__Interrupt104)?ABSOLUTE (__Interrupt104):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e6          0x4 LONG 0x52fe DEFINED (__Interrupt105)?ABSOLUTE (__Interrupt105):ABSOLUTE (__DefaultInterrupt)
+                  0x0000e8          0x4 LONG 0x52fe DEFINED (__Interrupt106)?ABSOLUTE (__Interrupt106):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ea          0x4 LONG 0x52fe DEFINED (__Interrupt107)?ABSOLUTE (__Interrupt107):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ec          0x4 LONG 0x52fe DEFINED (__Interrupt108)?ABSOLUTE (__Interrupt108):ABSOLUTE (__DefaultInterrupt)
+                  0x0000ee          0x4 LONG 0x52fe DEFINED (__Interrupt109)?ABSOLUTE (__Interrupt109):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f0          0x4 LONG 0x52fe DEFINED (__Interrupt110)?ABSOLUTE (__Interrupt110):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f2          0x4 LONG 0x52fe DEFINED (__Interrupt111)?ABSOLUTE (__Interrupt111):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f4          0x4 LONG 0x52fe DEFINED (__Interrupt112)?ABSOLUTE (__Interrupt112):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f6          0x4 LONG 0x52fe DEFINED (__Interrupt113)?ABSOLUTE (__Interrupt113):ABSOLUTE (__DefaultInterrupt)
+                  0x0000f8          0x4 LONG 0x52fe DEFINED (__Interrupt114)?ABSOLUTE (__Interrupt114):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fa          0x4 LONG 0x52fe DEFINED (__Interrupt115)?ABSOLUTE (__Interrupt115):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fc          0x4 LONG 0x52fe DEFINED (__Interrupt116)?ABSOLUTE (__Interrupt116):ABSOLUTE (__DefaultInterrupt)
+                  0x0000fe          0x4 LONG 0x52fe DEFINED (__Interrupt117)?ABSOLUTE (__Interrupt117):ABSOLUTE (__DefaultInterrupt)
+
+.aivt             0x000104         0xfc
+                  0x000104          0x4 LONG 0x52fe DEFINED (__AltReservedTrap0)?ABSOLUTE (__AltReservedTrap0):DEFINED (__ReservedTrap0)?ABSOLUTE (__ReservedTrap0):ABSOLUTE (__DefaultInterrupt)
+                  0x000106          0x4 LONG 0x52fe DEFINED (__AltOscillatorFail)?ABSOLUTE (__AltOscillatorFail):DEFINED (__OscillatorFail)?ABSOLUTE (__OscillatorFail):ABSOLUTE (__DefaultInterrupt)
+                  0x000108          0x4 LONG 0x52fe DEFINED (__AltAddressError)?ABSOLUTE (__AltAddressError):DEFINED (__AddressError)?ABSOLUTE (__AddressError):ABSOLUTE (__DefaultInterrupt)
+                  0x00010a          0x4 LONG 0x52fe DEFINED (__AltStackError)?ABSOLUTE (__AltStackError):DEFINED (__StackError)?ABSOLUTE (__StackError):ABSOLUTE (__DefaultInterrupt)
+                  0x00010c          0x4 LONG 0x52fe DEFINED (__AltMathError)?ABSOLUTE (__AltMathError):DEFINED (__MathError)?ABSOLUTE (__MathError):ABSOLUTE (__DefaultInterrupt)
+                  0x00010e          0x4 LONG 0x52fe DEFINED (__AltReservedTrap5)?ABSOLUTE (__AltReservedTrap5):DEFINED (__ReservedTrap5)?ABSOLUTE (__ReservedTrap5):ABSOLUTE (__DefaultInterrupt)
+                  0x000110          0x4 LONG 0x52fe DEFINED (__AltReservedTrap6)?ABSOLUTE (__AltReservedTrap6):DEFINED (__ReservedTrap6)?ABSOLUTE (__ReservedTrap6):ABSOLUTE (__DefaultInterrupt)
+                  0x000112          0x4 LONG 0x52fe DEFINED (__AltReservedTrap7)?ABSOLUTE (__AltReservedTrap7):DEFINED (__ReservedTrap7)?ABSOLUTE (__ReservedTrap7):ABSOLUTE (__DefaultInterrupt)
+                  0x000114          0x4 LONG 0x421e DEFINED (__AltINT0Interrupt)?ABSOLUTE (__AltINT0Interrupt):DEFINED (__INT0Interrupt)?ABSOLUTE (__INT0Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000116          0x4 LONG 0x52fe DEFINED (__AltIC1Interrupt)?ABSOLUTE (__AltIC1Interrupt):DEFINED (__IC1Interrupt)?ABSOLUTE (__IC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000118          0x4 LONG 0x52fe DEFINED (__AltOC1Interrupt)?ABSOLUTE (__AltOC1Interrupt):DEFINED (__OC1Interrupt)?ABSOLUTE (__OC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011a          0x4 LONG 0x52fe DEFINED (__AltT1Interrupt)?ABSOLUTE (__AltT1Interrupt):DEFINED (__T1Interrupt)?ABSOLUTE (__T1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00011c          0x4 LONG 0x52fe DEFINED (__AltInterrupt4)?ABSOLUTE (__AltInterrupt4):DEFINED (__Interrupt4)?ABSOLUTE (__Interrupt4):ABSOLUTE (__DefaultInterrupt)
+                  0x00011e          0x4 LONG 0x52fe DEFINED (__AltIC2Interrupt)?ABSOLUTE (__AltIC2Interrupt):DEFINED (__IC2Interrupt)?ABSOLUTE (__IC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000120          0x4 LONG 0x52fe DEFINED (__AltOC2Interrupt)?ABSOLUTE (__AltOC2Interrupt):DEFINED (__OC2Interrupt)?ABSOLUTE (__OC2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000122          0x4 LONG 0x52fe DEFINED (__AltT2Interrupt)?ABSOLUTE (__AltT2Interrupt):DEFINED (__T2Interrupt)?ABSOLUTE (__T2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000124          0x4 LONG 0x52fe DEFINED (__AltT3Interrupt)?ABSOLUTE (__AltT3Interrupt):DEFINED (__T3Interrupt)?ABSOLUTE (__T3Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000126          0x4 LONG 0x52fe DEFINED (__AltSPI1ErrInterrupt)?ABSOLUTE (__AltSPI1ErrInterrupt):DEFINED (__SPI1ErrInterrupt)?ABSOLUTE (__SPI1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000128          0x4 LONG 0x52fe DEFINED (__AltSPI1Interrupt)?ABSOLUTE (__AltSPI1Interrupt):DEFINED (__SPI1Interrupt)?ABSOLUTE (__SPI1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012a          0x4 LONG 0x52fe DEFINED (__AltU1RXInterrupt)?ABSOLUTE (__AltU1RXInterrupt):DEFINED (__U1RXInterrupt)?ABSOLUTE (__U1RXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012c          0x4 LONG 0x52fe DEFINED (__AltU1TXInterrupt)?ABSOLUTE (__AltU1TXInterrupt):DEFINED (__U1TXInterrupt)?ABSOLUTE (__U1TXInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00012e          0x4 LONG 0x1968 DEFINED (__AltADC1Interrupt)?ABSOLUTE (__AltADC1Interrupt):DEFINED (__ADC1Interrupt)?ABSOLUTE (__ADC1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000130          0x4 LONG 0x52fe DEFINED (__AltInterrupt14)?ABSOLUTE (__AltInterrupt14):DEFINED (__Interrupt14)?ABSOLUTE (__Interrupt14):ABSOLUTE (__DefaultInterrupt)
+                  0x000132          0x4 LONG 0x52fe DEFINED (__AltInterrupt15)?ABSOLUTE (__AltInterrupt15):DEFINED (__Interrupt15)?ABSOLUTE (__Interrupt15):ABSOLUTE (__DefaultInterrupt)
+                  0x000134          0x4 LONG 0x52fe DEFINED (__AltSI2C1Interrupt)?ABSOLUTE (__AltSI2C1Interrupt):DEFINED (__SI2C1Interrupt)?ABSOLUTE (__SI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000136          0x4 LONG 0x52fe DEFINED (__AltMI2C1Interrupt)?ABSOLUTE (__AltMI2C1Interrupt):DEFINED (__MI2C1Interrupt)?ABSOLUTE (__MI2C1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000138          0x4 LONG 0x52fe DEFINED (__AltInterrupt18)?ABSOLUTE (__AltInterrupt18):DEFINED (__Interrupt18)?ABSOLUTE (__Interrupt18):ABSOLUTE (__DefaultInterrupt)
+                  0x00013a          0x4 LONG 0x1a70 DEFINED (__AltCNInterrupt)?ABSOLUTE (__AltCNInterrupt):DEFINED (__CNInterrupt)?ABSOLUTE (__CNInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00013c          0x4 LONG 0x52fe DEFINED (__AltINT1Interrupt)?ABSOLUTE (__AltINT1Interrupt):DEFINED (__INT1Interrupt)?ABSOLUTE (__INT1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00013e          0x4 LONG 0x52fe DEFINED (__AltInterrupt21)?ABSOLUTE (__AltInterrupt21):DEFINED (__Interrupt21)?ABSOLUTE (__Interrupt21):ABSOLUTE (__DefaultInterrupt)
+                  0x000140          0x4 LONG 0x52fe DEFINED (__AltIC7Interrupt)?ABSOLUTE (__AltIC7Interrupt):DEFINED (__IC7Interrupt)?ABSOLUTE (__IC7Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000142          0x4 LONG 0x52fe DEFINED (__AltIC8Interrupt)?ABSOLUTE (__AltIC8Interrupt):DEFINED (__IC8Interrupt)?ABSOLUTE (__IC8Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000144          0x4 LONG 0x52fe DEFINED (__AltInterrupt24)?ABSOLUTE (__AltInterrupt24):DEFINED (__Interrupt24)?ABSOLUTE (__Interrupt24):ABSOLUTE (__DefaultInterrupt)
+                  0x000146          0x4 LONG 0x52fe DEFINED (__AltInterrupt25)?ABSOLUTE (__AltInterrupt25):DEFINED (__Interrupt25)?ABSOLUTE (__Interrupt25):ABSOLUTE (__DefaultInterrupt)
+                  0x000148          0x4 LONG 0x52fe DEFINED (__AltInterrupt26)?ABSOLUTE (__AltInterrupt26):DEFINED (__Interrupt26)?ABSOLUTE (__Interrupt26):ABSOLUTE (__DefaultInterrupt)
+                  0x00014a          0x4 LONG 0x52fe DEFINED (__AltInterrupt27)?ABSOLUTE (__AltInterrupt27):DEFINED (__Interrupt27)?ABSOLUTE (__Interrupt27):ABSOLUTE (__DefaultInterrupt)
+                  0x00014c          0x4 LONG 0x52fe DEFINED (__AltInterrupt28)?ABSOLUTE (__AltInterrupt28):DEFINED (__Interrupt28)?ABSOLUTE (__Interrupt28):ABSOLUTE (__DefaultInterrupt)
+                  0x00014e          0x4 LONG 0x52fe DEFINED (__AltINT2Interrupt)?ABSOLUTE (__AltINT2Interrupt):DEFINED (__INT2Interrupt)?ABSOLUTE (__INT2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000150          0x4 LONG 0x52fe DEFINED (__AltInterrupt30)?ABSOLUTE (__AltInterrupt30):DEFINED (__Interrupt30)?ABSOLUTE (__Interrupt30):ABSOLUTE (__DefaultInterrupt)
+                  0x000152          0x4 LONG 0x52fe DEFINED (__AltInterrupt31)?ABSOLUTE (__AltInterrupt31):DEFINED (__Interrupt31)?ABSOLUTE (__Interrupt31):ABSOLUTE (__DefaultInterrupt)
+                  0x000154          0x4 LONG 0x52fe DEFINED (__AltInterrupt32)?ABSOLUTE (__AltInterrupt32):DEFINED (__Interrupt32)?ABSOLUTE (__Interrupt32):ABSOLUTE (__DefaultInterrupt)
+                  0x000156          0x4 LONG 0x52fe DEFINED (__AltInterrupt33)?ABSOLUTE (__AltInterrupt33):DEFINED (__Interrupt33)?ABSOLUTE (__Interrupt33):ABSOLUTE (__DefaultInterrupt)
+                  0x000158          0x4 LONG 0x52fe DEFINED (__AltInterrupt34)?ABSOLUTE (__AltInterrupt34):DEFINED (__Interrupt34)?ABSOLUTE (__Interrupt34):ABSOLUTE (__DefaultInterrupt)
+                  0x00015a          0x4 LONG 0x52fe DEFINED (__AltInterrupt35)?ABSOLUTE (__AltInterrupt35):DEFINED (__Interrupt35)?ABSOLUTE (__Interrupt35):ABSOLUTE (__DefaultInterrupt)
+                  0x00015c          0x4 LONG 0x52fe DEFINED (__AltInterrupt36)?ABSOLUTE (__AltInterrupt36):DEFINED (__Interrupt36)?ABSOLUTE (__Interrupt36):ABSOLUTE (__DefaultInterrupt)
+                  0x00015e          0x4 LONG 0x52fe DEFINED (__AltInterrupt37)?ABSOLUTE (__AltInterrupt37):DEFINED (__Interrupt37)?ABSOLUTE (__Interrupt37):ABSOLUTE (__DefaultInterrupt)
+                  0x000160          0x4 LONG 0x52fe DEFINED (__AltInterrupt38)?ABSOLUTE (__AltInterrupt38):DEFINED (__Interrupt38)?ABSOLUTE (__Interrupt38):ABSOLUTE (__DefaultInterrupt)
+                  0x000162          0x4 LONG 0x52fe DEFINED (__AltInterrupt39)?ABSOLUTE (__AltInterrupt39):DEFINED (__Interrupt39)?ABSOLUTE (__Interrupt39):ABSOLUTE (__DefaultInterrupt)
+                  0x000164          0x4 LONG 0x52fe DEFINED (__AltInterrupt40)?ABSOLUTE (__AltInterrupt40):DEFINED (__Interrupt40)?ABSOLUTE (__Interrupt40):ABSOLUTE (__DefaultInterrupt)
+                  0x000166          0x4 LONG 0x52fe DEFINED (__AltInterrupt41)?ABSOLUTE (__AltInterrupt41):DEFINED (__Interrupt41)?ABSOLUTE (__Interrupt41):ABSOLUTE (__DefaultInterrupt)
+                  0x000168          0x4 LONG 0x52fe DEFINED (__AltInterrupt42)?ABSOLUTE (__AltInterrupt42):DEFINED (__Interrupt42)?ABSOLUTE (__Interrupt42):ABSOLUTE (__DefaultInterrupt)
+                  0x00016a          0x4 LONG 0x52fe DEFINED (__AltInterrupt43)?ABSOLUTE (__AltInterrupt43):DEFINED (__Interrupt43)?ABSOLUTE (__Interrupt43):ABSOLUTE (__DefaultInterrupt)
+                  0x00016c          0x4 LONG 0x52fe DEFINED (__AltInterrupt44)?ABSOLUTE (__AltInterrupt44):DEFINED (__Interrupt44)?ABSOLUTE (__Interrupt44):ABSOLUTE (__DefaultInterrupt)
+                  0x00016e          0x4 LONG 0x52fe DEFINED (__AltInterrupt45)?ABSOLUTE (__AltInterrupt45):DEFINED (__Interrupt45)?ABSOLUTE (__Interrupt45):ABSOLUTE (__DefaultInterrupt)
+                  0x000170          0x4 LONG 0x52fe DEFINED (__AltInterrupt46)?ABSOLUTE (__AltInterrupt46):DEFINED (__Interrupt46)?ABSOLUTE (__Interrupt46):ABSOLUTE (__DefaultInterrupt)
+                  0x000172          0x4 LONG 0x52fe DEFINED (__AltInterrupt47)?ABSOLUTE (__AltInterrupt47):DEFINED (__Interrupt47)?ABSOLUTE (__Interrupt47):ABSOLUTE (__DefaultInterrupt)
+                  0x000174          0x4 LONG 0x52fe DEFINED (__AltInterrupt48)?ABSOLUTE (__AltInterrupt48):DEFINED (__Interrupt48)?ABSOLUTE (__Interrupt48):ABSOLUTE (__DefaultInterrupt)
+                  0x000176          0x4 LONG 0x52fe DEFINED (__AltInterrupt49)?ABSOLUTE (__AltInterrupt49):DEFINED (__Interrupt49)?ABSOLUTE (__Interrupt49):ABSOLUTE (__DefaultInterrupt)
+                  0x000178          0x4 LONG 0x52fe DEFINED (__AltInterrupt50)?ABSOLUTE (__AltInterrupt50):DEFINED (__Interrupt50)?ABSOLUTE (__Interrupt50):ABSOLUTE (__DefaultInterrupt)
+                  0x00017a          0x4 LONG 0x52fe DEFINED (__AltInterrupt51)?ABSOLUTE (__AltInterrupt51):DEFINED (__Interrupt51)?ABSOLUTE (__Interrupt51):ABSOLUTE (__DefaultInterrupt)
+                  0x00017c          0x4 LONG 0x52fe DEFINED (__AltInterrupt52)?ABSOLUTE (__AltInterrupt52):DEFINED (__Interrupt52)?ABSOLUTE (__Interrupt52):ABSOLUTE (__DefaultInterrupt)
+                  0x00017e          0x4 LONG 0x52fe DEFINED (__AltInterrupt53)?ABSOLUTE (__AltInterrupt53):DEFINED (__Interrupt53)?ABSOLUTE (__Interrupt53):ABSOLUTE (__DefaultInterrupt)
+                  0x000180          0x4 LONG 0x52fe DEFINED (__AltInterrupt54)?ABSOLUTE (__AltInterrupt54):DEFINED (__Interrupt54)?ABSOLUTE (__Interrupt54):ABSOLUTE (__DefaultInterrupt)
+                  0x000182          0x4 LONG 0x52fe DEFINED (__AltInterrupt55)?ABSOLUTE (__AltInterrupt55):DEFINED (__Interrupt55)?ABSOLUTE (__Interrupt55):ABSOLUTE (__DefaultInterrupt)
+                  0x000184          0x4 LONG 0x52fe DEFINED (__AltInterrupt56)?ABSOLUTE (__AltInterrupt56):DEFINED (__Interrupt56)?ABSOLUTE (__Interrupt56):ABSOLUTE (__DefaultInterrupt)
+                  0x000186          0x4 LONG 0x50a2 DEFINED (__AltMPWM1Interrupt)?ABSOLUTE (__AltMPWM1Interrupt):DEFINED (__MPWM1Interrupt)?ABSOLUTE (__MPWM1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000188          0x4 LONG 0x52fe DEFINED (__AltQEIInterrupt)?ABSOLUTE (__AltQEIInterrupt):DEFINED (__QEIInterrupt)?ABSOLUTE (__QEIInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x00018a          0x4 LONG 0x52fe DEFINED (__AltInterrupt59)?ABSOLUTE (__AltInterrupt59):DEFINED (__Interrupt59)?ABSOLUTE (__Interrupt59):ABSOLUTE (__DefaultInterrupt)
+                  0x00018c          0x4 LONG 0x52fe DEFINED (__AltInterrupt60)?ABSOLUTE (__AltInterrupt60):DEFINED (__Interrupt60)?ABSOLUTE (__Interrupt60):ABSOLUTE (__DefaultInterrupt)
+                  0x00018e          0x4 LONG 0x52fe DEFINED (__AltInterrupt61)?ABSOLUTE (__AltInterrupt61):DEFINED (__Interrupt61)?ABSOLUTE (__Interrupt61):ABSOLUTE (__DefaultInterrupt)
+                  0x000190          0x4 LONG 0x52fe DEFINED (__AltInterrupt62)?ABSOLUTE (__AltInterrupt62):DEFINED (__Interrupt62)?ABSOLUTE (__Interrupt62):ABSOLUTE (__DefaultInterrupt)
+                  0x000192          0x4 LONG 0x52fe DEFINED (__AltFLTA1Interrupt)?ABSOLUTE (__AltFLTA1Interrupt):DEFINED (__FLTA1Interrupt)?ABSOLUTE (__FLTA1Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000194          0x4 LONG 0x52fe DEFINED (__AltInterrupt64)?ABSOLUTE (__AltInterrupt64):DEFINED (__Interrupt64)?ABSOLUTE (__Interrupt64):ABSOLUTE (__DefaultInterrupt)
+                  0x000196          0x4 LONG 0x52fe DEFINED (__AltU1ErrInterrupt)?ABSOLUTE (__AltU1ErrInterrupt):DEFINED (__U1ErrInterrupt)?ABSOLUTE (__U1ErrInterrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x000198          0x4 LONG 0x52fe DEFINED (__AltInterrupt66)?ABSOLUTE (__AltInterrupt66):DEFINED (__Interrupt66)?ABSOLUTE (__Interrupt66):ABSOLUTE (__DefaultInterrupt)
+                  0x00019a          0x4 LONG 0x52fe DEFINED (__AltInterrupt67)?ABSOLUTE (__AltInterrupt67):DEFINED (__Interrupt67)?ABSOLUTE (__Interrupt67):ABSOLUTE (__DefaultInterrupt)
+                  0x00019c          0x4 LONG 0x52fe DEFINED (__AltInterrupt68)?ABSOLUTE (__AltInterrupt68):DEFINED (__Interrupt68)?ABSOLUTE (__Interrupt68):ABSOLUTE (__DefaultInterrupt)
+                  0x00019e          0x4 LONG 0x52fe DEFINED (__AltInterrupt69)?ABSOLUTE (__AltInterrupt69):DEFINED (__Interrupt69)?ABSOLUTE (__Interrupt69):ABSOLUTE (__DefaultInterrupt)
+                  0x0001a0          0x4 LONG 0x52fe DEFINED (__AltInterrupt70)?ABSOLUTE (__AltInterrupt70):DEFINED (__Interrupt70)?ABSOLUTE (__Interrupt70):ABSOLUTE (__DefaultInterrupt)
+                  0x0001a2          0x4 LONG 0x52fe DEFINED (__AltInterrupt71)?ABSOLUTE (__AltInterrupt71):DEFINED (__Interrupt71)?ABSOLUTE (__Interrupt71):ABSOLUTE (__DefaultInterrupt)
+                  0x0001a4          0x4 LONG 0x52fe DEFINED (__AltInterrupt72)?ABSOLUTE (__AltInterrupt72):DEFINED (__Interrupt72)?ABSOLUTE (__Interrupt72):ABSOLUTE (__DefaultInterrupt)
+                  0x0001a6          0x4 LONG 0x52fe DEFINED (__AltMPWM2Interrupt)?ABSOLUTE (__AltMPWM2Interrupt):DEFINED (__MPWM2Interrupt)?ABSOLUTE (__MPWM2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0001a8          0x4 LONG 0x52fe DEFINED (__AltFLTA2Interrupt)?ABSOLUTE (__AltFLTA2Interrupt):DEFINED (__FLTA2Interrupt)?ABSOLUTE (__FLTA2Interrupt):ABSOLUTE (__DefaultInterrupt)
+                  0x0001aa          0x4 LONG 0x52fe DEFINED (__AltInterrupt75)?ABSOLUTE (__AltInterrupt75):DEFINED (__Interrupt75)?ABSOLUTE (__Interrupt75):ABSOLUTE (__DefaultInterrupt)
+                  0x0001ac          0x4 LONG 0x52fe DEFINED (__AltInterrupt76)?ABSOLUTE (__AltInterrupt76):DEFINED (__Interrupt76)?ABSOLUTE (__Interrupt76):ABSOLUTE (__DefaultInterrupt)
+                  0x0001ae          0x4 LONG 0x52fe DEFINED (__AltInterrupt77)?ABSOLUTE (__AltInterrupt77):DEFINED (__Interrupt77)?ABSOLUTE (__Interrupt77):ABSOLUTE (__DefaultInterrupt)
+                  0x0001b0          0x4 LONG 0x52fe DEFINED (__AltInterrupt78)?ABSOLUTE (__AltInterrupt78):DEFINED (__Interrupt78)?ABSOLUTE (__Interrupt78):ABSOLUTE (__DefaultInterrupt)
+                  0x0001b2          0x4 LONG 0x52fe DEFINED (__AltInterrupt79)?ABSOLUTE (__AltInterrupt79):DEFINED (__Interrupt79)?ABSOLUTE (__Interrupt79):ABSOLUTE (__DefaultInterrupt)
+                  0x0001b4          0x4 LONG 0x52fe DEFINED (__AltInterrupt80)?ABSOLUTE (__AltInterrupt80):DEFINED (__Interrupt80)?ABSOLUTE (__Interrupt80):ABSOLUTE (__DefaultInterrupt)
+                  0x0001b6          0x4 LONG 0x52fe DEFINED (__AltInterrupt81)?ABSOLUTE (__AltInterrupt81):DEFINED (__Interrupt81)?ABSOLUTE (__Interrupt81):ABSOLUTE (__DefaultInterrupt)
+                  0x0001b8          0x4 LONG 0x52fe DEFINED (__AltInterrupt82)?ABSOLUTE (__AltInterrupt82):DEFINED (__Interrupt82)?ABSOLUTE (__Interrupt82):ABSOLUTE (__DefaultInterrupt)
+                  0x0001ba          0x4 LONG 0x52fe DEFINED (__AltInterrupt83)?ABSOLUTE (__AltInterrupt83):DEFINED (__Interrupt83)?ABSOLUTE (__Interrupt83):ABSOLUTE (__DefaultInterrupt)
+                  0x0001bc          0x4 LONG 0x52fe DEFINED (__AltInterrupt84)?ABSOLUTE (__AltInterrupt84):DEFINED (__Interrupt84)?ABSOLUTE (__Interrupt84):ABSOLUTE (__DefaultInterrupt)
+                  0x0001be          0x4 LONG 0x52fe DEFINED (__AltInterrupt85)?ABSOLUTE (__AltInterrupt85):DEFINED (__Interrupt85)?ABSOLUTE (__Interrupt85):ABSOLUTE (__DefaultInterrupt)
+                  0x0001c0          0x4 LONG 0x52fe DEFINED (__AltInterrupt86)?ABSOLUTE (__AltInterrupt86):DEFINED (__Interrupt86)?ABSOLUTE (__Interrupt86):ABSOLUTE (__DefaultInterrupt)
+                  0x0001c2          0x4 LONG 0x52fe DEFINED (__AltInterrupt87)?ABSOLUTE (__AltInterrupt87):DEFINED (__Interrupt87)?ABSOLUTE (__Interrupt87):ABSOLUTE (__DefaultInterrupt)
+                  0x0001c4          0x4 LONG 0x52fe DEFINED (__AltInterrupt88)?ABSOLUTE (__AltInterrupt88):DEFINED (__Interrupt88)?ABSOLUTE (__Interrupt88):ABSOLUTE (__DefaultInterrupt)
+                  0x0001c6          0x4 LONG 0x52fe DEFINED (__AltInterrupt89)?ABSOLUTE (__AltInterrupt89):DEFINED (__Interrupt89)?ABSOLUTE (__Interrupt89):ABSOLUTE (__DefaultInterrupt)
+                  0x0001c8          0x4 LONG 0x52fe DEFINED (__AltInterrupt90)?ABSOLUTE (__AltInterrupt90):DEFINED (__Interrupt90)?ABSOLUTE (__Interrupt90):ABSOLUTE (__DefaultInterrupt)
+                  0x0001ca          0x4 LONG 0x52fe DEFINED (__AltInterrupt91)?ABSOLUTE (__AltInterrupt91):DEFINED (__Interrupt91)?ABSOLUTE (__Interrupt91):ABSOLUTE (__DefaultInterrupt)
+                  0x0001cc          0x4 LONG 0x52fe DEFINED (__AltInterrupt92)?ABSOLUTE (__AltInterrupt92):DEFINED (__Interrupt92)?ABSOLUTE (__Interrupt92):ABSOLUTE (__DefaultInterrupt)
+                  0x0001ce          0x4 LONG 0x52fe DEFINED (__AltInterrupt93)?ABSOLUTE (__AltInterrupt93):DEFINED (__Interrupt93)?ABSOLUTE (__Interrupt93):ABSOLUTE (__DefaultInterrupt)
+                  0x0001d0          0x4 LONG 0x52fe DEFINED (__AltInterrupt94)?ABSOLUTE (__AltInterrupt94):DEFINED (__Interrupt94)?ABSOLUTE (__Interrupt94):ABSOLUTE (__DefaultInterrupt)
+                  0x0001d2          0x4 LONG 0x52fe DEFINED (__AltInterrupt95)?ABSOLUTE (__AltInterrupt95):DEFINED (__Interrupt95)?ABSOLUTE (__Interrupt95):ABSOLUTE (__DefaultInterrupt)
+                  0x0001d4          0x4 LONG 0x52fe DEFINED (__AltInterrupt96)?ABSOLUTE (__AltInterrupt96):DEFINED (__Interrupt96)?ABSOLUTE (__Interrupt96):ABSOLUTE (__DefaultInterrupt)
+                  0x0001d6          0x4 LONG 0x52fe DEFINED (__AltInterrupt97)?ABSOLUTE (__AltInterrupt97):DEFINED (__Interrupt97)?ABSOLUTE (__Interrupt97):ABSOLUTE (__DefaultInterrupt)
+                  0x0001d8          0x4 LONG 0x52fe DEFINED (__AltInterrupt98)?ABSOLUTE (__AltInterrupt98):DEFINED (__Interrupt98)?ABSOLUTE (__Interrupt98):ABSOLUTE (__DefaultInterrupt)
+                  0x0001da          0x4 LONG 0x52fe DEFINED (__AltInterrupt99)?ABSOLUTE (__AltInterrupt99):DEFINED (__Interrupt99)?ABSOLUTE (__Interrupt99):ABSOLUTE (__DefaultInterrupt)
+                  0x0001dc          0x4 LONG 0x52fe DEFINED (__AltInterrupt100)?ABSOLUTE (__AltInterrupt100):DEFINED (__Interrupt100)?ABSOLUTE (__Interrupt100):ABSOLUTE (__DefaultInterrupt)
+                  0x0001de          0x4 LONG 0x52fe DEFINED (__AltInterrupt101)?ABSOLUTE (__AltInterrupt101):DEFINED (__Interrupt101)?ABSOLUTE (__Interrupt101):ABSOLUTE (__DefaultInterrupt)
+                  0x0001e0          0x4 LONG 0x52fe DEFINED (__AltInterrupt102)?ABSOLUTE (__AltInterrupt102):DEFINED (__Interrupt102)?ABSOLUTE (__Interrupt102):ABSOLUTE (__DefaultInterrupt)
+                  0x0001e2          0x4 LONG 0x52fe DEFINED (__AltInterrupt103)?ABSOLUTE (__AltInterrupt103):DEFINED (__Interrupt103)?ABSOLUTE (__Interrupt103):ABSOLUTE (__DefaultInterrupt)
+                  0x0001e4          0x4 LONG 0x52fe DEFINED (__AltInterrupt104)?ABSOLUTE (__AltInterrupt104):DEFINED (__Interrupt104)?ABSOLUTE (__Interrupt104):ABSOLUTE (__DefaultInterrupt)
+                  0x0001e6          0x4 LONG 0x52fe DEFINED (__AltInterrupt105)?ABSOLUTE (__AltInterrupt105):DEFINED (__Interrupt105)?ABSOLUTE (__Interrupt105):ABSOLUTE (__DefaultInterrupt)
+                  0x0001e8          0x4 LONG 0x52fe DEFINED (__AltInterrupt106)?ABSOLUTE (__AltInterrupt106):DEFINED (__Interrupt106)?ABSOLUTE (__Interrupt106):ABSOLUTE (__DefaultInterrupt)
+                  0x0001ea          0x4 LONG 0x52fe DEFINED (__AltInterrupt107)?ABSOLUTE (__AltInterrupt107):DEFINED (__Interrupt107)?ABSOLUTE (__Interrupt107):ABSOLUTE (__DefaultInterrupt)
+                  0x0001ec          0x4 LONG 0x52fe DEFINED (__AltInterrupt108)?ABSOLUTE (__AltInterrupt108):DEFINED (__Interrupt108)?ABSOLUTE (__Interrupt108):ABSOLUTE (__DefaultInterrupt)
+                  0x0001ee          0x4 LONG 0x52fe DEFINED (__AltInterrupt109)?ABSOLUTE (__AltInterrupt109):DEFINED (__Interrupt109)?ABSOLUTE (__Interrupt109):ABSOLUTE (__DefaultInterrupt)
+                  0x0001f0          0x4 LONG 0x52fe DEFINED (__AltInterrupt110)?ABSOLUTE (__AltInterrupt110):DEFINED (__Interrupt110)?ABSOLUTE (__Interrupt110):ABSOLUTE (__DefaultInterrupt)
+                  0x0001f2          0x4 LONG 0x52fe DEFINED (__AltInterrupt111)?ABSOLUTE (__AltInterrupt111):DEFINED (__Interrupt111)?ABSOLUTE (__Interrupt111):ABSOLUTE (__DefaultInterrupt)
+                  0x0001f4          0x4 LONG 0x52fe DEFINED (__AltInterrupt112)?ABSOLUTE (__AltInterrupt112):DEFINED (__Interrupt112)?ABSOLUTE (__Interrupt112):ABSOLUTE (__DefaultInterrupt)
+                  0x0001f6          0x4 LONG 0x52fe DEFINED (__AltInterrupt113)?ABSOLUTE (__AltInterrupt113):DEFINED (__Interrupt113)?ABSOLUTE (__Interrupt113):ABSOLUTE (__DefaultInterrupt)
+                  0x0001f8          0x4 LONG 0x52fe DEFINED (__AltInterrupt114)?ABSOLUTE (__AltInterrupt114):DEFINED (__Interrupt114)?ABSOLUTE (__Interrupt114):ABSOLUTE (__DefaultInterrupt)
+                  0x0001fa          0x4 LONG 0x52fe DEFINED (__AltInterrupt115)?ABSOLUTE (__AltInterrupt115):DEFINED (__Interrupt115)?ABSOLUTE (__Interrupt115):ABSOLUTE (__DefaultInterrupt)
+                  0x0001fc          0x4 LONG 0x52fe DEFINED (__AltInterrupt116)?ABSOLUTE (__AltInterrupt116):DEFINED (__Interrupt116)?ABSOLUTE (__Interrupt116):ABSOLUTE (__DefaultInterrupt)
+                  0x0001fe          0x4 LONG 0x52fe DEFINED (__AltInterrupt117)?ABSOLUTE (__AltInterrupt117):DEFINED (__Interrupt117)?ABSOLUTE (__Interrupt117):ABSOLUTE (__DefaultInterrupt)
+                    0x0000                  WREG0 = 0x0
+                    0x0000                  _WREG0 = 0x0
+                    0x0002                  WREG1 = 0x2
+                    0x0002                  _WREG1 = 0x2
+                    0x0004                  WREG2 = 0x4
+                    0x0004                  _WREG2 = 0x4
+                    0x0006                  WREG3 = 0x6
+                    0x0006                  _WREG3 = 0x6
+                    0x0008                  WREG4 = 0x8
+                    0x0008                  _WREG4 = 0x8
+                    0x000a                  WREG5 = 0xa
+                    0x000a                  _WREG5 = 0xa
+                    0x000c                  WREG6 = 0xc
+                    0x000c                  _WREG6 = 0xc
+                    0x000e                  WREG7 = 0xe
+                    0x000e                  _WREG7 = 0xe
+                    0x0010                  WREG8 = 0x10
+                    0x0010                  _WREG8 = 0x10
+                    0x0012                  WREG9 = 0x12
+                    0x0012                  _WREG9 = 0x12
+                    0x0014                  WREG10 = 0x14
+                    0x0014                  _WREG10 = 0x14
+                    0x0016                  WREG11 = 0x16
+                    0x0016                  _WREG11 = 0x16
+                    0x0018                  WREG12 = 0x18
+                    0x0018                  _WREG12 = 0x18
+                    0x001a                  WREG13 = 0x1a
+                    0x001a                  _WREG13 = 0x1a
+                    0x001c                  WREG14 = 0x1c
+                    0x001c                  _WREG14 = 0x1c
+                    0x001e                  WREG15 = 0x1e
+                    0x001e                  _WREG15 = 0x1e
+                    0x0020                  SPLIM = 0x20
+                    0x0020                  _SPLIM = 0x20
+                    0x0022                  ACCAL = 0x22
+                    0x0022                  _ACCAL = 0x22
+                    0x0024                  ACCAH = 0x24
+                    0x0024                  _ACCAH = 0x24
+                    0x0026                  ACCAU = 0x26
+                    0x0026                  _ACCAU = 0x26
+                    0x0028                  ACCBL = 0x28
+                    0x0028                  _ACCBL = 0x28
+                    0x002a                  ACCBH = 0x2a
+                    0x002a                  _ACCBH = 0x2a
+                    0x002c                  ACCBU = 0x2c
+                    0x002c                  _ACCBU = 0x2c
+                    0x002e                  PCL = 0x2e
+                    0x002e                  _PCL = 0x2e
+                    0x0030                  PCH = 0x30
+                    0x0030                  _PCH = 0x30
+                    0x0032                  TBLPAG = 0x32
+                    0x0032                  _TBLPAG = 0x32
+                    0x0034                  PSVPAG = 0x34
+                    0x0034                  _PSVPAG = 0x34
+                    0x0036                  RCOUNT = 0x36
+                    0x0036                  _RCOUNT = 0x36
+                    0x0038                  DCOUNT = 0x38
+                    0x0038                  _DCOUNT = 0x38
+                    0x003a                  DOSTARTL = 0x3a
+                    0x003a                  _DOSTARTL = 0x3a
+                    0x003c                  DOSTARTH = 0x3c
+                    0x003c                  _DOSTARTH = 0x3c
+                    0x003e                  DOENDL = 0x3e
+                    0x003e                  _DOENDL = 0x3e
+                    0x0040                  DOENDH = 0x40
+                    0x0040                  _DOENDH = 0x40
+                    0x0042                  SR = 0x42
+                    0x0042                  _SR = 0x42
+                    0x0042                  _SRbits = 0x42
+                    0x0044                  CORCON = 0x44
+                    0x0044                  _CORCON = 0x44
+                    0x0044                  _CORCONbits = 0x44
+                    0x0046                  MODCON = 0x46
+                    0x0046                  _MODCON = 0x46
+                    0x0046                  _MODCONbits = 0x46
+                    0x0048                  XMODSRT = 0x48
+                    0x0048                  _XMODSRT = 0x48
+                    0x004a                  XMODEND = 0x4a
+                    0x004a                  _XMODEND = 0x4a
+                    0x004c                  YMODSRT = 0x4c
+                    0x004c                  _YMODSRT = 0x4c
+                    0x004e                  YMODEND = 0x4e
+                    0x004e                  _YMODEND = 0x4e
+                    0x0050                  XBREV = 0x50
+                    0x0050                  _XBREV = 0x50
+                    0x0050                  _XBREVbits = 0x50
+                    0x0052                  DISICNT = 0x52
+                    0x0052                  _DISICNT = 0x52
+                    0x0060                  CNEN1 = 0x60
+                    0x0060                  _CNEN1 = 0x60
+                    0x0060                  _CNEN1bits = 0x60
+                    0x0062                  CNEN2 = 0x62
+                    0x0062                  _CNEN2 = 0x62
+                    0x0062                  _CNEN2bits = 0x62
+                    0x0068                  CNPU1 = 0x68
+                    0x0068                  _CNPU1 = 0x68
+                    0x0068                  _CNPU1bits = 0x68
+                    0x006a                  CNPU2 = 0x6a
+                    0x006a                  _CNPU2 = 0x6a
+                    0x006a                  _CNPU2bits = 0x6a
+                    0x0080                  INTCON1 = 0x80
+                    0x0080                  _INTCON1 = 0x80
+                    0x0080                  _INTCON1bits = 0x80
+                    0x0082                  INTCON2 = 0x82
+                    0x0082                  _INTCON2 = 0x82
+                    0x0082                  _INTCON2bits = 0x82
+                    0x0084                  IFS0 = 0x84
+                    0x0084                  _IFS0 = 0x84
+                    0x0084                  _IFS0bits = 0x84
+                    0x0086                  IFS1 = 0x86
+                    0x0086                  _IFS1 = 0x86
+                    0x0086                  _IFS1bits = 0x86
+                    0x0088                  IFS2 = 0x88
+                    0x0088                  _IFS2 = 0x88
+                    0x0088                  _IFS2bits = 0x88
+                    0x008a                  IFS3 = 0x8a
+                    0x008a                  _IFS3 = 0x8a
+                    0x008a                  _IFS3bits = 0x8a
+                    0x008c                  IFS4 = 0x8c
+                    0x008c                  _IFS4 = 0x8c
+                    0x008c                  _IFS4bits = 0x8c
+                    0x0094                  IEC0 = 0x94
+                    0x0094                  _IEC0 = 0x94
+                    0x0094                  _IEC0bits = 0x94
+                    0x0096                  IEC1 = 0x96
+                    0x0096                  _IEC1 = 0x96
+                    0x0096                  _IEC1bits = 0x96
+                    0x009a                  IEC3 = 0x9a
+                    0x009a                  _IEC3 = 0x9a
+                    0x009a                  _IEC3bits = 0x9a
+                    0x009c                  IEC4 = 0x9c
+                    0x009c                  _IEC4 = 0x9c
+                    0x009c                  _IEC4bits = 0x9c
+                    0x00a4                  IPC0 = 0xa4
+                    0x00a4                  _IPC0 = 0xa4
+                    0x00a4                  _IPC0bits = 0xa4
+                    0x00a6                  IPC1 = 0xa6
+                    0x00a6                  _IPC1 = 0xa6
+                    0x00a6                  _IPC1bits = 0xa6
+                    0x00a8                  IPC2 = 0xa8
+                    0x00a8                  _IPC2 = 0xa8
+                    0x00a8                  _IPC2bits = 0xa8
+                    0x00aa                  IPC3 = 0xaa
+                    0x00aa                  _IPC3 = 0xaa
+                    0x00aa                  _IPC3bits = 0xaa
+                    0x00ac                  IPC4 = 0xac
+                    0x00ac                  _IPC4 = 0xac
+                    0x00ac                  _IPC4bits = 0xac
+                    0x00ae                  IPC5 = 0xae
+                    0x00ae                  _IPC5 = 0xae
+                    0x00ae                  _IPC5bits = 0xae
+                    0x00b2                  IPC7 = 0xb2
+                    0x00b2                  _IPC7 = 0xb2
+                    0x00b2                  _IPC7bits = 0xb2
+                    0x00c0                  IPC14 = 0xc0
+                    0x00c0                  _IPC14 = 0xc0
+                    0x00c0                  _IPC14bits = 0xc0
+                    0x00c2                  IPC15 = 0xc2
+                    0x00c2                  _IPC15 = 0xc2
+                    0x00c2                  _IPC15bits = 0xc2
+                    0x00c4                  IPC16 = 0xc4
+                    0x00c4                  _IPC16 = 0xc4
+                    0x00c4                  _IPC16bits = 0xc4
+                    0x00c8                  IPC18 = 0xc8
+                    0x00c8                  _IPC18 = 0xc8
+                    0x00c8                  _IPC18bits = 0xc8
+                    0x00e0                  INTTREG = 0xe0
+                    0x00e0                  _INTTREG = 0xe0
+                    0x00e0                  _INTTREGbits = 0xe0
+                    0x0100                  TMR1 = 0x100
+                    0x0100                  _TMR1 = 0x100
+                    0x0102                  PR1 = 0x102
+                    0x0102                  _PR1 = 0x102
+                    0x0104                  T1CON = 0x104
+                    0x0104                  _T1CON = 0x104
+                    0x0104                  _T1CONbits = 0x104
+                    0x0106                  TMR2 = 0x106
+                    0x0106                  _TMR2 = 0x106
+                    0x0108                  TMR3HLD = 0x108
+                    0x0108                  _TMR3HLD = 0x108
+                    0x010a                  TMR3 = 0x10a
+                    0x010a                  _TMR3 = 0x10a
+                    0x010c                  PR2 = 0x10c
+                    0x010c                  _PR2 = 0x10c
+                    0x010e                  PR3 = 0x10e
+                    0x010e                  _PR3 = 0x10e
+                    0x0110                  T2CON = 0x110
+                    0x0110                  _T2CON = 0x110
+                    0x0110                  _T2CONbits = 0x110
+                    0x0112                  T3CON = 0x112
+                    0x0112                  _T3CON = 0x112
+                    0x0112                  _T3CONbits = 0x112
+                    0x0140                  IC1BUF = 0x140
+                    0x0140                  _IC1BUF = 0x140
+                    0x0142                  IC1CON = 0x142
+                    0x0142                  _IC1CON = 0x142
+                    0x0142                  _IC1CONbits = 0x142
+                    0x0144                  IC2BUF = 0x144
+                    0x0144                  _IC2BUF = 0x144
+                    0x0146                  IC2CON = 0x146
+                    0x0146                  _IC2CON = 0x146
+                    0x0146                  _IC2CONbits = 0x146
+                    0x0158                  IC7BUF = 0x158
+                    0x0158                  _IC7BUF = 0x158
+                    0x015a                  IC7CON = 0x15a
+                    0x015a                  _IC7CON = 0x15a
+                    0x015a                  _IC7CONbits = 0x15a
+                    0x015c                  IC8BUF = 0x15c
+                    0x015c                  _IC8BUF = 0x15c
+                    0x015e                  IC8CON = 0x15e
+                    0x015e                  _IC8CON = 0x15e
+                    0x015e                  _IC8CONbits = 0x15e
+                    0x0180                  OC1RS = 0x180
+                    0x0180                  _OC1RS = 0x180
+                    0x0182                  OC1R = 0x182
+                    0x0182                  _OC1R = 0x182
+                    0x0184                  OC1CON = 0x184
+                    0x0184                  _OC1CON = 0x184
+                    0x0184                  _OC1CONbits = 0x184
+                    0x0186                  OC2RS = 0x186
+                    0x0186                  _OC2RS = 0x186
+                    0x0188                  OC2R = 0x188
+                    0x0188                  _OC2R = 0x188
+                    0x018a                  OC2CON = 0x18a
+                    0x018a                  _OC2CON = 0x18a
+                    0x018a                  _OC2CONbits = 0x18a
+                    0x01c0                  P1TCON = 0x1c0
+                    0x01c0                  _P1TCON = 0x1c0
+                    0x01c0                  _P1TCONbits = 0x1c0
+                    0x01c0                  PTCON = 0x1c0
+                    0x01c0                  _PTCON = 0x1c0
+                    0x01c0                  _PTCONbits = 0x1c0
+                    0x01c2                  P1TMR = 0x1c2
+                    0x01c2                  _P1TMR = 0x1c2
+                    0x01c2                  _P1TMRbits = 0x1c2
+                    0x01c2                  PTMR = 0x1c2
+                    0x01c2                  _PTMR = 0x1c2
+                    0x01c2                  _PTMRbits = 0x1c2
+                    0x01c4                  P1TPER = 0x1c4
+                    0x01c4                  _P1TPER = 0x1c4
+                    0x01c4                  _P1TPERbits = 0x1c4
+                    0x01c4                  PTPER = 0x1c4
+                    0x01c4                  _PTPER = 0x1c4
+                    0x01c4                  _PTPERbits = 0x1c4
+                    0x01c6                  P1SECMP = 0x1c6
+                    0x01c6                  _P1SECMP = 0x1c6
+                    0x01c6                  _P1SECMPbits = 0x1c6
+                    0x01c6                  SEVTCMP = 0x1c6
+                    0x01c6                  _SEVTCMP = 0x1c6
+                    0x01c6                  _SEVTCMPbits = 0x1c6
+                    0x01c8                  PWM1CON1 = 0x1c8
+                    0x01c8                  _PWM1CON1 = 0x1c8
+                    0x01c8                  _PWM1CON1bits = 0x1c8
+                    0x01c8                  PWMCON1 = 0x1c8
+                    0x01c8                  _PWMCON1 = 0x1c8
+                    0x01c8                  _PWMCON1bits = 0x1c8
+                    0x01ca                  PWM1CON2 = 0x1ca
+                    0x01ca                  _PWM1CON2 = 0x1ca
+                    0x01ca                  _PWM1CON2bits = 0x1ca
+                    0x01ca                  PWMCON2 = 0x1ca
+                    0x01ca                  _PWMCON2 = 0x1ca
+                    0x01ca                  _PWMCON2bits = 0x1ca
+                    0x01cc                  DTCON1 = 0x1cc
+                    0x01cc                  _DTCON1 = 0x1cc
+                    0x01cc                  _DTCON1bits = 0x1cc
+                    0x01cc                  P1DTCON1 = 0x1cc
+                    0x01cc                  _P1DTCON1 = 0x1cc
+                    0x01cc                  _P1DTCON1bits = 0x1cc
+                    0x01ce                  DTCON2 = 0x1ce
+                    0x01ce                  _DTCON2 = 0x1ce
+                    0x01ce                  _DTCON2bits = 0x1ce
+                    0x01ce                  P1DTCON2 = 0x1ce
+                    0x01ce                  _P1DTCON2 = 0x1ce
+                    0x01ce                  _P1DTCON2bits = 0x1ce
+                    0x01d0                  FLTACON = 0x1d0
+                    0x01d0                  _FLTACON = 0x1d0
+                    0x01d0                  _FLTACONbits = 0x1d0
+                    0x01d0                  P1FLTACON = 0x1d0
+                    0x01d0                  _P1FLTACON = 0x1d0
+                    0x01d0                  _P1FLTACONbits = 0x1d0
+                    0x01d4                  OVDCON = 0x1d4
+                    0x01d4                  _OVDCON = 0x1d4
+                    0x01d4                  _OVDCONbits = 0x1d4
+                    0x01d4                  P1OVDCON = 0x1d4
+                    0x01d4                  _P1OVDCON = 0x1d4
+                    0x01d4                  _P1OVDCONbits = 0x1d4
+                    0x01d6                  P1DC1 = 0x1d6
+                    0x01d6                  _P1DC1 = 0x1d6
+                    0x01d6                  PDC1 = 0x1d6
+                    0x01d6                  _PDC1 = 0x1d6
+                    0x01d8                  P1DC2 = 0x1d8
+                    0x01d8                  _P1DC2 = 0x1d8
+                    0x01d8                  PDC2 = 0x1d8
+                    0x01d8                  _PDC2 = 0x1d8
+                    0x01da                  P1DC3 = 0x1da
+                    0x01da                  _P1DC3 = 0x1da
+                    0x01da                  PDC3 = 0x1da
+                    0x01da                  _PDC3 = 0x1da
+                    0x01e0                  QEI1CON = 0x1e0
+                    0x01e0                  _QEI1CON = 0x1e0
+                    0x01e0                  _QEI1CONbits = 0x1e0
+                    0x01e0                  QEICON = 0x1e0
+                    0x01e0                  _QEICON = 0x1e0
+                    0x01e0                  _QEICONbits = 0x1e0
+                    0x01e2                  DFLT1CON = 0x1e2
+                    0x01e2                  _DFLT1CON = 0x1e2
+                    0x01e2                  _DFLT1CONbits = 0x1e2
+                    0x01e2                  DFLTCON = 0x1e2
+                    0x01e2                  _DFLTCON = 0x1e2
+                    0x01e2                  _DFLTCONbits = 0x1e2
+                    0x01e4                  POS1CNT = 0x1e4
+                    0x01e4                  _POS1CNT = 0x1e4
+                    0x01e4                  POSCNT = 0x1e4
+                    0x01e4                  _POSCNT = 0x1e4
+                    0x01e6                  MAX1CNT = 0x1e6
+                    0x01e6                  _MAX1CNT = 0x1e6
+                    0x01e6                  MAXCNT = 0x1e6
+                    0x01e6                  _MAXCNT = 0x1e6
+                    0x0200                  I2C1RCV = 0x200
+                    0x0200                  _I2C1RCV = 0x200
+                    0x0200                  I2CRCV = 0x200
+                    0x0200                  _I2CRCV = 0x200
+                    0x0202                  I2C1TRN = 0x202
+                    0x0202                  _I2C1TRN = 0x202
+                    0x0202                  I2CTRN = 0x202
+                    0x0202                  _I2CTRN = 0x202
+                    0x0204                  I2C1BRG = 0x204
+                    0x0204                  _I2C1BRG = 0x204
+                    0x0206                  I2C1CON = 0x206
+                    0x0206                  _I2C1CON = 0x206
+                    0x0206                  _I2C1CONbits = 0x206
+                    0x0206                  I2CCON = 0x206
+                    0x0206                  _I2CCON = 0x206
+                    0x0208                  I2C1STAT = 0x208
+                    0x0208                  _I2C1STAT = 0x208
+                    0x0208                  _I2C1STATbits = 0x208
+                    0x0208                  I2CSTAT = 0x208
+                    0x0208                  _I2CSTAT = 0x208
+                    0x020a                  I2C1ADD = 0x20a
+                    0x020a                  _I2C1ADD = 0x20a
+                    0x020a                  I2CADD = 0x20a
+                    0x020a                  _I2CADD = 0x20a
+                    0x020c                  I2C1MSK = 0x20c
+                    0x020c                  _I2C1MSK = 0x20c
+                    0x0220                  U1MODE = 0x220
+                    0x0220                  _U1MODE = 0x220
+                    0x0220                  _U1MODEbits = 0x220
+                    0x0222                  U1STA = 0x222
+                    0x0222                  _U1STA = 0x222
+                    0x0222                  _U1STAbits = 0x222
+                    0x0224                  U1TXREG = 0x224
+                    0x0224                  _U1TXREG = 0x224
+                    0x0224                  _U1TXREGbits = 0x224
+                    0x0226                  U1RXREG = 0x226
+                    0x0226                  _U1RXREG = 0x226
+                    0x0226                  _U1RXREGbits = 0x226
+                    0x0228                  U1BRG = 0x228
+                    0x0228                  _U1BRG = 0x228
+                    0x0240                  SPI1STAT = 0x240
+                    0x0240                  _SPI1STAT = 0x240
+                    0x0240                  _SPI1STATbits = 0x240
+                    0x0242                  SPI1CON1 = 0x242
+                    0x0242                  _SPI1CON1 = 0x242
+                    0x0242                  _SPI1CON1bits = 0x242
+                    0x0244                  SPI1CON2 = 0x244
+                    0x0244                  _SPI1CON2 = 0x244
+                    0x0244                  _SPI1CON2bits = 0x244
+                    0x0248                  SPI1BUF = 0x248
+                    0x0248                  _SPI1BUF = 0x248
+                    0x02c0                  TRISA = 0x2c0
+                    0x02c0                  _TRISA = 0x2c0
+                    0x02c0                  _TRISAbits = 0x2c0
+                    0x02c2                  PORTA = 0x2c2
+                    0x02c2                  _PORTA = 0x2c2
+                    0x02c2                  _PORTAbits = 0x2c2
+                    0x02c4                  LATA = 0x2c4
+                    0x02c4                  _LATA = 0x2c4
+                    0x02c4                  _LATAbits = 0x2c4
+                    0x02c6                  ODCA = 0x2c6
+                    0x02c6                  _ODCA = 0x2c6
+                    0x02c6                  _ODCAbits = 0x2c6
+                    0x02c8                  TRISB = 0x2c8
+                    0x02c8                  _TRISB = 0x2c8
+                    0x02c8                  _TRISBbits = 0x2c8
+                    0x02ca                  PORTB = 0x2ca
+                    0x02ca                  _PORTB = 0x2ca
+                    0x02ca                  _PORTBbits = 0x2ca
+                    0x02cc                  LATB = 0x2cc
+                    0x02cc                  _LATB = 0x2cc
+                    0x02cc                  _LATBbits = 0x2cc
+                    0x02ce                  ODCB = 0x2ce
+                    0x02ce                  _ODCB = 0x2ce
+                    0x02ce                  _ODCBbits = 0x2ce
+                    0x02d0                  TRISC = 0x2d0
+                    0x02d0                  _TRISC = 0x2d0
+                    0x02d0                  _TRISCbits = 0x2d0
+                    0x02d2                  PORTC = 0x2d2
+                    0x02d2                  _PORTC = 0x2d2
+                    0x02d2                  _PORTCbits = 0x2d2
+                    0x02d4                  LATC = 0x2d4
+                    0x02d4                  _LATC = 0x2d4
+                    0x02d4                  _LATCbits = 0x2d4
+                    0x02d6                  ODCC = 0x2d6
+                    0x02d6                  _ODCC = 0x2d6
+                    0x02d6                  _ODCCbits = 0x2d6
+                    0x0300                  ADC1BUF0 = 0x300
+                    0x0300                  _ADC1BUF0 = 0x300
+                    0x0300                  ADCBUF0 = 0x300
+                    0x0300                  _ADCBUF0 = 0x300
+                    0x0302                  ADC1BUF1 = 0x302
+                    0x0302                  _ADC1BUF1 = 0x302
+                    0x0302                  ADCBUF1 = 0x302
+                    0x0302                  _ADCBUF1 = 0x302
+                    0x0304                  ADC1BUF2 = 0x304
+                    0x0304                  _ADC1BUF2 = 0x304
+                    0x0304                  ADCBUF2 = 0x304
+                    0x0304                  _ADCBUF2 = 0x304
+                    0x0306                  ADC1BUF3 = 0x306
+                    0x0306                  _ADC1BUF3 = 0x306
+                    0x0306                  ADCBUF3 = 0x306
+                    0x0306                  _ADCBUF3 = 0x306
+                    0x0308                  ADC1BUF4 = 0x308
+                    0x0308                  _ADC1BUF4 = 0x308
+                    0x0308                  ADCBUF4 = 0x308
+                    0x0308                  _ADCBUF4 = 0x308
+                    0x030a                  ADC1BUF5 = 0x30a
+                    0x030a                  _ADC1BUF5 = 0x30a
+                    0x030a                  ADCBUF5 = 0x30a
+                    0x030a                  _ADCBUF5 = 0x30a
+                    0x030c                  ADC1BUF6 = 0x30c
+                    0x030c                  _ADC1BUF6 = 0x30c
+                    0x030c                  ADCBUF6 = 0x30c
+                    0x030c                  _ADCBUF6 = 0x30c
+                    0x030e                  ADC1BUF7 = 0x30e
+                    0x030e                  _ADC1BUF7 = 0x30e
+                    0x030e                  ADCBUF7 = 0x30e
+                    0x030e                  _ADCBUF7 = 0x30e
+                    0x0310                  ADC1BUF8 = 0x310
+                    0x0310                  _ADC1BUF8 = 0x310
+                    0x0310                  ADCBUF8 = 0x310
+                    0x0310                  _ADCBUF8 = 0x310
+                    0x0312                  ADC1BUF9 = 0x312
+                    0x0312                  _ADC1BUF9 = 0x312
+                    0x0312                  ADCBUF9 = 0x312
+                    0x0312                  _ADCBUF9 = 0x312
+                    0x0314                  ADC1BUFA = 0x314
+                    0x0314                  _ADC1BUFA = 0x314
+                    0x0314                  ADCBUFA = 0x314
+                    0x0314                  _ADCBUFA = 0x314
+                    0x0316                  ADC1BUFB = 0x316
+                    0x0316                  _ADC1BUFB = 0x316
+                    0x0316                  ADCBUFB = 0x316
+                    0x0316                  _ADCBUFB = 0x316
+                    0x0318                  ADC1BUFC = 0x318
+                    0x0318                  _ADC1BUFC = 0x318
+                    0x0318                  ADCBUFC = 0x318
+                    0x0318                  _ADCBUFC = 0x318
+                    0x031a                  ADC1BUFD = 0x31a
+                    0x031a                  _ADC1BUFD = 0x31a
+                    0x031a                  ADCBUFD = 0x31a
+                    0x031a                  _ADCBUFD = 0x31a
+                    0x031c                  ADC1BUFE = 0x31c
+                    0x031c                  _ADC1BUFE = 0x31c
+                    0x031c                  ADCBUFE = 0x31c
+                    0x031c                  _ADCBUFE = 0x31c
+                    0x031e                  ADC1BUFF = 0x31e
+                    0x031e                  _ADC1BUFF = 0x31e
+                    0x031e                  ADCBUFF = 0x31e
+                    0x031e                  _ADCBUFF = 0x31e
+                    0x0320                  AD1CON1 = 0x320
+                    0x0320                  _AD1CON1 = 0x320
+                    0x0320                  _AD1CON1bits = 0x320
+                    0x0322                  AD1CON2 = 0x322
+                    0x0322                  _AD1CON2 = 0x322
+                    0x0322                  _AD1CON2bits = 0x322
+                    0x0324                  AD1CON3 = 0x324
+                    0x0324                  _AD1CON3 = 0x324
+                    0x0324                  _AD1CON3bits = 0x324
+                    0x0326                  AD1CHS123 = 0x326
+                    0x0326                  _AD1CHS123 = 0x326
+                    0x0326                  _AD1CHS123bits = 0x326
+                    0x0328                  AD1CHS0 = 0x328
+                    0x0328                  _AD1CHS0 = 0x328
+                    0x0328                  _AD1CHS0bits = 0x328
+                    0x032c                  AD1PCFGL = 0x32c
+                    0x032c                  _AD1PCFGL = 0x32c
+                    0x032c                  _AD1PCFGLbits = 0x32c
+                    0x032c                  ADPCFG = 0x32c
+                    0x032c                  _ADPCFG = 0x32c
+                    0x0330                  AD1CSSL = 0x330
+                    0x0330                  _AD1CSSL = 0x330
+                    0x0330                  _AD1CSSLbits = 0x330
+                    0x05c0                  P2TCON = 0x5c0
+                    0x05c0                  _P2TCON = 0x5c0
+                    0x05c0                  _P2TCONbits = 0x5c0
+                    0x05c2                  P2TMR = 0x5c2
+                    0x05c2                  _P2TMR = 0x5c2
+                    0x05c2                  _P2TMRbits = 0x5c2
+                    0x05c4                  P2TPER = 0x5c4
+                    0x05c4                  _P2TPER = 0x5c4
+                    0x05c4                  _P2TPERbits = 0x5c4
+                    0x05c6                  P2SECMP = 0x5c6
+                    0x05c6                  _P2SECMP = 0x5c6
+                    0x05c6                  _P2SECMPbits = 0x5c6
+                    0x05c8                  PWM2CON1 = 0x5c8
+                    0x05c8                  _PWM2CON1 = 0x5c8
+                    0x05c8                  _PWM2CON1bits = 0x5c8
+                    0x05ca                  PWM2CON2 = 0x5ca
+                    0x05ca                  _PWM2CON2 = 0x5ca
+                    0x05ca                  _PWM2CON2bits = 0x5ca
+                    0x05cc                  P2DTCON1 = 0x5cc
+                    0x05cc                  _P2DTCON1 = 0x5cc
+                    0x05cc                  _P2DTCON1bits = 0x5cc
+                    0x05ce                  P2DTCON2 = 0x5ce
+                    0x05ce                  _P2DTCON2 = 0x5ce
+                    0x05ce                  _P2DTCON2bits = 0x5ce
+                    0x05d0                  P2FLTACON = 0x5d0
+                    0x05d0                  _P2FLTACON = 0x5d0
+                    0x05d0                  _P2FLTACONbits = 0x5d0
+                    0x05d4                  P2OVDCON = 0x5d4
+                    0x05d4                  _P2OVDCON = 0x5d4
+                    0x05d4                  _P2OVDCONbits = 0x5d4
+                    0x05d6                  P2DC1 = 0x5d6
+                    0x05d6                  _P2DC1 = 0x5d6
+                    0x0680                  RPINR0 = 0x680
+                    0x0680                  _RPINR0 = 0x680
+                    0x0680                  _RPINR0bits = 0x680
+                    0x0682                  RPINR1 = 0x682
+                    0x0682                  _RPINR1 = 0x682
+                    0x0682                  _RPINR1bits = 0x682
+                    0x0686                  RPINR3 = 0x686
+                    0x0686                  _RPINR3 = 0x686
+                    0x0686                  _RPINR3bits = 0x686
+                    0x068e                  RPINR7 = 0x68e
+                    0x068e                  _RPINR7 = 0x68e
+                    0x068e                  _RPINR7bits = 0x68e
+                    0x0694                  RPINR10 = 0x694
+                    0x0694                  _RPINR10 = 0x694
+                    0x0694                  _RPINR10bits = 0x694
+                    0x0696                  RPINR11 = 0x696
+                    0x0696                  _RPINR11 = 0x696
+                    0x0696                  _RPINR11bits = 0x696
+                    0x0698                  RPINR12 = 0x698
+                    0x0698                  _RPINR12 = 0x698
+                    0x0698                  _RPINR12bits = 0x698
+                    0x069a                  RPINR13 = 0x69a
+                    0x069a                  _RPINR13 = 0x69a
+                    0x069a                  _RPINR13bits = 0x69a
+                    0x069c                  RPINR14 = 0x69c
+                    0x069c                  _RPINR14 = 0x69c
+                    0x069c                  _RPINR14bits = 0x69c
+                    0x069e                  RPINR15 = 0x69e
+                    0x069e                  _RPINR15 = 0x69e
+                    0x069e                  _RPINR15bits = 0x69e
+                    0x06a4                  RPINR18 = 0x6a4
+                    0x06a4                  _RPINR18 = 0x6a4
+                    0x06a4                  _RPINR18bits = 0x6a4
+                    0x06a8                  RPINR20 = 0x6a8
+                    0x06a8                  _RPINR20 = 0x6a8
+                    0x06a8                  _RPINR20bits = 0x6a8
+                    0x06aa                  RPINR21 = 0x6aa
+                    0x06aa                  _RPINR21 = 0x6aa
+                    0x06aa                  _RPINR21bits = 0x6aa
+                    0x06c0                  RPOR0 = 0x6c0
+                    0x06c0                  _RPOR0 = 0x6c0
+                    0x06c0                  _RPOR0bits = 0x6c0
+                    0x06c2                  RPOR1 = 0x6c2
+                    0x06c2                  _RPOR1 = 0x6c2
+                    0x06c2                  _RPOR1bits = 0x6c2
+                    0x06c4                  RPOR2 = 0x6c4
+                    0x06c4                  _RPOR2 = 0x6c4
+                    0x06c4                  _RPOR2bits = 0x6c4
+                    0x06c6                  RPOR3 = 0x6c6
+                    0x06c6                  _RPOR3 = 0x6c6
+                    0x06c6                  _RPOR3bits = 0x6c6
+                    0x06c8                  RPOR4 = 0x6c8
+                    0x06c8                  _RPOR4 = 0x6c8
+                    0x06c8                  _RPOR4bits = 0x6c8
+                    0x06ca                  RPOR5 = 0x6ca
+                    0x06ca                  _RPOR5 = 0x6ca
+                    0x06ca                  _RPOR5bits = 0x6ca
+                    0x06cc                  RPOR6 = 0x6cc
+                    0x06cc                  _RPOR6 = 0x6cc
+                    0x06cc                  _RPOR6bits = 0x6cc
+                    0x06ce                  RPOR7 = 0x6ce
+                    0x06ce                  _RPOR7 = 0x6ce
+                    0x06ce                  _RPOR7bits = 0x6ce
+                    0x06d0                  RPOR8 = 0x6d0
+                    0x06d0                  _RPOR8 = 0x6d0
+                    0x06d0                  _RPOR8bits = 0x6d0
+                    0x06d2                  RPOR9 = 0x6d2
+                    0x06d2                  _RPOR9 = 0x6d2
+                    0x06d2                  _RPOR9bits = 0x6d2
+                    0x06d4                  RPOR10 = 0x6d4
+                    0x06d4                  _RPOR10 = 0x6d4
+                    0x06d4                  _RPOR10bits = 0x6d4
+                    0x06d6                  RPOR11 = 0x6d6
+                    0x06d6                  _RPOR11 = 0x6d6
+                    0x06d6                  _RPOR11bits = 0x6d6
+                    0x06d8                  RPOR12 = 0x6d8
+                    0x06d8                  _RPOR12 = 0x6d8
+                    0x06d8                  _RPOR12bits = 0x6d8
+                    0x0740                  RCON = 0x740
+                    0x0740                  _RCON = 0x740
+                    0x0740                  _RCONbits = 0x740
+                    0x0742                  OSCCON = 0x742
+                    0x0742                  _OSCCON = 0x742
+                    0x0742                  _OSCCONbits = 0x742
+                    0x0742                  OSCCONL = 0x742
+                    0x0742                  _OSCCONL = 0x742
+                    0x0743                  OSCCONH = 0x743
+                    0x0743                  _OSCCONH = 0x743
+                    0x0744                  CLKDIV = 0x744
+                    0x0744                  _CLKDIV = 0x744
+                    0x0744                  _CLKDIVbits = 0x744
+                    0x0746                  PLLFBD = 0x746
+                    0x0746                  _PLLFBD = 0x746
+                    0x0746                  _PLLFBDbits = 0x746
+                    0x0748                  OSCTUN = 0x748
+                    0x0748                  _OSCTUN = 0x748
+                    0x0748                  _OSCTUNbits = 0x748
+                    0x0760                  NVMCON = 0x760
+                    0x0760                  _NVMCON = 0x760
+                    0x0760                  _NVMCONbits = 0x760
+                    0x0766                  NVMKEY = 0x766
+                    0x0766                  _NVMKEY = 0x766
+                    0x0770                  PMD1 = 0x770
+                    0x0770                  _PMD1 = 0x770
+                    0x0770                  _PMD1bits = 0x770
+                    0x0772                  PMD2 = 0x772
+                    0x0772                  _PMD2 = 0x772
+                    0x0772                  _PMD2bits = 0x772
+                    0x0774                  PMD3 = 0x774
+                    0x0774                  _PMD3 = 0x774
+                    0x0774                  _PMD3bits = 0x774
+                    0x0140                  IC1 = 0x140
+                    0x0140                  _IC1 = 0x140
+                    0x0144                  IC2 = 0x144
+                    0x0144                  _IC2 = 0x144
+                    0x0158                  IC7 = 0x158
+                    0x0158                  _IC7 = 0x158
+                    0x015c                  IC8 = 0x15c
+                    0x015c                  _IC8 = 0x15c
+                    0x0180                  OC1 = 0x180
+                    0x0180                  _OC1 = 0x180
+                    0x0186                  OC2 = 0x186
+                    0x0186                  _OC2 = 0x186
+                    0x0240                  SPI1 = 0x240
+                    0x0240                  _SPI1 = 0x240
+                    0x0220                  UART1 = 0x220
+                    0x0220                  _UART1 = 0x220
+                    0x0001                  __MPLAB_BUILD = 0x1
+START GROUP
+LOAD c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libpic30-coff.a
+LOAD c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libm-coff.a
+LOAD c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libc-coff.a
+END GROUP
+OUTPUT(output\max2_bldc_0_3_t2r2.cof coff-pic30)
+LOAD FGS
+LOAD data_init
+LOAD default_isr
+
+__c30_signature
+                  0x000000         0x78
+ __c30_signature
+                  0x000000          0x6 temp\adc.o
+ __c30_signature
+                  0x000006          0x6 temp\bldc.o
+ __c30_signature
+                  0x00000c          0x6 temp\brake.o
+ __c30_signature
+                  0x000012          0x6 temp\control.o
+ __c30_signature
+                  0x000018          0x6 temp\current.o
+ __c30_signature
+                  0x00001e          0x6 temp\dio.o
+ __c30_signature
+                  0x000024          0x6 temp\encoder_vertx.o
+ __c30_signature
+                  0x00002a          0x6 temp\ethercat.o
+ __c30_signature
+                  0x000030          0x6 temp\ethercat_appl.o
+ __c30_signature
+                  0x000036          0x6 temp\ethercat_hw.o
+ __c30_signature
+                  0x00003c          0x6 temp\ethercat_slave_fsm.o
+ __c30_signature
+                  0x000042          0x6 temp\main.o
+ __c30_signature
+                  0x000048          0x6 temp\pwm.o
+ __c30_signature
+                  0x00004e          0x6 temp\setup.o
+ __c30_signature
+                  0x000054          0x6 temp\timer1.o
+ __c30_signature
+                  0x00005a          0x6 temp\timer3.o
+ __c30_signature
+                  0x000060          0x6 c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libpic30-coff.a(crt0_standard.o)
+ __c30_signature
+                  0x000066          0x6 c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libpic30-coff.a(data_init_standard.o)
+ __c30_signature
+                  0x00006c          0x6 c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libm-coff.a(udivsi3.o)
+ __c30_signature
+                  0x000072          0x6 c:/program files (x86)/microchip/mplabc30/v3.30c/bin/bin/../../lib\libc-coff.a(memset.XXo)
+
+.nbss               0x0800        0x376
+ .nbss              0x0800        0x132 temp\adc.o
+                    0x0802                  watchdog_expired
+                    0x0804                  irq_cnt
+                    0x0806                  adc_buffer_fast
+                    0x0826                  adc_buffer
+                    0x0926                  adc_idx_fast
+                    0x0928                  adc_idx
+                    0x092a                  adc_raw
+ .nbss              0x0932         0xf0 temp\current.o
+                    0x0934                  i_fault_mom
+                    0x0936                  i_fault_cont
+                    0x0938                  i_state
+                    0x093a                  i_rms_cont_idx
+                    0x093c                  i_rms_mom_idx
+                    0x093e                  i_rms_cont_sum
+                    0x0942                  i_rms_mom_sum
+                    0x0946                  i_rms_cont_ds
+                    0x0948                  i_rms_mom_ds
+                    0x094a                  i_fault_val
+                    0x094e                  i_rms_mom_sq
+                    0x0952                  i_rms_cont_sq
+                    0x0956                  i_zero_sum_b
+                    0x0958                  i_zero_sum_a
+                    0x095a                  i_rms_cont_buf
+                    0x09da                  i_rms_mom_buf
+                    0x0a1a                  i_zero_cnt
+                    0x0a1c                  i_zero_b
+                    0x0a1e                  i_zero_a
+                    0x0a20                  i_mA
+ .nbss              0x0a22         0xc8 temp\ethercat.o
+                    0x0a22                  pdo_stat
+                    0x0a5e                  pdo_cmd
+                    0x0a9a                  ec_stat
+                    0x0aba                  ec_cmd
+                    0x0ae0                  ec_wd_timestamp
+                    0x0ae4                  ec_wd_expired
+                    0x0ae6                  ec_flags
+                    0x0ae8                  ec_debug
+ .nbss              0x0aea         0x8c temp\control.o
+                    0x0aea                  td_idx
+                    0x0aec                  torque_prev
+                    0x0aee                  torque_dot
+                    0x0af2                  t_error_sum
+                    0x0af6                  ramp_idx
+                    0x0af8                  fsa_state
+                    0x0afa                  torque_delta
+                    0x0b3a                  gains
+                    0x0b60                  result
+                    0x0b64                  t_error
+                    0x0b66                  ff_term
+                    0x0b6a                  d_term
+                    0x0b6e                  i_term
+                    0x0b72                  p_term
+
+.ndata              0x0b76         0x20
+ .ndata             0x0b76         0x20 temp\bldc.o
+                    0x0b76                  StateTableRev
+                    0x0b86                  StateTableFwd
+
+.nbss               0x0b96         0x3e
+ .nbss              0x0b96         0x1a temp\ethercat_slave_fsm.o
+                    0x0b96                  bDcSyncActive
+                    0x0b98                  nEscAddrInputData
+                    0x0b9a                  nEscAddrOutputData
+                    0x0b9c                  nStateTrans
+                    0x0b9d                  bWdActive
+                    0x0b9e                  u16WdCounter
+                    0x0ba0                  u16WdValue
+                    0x0ba2                  nAlStatusCode
+                    0x0ba3                  nAlStatusFailed
+                    0x0ba4                  nAlStatus
+                    0x0ba5                  nAlControl
+                    0x0ba6                  nMaxSyncMan
+                    0x0ba7                  bSynchronMode
+                    0x0ba8                  nPdOutputSize
+                    0x0baa                  nPdInputSize
+                    0x0bac                  bEcatFirstOutputsReceived
+                    0x0bad                  bEcatInputUpdateRunning
+                    0x0bae                  bEcatOutputUpdateRunning
+ .nbss              0x0bb0         0x12 temp\encoder_vertx.o
+                    0x0bb0                  vertx_error_buffer
+                    0x0bb4                  vertx_buffer
+                    0x0bbc                  vertx_idx
+                    0x0bbe                  vertx_val
+ .nbss              0x0bc2         0x12 temp\ethercat_hw.o
+                    0x0bc2                  EscMbxReadEcatCtrl
+                    0x0bc4                  TmpSyncMan
+                    0x0bcc                  EscAlEvent
+                    0x0bd0                  EscAlControl
+                    0x0bd2                  bAlEventEnabled
+
+.ndata              0x0bd4          0x4
+ .ndata             0x0bd4          0x4 temp\adc.o
+                    0x0bd4                  last_status
+                    0x0bd6                  wd_cnt
+
+.nbss               0x0bd8          0xa
+ .nbss              0x0bd8          0x4 temp\bldc.o
+                    0x0bd8                  bldc_fwd
+                    0x0bda                  bldc_hall_val
+ .nbss              0x0bdc          0x4 temp\pwm.o
+                    0x0bdc                  pwm_duty_buf
+                    0x0bde                  pwm_cmd_buf
+ .nbss              0x0be0          0x2 temp\ethercat_appl.o
+                    0x0be0                  bEcatWaitForInputUpdate
+
+.ndata              0x0be2          0x2
+ .ndata             0x0be2          0x2 temp\pwm.o
+                    0x0be2                  actual_pwm
+
+.dinit            0x005292         0x6c
+ .dinit           0x005292         0x6c data_init
+
+.isr              0x0052fe          0x4
+ .isr             0x0052fe          0x4 default_isr
+                  0x0052fe                  _DefaultInterrupt

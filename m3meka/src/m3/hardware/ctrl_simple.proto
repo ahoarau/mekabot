@@ -1,0 +1,102 @@
+ /*************************************************************************
+ * 
+ * REDWOOD CONFIDENTIAL
+ * Author: Aaron Edsinger
+ * __________________
+ * 
+ *  [2012] - [+] Redwood Robotics Incorporated 
+ *  All Rights Reserved.
+ * 
+ * All information contained herein is, and remains
+ * the property of Redwood Robotics Incorporated and its suppliers,
+ * if any.  The intellectual and technical concepts contained
+ * herein are proprietary to Redwood Robotics Incorporated
+ * and its suppliers and may be covered by U.S. and Foreign Patents,
+ * patents in process, and are protected by trade secret or copyright law.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Redwood Robotics Incorporated.
+ */
+ 
+
+option optimize_for = SPEED;
+import "component_base.proto";
+import "actuator.proto";
+
+enum CTRL_SIMPLE_MODE
+{
+	CTRL_MODE_OFF		= 0;	// Actuator off
+	CTRL_MODE_CURRENT	= 1;	// Amplifier current
+	CTRL_MODE_TORQUE	= 2;	// Direct torque control
+	CTRL_MODE_TORQUE_GC	= 3;	// Direct torque control
+	CTRL_MODE_THETA		= 4;	// Joint angle control, stiff
+	CTRL_MODE_THETA_IMP	= 5;	// Impedance control (with gravity comp, inner torque)
+	CTRL_MODE_BRAKE		= 6;	// Shorted motor leads
+}
+
+enum CTRL_SIMPLE_TRAJ_MODE
+{	
+	TRAJ_OFF	= 0;
+	TRAJ_SQUARE	= 1;
+	TRAJ_SINE	= 2;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//								status
+
+message M3CtrlSimpleStatusCommand
+{
+	optional double		theta		= 1;	// (Rad) 
+	optional double		current		= 2;	// (A)
+	optional double		torque		= 3;	// (Nm)
+	optional double		stiffness	= 4;	// (Nm/rad)
+	optional double		pwm			= 5;
+}
+
+
+message M3CtrlSimpleStatus
+{
+  	optional M3BaseStatus		base=1;					//Reserved
+	optional M3CtrlSimpleStatusCommand	command		= 2;	// Current values commanded 
+	optional M3ActuatorStatus		actuator	= 3;	// Motor frame sensor/ctrl state
+	optional double			torque_gravity = 4;	//(Nm) Gravity torque
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//								params
+
+message M3ParamTrajectory
+{
+	optional double		freq	= 1;
+	optional double		amp	= 2;
+	optional double		zero	= 3;
+}
+
+message M3CtrlSimpleParam
+{
+	optional M3ParamTrajectory	traj_current	= 1;	//Trajectory settings
+	optional M3ParamTrajectory	traj_torque	= 2;
+	optional M3ParamTrajectory	traj_theta	= 3;
+	optional M3ParamPID		pid_theta	= 4;
+	optional M3ParamPID		pid_torque	= 5;
+}
+
+message M3ParamPID{
+	optional double		k_p			= 1;	//P gain
+	optional double		k_i			= 2;	//I gain
+	optional double		k_d			= 3;	//D gain
+	optional double		k_i_limit	= 4;	//Integral limit
+	optional double		k_i_range	= 5;	//Integral range to accumulate error over
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//								cmd
+message M3CtrlSimpleCommand
+{
+	optional CTRL_SIMPLE_MODE		ctrl_mode		= 1;	// Desired control mode
+	optional CTRL_SIMPLE_TRAJ_MODE		traj_mode		= 2;	// Desired trajectory mode
+	optional double				desired_current		= 3; 	// Desired amp current (A)
+    optional double				desired_theta		= 4;	// Desired joint angle (Rad)
+	optional double				desired_torque		= 5;	// Desired joint torque (Nm)
+	optional double				desired_stiffness	= 6;	// Desired stiffness of impedance  (Nm/Rad)
+}

@@ -1,0 +1,40 @@
+########### M3 CONFIG ######################
+hostname: meka-metro
+factory_rt_libs:
+  - /usr/local/lib/libm3toolbox.so
+  - /usr/local/lib/libm3hardware.so
+factory_py_libs:
+  - /usr/local/lib/python2.6/dist-packages/m3/m3meka_factory_proxy.py
+rt_components:
+  pwr:
+#    m3pwr_pwr026: m3pwr
+    m3pwr_pwr023: m3pwr
+  sea:
+#   m3actuator_mt4_j1: m3actuator
+#    m3ctrl_simple_j0: m3ctrl_simple
+#    m3actuator_j0: m3actuator
+    m3ctrl_simple_j1: m3ctrl_simple
+    m3actuator_j1: m3actuator
+#    m3ctrl_simple_j2: m3ctrl_simple
+#    m3actuator_j2: m3actuator
+#    m3ctrl_simple_j3: m3ctrl_simple
+#    m3actuator_j3: m3actuator
+#    m3ctrl_simple_j4: m3ctrl_simple
+#    m3actuator_j4: m3actuator
+#    m3ctrl_simple_j5: m3ctrl_simple
+#    m3actuator_j5: m3actuator
+#    m3ctrl_simple_j6: m3ctrl_simple
+#    m3actuator_j6: m3actuator
+ec_components:
+  sea:
+#   m3actuator_ec_mt4_j1: m3actuator_ec
+#    m3actuator_ec_j0: m3actuator_ec
+    m3actuator_ec_j1: m3actuator_ec
+#    m3actuator_ec_j2: m3actuator_ec
+#    m3actuator_ec_j3: m3actuator_ec
+#    m3actuator_ec_j4: m3actuator_ec
+#    m3actuator_ec_j5: m3actuator_ec
+#    m3actuator_ec_j6: m3actuator_ec
+  pwr:
+#    m3pwr_ec_pwr026: m3pwr_ec
+    m3pwr_ec_pwr023: m3pwr_ec

@@ -1,0 +1,53 @@
+<package>
+  <description brief="Driver for the Neuronics Katana 450 arm">
+
+    <p>
+    This package provides ROS interfaces to the Neuronics Katana 450 arm.
+    It wraps the <a href="/wiki/kni">KNI</a> library for low-level communication
+    with the Katana arm.
+    </p>
+
+    <p>
+    GPL license due to the KNI library.
+    </p>
+
+  </description>
+  <author>Martin Günther</author>
+  <license>GPL</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/katana</url>
+  <depend package="meka_client"/>
+  <depend package="katana"/>
+  <!-- <depend package="arm_control_msgs"/> -->
+  <depend package="image_proc"/>
+  <export>
+    <cpp cflags="-I${prefix}/msg/cpp/include -I${prefix}/srv/cpp/include -I${prefix}/include"/>    
+  </export>
+  <depend package="roscpp"/>
+  <depend package="kni"/>
+  <depend package="std_msgs"/>
+  <depend package="std_srvs"/>
+
+  <!-- for JointStatePublisher -->
+  <depend package="sensor_msgs"/>
+
+  <!-- for JointTrajectoryActionController -->
+  <depend package="actionlib" />
+  <depend package="pr2_controllers_msgs" />
+  <depend package="control_msgs"/>
+  <depend package="trajectory_msgs"/>
+  <depend package="urdf"/>
+
+  <!-- for KNIKinematics -->
+  <depend package="kinematics_msgs"/>
+  <depend package="tf"/>
+  <depend package="arm_navigation_msgs"/>  
+
+  <!-- for katana_gripper_grasp_controller -->
+  <depend package="object_manipulation_msgs"/>
+
+  <!-- for JointMovementActionController -->
+  <!--<depend package="katana_msgs"/>-->
+  
+  <rosdep name="armadillo"/>
+</package>

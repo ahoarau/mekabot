@@ -1,0 +1,20 @@
+prefix=/usr/local
+libdir=${prefix}/lib
+includedir=${prefix}/include
+ros_dir = /opt/ros/cturtle
+
+Name: m3toolbox
+Description: Toolbox library for M3 Core.
+Version: 1.4.0
+Requires: yaml-cpp >= 0.2.5, protobuf >= 2.2.0a, orocos-kdl >= 1.0.2, eigen2 >= 2.0.15, ethercat >= 1.5.0
+Libs: -L${libdir} -lm3base
+Libs.private: -L${ros_dir}/ros/core/roscpp/lib -L${ros_dir}/ros/core/roslib/lib -L${ros_dir}/ros/core/rosconsole/lib -L${ros_dir}/ros/3rdparty/xmlrpcpp/lib -L/usr/realtime/lib
+Cflags: -I${includedir}/m3 -Wl,-E -ffast-math -pipe -mhard-float \
+	-I/usr/realtime/include \
+	-I${ros_dir}/stacks/m3_msgs/srv_gen/cpp/include \
+	-I${ros_dir}/stacks/m3_msgs/msg_gen/cpp/include \
+	-I${ros_dir}/ros/core/roscpp/include \
+	-I${ros_dir}/ros/core/roscpp/include \
+	-I${ros_dir}/ros/core/roslib/include \
+	-I${ros_dir}/ros/3rdparty/xmlrpcpp/src \
+	-I${ros_dir}/ros/core/rosconsole/include

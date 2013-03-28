@@ -1,0 +1,61 @@
+// M3 -- Meka Robotics Robot Components
+// Copyright (c) 2010 Meka Robotics
+// Author: edsinger@mekabot.com (Aaron Edsinger)
+// 
+// M3 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// M3 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with M3.  If not, see <http://www.gnu.org/licenses/>.
+
+
+option optimize_for = SPEED;
+
+import "component_base.proto";
+import "joint_array_mode.proto";
+
+message M3TorqueShmBaseStatus
+{	
+   repeated double		    torque=1;					//(mNm)
+    repeated double			theta=2;					//(Rad)
+    repeated double			thetadot=3;				//(Rad/s)   
+    repeated JOINT_ARRAY_MODE		ctrl_mode = 4;				//Desired arm control mode 
+    repeated double			loadx6=5;				//FTS if present
+}
+
+
+message M3TorqueShmBaseCommand{	
+	repeated double		tq_desired = 1;				//Desired torque (mNm)
+	repeated double		q_desired = 2;				//Desired theta (deg)
+	repeated double		slew_rate_q_desired = 3;				//Desired theta (deg)
+}
+
+message M3TorqueShmStatus
+{
+	optional M3BaseStatus	base=1;			//Reserved	
+	optional M3TorqueShmBaseStatus	right_arm=2;
+	optional M3TorqueShmBaseStatus	left_arm=3;
+	optional M3TorqueShmBaseStatus	torso=4;
+	optional M3TorqueShmBaseStatus	head=5;
+	optional M3TorqueShmBaseStatus	right_hand=6;    
+}
+
+message M3TorqueShmCommand{
+	optional int64 		timestamp = 1;
+	optional M3TorqueShmBaseCommand	right_arm=2;
+	optional M3TorqueShmBaseCommand	left_arm=3;
+	optional M3TorqueShmBaseCommand	torso=4;
+	optional M3TorqueShmBaseCommand	head=5;
+	optional M3TorqueShmBaseCommand	right_hand=6;    
+}
+
+message M3TorqueShmParam{
+	optional double			test=1;
+}

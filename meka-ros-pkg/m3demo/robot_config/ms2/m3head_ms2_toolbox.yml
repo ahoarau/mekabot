@@ -1,0 +1,33 @@
+csp_param:
+  csp_db: 5.0
+  csp_joint_slew_rate:
+  - 25.0
+  - 1.0
+  - 25.0
+  - 25.0
+  - 25.0
+  - 25.0
+  - 25.0
+  csp_p:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - -1.0
+  - 1.0
+  - 1.0
+  csp_target_slew_rate: 5.0
+  csp_target_thetadot:
+  - 15.0
+  - 1.0
+  - 15.0
+  - 15.0
+  - 15.0
+  - 15.0
+  - 15.0
+eqm_param:
+  eqm_j4_ramp_end: 30.0
+  eqm_j4_ramp_start: 15.0
+  eqm_j7_reduce: 35.0
+left_camera_calibration: pg0_800x600_calib
+right_camera_calibration: pg0_800x600_calib

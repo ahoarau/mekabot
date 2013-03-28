@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+  
+
+  <property name="M_PI" value="3.1415926535897931" />
+
+
+  <macro name="meka_zlift" params="side parent reflect *origin">
+
+    <!-- Shoulder pan -->
+    <joint name="zlift_joint" type="prismatic">
+      <axis xyz="0 0 1" />
+      <insert_block name="origin" /> <!-- transform from parent link to this joint frame -->
+      <parent link="${parent}"/>
+      <child link="zlift_link"/>
+      <limit lower="${reflect*M_PI/4-1.5}"  upper="${reflect*M_PI/4+1.5}"
+             effort="30" velocity="${3.48}" />
+
+      <dynamics damping="10.0" />
+
+      <safety_controller k_position="100" k_velocity="10"
+                         soft_lower_limit="${reflect*M_PI/4-1.5+0.15}"
+                         soft_upper_limit="${reflect*M_PI/4+1.5-0.15}" />      
+    </joint>
+    
+    <link name="zlift_link">
+      <inertial>
+        <mass value="25.799322" />
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <inertia ixx="0.866179142480"  ixy="-0.06086507933"  ixz="-0.12118061183"
+                 iyy="0.87421714893"  iyz="-0.05886609911"
+                 izz="0.27353821674" />
+      </inertial>
+
+      <visual>
+	      <material name="GreyA" />
+	      <origin xyz="0 0 0" rpy="0 0 0 " />
+	      <geometry name="z_lift_geom">
+		      <mesh filename="package://${MESH}/B1R1/MB1_00_011_festo-chest_mount_assy+spacer.dae" />
+	      </geometry>  
+      </visual>
+
+      <collision>
+	      <origin xyz="0 0 0" rpy="0.0 0.0 0.0 " />
+	      <geometry name="z_lift_geom_collision_geom">
+		      <box size="0.01 0.01 0.01" />
+	      </geometry>
+      </collision>
+    </link>
+
+  </macro>
+
+
+</robot>

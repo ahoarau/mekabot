@@ -1,0 +1,88 @@
+calib:
+  amp_temp:
+    type: temp_25C
+  angle_df:
+    theta_df:
+      cutoff_freq: 200
+      order: 2
+      type: butterworth
+    thetadot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+  current:
+    type: none
+  ext_temp:
+    cb_bias: -6.4099609374999993
+    cb_mV_at_25C: 750.0
+    cb_mV_per_C: 10.0
+    cb_scale: 1.0
+    name: Analog TMP36
+    type: adc_linear_3V3
+  motor:
+    amplifier_resistance: 0.019
+    current_sensor_type: none
+    gear_ratio: 100.0
+    max_efficiency: 64.0
+    max_pwm_duty: 3186.0
+    max_winding_temp: 125.0
+    mechanical_time_constant: 20.0
+    model_type: model_v1
+    name: Maxon EC32 Flat 15W 24V 267121
+    no_load_current: 73.400000000000006
+    no_load_speed: 4390.0
+    nominal_current: 0.48999999999999999
+    nominal_speed: 2800.0
+    nominal_torque: 23.199999999999999
+    nominal_voltage: 24.0
+    rotor_inertia: 35.0
+    speed_constant: 195.0
+    speed_torque_gradient: 54.5
+    stall_torque: 85.0
+    starting_current: 1.75
+    temp_sensor_type: ambient
+    thermal_resistance_housing_ambient: 9.7400000000000002
+    thermal_resistance_rotor_housing: 4.6299999999999999
+    thermal_time_constant_motor: 108.0
+    thermal_time_constant_winding: 8.0999999999999996
+    torque_constant: 49.0
+    winding_inductance: 7.7300000000000004
+    winding_resistance: 13.699999999999999
+  theta:
+    cb_bias: 273.60373557956416
+    cb_scale: -1.0
+    name: ContElec VertX13
+    type: vertx_14bit
+  torque:
+    cb_bias: 57.950859578450519
+    cb_inv_torque:
+    - 0.96866154372535151
+    - 7772.7615811502983
+    cb_scale: 1.0
+    cb_torque:
+    - 1.0323523283004761
+    - -8024.228515625
+    name: ContElec VertX13
+    type: sea_vertx_14bit
+  torquedot_df:
+    cutoff_freq: 100
+    order: 3
+    type: diff_butterworth
+calibration_date: Wed Jun 30 10:19:03 2010
+description: bmw_v0.3
+ec_component: m3actuator_ec_ma10_j4
+ignore_bounds: 0
+joint_component: m3joint_ma10_j4
+name: m3actuator_ma10_j4
+param:
+  max_amp_current: 8800.0
+  max_amp_temp: 100.0
+  max_overload_time: 3.0
+  max_tq: 4000.0
+  min_tq: -4000.0
+version: iss

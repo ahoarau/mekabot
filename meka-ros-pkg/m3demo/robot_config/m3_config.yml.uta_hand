@@ -1,0 +1,27 @@
+
+########### M3 CONFIG ######################
+hostname: uta-studio
+rt_components:
+  pwr:
+    m3pwr_pwr012: m3pwr
+  mh8:
+    m3actuator_mh8_j0: m3actuator
+    m3actuator_mh8_j1: m3actuator
+    m3actuator_mh8_j2: m3actuator
+    m3actuator_mh8_j3: m3actuator
+    m3actuator_mh8_j4: m3actuator
+    m3joint_mh8_j0: m3joint
+    m3joint_mh8_j1: m3joint
+    m3joint_mh8_j2: m3joint
+    m3joint_mh8_j3: m3joint
+    m3joint_mh8_j4: m3joint
+    m3hand_mh8: m3hand
+ec_components:
+  pwr:
+    m3pwr_ec_pwr012: m3pwr_ec
+  mh8:
+    m3actuator_ec_mh8_j0: m3actuator_ec
+    m3actuator_ec_mh8_j1: m3actuator_ec
+    m3actuator_ec_mh8_j2: m3actuator_ec
+    m3actuator_ec_mh8_j3: m3actuator_ec
+    m3actuator_ec_mh8_j4: m3actuator_ec

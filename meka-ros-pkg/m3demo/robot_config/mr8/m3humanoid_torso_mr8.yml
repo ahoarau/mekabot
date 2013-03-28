@@ -1,0 +1,19 @@
+chains:
+  torso:
+    base_rotation_in_parent:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    base_translation_in_parent:
+    - 0.0
+    - 0.0
+    - 0.0
+    chain_component: m3torso_mt3
+name: m3humanoid_torso_mr8
+pwr_component: m3pwr_pwr012

@@ -1,0 +1,7 @@
+name: torque_shm_0
+version: default
+# shm_id must be less than 5 char
+shm_id: TSHM
+humanoid_component: m3humanoid_right_arm_torso_mr8
+# timeout in ms
+timeout: 200

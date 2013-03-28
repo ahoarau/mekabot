@@ -1,0 +1,188 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\adc.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\control.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\dio.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\ethercat.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\ethercat_appl.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\ethercat_hw.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\ethercat_slave_fsm.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\main.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File008]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\pwm.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File009]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\setup.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File010]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\timer3.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File011]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\encoder_ma3.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_DIO -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_ENCODER_MA3 -DUSE_PWM -DUSE_CONTROL -DUSE_ADC -DM3_HEX2_S1R1
+TraceCmdString=
+DebugOptions=
+[File012]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\m3_controller_hex2_s1r1.cof
+Folder=Output
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={433C3D55-811D-409D-A6BF-159CF9355B42}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-Map="$(BINDIR_)$(TARGETBASE).map" --report-mem -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)"
+TraceCmdString=
+DebugOptions=
+[File013]
+Location=C:\meka_local\projects\m3\trunk\src\m3dsp\m3_controller_hex2_s1r1.hex
+Folder=Output
+DeviceName=dsPIC33FJ32MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={433C3D55-811D-409D-A6BF-159CF9355B42}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|adc.c|control.c|dio.c|ethercat.c|ethercat_appl.c|ethercat_hw.c|ethercat_slave_fsm.c|main.c|pwm.c|setup.c|timer3.c|encoder_ma3.c||<obj>||<lib>||<lkr>|p33FJ32MC204_APP.gld||
+SuiteArgsString=
+ToolArgsString=-Map="$(BINDIR_)$(TARGETBASE).map" --report-mem -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)"
+TraceCmdString=
+DebugOptions=
+[TOOL_LOC_STAMPS]
+tool_loc{069BD372-6CA0-40D4-BF2F-5DC806D05083}=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-gcc.exe
+tool_loc{433C3D55-811D-409D-A6BF-159CF9355B42}=C:\Program Files (x86)\Microchip\mplabc30\v3.25\bin\pic30-ld.exe

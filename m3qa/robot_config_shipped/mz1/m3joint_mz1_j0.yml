@@ -1,0 +1,37 @@
+actuator_component: m3actuator_mz1_j0
+brake: auto
+calib:
+  cb_gearing: 5.0
+  cb_payload_mass: 40.0
+  cb_screw_efficiency: 0.90000000000000002
+  cb_screw_pitch: 30.0
+name: m3joint_mz1_j0
+param:
+  kq_d: -0.050000000000000003
+  kq_g: 1.0
+  kq_i: -0.01
+  kq_i_limit: 50.0
+  kq_i_range: 20000.0
+  kq_p: -1.25
+  kt_d: -0.029999999999999999
+  kt_i: -0.01
+  kt_i_limit: 100.0
+  kt_i_range: 10000.0
+  kt_p: -0.25
+  max_q: 39500.0
+  max_q_pad: 100.0
+  max_q_slew_rate: 8000.0
+  min_q: 0.0
+  min_q_pad: 100.0
+transmission:
+  act_name: m3actuator_mz1_j0
+  qj_to_qa:
+  - 1.0
+  qs_to_qj:
+  - 1.0
+  tqj_to_tqa:
+  - 1.0
+  tqs_to_tqj:
+  - 1.0
+  type: gear
+version: iss

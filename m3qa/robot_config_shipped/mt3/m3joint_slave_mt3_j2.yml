@@ -1,0 +1,8 @@
+calib:
+  cb_ms_ratio: 1.0
+cpj_component: m3joint_mt3_j1
+name: m3joint_slave_mt3_j2
+param:
+  max_q: 29.0
+  max_q_slew_rate: 25.0
+  min_q: -29.0

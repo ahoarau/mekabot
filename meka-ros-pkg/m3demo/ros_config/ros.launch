@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- send pr2_l_arm.xml to param server -->
+
+  <!-- for visualization -->
+
+  <!-- Robot state publisher -->
+
+
+</launch>

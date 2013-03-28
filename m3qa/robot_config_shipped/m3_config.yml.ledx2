@@ -1,0 +1,11 @@
+
+########### M3 CONFIG ######################
+hostname: meka-maddog
+rt_components:
+  pwr:
+    m3pwr_pwr010: m3pwr
+ec_components:
+  pwr:
+    m3pwr_ec_pwr010: m3pwr_ec
+  ms2:
+    m3ledx2xn_ec_ms2_b0: m3ledx2xn_ec

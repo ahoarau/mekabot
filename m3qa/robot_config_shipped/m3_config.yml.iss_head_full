@@ -1,0 +1,38 @@
+
+########### M3 CONFIG ######################
+hostname: meka-mookfish
+rt_components:
+  pwr:
+    m3pwr_pwr010: m3pwr
+  ms3:
+    m3actuator_ms3_j0: m3actuator
+    m3actuator_ms3_j1: m3actuator
+    m3actuator_ms3_j2: m3actuator
+    m3actuator_ms3_j3: m3actuator
+    m3actuator_ms3_j4: m3actuator
+    m3actuator_ms3_j5: m3actuator
+    m3actuator_ms3_j6: m3actuator
+    m3joint_ms3_j0: m3joint
+    m3joint_ms3_j1: m3joint
+    m3joint_ms3_j2: m3joint
+    m3joint_ms3_j3: m3joint
+    m3joint_ms3_j4: m3joint
+    m3joint_ms3_j5: m3joint
+    m3joint_ms3_j6: m3joint
+    m3dynamatics_s2r1_iss_ms3: m3dynamatics
+    m3head_ms3: m3head
+    m3head_s2csp_ctrl_ms3: m3head_s2csp_ctrl
+  mr7:
+    m3humanoid_head_mr7: m3humanoid
+ec_components:
+  pwr:
+    m3pwr_ec_pwr010: m3pwr_ec
+  ms3:
+    m3actuator_ec_ms3_j0: m3actuator_ec
+    m3actuator_ec_ms3_j1: m3actuator_ec
+    m3actuator_ec_ms3_j2: m3actuator_ec
+    m3actuator_ec_ms3_j3: m3actuator_ec
+    m3actuator_ec_ms3_j4: m3actuator_ec
+    m3actuator_ec_ms3_j5: m3actuator_ec
+    m3actuator_ec_ms3_j6: m3actuator_ec
+    m3led_matrix_ec_ms3_l0: m3led_matrix_ec

@@ -1,0 +1,113 @@
+
+########### M3 CONFIG ######################
+hostname: meka-mojo
+sys_test: iir
+rt_components:
+  pwr:
+    m3pwr_pwr015: m3pwr
+  mh10:
+    m3actuator_mh10_j0: m3actuator
+    m3actuator_mh10_j1: m3actuator
+    m3actuator_mh10_j2: m3actuator
+    m3actuator_mh10_j3: m3actuator
+    m3actuator_mh10_j4: m3actuator
+    m3joint_mh10_j0: m3joint
+    m3joint_mh10_j1: m3joint
+    m3joint_mh10_j2: m3joint
+    m3joint_mh10_j3: m3joint
+    m3joint_mh10_j4: m3joint
+    m3hand_mh10: m3hand
+  mh11:
+    m3actuator_mh11_j0: m3actuator
+    m3actuator_mh11_j1: m3actuator
+    m3actuator_mh11_j2: m3actuator
+    m3actuator_mh11_j3: m3actuator
+    m3actuator_mh11_j4: m3actuator
+    m3joint_mh11_j0: m3joint
+    m3joint_mh11_j1: m3joint
+    m3joint_mh11_j2: m3joint
+    m3joint_mh11_j3: m3joint
+    m3joint_mh11_j4: m3joint
+    m3hand_mh11: m3hand
+  mt4:
+    m3actuator_mt4_j0: m3actuator
+    m3actuator_mt4_j1: m3actuator
+    m3joint_mt4_j0: m3joint
+    m3joint_mt4_j1: m3joint
+    m3joint_slave_mt4_j2: m3joint_slave
+    m3torso_mt4: m3torso
+    m3dynamatics_bimanual_a2r3_mt4: m3dynamatics
+  ma12:
+    m3actuator_ma12_j0: m3actuator
+    m3actuator_ma12_j1: m3actuator
+    m3actuator_ma12_j2: m3actuator
+    m3actuator_ma12_j3: m3actuator
+    m3actuator_ma12_j4: m3actuator
+    m3actuator_ma12_j5: m3actuator
+    m3actuator_ma12_j6: m3actuator
+    m3joint_ma12_j0: m3joint
+    m3joint_ma12_j1: m3joint
+    m3joint_ma12_j2: m3joint
+    m3joint_ma12_j3: m3joint
+    m3joint_ma12_j4: m3joint
+    m3joint_ma12_j5: m3joint
+    m3joint_ma12_j6: m3joint
+    m3arm_ma12: m3arm
+    m3dynamatics_right_h2r3_fts_ma12: m3dynamatics
+    m3loadx6_ma12_l0: m3loadx6
+  ma14:
+    m3actuator_ma14_j0: m3actuator
+    m3actuator_ma14_j1: m3actuator
+    m3actuator_ma14_j2: m3actuator
+    m3actuator_ma14_j3: m3actuator
+    m3actuator_ma14_j4: m3actuator
+    m3actuator_ma14_j5: m3actuator
+    m3actuator_ma14_j6: m3actuator
+    m3joint_ma14_j0: m3joint
+    m3joint_ma14_j1: m3joint
+    m3joint_ma14_j2: m3joint
+    m3joint_ma14_j3: m3joint
+    m3joint_ma14_j4: m3joint
+    m3joint_ma14_j5: m3joint
+    m3joint_ma14_j6: m3joint
+    m3arm_ma14: m3arm
+    m3dynamatics_left_h2r3_fts_ma14: m3dynamatics
+    m3loadx6_ma14_l0: m3loadx6
+  mr10:
+    m3humanoid_bimanual_torso_mr10: m3humanoid
+ec_components:
+  pwr:
+    m3pwr_ec_pwr015: m3pwr_ec
+  mt4:
+    m3actuator_ec_mt4_j0: m3actuator_ec
+    m3actuator_ec_mt4_j1: m3actuator_ec
+  mh10:
+    m3actuator_ec_mh10_j0: m3actuator_ec
+    m3actuator_ec_mh10_j1: m3actuator_ec
+    m3actuator_ec_mh10_j2: m3actuator_ec
+    m3actuator_ec_mh10_j3: m3actuator_ec
+    m3actuator_ec_mh10_j4: m3actuator_ec
+  mh11:
+    m3actuator_ec_mh11_j0: m3actuator_ec
+    m3actuator_ec_mh11_j1: m3actuator_ec
+    m3actuator_ec_mh11_j2: m3actuator_ec
+    m3actuator_ec_mh11_j3: m3actuator_ec
+    m3actuator_ec_mh11_j4: m3actuator_ec
+  ma12:
+    m3actuator_ec_ma12_j0: m3actuator_ec
+    m3actuator_ec_ma12_j1: m3actuator_ec
+    m3actuator_ec_ma12_j2: m3actuator_ec
+    m3actuator_ec_ma12_j3: m3actuator_ec
+    m3actuator_ec_ma12_j4: m3actuator_ec
+    m3actuator_ec_ma12_j5: m3actuator_ec
+    m3actuator_ec_ma12_j6: m3actuator_ec
+    m3loadx6_ec_ma12_l0: m3loadx6_ec
+  ma14:
+    m3actuator_ec_ma14_j0: m3actuator_ec
+    m3actuator_ec_ma14_j1: m3actuator_ec
+    m3actuator_ec_ma14_j2: m3actuator_ec
+    m3actuator_ec_ma14_j3: m3actuator_ec
+    m3actuator_ec_ma14_j4: m3actuator_ec
+    m3actuator_ec_ma14_j5: m3actuator_ec
+    m3actuator_ec_ma14_j6: m3actuator_ec
+    m3loadx6_ec_ma14_l0: m3loadx6_ec

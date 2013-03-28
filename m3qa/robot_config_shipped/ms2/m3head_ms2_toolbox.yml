@@ -1,0 +1,6 @@
+eqm_param:
+  eqm_j4_ramp_end: 30.0
+  eqm_j4_ramp_start: 15.0
+  eqm_j7_reduce: 35.0
+left_camera_calibration: pg0_800x600_calib
+right_camera_calibration: pg1_800x600_calib

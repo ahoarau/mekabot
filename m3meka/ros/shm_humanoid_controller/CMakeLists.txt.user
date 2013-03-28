@@ -1,0 +1,242 @@
+<!DOCTYPE QtCreatorProject>
+<qtcreator>
+ <data>
+  <variable>RunConfiguration0-BaseEnvironmentBase</variable>
+  <value type="int">2</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-CMakeRunConfiguation.Title</variable>
+  <value type="QString">move_humanoid</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-CMakeRunConfiguration.Arguments</variable>
+  <value type="QString"></value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-CMakeRunConfiguration.Target</variable>
+  <value type="QString">/home/meka/mekabot/m3meka/ros/shm_humanoid_controller/bin/move_humanoid</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-CMakeRunConfiguration.UseTerminal</variable>
+  <value type="bool">false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-CMakeRunConfiguration.UserEnvironmentChanges</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>RunConfiguration0-CMakeRunConfiguration.UserWorkingDirectory</variable>
+  <value type="QString"></value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-CMakeRunConfiguration.WorkingDirectory</variable>
+  <value type="QString">/home/meka/mekabot/m3meka/ros/shm_humanoid_controller/bin</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-RunConfiguration.name</variable>
+  <value type="QString">move_humanoid</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-type</variable>
+  <value type="QString">CMakeProjectManager.CMakeRunConfiguration</value>
+ </data>
+ <data>
+  <variable>activeRunConfiguration</variable>
+  <value type="int">0</value>
+ </data>
+ <data>
+  <variable>activebuildconfiguration</variable>
+  <value type="QString">all</value>
+ </data>
+ <data>
+  <variable>buildConfiguration-all</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">all</value>
+   <value key="buildDirectory" type="QString">/home/meka/mekabot/m3meka/ros/shm_humanoid_controller</value>
+   <value key="msvcVersion" type="QString"></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-all-buildstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">all</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList">
+    <value type="QString">CMAKE_PREFIX_PATH=/opt/ros/fuerte/share/catkin/cmake/Modules:/opt/ros/fuerte:/opt/ros/fuerte/share/catkin/cmake/Modules:/opt/ros/fuerte:</value>
+    <value type="QString">COLORTERM=gnome-terminal</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-SLtpzmLDyS,guid=c7264c6490f89d341625b20751433c84</value>
+    <value type="QString">DEFAULTS_PATH=/usr/share/gconf/gnome.default.path</value>
+    <value type="QString">DESKTOP_SESSION=gnome</value>
+    <value type="QString">DISPLAY=:0.0</value>
+    <value type="QString">GDMSESSION=gnome</value>
+    <value type="QString">GDM_KEYBOARD_LAYOUT=fr	oss</value>
+    <value type="QString">GDM_LANG=en_US.utf8</value>
+    <value type="QString">GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-6wvKfw</value>
+    <value type="QString">GNOME_KEYRING_PID=1496</value>
+    <value type="QString">GTK_MODULES=canberra-gtk-module</value>
+    <value type="QString">HOME=/home/meka</value>
+    <value type="QString">LANG=en_US.UTF-8</value>
+    <value type="QString">LANGUAGE=en_US:en</value>
+    <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:/opt/ros/fuerte/lib:/opt/ros/fuerte/lib:</value>
+    <value type="QString">LESSCLOSE=/usr/bin/lesspipe %s %s</value>
+    <value type="QString">LESSOPEN=| /usr/bin/lesspipe %s</value>
+    <value type="QString">LOGNAME=meka</value>
+    <value type="QString">LS_COLORS=rs=0:di=01;34:ln=01;36:hl=44;37:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:</value>
+    <value type="QString">M3_ROBOT=/home/meka/mekabot/m3ens</value>
+    <value type="QString">MALLOC_CHECK_=0</value>
+    <value type="QString">MANDATORY_PATH=/usr/share/gconf/gnome.mandatory.path</value>
+    <value type="QString">OLDPWD=</value>
+    <value type="QString">OLDPWDBAK=</value>
+    <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-meka</value>
+    <value type="QString">PATH=/opt/ros/fuerte/bin:/opt/ros/fuerte/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString">PKG_CONFIG_PATH=/opt/ros/fuerte/lib/pkgconfig:/opt/ros/fuerte/lib/pkgconfig:</value>
+    <value type="QString">PWD=/home/meka</value>
+    <value type="QString">PYTHONPATH=/opt/ros/fuerte/lib/python2.6/dist-packages:/opt/ros/fuerte/lib/python2.6/dist-packages::/usr/local/lib/python2.6/dist-packages/m3:/usr/local/lib/python2.6/dist-packages/pyalsa-1.0.25-py2.6-linux-i686.egg/pyalsa</value>
+    <value type="QString">ROSLISP_PACKAGE_DIRECTORY=/opt/ros/fuerte/share/common-lisp/ros</value>
+    <value type="QString">ROS_DISTRO=fuerte</value>
+    <value type="QString">ROS_ETC_DIR=/opt/ros/fuerte/etc/ros</value>
+    <value type="QString">ROS_MASTER_URI=http://meka-moch:11311</value>
+    <value type="QString">ROS_PACKAGE_PATH=/home/meka/fuerte_workspace/sandbox:/opt/ros/fuerte/stacks:/opt/ros/fuerte/share:/opt/ros/fuerte/share/ros:/home/meka/mekabot/meka-ros-pkg:/home/meka/mekabot/m3core/ros:/home/meka/mekabot/m3meka/ros</value>
+    <value type="QString">ROS_ROOT=/opt/ros/fuerte/share/ros</value>
+    <value type="QString">ROS_WORKSPACE=/home/meka/fuerte_workspace</value>
+    <value type="QString">SESSION_MANAGER=local/meka-mud:@/tmp/.ICE-unix/1514,unix/meka-mud:/tmp/.ICE-unix/1514</value>
+    <value type="QString">SHELL=/bin/bash</value>
+    <value type="QString">SHLVL=1</value>
+    <value type="QString">SPEECHD_PORT=7560</value>
+    <value type="QString">SSH_AGENT_PID=1549</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/keyring-6wvKfw/ssh</value>
+    <value type="QString">TERM=xterm</value>
+    <value type="QString">USER=meka</value>
+    <value type="QString">USERNAME=meka</value>
+    <value type="QString">WINDOWID=16777219</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-meka-BKciTD/database</value>
+    <value type="QString">XDG_CONFIG_DIRS=/etc/xdg/xdg-gnome:/etc/xdg</value>
+    <value type="QString">XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
+    <value type="QString">XDG_SESSION_COOKIE=c3b62c99b992d00d6bdc60425052fe8e-1363360900.351492-1913054938</value>
+    <value type="QString">_=/usr/bin/qtcreator</value>
+    <value type="QString">ftp_proxy=ftp://proxy.ensta.fr:8080/</value>
+    <value type="QString">http_proxy=http://proxy.ensta.fr:8080/</value>
+    <value type="QString">https_proxy=https://proxy.ensta.fr:8080/</value>
+   </valuelist>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList"/>
+   <value key="abstractProcess.command" type="QString">make</value>
+   <value key="abstractProcess.enabled" type="bool">true</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/meka/mekabot/m3meka/ros/shm_humanoid_controller</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-all-cleanstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">all</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList">
+    <value type="QString">CMAKE_PREFIX_PATH=/opt/ros/fuerte/share/catkin/cmake/Modules:/opt/ros/fuerte:/opt/ros/fuerte/share/catkin/cmake/Modules:/opt/ros/fuerte:</value>
+    <value type="QString">COLORTERM=gnome-terminal</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-MeHF6mkCqn,guid=d916fd53e2d15f3394355429513db0a5</value>
+    <value type="QString">DEFAULTS_PATH=/usr/share/gconf/gnome.default.path</value>
+    <value type="QString">DESKTOP_SESSION=gnome</value>
+    <value type="QString">DISPLAY=:0.0</value>
+    <value type="QString">GDMSESSION=gnome</value>
+    <value type="QString">GDM_KEYBOARD_LAYOUT=fr	oss</value>
+    <value type="QString">GDM_LANG=en_US.utf8</value>
+    <value type="QString">GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-zWoOKT</value>
+    <value type="QString">GNOME_KEYRING_PID=1526</value>
+    <value type="QString">GTK_MODULES=canberra-gtk-module</value>
+    <value type="QString">HOME=/home/meka</value>
+    <value type="QString">LANG=en_US.UTF-8</value>
+    <value type="QString">LANGUAGE=en_US:en</value>
+    <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:/opt/ros/fuerte/lib:/opt/ros/fuerte/lib:</value>
+    <value type="QString">LESSCLOSE=/usr/bin/lesspipe %s %s</value>
+    <value type="QString">LESSOPEN=| /usr/bin/lesspipe %s</value>
+    <value type="QString">LOGNAME=meka</value>
+    <value type="QString">LS_COLORS=rs=0:di=01;34:ln=01;36:hl=44;37:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:</value>
+    <value type="QString">M3_ROBOT=/home/meka/mekabot/m3ens</value>
+    <value type="QString">MALLOC_CHECK_=0</value>
+    <value type="QString">MANDATORY_PATH=/usr/share/gconf/gnome.mandatory.path</value>
+    <value type="QString">OLDPWD=</value>
+    <value type="QString">OLDPWDBAK=</value>
+    <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-meka</value>
+    <value type="QString">PATH=/opt/ros/fuerte/bin:/opt/ros/fuerte/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
+    <value type="QString">PKG_CONFIG_PATH=/opt/ros/fuerte/lib/pkgconfig:/opt/ros/fuerte/lib/pkgconfig:</value>
+    <value type="QString">PWD=/home/meka</value>
+    <value type="QString">PYTHONPATH=/opt/ros/fuerte/lib/python2.6/dist-packages:/opt/ros/fuerte/lib/python2.6/dist-packages::/usr/local/lib/python2.6/dist-packages/m3:/usr/local/lib/python2.6/dist-packages/pyalsa-1.0.25-py2.6-linux-i686.egg/pyalsa</value>
+    <value type="QString">ROSLISP_PACKAGE_DIRECTORY=/opt/ros/fuerte/share/common-lisp/ros</value>
+    <value type="QString">ROS_DISTRO=fuerte</value>
+    <value type="QString">ROS_ETC_DIR=/opt/ros/fuerte/etc/ros</value>
+    <value type="QString">ROS_MASTER_URI=http://meka-moch:11311</value>
+    <value type="QString">ROS_PACKAGE_PATH=/home/meka/fuerte_workspace/sandbox:/opt/ros/fuerte/stacks:/opt/ros/fuerte/share:/opt/ros/fuerte/share/ros:/home/meka/mekabot/meka-ros-pkg:/home/meka/mekabot/m3core/ros:/home/meka/mekabot/m3meka/ros:/home/meka/mekabot/m3ens/</value>
+    <value type="QString">ROS_ROOT=/opt/ros/fuerte/share/ros</value>
+    <value type="QString">ROS_WORKSPACE=/home/meka/fuerte_workspace</value>
+    <value type="QString">SESSION_MANAGER=local/meka-mud:@/tmp/.ICE-unix/1544,unix/meka-mud:/tmp/.ICE-unix/1544</value>
+    <value type="QString">SHELL=/bin/bash</value>
+    <value type="QString">SHLVL=1</value>
+    <value type="QString">SPEECHD_PORT=7560</value>
+    <value type="QString">SSH_AGENT_PID=1578</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/keyring-zWoOKT/ssh</value>
+    <value type="QString">TERM=xterm</value>
+    <value type="QString">USER=meka</value>
+    <value type="QString">USERNAME=meka</value>
+    <value type="QString">WINDOWID=69206019</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-meka-CkRIIF/database</value>
+    <value type="QString">XDG_CONFIG_DIRS=/etc/xdg/xdg-gnome:/etc/xdg</value>
+    <value type="QString">XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/</value>
+    <value type="QString">XDG_SESSION_COOKIE=c3b62c99b992d00d6bdc60425052fe8e-1362997413.679545-1006722046</value>
+    <value type="QString">_=/usr/bin/qtcreator</value>
+    <value type="QString">ftp_proxy=ftp://proxy.ensta.fr:8080/</value>
+    <value type="QString">http_proxy=http://proxy.ensta.fr:8080/</value>
+    <value type="QString">https_proxy=https://proxy.ensta.fr:8080/</value>
+   </valuelist>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool">true</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList">
+    <value type="QString">clean</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString">make</value>
+   <value key="abstractProcess.enabled" type="bool">true</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/meka/mekabot/m3meka/ros/shm_humanoid_controller</value>
+   <valuelist key="additionalArguments" type="QVariantList">
+    <value type="QString">clean</value>
+   </valuelist>
+   <value key="cleanConfig" type="bool">true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfigurations</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">all</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>buildstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString"></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildsteps</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">CMakeProjectManager.MakeStep</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>cleanstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString"></value>
+   <value key="clean" type="bool">true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>cleansteps</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">CMakeProjectManager.MakeStep</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>defaultFileEncoding</variable>
+  <value type="QByteArray">System</value>
+ </data>
+ <data>
+  <variable>project</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+</qtcreator>

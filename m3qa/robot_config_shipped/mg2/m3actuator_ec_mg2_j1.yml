@@ -1,0 +1,25 @@
+chid: 1
+ethercat:
+  pdo_version: actx2_pdo_v1
+  product_code: 1011
+  serial_number: 526
+name: m3actuator_ec_mg2_j1
+param:
+  config: 2
+  k_d: 0
+  k_d_shift: 0
+  k_ff: 0
+  k_ff_shift: 0
+  k_ff_zero: 0
+  k_i: 0
+  k_i_limit: 0
+  k_i_shift: 0
+  k_p: -250
+  k_p_shift: 0
+  pwm_db: 150
+  pwm_max: 3186
+  qei_max: 19390
+  qei_min: 1412
+  t_max: 4096
+  t_min: 0
+pwr_component: m3pwr_pwr006

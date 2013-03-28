@@ -1,0 +1,13 @@
+<launch>
+   <node pkg="camera1394" type="camera1394_node" name="camera1394_node" >
+<!--     <param name="auto_brightness" value="3" />-->
+<!--     <param name="brightness" value="256.0" />-->
+     <param name="guid" value="00b09d0100990bb0" />
+     <param name="video_mode" value="800x600_yuv422" />
+     <param name="iso_speed" value="400" />
+     <param name="frame_rate" value="15" />
+<!--     <param name="camera_info_url" value="file:///home/meka/mekabot/m3uta/ros_config/camera_800x600.yaml" />-->
+
+   </node>
+</launch>
+

@@ -1,0 +1,11 @@
+<launch>
+
+<node name="joy_node" pkg="joy" type="joy_node" respawn="true" output="screen">     
+       <param name="dev" type="string" value="/dev/input/js0" />
+       <param name="deadzone" value="0.12" />
+  </node>
+
+<node name="omnibase_joy_node" pkg="m3ros" type="sixaxis.py" respawn="true" output="screen">       
+  </node>
+
+</launch>

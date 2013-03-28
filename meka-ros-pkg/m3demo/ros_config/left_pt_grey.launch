@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- first camera and associated image pipeline -->
+  <group ns="camera0" >
+    <node pkg="camera1394" type="camera1394_node" name="camera1394_node" >
+      <rosparam file="$(find m3_defs_ros)/cameras/point_grey_0.yml" /> 
+    </node>
+    <include file="$(find m3_defs_ros)/image_pipeline.launch" />
+  </group>
+
+ 
+</launch>

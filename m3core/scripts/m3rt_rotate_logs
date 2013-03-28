@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ $UID != 0 ]; then SUDO="sudo "; else SUDO=""; fi
+
+if [ -f $M3_ROBOT/robot_log/m3rt_server.log.1 ]
+then
+  $SUDO cp $M3_ROBOT/robot_log/m3rt_server.log.1 $M3_ROBOT/robot_log/m3rt_server.log.2;
+fi
+
+if [ -f $M3_ROBOT/robot_log/m3rt_server.log.0 ]
+then
+  $SUDO cp $M3_ROBOT/robot_log/m3rt_server.log.0 $M3_ROBOT/robot_log/m3rt_server.log.1;
+fi
+
+if [ -f $M3_ROBOT/robot_log/m3rt_server.log ]
+then
+  $SUDO cp $M3_ROBOT/robot_log/m3rt_server.log $M3_ROBOT/robot_log/m3rt_server.log.0;
+  $SUDO rm $M3_ROBOT/robot_log/m3rt_server.log
+fi
+
+sync

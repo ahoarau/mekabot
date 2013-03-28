@@ -1,0 +1,44 @@
+dynamatics_component: m3dynamatics_s2r1_iss_ms3
+eyes:
+  left:
+    rotation:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    - -1.0
+    - 0.0
+    translation:
+    - 0.0
+    - 0.0
+    - -0.052999999999999999
+  right:
+    rotation:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    - -1.0
+    - 0.0
+    translation:
+    - 0.0
+    - 0.0
+    - 0.052999999999999999
+joint_components:
+  J0: m3joint_ms3_j0
+  J1: m3joint_ms3_j1
+  J2: m3joint_ms3_j2
+  J3: m3joint_ms3_j3
+  J4: m3joint_ms3_j4
+  J5: m3joint_ms3_j5
+  J6: m3joint_ms3_j6
+limb_name: head
+name: m3head_ms3
+ndof: 7
+version: iss

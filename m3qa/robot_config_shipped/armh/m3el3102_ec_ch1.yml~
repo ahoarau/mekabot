@@ -1,0 +1,6 @@
+ethercat:
+  pdo_version: el3102_pdo_v0
+  product_code: 203305042
+  serial_number: 1003
+name: m3el3102_ec_ch0
+

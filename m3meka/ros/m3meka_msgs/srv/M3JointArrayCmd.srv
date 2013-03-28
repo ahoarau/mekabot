@@ -1,0 +1,12 @@
+float32[] tq_desired		#Desired torque (mNm)
+int32[] pwm_desired		#Desired pwm (ticks)
+float32[] q_stiffness		#Desired joint stifness (0.0-1.0, scalar)
+int32[] ctrl_mode		#Desired arm control mode 
+float32[] q_desired		#Desired joint angle (Rad)
+float32[] pos_desired		#Desired end pos (x,y,z,yaw,pitch,roll) (mm,rad)
+float32[] qdot_desired		#Desired joint angle (Deg)
+float32[] q_slew_rate		#Slew Rates (max ang velocity) for joints (Deg/sec)
+---
+int32 response
+
+#repeated M3JointVia			vias=5;	 				//Joint trajectory vias

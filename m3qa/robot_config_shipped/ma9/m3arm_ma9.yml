@@ -1,0 +1,13 @@
+dynamatics_component: m3dynamatics_left_h2r2_fts_ma9
+joint_components:
+  J0: m3joint_ma9_j0
+  J1: m3joint_ma9_j1
+  J2: m3joint_ma9_j2
+  J3: m3joint_ma9_j3
+  J4: m3joint_ma9_j4
+  J5: m3joint_ma9_j5
+  J6: m3joint_ma9_j6
+limb_name: left_arm
+name: m3arm_ma9
+ndof: 7
+version: iss

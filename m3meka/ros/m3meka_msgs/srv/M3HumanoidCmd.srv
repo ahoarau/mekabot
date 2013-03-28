@@ -1,0 +1,11 @@
+uint8 chain
+float32[] tq_desired
+uint8[] ctrl_mode
+float32[] q_stiffness
+float32[] q_desired
+float32[] qdot_desired
+float32[] q_slew_rate
+float32[] pwm_desired
+bool enable_motor
+---
+int32 response

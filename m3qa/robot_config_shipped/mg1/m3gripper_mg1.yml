@@ -1,0 +1,9 @@
+limb_name: right_gripper
+name: m3gripper_mg1
+digit_joint_components:
+  J0: m3gripper_digit_joint_mg1_j0
+  J1: m3gripper_digit_joint_mg1_j1
+param:
+  foo: [0.0, 0.0, 0.0, 0.0]
+calib: 
+  cb_drive_radius_m: 0.01625

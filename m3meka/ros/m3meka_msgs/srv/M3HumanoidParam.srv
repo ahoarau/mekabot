@@ -1,0 +1,8 @@
+uint8 chain
+float32 payload_mass		#Kg
+float32[3] payload_com		#Meters, End link coordinate system
+float32[6] payload_inertia
+bool use_velocities
+bool use_accelerations
+---
+int32 response

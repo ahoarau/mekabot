@@ -1,0 +1,6 @@
+# chid: 0
+ethercat:
+  pdo_version: actx1_pdo_v1
+  product_code: 1010
+  serial_number: 277
+name: m3actuator_ec_as5510

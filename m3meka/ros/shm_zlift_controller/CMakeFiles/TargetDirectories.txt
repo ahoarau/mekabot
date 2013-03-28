@@ -1,0 +1,16 @@
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/ROSBUILD_genmsg_cpp.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/ROSBUILD_genmsg_lisp.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/ROSBUILD_gensrv_cpp.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/ROSBUILD_gensrv_lisp.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/clean-test-results.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/move_zlift.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/rosbuild_precompile.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/rosbuild_premsgsrvgen.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/rospack_genmsg.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/rospack_genmsg_libexe.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/rospack_gensrv.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/test.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/test-future.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/test-results.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/test-results-run.dir
+/home/meka/mekabot/m3meka/ros/shm_zlift_controller/CMakeFiles/tests.dir

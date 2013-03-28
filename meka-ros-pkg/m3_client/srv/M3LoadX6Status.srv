@@ -1,0 +1,8 @@
+int32 request
+---
+M3BaseStatus base
+float32[6] wrench		#Load cell wrench (mNm)
+float32 adc_ext_0 		
+float32 adc_ext_1 		
+float32 adc_ext_2 		
+float32 dig_ext_0 		

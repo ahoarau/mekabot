@@ -1,0 +1,41 @@
+#!/bin/sh
+
+if [ $UID != 0 ]; then SUDO="sudo "; else SUDO=""; fi
+
+
+if test \! -c /dev/rtai_shm; then
+	$SUDO mknod -m 666 /dev/rtai_shm c 10 254
+fi
+for n in `seq 0 9`; do
+	f=/dev/rtf$n
+	if test \! -c $f; then
+		$SUDO mknod -m 666 $f c 150 $n
+	fi
+done
+
+insmod=/sbin/insmod
+m3ko=/lib/modules/$(uname -r)/extra/m3ec.ko
+MODULES=/usr/realtime/modules
+
+#sync paranoia might be useful
+sync
+$SUDO $insmod $MODULES/rtai_hal.ko IsolCpusMask=0;
+sync
+$SUDO $insmod $MODULES/rtai_lxrt.ko;
+#$insmod $MODULES/rtai_ksched.ko;
+#$insmod $MODULES/rtai_smp.o;
+sync
+$SUDO $insmod $MODULES/rtai_sem.ko;
+sync
+$SUDO $insmod $MODULES/rtai_shm.ko;
+if [ -f $MODULES/rtai_smi.ko ]
+then
+  sync
+  $SUDO $insmod $MODULES/rtai_smi.ko;
+fi
+sync
+sync
+$SUDO $insmod $m3ko;
+
+
+

@@ -1,0 +1,16 @@
+option optimize_for = SPEED;
+
+enum JOINT_ARRAY_MODE{
+		JOINT_ARRAY_MODE_OFF = 0;					//Actuator off
+		JOINT_ARRAY_MODE_PWM = 1;					//Direct PWM control
+		JOINT_ARRAY_MODE_TORQUE = 2;					//Direct Torque control
+		JOINT_ARRAY_MODE_THETA = 3;					//Joint angle control (no force feedback)
+		JOINT_ARRAY_MODE_TORQUE_GC = 4;					//Gravity compensated torque control
+		JOINT_ARRAY_MODE_THETA_GC = 5;					//Gravity compensated joint angle control
+		JOINT_ARRAY_MODE_THETA_MJ = 6;					//Minimum Jerk joint angle control
+		JOINT_ARRAY_MODE_THETA_GC_MJ = 7;				//Minimum Jerk gravity compensated joint angle
+		JOINT_ARRAY_MODE_SPLINED_TRAJ = 8;				//Splined traj. with THETA jont mode
+		JOINT_ARRAY_MODE_SPLINED_TRAJ_GC=9;				//Splined traj. with THETA_GC joint mode
+		JOINT_ARRAY_MODE_TORQUE_SHM=10;					//External torque command via shared memory
+		JOINT_ARRAY_MODE_ANGLE_SHM=11;					//External angle command via shared memory
+}

@@ -1,0 +1,27 @@
+
+option optimize_for = SPEED;
+import "component_base.proto";
+
+
+message M3ExampleStatus
+{
+	optional M3BaseStatus	base=1;						//reserved
+	optional double		foo=2;						//sensor value
+}
+
+message M3ExampleParam
+{
+	optional double			max_fx=1;				//scale status value
+	optional double			max_fy=2;				//scale status value
+	optional double			max_fz=3;				//scale status value
+
+}
+
+message M3ExampleCommand
+{
+	optional bool			enable=1;				//turn  on/off
+	optional double			fx=2;
+	optional double			fy=3;
+	optional double			fz=4;
+}
+

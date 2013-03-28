@@ -1,0 +1,95 @@
+calib:
+  amp_temp:
+    cb_bias: 0.013411458333344228
+    cb_mV_at_25C: 750.0
+    cb_mV_per_C: 10.0
+    cb_scale: 1.0
+    name: Microchip TC1047
+    type: adc_linear_5V
+  angle_df:
+    theta_df:
+      cutoff_freq: 80
+      order: 3
+      type: butterworth
+    thetadot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+  current:
+    cb_bias: 0.0
+    cb_mV_per_A: 66.0
+    cb_scale: 1.0
+    cb_ticks_at_zero_a: 1838.2
+    cb_ticks_at_zero_b: 1858.0
+    name: Allegro ACS712-30
+    type: adc_linear_5V
+  ext_temp:
+    type: temp_25C
+  motor:
+    amplifier_resistance: 0.013599999999999999
+    current_sensor_type: measured
+    gear_ratio: 512.0
+    max_efficiency: 93.0
+    max_pwm_duty: 3186.0
+    max_winding_temp: 125.0
+    mechanical_time_constant: 4.2000000000000002
+    model_type: model_v1
+    name: Maxon RE50 200W 24V 370354
+    no_load_current: 248.0
+    no_load_speed: 5778.0
+    nominal_current: 9.0399999999999991
+    nominal_speed: 5538.0
+    nominal_torque: 349.0
+    nominal_voltage: 24.0
+    rotor_inertia: 584.0
+    speed_constant: 241.0
+    speed_torque_gradient: 0.68700000000000006
+    stall_torque: 8416
+    starting_current: 212.0
+    temp_sensor_type: ambient
+    thermal_resistance_housing_ambient: 3.8100000000000001
+    thermal_resistance_rotor_housing: 2.27
+    thermal_time_constant_motor: 406.0
+    thermal_time_constant_winding: 137.0
+    torque_constant: 39.600000000000001
+    winding_inductance: 0.094
+    winding_resistance: 0.113
+  theta:
+    cb_bias: 181.84802522940464
+    cb_scale: -0.81928527355194092
+    name: ContElec VertX13
+    type: vertx_14bit
+  torque:
+    cb_bias: 21868.917710876463
+    cb_inv_torque:
+    - 0.010519218631088734
+    - 1941.0465087890625
+    cb_scale: 1.0
+    cb_torque:
+    - 95.040931701660156
+    - -184478.84375
+    description: TRS-1K
+    name: Linear torque-load cell
+    type: adc_poly
+  torquedot_df:
+    cutoff_freq: 100
+    order: 3
+    type: diff_butterworth
+calibration_date: Sun Jun 20 14:58:30 2010
+description: max2_v0.2_seax2_v1.2
+ec_component: m3actuator_ec_mt2_j1
+ignore_bounds: 0
+joint_component: m3joint_mt2_j1
+name: m3actuator_mt2_j1
+param:
+  max_amp_current: 20000.0
+  max_amp_temp: 125.0
+  max_overload_time: 3.0
+  max_tq: 200000.0
+  min_tq: -200000.0
+version: iss

@@ -1,0 +1,37 @@
+
+########### M3 CONFIG ######################
+hostname: meka-mobile
+rt_components:
+  pwr:
+    m3pwr_pwr013: m3pwr
+  mb1:  
+    m3omnibase_mb1: m3omnibase
+    m3joint_array_mb1: m3joint_array
+    m3actuator_mb1_j0: m3actuator
+    m3actuator_mb1_j1: m3actuator
+    m3actuator_mb1_j2: m3actuator
+    m3actuator_mb1_j3: m3actuator
+    m3actuator_mb1_j4: m3actuator
+    m3actuator_mb1_j5: m3actuator
+    m3actuator_mb1_j6: m3actuator
+    m3actuator_mb1_j7: m3actuator
+    m3joint_mb1_j0: m3joint
+    m3joint_mb1_j1: m3joint
+    m3joint_mb1_j2: m3joint
+    m3joint_mb1_j3: m3joint
+    m3joint_mb1_j4: m3joint
+    m3joint_mb1_j5: m3joint
+    m3joint_mb1_j6: m3joint
+    m3joint_mb1_j7: m3joint
+ec_components:
+  pwr:
+    m3pwr_ec_pwr013: m3pwr_ec
+  mb1:
+    m3actuator_ec_mb1_j0: m3actuator_ec
+    m3actuator_ec_mb1_j1: m3actuator_ec
+    m3actuator_ec_mb1_j2: m3actuator_ec
+    m3actuator_ec_mb1_j3: m3actuator_ec
+    m3actuator_ec_mb1_j4: m3actuator_ec
+    m3actuator_ec_mb1_j5: m3actuator_ec
+    m3actuator_ec_mb1_j6: m3actuator_ec
+    m3actuator_ec_mb1_j7: m3actuator_ec

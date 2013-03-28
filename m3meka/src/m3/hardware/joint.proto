@@ -1,0 +1,85 @@
+// M3 -- Meka Robotics Robot Components
+// Copyright (c) 2010 Meka Robotics
+// Author: edsinger@mekabot.com (Aaron Edsinger)
+// 
+// M3 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// M3 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with M3.  If not, see <http://www.gnu.org/licenses/>.
+
+
+option optimize_for = SPEED;
+
+import "component_base.proto";
+import "smoothing_mode.proto";
+
+
+enum JOINT_MODE{	
+	JOINT_MODE_OFF = 0;		//Actuator off
+	JOINT_MODE_PWM = 1;		//Direct PWM control
+	JOINT_MODE_TORQUE = 2;		//Direct Torque control
+	JOINT_MODE_THETA = 3;		//Joint angle control
+	JOINT_MODE_TORQUE_GC = 4;	//Gravity compensated torque control
+	JOINT_MODE_THETA_GC = 5;	//Gravity compensated joint angle control with torque feedback
+	JOINT_MODE_THETA_MJ = 6;	//Minimum Jerk joint angle control
+	JOINT_MODE_THETA_GC_MJ = 7;	//Minimum Jerk gravity compensated joint angle control
+}
+
+message M3JointStatus{
+	optional M3BaseStatus	base=1;					//Reserved
+	optional double		motor_temp= 2;				//(C)
+    	optional double		amp_temp=3;				//(C)
+    	optional double		current=4;				//(mA)
+    	optional double		torque=6;				//(mNm)
+	optional double		torquedot=7;				//(mNm)
+   	optional double		theta=8;				//(Deg)
+    	optional double		thetadot=9;				//(Deg/s)
+    	optional double		thetadotdot=10;				//(Deg/s^2)
+    	optional double		torque_gravity=11;			//(mNm)
+	optional int32		pwm_cmd=12;				//Current PWM command to motor
+	optional double		ambient_temp= 13;			//(C)
+	optional double		case_temp= 14;				//(C)
+	optional double		power= 15;				//(C)
+	optional int32		flags=16;				//Status reported by DSP
+}
+
+message M3JointParam{
+	
+	optional double		kq_p = 1;					//P gain, gc joint angle control (THETA_GC Mode)
+	optional double		kq_i = 2;					//I gain, gc joint angle  control (THETA_GC Mode)
+	optional double		kq_d = 3;					//D gain, gc joint angle  control (THETA_GC Mode)
+	optional double		kq_i_limit = 4;					//Integral limit, gravity compensated joint angle  control (THETA_GC Mode)
+	optional double		max_q=5;					//Safety thresh (Deg)
+	optional double		min_q = 6;					//Safety thresh (Deg)
+	optional double		kt_p = 7;					//P gain, direct joint angle control (THETA Mode)
+	optional double		kt_i = 8;					//I gain, direct joint angle  control (THETA Mode)
+	optional double		kt_d = 9;					//D gain, direct joint angle  control (THETA Mode)
+	optional double		kt_i_limit = 10;				//Integral limit, direct joint angle  control (THETA Mode)
+	optional double 		kq_g=11;					//Gravity compensation gain
+	optional double		max_q_slew_rate=12;					//Max Rate (deg/S) to slew desired joint angle
+	optional double		kq_i_range = 13;				//Integral range (Deg) (THETA_GC Mode)
+	optional double		kt_i_range = 14;				//Integral range (Deg) (THETA Mode)
+	optional double		max_q_pad=15 ;					//Safety thresh padding (Deg)
+	optional double		min_q_pad = 16 ;				//Safety thresh padding (Deg)
+}
+		
+message M3JointCommand{
+		optional double        		tq_desired = 1;                                 //Desired torque (mNm)
+    	optional double            	q_desired = 2;                                  //Desired joint angle (Deg)
+    	optional int32            	pwm_desired = 3;                                //Desired pwm (ticks)
+    	optional double             	q_stiffness = 4;                                //Desired joint stifness (0.0-1.0, scalar)
+    	optional JOINT_MODE     	ctrl_mode = 5;                                  //Desired control mode (M3SEA_MODE_OFF, etc)
+    	optional double            	qdot_desired = 6;                               //Desired joint velocity (Deg)
+	optional double            	q_slew_rate = 7;                               //Rate (deg/S) to slew desired joint angle
+    	optional bool			brake_off=8;					//Disable brake if present
+   	optional SMOOTHING_MODE     	smoothing_mode = 9;                                  //Desired control mode (M3SEA_MODE_OFF, etc)
+	
+}

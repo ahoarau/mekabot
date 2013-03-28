@@ -1,0 +1,19 @@
+(cl:defpackage meka_trajectory-msg
+  (:use )
+  (:export
+   "<TRAJACTIONFEEDBACK>"
+   "TRAJACTIONFEEDBACK"
+   "<TRAJFEEDBACK>"
+   "TRAJFEEDBACK"
+   "<TRAJRESULT>"
+   "TRAJRESULT"
+   "<TRAJACTIONGOAL>"
+   "TRAJACTIONGOAL"
+   "<TRAJACTION>"
+   "TRAJACTION"
+   "<TRAJACTIONRESULT>"
+   "TRAJACTIONRESULT"
+   "<TRAJGOAL>"
+   "TRAJGOAL"
+  ))
+

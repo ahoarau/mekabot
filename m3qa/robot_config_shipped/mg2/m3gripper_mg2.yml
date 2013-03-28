@@ -1,0 +1,8 @@
+limb_name: right_gripper
+name: m3gripper_mg2
+ndof: 2
+joint_components:
+  J0: m3joint_mg2_j0
+  J1: m3joint_mg2_j1
+calib: 
+  cb_drive_radius_m: 0.01625

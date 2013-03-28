@@ -1,0 +1,33 @@
+actuator_component: m3actuator_mh8_j3
+brake: none
+calibration_date: Mon Jul 26 11:37:27 2010
+name: m3joint_mh8_j3
+param:
+  kq_d: -0.25
+  kq_g: -0.10000000000000001
+  kq_i: -0.10000000000000001
+  kq_i_limit: 50.0
+  kq_i_range: 45.0
+  kq_p: -15.0
+  kt_d: 0.0
+  kt_i: 0.0
+  kt_i_limit: 0.0
+  kt_i_range: 0.0
+  kt_p: 0.0
+  max_q: 330.13941789006969
+  max_q_pad: 40.0
+  max_q_slew_rate: 200.0
+  min_q: 1.427503741879832e-05
+  min_q_pad: 0.0
+transmission:
+  act_name: m3actuator_mh8_j3
+  qj_to_qa:
+  - 1.0
+  qs_to_qj:
+  - 1.0
+  tqj_to_tqa:
+  - 1.0
+  tqs_to_tqj:
+  - 1.0
+  type: gear
+version: iss

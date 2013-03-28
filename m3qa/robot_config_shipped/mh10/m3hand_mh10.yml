@@ -1,0 +1,10 @@
+joint_components:
+  J0: m3joint_mh10_j0
+  J1: m3joint_mh10_j1
+  J2: m3joint_mh10_j2
+  J3: m3joint_mh10_j3
+  J4: m3joint_mh10_j4
+limb_name: right_hand
+name: m3hand_mh10
+ndof: 5
+version: iss

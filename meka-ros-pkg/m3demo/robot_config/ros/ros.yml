@@ -1,0 +1,4 @@
+ros_components:
+  - m3hand_mh8
+  - m3humanoid_right_arm_torso_mr8
+  - m3loadx6_ma10_l0

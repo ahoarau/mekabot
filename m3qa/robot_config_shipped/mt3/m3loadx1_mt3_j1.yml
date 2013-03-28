@@ -1,0 +1,22 @@
+calib:
+  torque:
+    cb_bias: 0.0
+    cb_inv_torque:
+    - 0.0022755854297429323
+    - 1878.2899169921875
+    cb_scale: 1.0
+    cb_torque:
+    - 439.14651489257812
+    - -824844.5
+    name: Linear torque-load cell
+    type: adc_poly
+  torquedot_df:
+    cutoff_freq: 100
+    order: 3
+    type: diff_butterworth
+calibration_date: Fri Nov 20 17:28:51 2009
+description: TRS-2K SN239288
+ec_component: m3loadx1_ec_mt2_j1
+name: m3loadx1_mt2_j1
+param:
+  foo: 0

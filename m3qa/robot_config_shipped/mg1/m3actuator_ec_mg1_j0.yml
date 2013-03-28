@@ -1,0 +1,22 @@
+chid: 0
+ethercat:
+  pdo_version: gmb_pdo_v0
+  product_code: 1006
+  serial_number: 274
+name: m3actuator_ec_mg1_j0
+param:
+  config: 2
+  k_d: 0
+  k_d_shift: 0
+  k_i: 0
+  k_i_limit: 0
+  k_i_shift: 0
+  k_p: 40
+  k_p_shift: 0
+  pwm_max: 3186
+  qei_max: 0
+  qei_min: 0
+  t_max: 2850
+  t_min: 2350
+pwr_component: m3pwr_pwr007
+

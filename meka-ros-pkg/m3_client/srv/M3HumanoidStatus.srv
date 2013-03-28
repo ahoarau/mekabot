@@ -1,0 +1,17 @@
+uint8 chain
+---
+M3BaseStatus base
+string[] joint_names		# not implemented
+float32[] torque 		#(mNm)
+float32[] torquedot 		#(mNm)    
+float32[] theta 		#(Rad)
+float32[] thetadot 		#(Rad/s)
+float32[] thetadotdot 		#(Rad/s^2)
+int32 completed_spline_idx 	#Last spline command completed	
+float32[3] end_pos 		#3x1 position of End frame in Base coords (x,y,z)
+float32[9] end_rot		#3x3 Rotation Mtx
+float32[] J			#6xndof Jacobian Frame ndof+1 to Frame 0
+float32[] G			#ndofx1 joint torque gravity vector mN*m
+float32[6] end_twist		#6x1 twist at Frame ndof+1
+float32[] pwm_cmd		#Current PWM command to motor
+bool motor_enabled		# not implemented

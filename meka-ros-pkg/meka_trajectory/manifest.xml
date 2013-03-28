@@ -1,0 +1,18 @@
+<package>
+  <description brief="meka_trajectory">
+
+	meka_trajectory
+
+  </description>
+  <author>meka</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/simple_traj_server</url>
+  <depend package="actionlib"/>
+  <depend package="roscpp"/>
+  <depend package="pr2_controllers_msgs"/>
+  
+
+</package>
+
+

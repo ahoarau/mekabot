@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find hon_arm_navigation)/launch/hon_planning_environment.launch" />
+    <node pkg="arm_kinematics_constraint_aware" type="arm_kinematics_constraint_aware" name="hon_right_arm_kinematics">
+        <param name="group" type="string" value="right_arm" />
+        <param name="right_arm/root_name" type="string" value="upper" />
+        <param name="right_arm/tip_name" type="string" value="handmount_RIGHT" />
+        <param name="kinematics_solver" type="string" value="arm_kinematics_constraint_aware/KDLArmKinematicsPlugin" />
+    </node>
+</launch>

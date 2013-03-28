@@ -1,0 +1,10 @@
+limb_name: right_hand
+name: m3hand_mh5
+ndof: 5
+joint_components:
+  J0: m3joint_mh5_j0
+  J1: m3joint_mh5_j1
+  J2: m3joint_mh5_j2
+  J3: m3joint_mh5_j3
+  J4: m3joint_mh5_j4
+

@@ -1,0 +1,71 @@
+Return-Path: <rkelbs@gmail.com>
+X-Original-To: edsinger@mekabot.com
+Delivered-To: x3011423@homiemail-mx9.g.dreamhost.com
+Received: from mail-pw0-f51.google.com (mail-pw0-f51.google.com [209.85.160.51])
+	by homiemail-mx9.g.dreamhost.com (Postfix) with ESMTP id C8B9F285859
+	for <edsinger@mekabot.com>; Sat, 10 Jul 2010 19:18:23 -0700 (PDT)
+Received: by pwi6 with SMTP id 6so1657769pwi.38
+        for <edsinger@mekabot.com>; Sat, 10 Jul 2010 19:18:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=domainkey-signature:mime-version:received:received:date:message-id
+         :subject:from:to:content-type;
+        bh=NVaVwQX/F/yiQP/5QnjSKKTGArYJOnbLy4He0/Zoc+E=;
+        b=qjmC7I4jS3JBJdJmxfIANQkNgTyZ1f+ncfJ5Wr6FbF1YSVQEivQii4Zg6wvoLU7kbb
+         VeYAR+uYRKbTm4eYgWqIl+q9OwjXB/RyjhcRhqtR+6FKMKFNtDchufGA2KhJ6smSC5Ws
+         WvhEN39VUb2nNAFnWIG4bb3aH0vW/zkswh0Dw=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=gmail.com; s=gamma;
+        h=mime-version:date:message-id:subject:from:to:content-type;
+        b=xGy1sizY+1PnPaqwtnr3cBJ5ZurISKDpjDJ3nZzL2CsV+9oreRZmmDzXrMbut7CUn9
+         nsE8UtqmwfWzekA8AsBhSdrMzvD3jLFIeyTVjbpbNE7l7Zven9jGOWZC0Eli9e8Vscgg
+         dFQwbY2ZQAFaNZVihUaDVLzA1YIPKCQNlBnZ0=
+MIME-Version: 1.0
+Received: by 10.142.127.9 with SMTP id z9mr14092028wfc.187.1278814703449; Sat, 
+	10 Jul 2010 19:18:23 -0700 (PDT)
+Received: by 10.143.13.10 with HTTP; Sat, 10 Jul 2010 19:18:23 -0700 (PDT)
+Date: Sat, 10 Jul 2010 19:18:23 -0700
+Message-ID: <AANLkTikxf975wg25tNY6fgeA1RPFa5-E2NE97BOme-TC@mail.gmail.com>
+Subject: ros library paths
+From: Robby K <rkelbs@gmail.com>
+To: Aaron Edsinger <edsinger@mekabot.com>
+Content-Type: multipart/alternative; boundary=000e0cd3292e21f53e048b13403e
+
+--000e0cd3292e21f53e048b13403e
+Content-Type: text/plain; charset=ISO-8859-1
+
+.bashrc:
+
+export
+LD_LIBRARY_PATH=/usr/local/lib:~/mekabot/ros/ros/3rdparty/xmlrpcpp/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/mekabot/ros/ros/core/roscpp/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/mekabot/ros/ros/core/roslib/lib
+export
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/mekabot/ros/ros/core/rosconsole/lib
+
+
+
+also in /etc/ld.so.conf:
+
+/home/meka/mekabot/ros/ros/3rdparty/xmlrpcpp/lib
+/home/meka/mekabot/ros/ros/core/roscpp/lib
+/home/meka/mekabot/ros/ros/core/roslib/lib
+/home/meka/mekabot/ros/ros/core/rosconsole/lib
+
+--000e0cd3292e21f53e048b13403e
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+.bashrc:<div><br></div><div><div>export LD_LIBRARY_PATH=3D/usr/local/lib:~/=
+mekabot/ros/ros/3rdparty/xmlrpcpp/lib</div><div>export LD_LIBRARY_PATH=3D$L=
+D_LIBRARY_PATH:~/mekabot/ros/ros/core/roscpp/lib</div><div>export LD_LIBRAR=
+Y_PATH=3D$LD_LIBRARY_PATH:~/mekabot/ros/ros/core/roslib/lib</div>
+<div>export LD_LIBRARY_PATH=3D$LD_LIBRARY_PATH:~/mekabot/ros/ros/core/rosco=
+nsole/lib</div></div><div><br></div><div><br></div><div><br></div><div>also=
+ in /etc/ld.so.conf:</div><div><br></div><div><div>/home/meka/mekabot/ros/r=
+os/3rdparty/xmlrpcpp/lib</div>
+<div>/home/meka/mekabot/ros/ros/core/roscpp/lib</div><div>/home/meka/mekabo=
+t/ros/ros/core/roslib/lib</div><div>/home/meka/mekabot/ros/ros/core/roscons=
+ole/lib</div></div>
+
+--000e0cd3292e21f53e048b13403e--

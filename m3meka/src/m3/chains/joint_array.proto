@@ -1,0 +1,60 @@
+// M3 -- Meka Robotics Robot Components
+// Copyright (c) 2010 Meka Robotics
+// Author: edsinger@mekabot.com (Aaron Edsinger)
+// 
+// M3 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// M3 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with M3.  If not, see <http://www.gnu.org/licenses/>.
+
+option optimize_for = SPEED;
+
+import "component_base.proto";
+import "trajectory.proto";
+import "joint.proto";
+import "smoothing_mode.proto";
+import "joint_array_mode.proto";
+
+message M3JointArrayStatus
+{
+	optional M3BaseStatus	base=1;			//Reserved	
+	repeated double			motor_temp= 2;				//(F)
+    repeated double			amp_temp=3;					//(F)
+    repeated double			current=4;					//(mA)
+    repeated double		    torque=5;					//(mNm)
+    repeated double		    torquedot=6;				//(mNm)    
+    repeated double			theta=7;					//(Rad)
+    repeated double			thetadot=8;				//(Rad/s)
+    repeated double			thetadotdot=9;				//(Rad/s^2)
+    optional int32			completed_spline_idx=10;	//Last spline command completed
+    repeated int32			pwm_cmd=11;				//Current PWM command to motor
+    repeated int32			flags=12;				//Status flags from DSP
+}
+
+
+
+
+message M3JointArrayCommand{
+	repeated double				tq_desired = 1;				//Desired torque (mNm)
+	repeated int32				pwm_desired = 2;			//Desired pwm (ticks)
+	repeated double				q_stiffness = 3;			//Desired joint stifness (0.0-1.0, scalar)
+	repeated JOINT_ARRAY_MODE		ctrl_mode = 4;				//Desired arm control mode 
+	repeated M3JointVia			vias=5;	 				//Joint trajectory vias
+	repeated double				q_desired = 6;				//Desired joint angle (Deg)
+	repeated double 				pos_desired=7;				//Desired end pos (x,y,z,yaw,pitch,roll) (mm,rad)
+	repeated double				qdot_desired = 8;			//Desired joint angle (Deg)
+	repeated double				q_slew_rate = 9;			//Slew Rates (max ang velocity) for joints (Deg/sec)
+	repeated SMOOTHING_MODE			smoothing_mode = 10;				//Desired arm control mode 	
+}
+
+message M3JointArrayParam{
+	optional double			test=1;
+}

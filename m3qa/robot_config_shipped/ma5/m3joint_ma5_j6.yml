@@ -1,0 +1,36 @@
+actuator_component: m3actuator_ma5_j6
+calibration_date: Wed Mar  3 09:57:43 2010
+name: m3joint_ma5_j6
+param:
+  kq_d: -4.0
+  kq_g: 1.0
+  kq_i: -0.10000000000000001
+  kq_i_limit: 1000.0
+  kq_i_range: 150.0
+  kq_p: -200.0
+  kt_d: -2.0
+  kt_i: 0.0
+  kt_i_limit: 300.0
+  kt_i_range: 25.0
+  kt_p: -75.0
+  max_q: 59.670390038454485
+  max_q_pad: 0.0
+  max_q_slew_rate: 150.0
+  min_q: -59.670390038454485
+  min_q_pad: 0.0
+transmission:
+  act_name: m3actuator_ma5_j6
+  cpj_name: m3joint_ma5_j5
+  qj_to_qa:
+  - -2.0
+  - 2.0
+  qs_to_qj:
+  - 1.0
+  - 0.0
+  tqj_to_tqa:
+  - -0.25
+  - 0.25
+  tqs_to_tqj:
+  - -2.0
+  - 2.0
+  type: differential

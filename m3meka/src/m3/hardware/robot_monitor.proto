@@ -1,0 +1,57 @@
+// M3 -- Meka Robotics Robot Components
+// Copyright (c) 2010 Meka Robotics
+// Author: edsinger@mekabot.com (Aaron Edsinger)
+// 
+// M3 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// M3 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with M3.  If not, see <http://www.gnu.org/licenses/>.
+
+option optimize_for = SPEED;
+import "component_base.proto";
+
+enum ROBOT_MONITOR_STATE {
+	ROBOT_MONITOR_OKAY = 0;
+	ROBOT_MONITOR_LOW_WARN = 1;
+	ROBOT_MONITOR_HIGH_WARN = 2;	
+	ROBOT_MONITOR_LOW_ERR = 3;
+	ROBOT_MONITOR_HIGH_ERR = 4;	
+}
+
+message M3RobotMonitorComponentStatus {
+      optional string 			component_name=1;
+      optional ROBOT_MONITOR_STATE 	state=2;
+      optional string 			msg=3;
+}
+
+
+message M3RobotMonitorStatus {
+	optional M3BaseStatus			base=1;						//Reserved
+	repeated M3RobotMonitorComponentStatus	volt_comp=2;
+	repeated M3RobotMonitorComponentStatus	temp_comp=3;
+}
+
+message M3RobotMonitorCommand{
+	optional int32					force_safe_op=1;
+}
+
+message M3RobotMonitorComponentParam {	
+	optional double max_val_warn=1;
+	optional double min_val_warn=2;
+	optional double max_val_err=3;
+	optional double min_val_err=4;
+	optional string component_name = 5;
+}
+
+message M3RobotMonitorParam{
+	repeated M3RobotMonitorComponentParam		volt_comp=1;
+	repeated M3RobotMonitorComponentParam		temp_comp=2;
+}

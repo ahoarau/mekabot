@@ -1,0 +1,7 @@
+name: m3pwr_ec_pwr006
+ethercat:
+  product_code: 1002
+  serial_number: 262
+  pdo_version: pwr_pdo_v1
+param:
+  config: 0

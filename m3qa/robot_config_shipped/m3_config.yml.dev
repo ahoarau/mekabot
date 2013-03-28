@@ -1,0 +1,16 @@
+
+########### M3 CONFIG ######################
+hostname: meka-maddog
+rt_components:
+  sys:
+    m3monitor_m0: m3monitor
+  pwr:
+    m3pwr_pwr007: m3pwr
+  dev:
+    m3actuator_dev_j0: m3actuator
+    m3joint_dev_j0: m3joint
+ec_components:
+  dev:
+    m3actuator_ec_dev_j0: m3actuator_ec
+  pwr:
+    m3pwr_ec_pwr007: m3pwr_ec

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+
+  <property name="M_PI" value="3.1415926535897931" />
+ 
+
+  <macro name="m3_neck_transmission">
+  <transmission name="m3joint_${HEAD}_t0" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="m3joint_${HEAD}_a0"/>
+      <joint name="m3joint_${HEAD}_j0"/>
+    <mechanicalReduction>1</mechanicalReduction>
+  </transmission>
+
+     
+    <transmission name="m3joint_${HEAD}_t1" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="m3joint_${HEAD}_a1"/>
+      <joint name="m3joint_${HEAD}_j1"/>
+    <mechanicalReduction>1</mechanicalReduction>
+  </transmission>
+
+    <transmission name="m3joint_${HEAD}_t2" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="m3joint_${HEAD}_a2"/>
+      <joint name="m3joint_${HEAD}_j2"/>
+    <mechanicalReduction>1</mechanicalReduction>
+  </transmission>
+
+      <transmission name="m3joint_${HEAD}_t3" type="pr2_mechanism_model/SimpleTransmission">
+        <actuator name="m3joint_${HEAD}_a3"/>
+        <joint name="m3joint_${HEAD}_j3"/>
+    <mechanicalReduction>1</mechanicalReduction>
+  </transmission>
+
+  
+
+
+    <transmission name="m3joint_${HEAD}_t4" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="m3joint_${HEAD}_a4"/>
+      <joint name="m3joint_${HEAD}_j4"/>
+    <mechanicalReduction>1</mechanicalReduction>
+  </transmission>
+
+    <transmission name="m3joint_${HEAD}_t5" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="m3joint_${HEAD}_a5"/>
+      <joint name="m3joint_${HEAD}_j5"/>
+    <mechanicalReduction>1</mechanicalReduction>
+  </transmission>
+
+  <transmission name="m3joint_${HEAD}_t6" type="pr2_mechanism_model/SimpleTransmission">
+    <actuator name="m3joint_${HEAD}_a6"/>
+    <joint name="m3joint_${HEAD}_j6"/>
+    <mechanicalReduction>1</mechanicalReduction>
+  </transmission>
+       
+</macro>
+
+
+  <macro name="m3_head_transmission">
+    <m3_neck_transmission/>
+  </macro>
+
+
+</robot>

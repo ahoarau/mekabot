@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       name="meka" >
+
+ <property name="M_PI" value="3.1415926535897931" />
+
+ 
+ <property name="MESH" value="meka_description/meshes/mid_res" />
+ <property name="MESH_COLL" value="meka_description/meshes/low_res" />
+
+<!-- generic simulator_gazebo plugins for starting mechanism control, ros time, ros battery -->
+  <include filename="$(find meka_description)/gazebo/gazebo.urdf.xacro" />
+  <!--<include filename="$(find meka_description)/transmissions/uta.transmission.xacro" />-->
+
+<!-- Meka Base -->
+  <include filename="$(find meka_description)/urdf/B1R2B_defs.urdf.xacro" />
+
+<!-- Meka Zlift -->
+  <include filename="$(find meka_description)/urdf/Z1R2B_defs.urdf.xacro" />
+
+<!-- Meka Arm -->
+  <include filename="$(find meka_description)/urdf/A2R4_r_arm_defs.urdf.xacro" />
+  
+
+  <!-- Meka Hand -->
+  <include filename="$(find meka_description)/urdf/H2R4_r_hand_defs.urdf.xacro" />
+
+  
+<!-- Meka Head -->
+  <include filename="$(find meka_description)/urdf/S2R1B_head_defs.urdf.xacro" />
+
+
+
+  <!-- john added transmissions -->
+  <include filename="$(find meka_description)/transmissions/A2R4_r_arm_defs.transmission.xacro" />
+  <!--<include filename="$(find meka_description)/transmissions/H2R2_r_hand_defs.transmission.xacro" />-->
+  <!--<include filename="$(find meka_description)/transmissions/S2R1_head_defs.transmission.xacro" />-->
+
+
+   <property name="M_PI" value="3.1415926535897931" />
+  <material name="GreyA"> <!-- darkest -->
+    <color rgba="0.3 0.3 0.3 1.0"/>
+  </material>
+  
+  <material name="GreyB">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+  
+  <material name="GreyC">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  
+
+
+  <!-- john added transmissions -->
+  <m3_r_arm_transmission side="r" reflect="1" parent="upper"/>
+  <m3_r_hand_transmission/>
+  
+  <m3_r_hand side="r" reflect="1" parent="handmount_RIGHT">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+  </m3_r_hand>
+  
+  <m3_head side="r" reflect="1" parent="upper">
+    <origin xyz="0.0 0.0 0.31155" rpy="0 0 0" />
+  </m3_head>
+
+  
+  
+ <m3_r_arm side="r" reflect="1" parent="upper">
+    <origin xyz="0.0 -0.18465 0.2337" rpy="0 0 0" />
+  </m3_r_arm>
+  
+  <link name="world" />
+
+  <link name="base_link" />
+<!-- Solid Base -->
+  <joint name="base_joint" type="fixed">
+	  <origin xyz="0 0 1" rpy="0 0 0" />
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
+
+    
+  <meka_base  side="r" reflect="1" parent="base_link">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+  </meka_base>
+
+  <meka_zlift  side="r" reflect="1" parent="dummy_3">
+    <origin xyz="0.43 0.0 0.75" rpy="0 0 0" />
+  </meka_zlift>
+
+  <!-- Solid Base -->
+  <joint name="chest_joint" type="fixed">
+	  <origin xyz="0 0 0.0" rpy="0 0 0" />
+    <parent link="zlift_link" />
+    <child link="upper" />
+  </joint>
+  <link name="upper">
+	  <inertial>
+		  <mass value="1000" />
+		  <origin xyz="0 0 0" />
+		  <inertia ixx="1000"  ixy="0"  ixz="0" iyy="1000" iyz="0" izz="1000" />
+	  </inertial>
+	  <visual>
+		  <material name="GreyC" />
+		  <origin xyz="0 0 0" rpy="0 0 0" />
+		  <geometry name="upper_geom">
+			  <mesh filename="package://${MESH}/T2R3/T2R3_TJ3_chest_waist_neck.dae" />
+		  </geometry>
+	  </visual>
+	  <collision>
+		  <origin xyz="0 0 0" rpy="0.0 0.0 0.0 " />
+		  <geometry name="upper_collision_geom">
+			  <mesh filename="package://${MESH_COLL}/T2R3/T2R3_TJ3_chest_waist_neck.stl" />
+		  </geometry>
+	  </collision>
+  </link>
+
+</robot>
+  

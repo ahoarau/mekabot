@@ -1,0 +1,6 @@
+ethercat:
+  pdo_version: actx1_pdo_v1
+  product_code: 1010
+  serial_number: 264
+name: m3loadx1_ec_mt2_j0
+pwr_component: m3pwr_pwr006

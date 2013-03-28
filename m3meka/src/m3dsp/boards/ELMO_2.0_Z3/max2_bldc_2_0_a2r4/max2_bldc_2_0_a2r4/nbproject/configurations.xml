@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>../../src/adc.h</itemPath>
+      <itemPath>../../src/control.h</itemPath>
+      <itemPath>../../src/dio.h</itemPath>
+      <itemPath>../../src/ethercat.h</itemPath>
+      <itemPath>../../src/ethercat_appl.h</itemPath>
+      <itemPath>../../src/ethercat_def.h</itemPath>
+      <itemPath>../../src/ethercat_esc.h</itemPath>
+      <itemPath>../../src/ethercat_hw.h</itemPath>
+      <itemPath>../../src/ethercat_slave_fsm.h</itemPath>
+      <itemPath>../../src/inttypes.h</itemPath>
+      <itemPath>../../src/setup.h</itemPath>
+      <itemPath>../../src/timer1.h</itemPath>
+      <itemPath>../../src/timer3.h</itemPath>
+      <itemPath>../../src/warning.h</itemPath>
+      <itemPath>../../src/temperature_model.h</itemPath>
+      <itemPath>../../src/spi1Drv.h</itemPath>
+      <itemPath>../../src/dac.h</itemPath>
+      <itemPath>../../src/encoder_qei.h</itemPath>
+      <itemPath>../../src/encoder_vertx.h</itemPath>
+      <itemPath>../../src/brake.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="Library Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+      <itemPath>/opt/microchip/mplabc30/v3.30c/support/dsPIC33F/gld/p33FJ64MC204.gld</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ObjectFiles"
+                   displayName="Object Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>../../src/adc.c</itemPath>
+      <itemPath>../../src/dio.c</itemPath>
+      <itemPath>../../src/encoder_vertx.c</itemPath>
+      <itemPath>../../src/ethercat.c</itemPath>
+      <itemPath>../../src/ethercat_appl.c</itemPath>
+      <itemPath>../../src/ethercat_hw.c</itemPath>
+      <itemPath>../../src/ethercat_slave_fsm.c</itemPath>
+      <itemPath>../../src/main.c</itemPath>
+      <itemPath>../../src/pwm.c</itemPath>
+      <itemPath>../../src/setup.c</itemPath>
+      <itemPath>../../src/timer1.c</itemPath>
+      <itemPath>../../src/timer3.c</itemPath>
+      <itemPath>../../../../../m3/hardware/m3ec_pdo_v4_def.h</itemPath>
+      <itemPath>../../src/control.c</itemPath>
+      <itemPath>../../src/spi1Drv.c</itemPath>
+      <itemPath>../../src/dac.c</itemPath>
+      <itemPath>../../src/encoder_qei.c</itemPath>
+      <itemPath>../../src/brake.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>../../../../../../../../m3meka-honda/src/m3dsp/boards/MAX2_2.0/max2_bldc_2_0_a2r4</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="default" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>dsPIC33FJ64MC204</targetDevice>
+        <targetHeader></targetHeader>
+        <platformTool>ICD3PlatformTool</platformTool>
+        <languageToolchain>C30</languageToolchain>
+        <languageToolchainVersion>3_30</languageToolchainVersion>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationAlternativeFileToLoadEnabled>false</makeCustomizationAlternativeFileToLoadEnabled>
+        <makeCustomizationAlternativeFileToLoad></makeCustomizationAlternativeFileToLoad>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+      </makeCustomizationType>
+      <C30>
+        <property key="optimization-level" value="3"/>
+        <property key="preprocessor-macros"
+                  value="EMBEDDED;USE_DIO;USE_ADC;USE_TIMESTAMP_DC;USE_ETHERCAT;USE_TIMER3;USE_CONTROL;USE_DAC;USE_ENCODER_QEI;USE_ACTX1_PDO_V2;M3_ELMO_B1R1;USE_ENCODER_VERTX;USE_TIMER1;USE_WATCHDOG;USE_BRAKE;M3_ELMO_Z1R1"/>
+        <property key="code-model" value="default"/>
+        <property key="const-model" value="default"/>
+        <property key="enable-procedural-abstraction" value="false"/>
+        <property key="enable-ansi-warnings" value="false"/>
+        <property key="enable-short-double" value="false"/>
+        <property key="extra-include-directories" value="../../src"/>
+        <property key="post-instruction-scheduling" value="default"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="data-model" value="default"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="enable-fatal-warnings" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-ansi-std" value="false"/>
+        <property key="enable-all-warnings" value="true"/>
+        <property key="pre-instruction-scheduling" value="default"/>
+        <property key="enable-large-arrays" value="false"/>
+        <property key="scalar-model" value="default"/>
+      </C30>
+      <C30-AS>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=".."/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="list-file" value=""/>
+        <property key="list-source" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="relax" value="false"/>
+        <property key="warning-level" value="emit-warnings"/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="list-section-info" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="false-conditionals" value="false"/>
+        <property key="expand-macros" value="false"/>
+        <property key="assembler-symbols" value=""/>
+        <appendMe value="-g "/>
+      </C30-AS>
+      <C30-LD>
+        <property key="preprocessor-macros" value=""/>
+        <property key="general-code-protect" value="no_code_protect"/>
+        <property key="secure-write-protect" value="no_write_protect"/>
+        <property key="warn-section-align" value="false"/>
+        <property key="heap-size" value=""/>
+        <property key="remove-unused-sections" value="false"/>
+        <property key="stack-size" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="map-file"
+                  value="&quot;${DISTDIR}/max2_bldc_0_3_a2r2.X.${IMAGE_TYPE}.map&quot;"/>
+        <property key="enable-pack-data" value="true"/>
+        <property key="boot-eeprom" value="no_eeprom"/>
+        <property key="general-write-protect" value="no_write_protect"/>
+        <property key="enable-handles" value="true"/>
+        <property key="enable-data-init" value="true"/>
+        <property key="secure-flash" value="no_flash"/>
+        <property key="report-memory-usage" value="true"/>
+        <property key="boot-write-protect" value="no_write_protect"/>
+        <property key="boot-flash" value="no_flash"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="input-libraries" value=""/>
+        <property key="secure-ram" value="no_ram"/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="enable-default-isr" value="true"/>
+        <property key="symbol-stripping" value=""/>
+        <property key="boot-ram" value="no_ram"/>
+        <property key="secure-eeprom" value="no_eeprom"/>
+        <property key="extra-lib-directories" value="../../misc;"/>
+      </C30-LD>
+      <C30Global>
+        <property key="fast-math" value="false"/>
+        <property key="output-file-format" value="elf"/>
+        <property key="legacy-libc" value="false"/>
+      </C30Global>
+      <ICD3PlatformTool>
+        <property key="tracecontrol.select" value="0"/>
+        <property key="tracecontrol.medium" value="0"/>
+        <property key="tracecontrol.disablemacros" value="true"/>
+      </ICD3PlatformTool>
+    </conf>
+  </confs>
+</configurationDescriptor>

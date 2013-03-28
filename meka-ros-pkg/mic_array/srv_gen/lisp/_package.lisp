@@ -1,0 +1,10 @@
+(cl:defpackage mic_array-srv
+  (:use )
+  (:export
+   "MICARRAYPARAM"
+   "<MICARRAYPARAM-REQUEST>"
+   "MICARRAYPARAM-REQUEST"
+   "<MICARRAYPARAM-RESPONSE>"
+   "MICARRAYPARAM-RESPONSE"
+  ))
+

@@ -1,0 +1,9 @@
+<launch>
+ 
+  <param name="mic_array_config" value="$(env M3_ROBOT)/ros_config/mic_array.yml" />
+        
+    <node pkg="mic_array" name="mic_array" type="mic_array.py" output="screen">              
+    </node>
+    
+  
+</launch>

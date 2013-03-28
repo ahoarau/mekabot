@@ -1,0 +1,6 @@
+humanoid: m3humanoid_right_arm_torso_mr8
+name: m3uta_example_ex0
+param:
+  max_fx: 10000.0
+  max_fy: 10000.0
+  max_fz: 10000.0

@@ -1,0 +1,15 @@
+
+
+########### M3 CONFIG ######################
+hostname: meka-mobile
+rt_components:
+  pwr:
+    m3pwr_pwr013: m3pwr
+  mz1:
+    m3actuator_mz1_j0: m3actuator
+    m3joint_mz1_j0: m3joint_zlift
+ec_components:
+  pwr:
+    m3pwr_ec_pwr013: m3pwr_ec
+  mz1:
+    m3actuator_ec_mz1_j0: m3actuator_ec

@@ -1,0 +1,9 @@
+dynamatics_component: m3dynamatics_a2r2_right_mt3
+joint_components:
+  J0: m3joint_mt3_j0
+  J1: m3joint_mt3_j1
+  J2: m3joint_slave_mt3_j2
+limb_name: torso
+name: m3torso_mt3
+ndof: 3
+version: iss

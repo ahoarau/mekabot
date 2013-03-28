@@ -1,0 +1,15 @@
+<package>
+  <description brief="meka_description">
+
+     meka_description
+
+  </description>
+  <author>meka</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://pr.willowgarage.com/wiki/m3ros</url>
+  <depend package="rviz"/>  
+  <depend package="robot_state_publisher"/>
+</package>
+
+

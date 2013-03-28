@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<robot xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+
+  <macro name="m3_r_shoulder_transmission" params="side parent reflect">
+    <!-- Shoulder pan -->
+    <transmission name="right_arm_t0" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="right_arm_a0" />
+      <joint name="right_arm_j0" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+    <!-- Shoulder lift -->
+    <transmission name="right_arm_t1" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="right_arm_a1" />
+      <joint name="right_arm_j1" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+    <!-- Upperarm roll: internal fixed attchment point for upper arm -->
+    <transmission name="right_arm_t2" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="right_arm_a2" />
+      <joint name="right_arm_j2" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+  </macro>
+
+
+
+  <!-- ============================   Upper Arm   ============================ -->
+  <macro name="m3_r_upper_arm_transmission" params="side parent reflect">
+    <transmission name="right_arm_t3" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="right_arm_a3" />
+      <joint name="right_arm_j3" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+    <!-- Elbow flex -->
+    <transmission name="right_arm_t4" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="right_arm_a4" />
+      <joint name="right_arm_j4" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+  </macro>
+
+
+  <!-- ============================   Forearm   ============================ -->
+
+  <macro name="m3_r_forearm_transmission" params="side parent reflect">
+    <transmission name="right_arm_t5" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="right_arm_a5" />
+      <joint name="right_arm_j5" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+    <!-- Wrist flex -->
+    <transmission name="right_arm_t6" type="pr2_mechanism_model/SimpleTransmission">
+      <actuator name="right_arm_a6" />
+      <joint name="right_arm_j6" />
+      <mechanicalReduction>1</mechanicalReduction>
+    </transmission>
+  </macro>
+
+
+
+  <macro name="m3_r_arm_transmission" params="side parent reflect">
+    <m3_r_shoulder_transmission side="${side}" reflect="${reflect}" parent="${parent}"/>
+    <m3_r_upper_arm_transmission side="${side}" reflect="${reflect}" parent="bicep_RIGHT" />
+    <m3_r_forearm_transmission side="${side}" reflect="${reflect}" parent="wrist_RIGHT" />
+  </macro>
+
+
+</robot>

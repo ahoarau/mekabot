@@ -1,0 +1,27 @@
+chid: 1
+ethercat:
+  pdo_version: actx2_pdo_v1
+  product_code: 1011
+  serial_number: 280
+firmware: m3_controller_hb2_h2r1_j0j1
+name: m3actuator_ec_mh5_j4
+param:
+  config: 18
+  k_d: 0
+  k_d_shift: 0
+  k_ff: -2
+  k_ff_shift: 1
+  k_ff_zero: 2772
+  k_i: 0
+  k_i_limit: 0
+  k_i_shift: 0
+  k_p: -8
+  k_p_shift: 0
+  pwm_db: 0
+  pwm_max: 1200
+  qei_max: 19500
+  qei_min: 1000
+  t_max: 3500
+  t_min: 2000
+pwr_component: m3pwr_pwr017
+version: iss

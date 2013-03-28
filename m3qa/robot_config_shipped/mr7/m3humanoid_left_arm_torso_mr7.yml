@@ -1,0 +1,36 @@
+chains:
+  left_arm:
+    arm_model: a2r2_left
+    base_rotation_in_parent:
+    - 0.0
+    - 0.0
+    - 1.0
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    base_translation_in_parent:
+    - 0.0
+    - 0.0
+    - 0.0
+    chain_component: m3arm_ma9
+  torso:
+    base_rotation_in_parent:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    base_translation_in_parent:
+    - 0.0
+    - 0.0
+    - 0.0
+    chain_component: m3torso_mt2
+name: m3humanoid_left_arm_torso_mr7
+pwr_component: m3pwr_pwr010

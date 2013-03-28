@@ -1,0 +1,6 @@
+ethercat:
+  pdo_version: el4132_pdo_v0
+  product_code: 270807122
+  serial_number: 1001
+name: m3el4132_ec_ch0
+

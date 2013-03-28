@@ -1,0 +1,52 @@
+// M3 -- Meka Robotics Robot Components
+// Copyright (c) 2010 Meka Robotics
+// Author: edsinger@mekabot.com (Aaron Edsinger)
+// 
+// M3 is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// M3 is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with M3.  If not, see <http://www.gnu.org/licenses/>.
+
+option optimize_for = SPEED;
+import "component_base.proto";
+
+message M3LedX2EcStatus{
+	optional M3BaseStatus			base=1;					//Reserved
+	optional M3EtherCATStatus		ethercat =2;				//EtherCAT info
+	optional int32				timestamp=3;				//Time in us
+	optional int32				adc_ext_a=4;				//Auxillary adc input
+	optional int32				adc_ext_b=5;				//Auxillary adc input
+	optional int32				adc_ext_c=6;				//Auxillary adc input
+	optional int32				adc_ext_d=7;				//Auxillary adc input
+	optional int32				flags=8;				//Reserved
+}
+
+message M3LedX2EcRGB{
+	optional int32		r=1;
+	optional int32		g=2;		
+	optional int32		b=3;
+}
+
+message M3LedX2EcBranch{
+	optional M3LedX2EcRGB		board_a=1;
+	optional M3LedX2EcRGB		board_b=2;		
+}
+
+message M3LedX2EcCommand{
+	optional int32				enable_a=1;		//Power on
+	optional int32				enable_b=2;		//Power on
+	optional M3LedX2EcBranch		branch_a=3;
+	optional M3LedX2EcBranch		branch_b=4;	
+}
+
+message M3LedX2EcParam{
+	optional int32			config=1;					//Reserved
+}

@@ -1,0 +1,6 @@
+export CMAKE_PREFIX_PATH=
+export PKG_CONFIG_PATH=
+export PYTHONPATH=/usr/local/lib/python2.6/dist-packages/m3
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export LD_LIBRARY_PATH=/usr/local/lib
+export CPATH=

@@ -1,0 +1,13 @@
+name: m3robot_monitor_rm0
+temp_components:
+  m3actuator_mb1_j0:
+    max_warn: 20
+    min_warn: 10
+    max_err: 25
+    min_err: 8
+volt_components:
+  m3pwr_pwr013:
+    max_warn: 30
+    min_warn: 20
+    max_err: 30
+    min_err: 19

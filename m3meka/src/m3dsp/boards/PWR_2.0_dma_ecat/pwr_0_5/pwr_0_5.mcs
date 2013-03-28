@@ -1,0 +1,175 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\adc.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File001]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\adc_spi.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File002]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\control.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File003]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\dio.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File004]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\ethercat.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File005]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\ethercat_appl.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File006]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\ethercat_hw.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File007]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\ethercat_slave_fsm.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File008]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\main.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File009]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\setup.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File010]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\temp\timer3.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -DEMBEDDED -DUSE_ADC -DUSE_CONTROL -DUSE_ETHERCAT -DUSE_TIMER3 -DUSE_DIO -DUSE_TIMESTAMP_DC -DPWR_0_5 -DUSE_WATCHDOG -O1
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File011]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\output\pwr_0_5.cof
+Folder=Output
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={433C3D55-811D-409D-A6BF-159CF9355B42}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-ld.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map" --report-mem
+TraceCmdString=
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_ICD3=1 --defsym=__ICD2RAM=1
+[File012]
+Location=E:\mekabot\m3meka-new-ec\src\m3dsp\boards\PWR_NEW\pwr_0_5\output\pwr_0_5.hex
+Folder=Output
+DeviceName=dsPIC33FJ64MC204
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={433C3D55-811D-409D-A6BF-159CF9355B42}
+LanguageToolLocation=C:\Program Files\Microchip\MPLAB C30\bin\pic30-ld.exe
+PPAD=$(BINDIR)|output||$(TMPDIR)|temp||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\src\adc.c|..\src\adc_spi.c|..\src\control.c|..\src\dio.c|..\src\ethercat.c|..\src\ethercat_appl.c|..\src\ethercat_hw.c|..\src\ethercat_slave_fsm.c|..\src\main.c|..\src\setup.c|..\src\timer3.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -Map="$(BINDIR_)$(TARGETBASE).map" --report-mem
+TraceCmdString=
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_ICD3=1 --defsym=__ICD2RAM=1
+[TOOL_LOC_STAMPS]
+tool_loc{069BD372-6CA0-40D4-BF2F-5DC806D05083}=C:\Program Files\Microchip\MPLAB C30\bin\pic30-gcc.exe
+tool_loc{433C3D55-811D-409D-A6BF-159CF9355B42}=C:\Program Files\Microchip\MPLAB C30\bin\pic30-ld.exe

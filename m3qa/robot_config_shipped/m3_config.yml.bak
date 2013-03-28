@@ -1,0 +1,48 @@
+
+########### M3 CONFIG ######################
+hostname: meka-maddog
+rt_components:
+  pwr:
+    m3pwr_pwr011: m3pwr
+  ma8:
+    m3actuator_ma8_j0: m3actuator
+    m3actuator_ma8_j1: m3actuator
+    m3actuator_ma8_j2: m3actuator
+    m3actuator_ma8_j3: m3actuator
+    m3actuator_ma8_j4: m3actuator
+    m3actuator_ma8_j5: m3actuator
+    m3actuator_ma8_j6: m3actuator
+    m3joint_ma8_j0: m3joint
+    m3joint_ma8_j1: m3joint
+    m3joint_ma8_j2: m3joint
+    m3joint_ma8_j3: m3joint
+    m3joint_ma8_j4: m3joint
+    m3joint_ma8_j5: m3joint
+    m3joint_ma8_j6: m3joint
+  mt2:
+    m3actuator_mt2_j0: m3actuator
+    m3actuator_mt2_j1: m3actuator
+    m3joint_mt2_j0: m3joint
+    m3joint_mt2_j1: m3joint
+    m3joint_slave_mt2_j2: m3joint_slave
+ec_components:
+  pwr:
+    m3pwr_ec_pwr011: m3pwr_ec
+  ma8:
+    m3actuator_ec_ma8_j0: m3actuator_ec
+    m3actuator_ec_ma8_j1: m3actuator_ec
+    m3actuator_ec_ma8_j2: m3actuator_ec
+    m3actuator_ec_ma8_j3: m3actuator_ec
+    m3actuator_ec_ma8_j4: m3actuator_ec
+    m3actuator_ec_ma8_j5: m3actuator_ec
+    m3actuator_ec_ma8_j6: m3actuator_ec
+    m3loadx6_ec_ma8_l0: m3loadx6_ec
+  ma9:
+    m3actuator_ec_ma9_j0: m3actuator_ec
+    m3actuator_ec_ma9_j1: m3actuator_ec
+    m3actuator_ec_ma9_j2: m3actuator_ec
+    m3actuator_ec_ma9_j3: m3actuator_ec
+    m3actuator_ec_ma9_j4: m3actuator_ec
+    m3actuator_ec_ma9_j5: m3actuator_ec
+    m3actuator_ec_ma9_j6: m3actuator_ec
+    m3loadx6_ec_ma9_l0: m3loadx6_ec

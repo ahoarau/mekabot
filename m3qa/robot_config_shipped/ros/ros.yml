@@ -1,0 +1,3 @@
+ros_components:
+  - m3hand_mh5
+  - m3humanoid_mr6

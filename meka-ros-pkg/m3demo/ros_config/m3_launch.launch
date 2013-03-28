@@ -1,0 +1,21 @@
+<launch>
+
+  
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find m3_defs_ros)/robots/m3.urdf.xacro'" />
+
+  <!-- for visualization -->
+  <node pkg="rviz" type="rviz" respawn="false" output="screen" name="rviz" 
+    args="-d '$(find m3_defs_ros)/m3_rviz.vcg'"/>
+ 
+
+  <!-- Robot state publisher -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+  </node>
+
+<!--  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0" />
+    <param name="tf_prefix" type="string" value="" />
+  </node> -->
+
+</launch>
+

@@ -1,0 +1,1 @@
+Those .hex were flashed on Singapore

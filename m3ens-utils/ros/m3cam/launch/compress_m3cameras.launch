@@ -1,0 +1,4 @@
+<launch>
+<node pkg="image_transport" type="republish" name="left_eye_compressor" args="compressed in:=/meka_eyes/left/image_raw out:=/meka_left_comp"/>
+<node pkg="image_transport" type="republish" name="right_eye_compressor" args="compressed in:=/meka_eyes/right/image_raw out:=/meka_right_comp"/>
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+<node pkg="image_transport" type="republish" name="meka_kinect_rgb_compressor" args="compressed in:=/camera/rgb/image_rect_color out:=/meka_kinect_rgb_comp"/>
+<node pkg="image_transport" type="republish" name="meka_kinect_depth_reg_compressor" args="compressedDepth in:=/camera/depth_registered/image_rect out:=/meka_kinect_depth_reg_comp"/>
+<node pkg="image_transport" type="republish" name="meka_kinect_depth_compressor" args="compressedDepth in:=/camera/depth/image_rect out:=/meka_kinect_depth_comp"/>
+</launch>

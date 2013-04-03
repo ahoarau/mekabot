@@ -77,7 +77,7 @@ class M3image_subscriber(Thread):
             #print 'sub : ',sub
             ts = message_filters.TimeSynchronizer(sub, 20)
             ts.registerCallback(self.callback)
-            
+        self.start()
     def start_compression_threads(self):
         self.comp=[]
         #print 'comp : ',self.comp
@@ -93,9 +93,10 @@ class M3image_subscriber(Thread):
             self.comp[i].start()
             
     def stop(self):
-        #print self,' stopped'
         cv.DestroyAllWindows()
-        self._stop.set()
+        self._stop.set()        
+        print self,' stopped'
+
         
     def run(self):
         while not rospy.is_shutdown():
@@ -126,11 +127,12 @@ class M3image_subscriber(Thread):
             return self.images[i]
         
     def show_image(self,window_name,image):
-        try:
-            cv.ShowImage(window_name, image)
-            cv.WaitKey(3)
-        except TypeError,e:
-            print e
+        if not rospy.is_shutdown(): 
+            try:
+                cv.ShowImage(window_name, image)
+                cv.WaitKey(3)
+            except TypeError,e:
+                print e
 
     def show(self):
         for i in range(len(self.topics)): 

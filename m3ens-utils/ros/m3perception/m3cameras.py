@@ -35,7 +35,8 @@ class M3cameras:
     def show_both(self):
         self.show_left()
         self.show_right()
-    
+    def is_shutdown(self):
+        return self.left_th.is_alive() or self.right_th.is_alive()
 #if __name__ == '__main__':
 #    #How to use that utility
 #    m3cams = M3cameras()

@@ -41,7 +41,8 @@ class M3kinect:
     def show_depth_degistered(self):
         self.depth_registered_th.show()
 
-    
+    def is_shutdown(self):
+        return self.rgb_th.is_alive() or self.depth_th.is_alive() or self.depth_registered_th.is_alive()
 #if __name__ == '__main__':
 #    #How to use that utility
 #    m3cams = M3cameras()

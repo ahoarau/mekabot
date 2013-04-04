@@ -1,9 +1,9 @@
 [submodule "m3ens-tutos"]
 	path = m3ens-tutos
-	url = git+ssh://anhoarau@scm.gforge.inria.fr//gitroot/m3ens-tutos/m3ens-tutos.git
+	url = git://scm.gforge.inria.fr/m3ens-tutos/m3ens-tutos.git
 [submodule "m3ens"]
 	path = m3ens
-	url = git+ssh://anhoarau@scm.gforge.inria.fr//gitroot/m3ens/m3ens.git
+	url = git://scm.gforge.inria.fr/m3ens/m3ens.git
 [submodule "m3ens-demos"]
 	path = m3ens-demos
-	url = git+ssh://anhoarau@scm.gforge.inria.fr//gitroot/m3ens-demos/m3ens-demos.git
+	url = git://scm.gforge.inria.fr/m3ens-demos/m3ens-demos.git

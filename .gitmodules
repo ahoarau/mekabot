@@ -1,18 +1,31 @@
 [submodule "m3core"]
 	path = m3core
 	url = git@bitbucket.org:ensta/m3core.git
+
 [submodule "m3meka"]
 	path = m3meka
 	url = git@bitbucket.org:ensta/m3meka.git
+
 [submodule "m3ens"]
 	path = m3ens
 	url = git@bitbucket.org:ensta/m3ens.git
+
 [submodule "m3ens-tutos"]
 	path = m3ens-tutos
 	url = git@bitbucket.org:ensta/m3ens-tutos.git
+
 [submodule "m3ens-utils"]
 	path = m3ens-utils
-	url = git@bitbucket.org:ensta/m3ens.git
+	url = git@bitbucket.org:ensta/m3ens-utils.git
+
 [submodule "m3ens-demos"]
 	path = m3ens-demos
 	url = git@bitbucket.org:ensta/m3ens-demos.git
+
+[submodule "m3qa"]
+	path = m3qa
+	url = git@bitbucket.org:ensta/m3qa.git
+
+[submodule "meka-ros-pkg"]
+	path = meka-ros-pkg
+	url = git@bitbucket.org:ensta/meka-ros-pkg.git

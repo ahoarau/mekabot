@@ -1,9 +1,0 @@
-<!-- list the ROS components you wish to start here. -->
-
-<launch>
-
-  <include file="$(env M3_ROBOT)/ros_config/dual_pt_grey.launch" />
-  <include file="$(env M3_ROBOT)/ros_config/right_face_detect.launch" />
-
-
-</launch>

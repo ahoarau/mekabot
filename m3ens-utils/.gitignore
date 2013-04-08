@@ -1,6 +1,0 @@
-build
-.svn*
-*.log
-*.log.*
-.Trash*
-*.pyc

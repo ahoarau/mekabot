@@ -1,7 +1,0 @@
-#!/bin/sh
-
-/usr/local/bin/m3rt_insmods
-/usr/local/bin/m3rt_timestats
-/usr/local/bin/m3rt_rmmods
-
-

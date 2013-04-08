@@ -1,7 +1,0 @@
-<launch>
-    <node pkg="move_arm" type="move_arm_simple_action" name="uta_move_right_arm">
-        <param name="group" type="string" value="right_arm" />
-        <remap from="arm_ik" to="uta_right_arm_kinematics/get_constraint_aware_ik" />
-        <param name="controller_action_name" type="string" value="right_arm_controller/follow_joint_trajectory" />
-    </node>
-</launch>

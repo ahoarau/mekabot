@@ -1,7 +1,0 @@
-float32[6] gains
-float32[6] bias
-float32 window_time
-float32 threshold
-float32 slew_rate
----
-int32 resp

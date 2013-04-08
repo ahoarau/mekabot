@@ -1,9 +1,0 @@
-prefix=/usr/local
-libdir=${prefix}/lib
-includedir=${prefix}/include
-
-Name: m3ens
-Description: A realtime robotics component for Meka Robotics M3 System.
-Version: 0.0.0
-Libs: -L${libdir} -lm3enscomponents
-Cflags: -I${includedir}/m3ens

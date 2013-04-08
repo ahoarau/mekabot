@@ -1,8 +1,0 @@
-ethercat:
-  pdo_version: pwr_pdo_v2
-  product_code: 1002
-  serial_number: 531
-name: m3pwr_ec_pwr012
-param:
-  config: 0
-firmware: m3_controller_pwr_0_4

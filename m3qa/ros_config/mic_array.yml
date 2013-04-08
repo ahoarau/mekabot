@@ -1,4 +1,0 @@
-gains: [2.2,0.8,1.0,1.8,1.0,0.5]
-threshold: 150
-window_time: 0.1
-slew_rate: 1.0

@@ -1,3 +1,0 @@
-#!/bin/sh
-if [ $UID != 0 ]; then SUDO="sudo "; else SUDO=""; fi
-$SUDO ethercat slaves

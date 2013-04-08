@@ -1,4 +1,0 @@
-<launch>
-    <param name="robot_description" textfile="$(find meka_description)/robots/hon.xml" />
-    <rosparam command="load" ns="robot_description_planning" file="$(find hon_arm_navigation)/config/hon_planning_description.yaml" />
-</launch>

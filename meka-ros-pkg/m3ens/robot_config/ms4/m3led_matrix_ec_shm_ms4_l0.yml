@@ -1,7 +1,0 @@
-name: m3led_matrix_ec_shm_ms4_l0
-version: default
-# shm_id must be less than 5 char
-shm_id: LSHM
-led_matrix_component: m3led_matrix_ec_ms4_l0
-# timeout in ms
-timeout: 200

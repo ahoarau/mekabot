@@ -1,7 +1,0 @@
-#!/bin/sh
-killall -9 m3rt_server.py
-killall -9 m3rt_server_run
-/usr/local/bin/m3rt_rmmods
-
-
-

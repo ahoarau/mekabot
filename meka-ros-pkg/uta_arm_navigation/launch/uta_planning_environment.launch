@@ -1,4 +1,0 @@
-<launch>
-    <param name="robot_description" textfile="$(find meka_description)/robots/uta.xml" />
-    <rosparam command="load" ns="robot_description_planning" file="$(find uta_arm_navigation)/config/uta_planning_description.yaml" />
-</launch>

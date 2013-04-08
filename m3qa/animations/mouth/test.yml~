@@ -1,6 +1,0 @@
-animation_name: test
-sequence:
-- file: sm0.tiff
-  duration: 0.2
-- file: sm1.tiff
-  duration: 0.2

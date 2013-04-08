@@ -1,9 +1,0 @@
-dynamatics_component: m3dynamatics_bimanual_a2r3_mt4
-joint_components:
-  J0: m3joint_mt4_j0
-  J1: m3joint_mt4_j1
-  J2: m3joint_slave_mt4_j2
-limb_name: torso
-name: m3torso_mt4
-ndof: 3
-version: iss

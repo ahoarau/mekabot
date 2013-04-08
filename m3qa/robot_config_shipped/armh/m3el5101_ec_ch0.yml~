@@ -1,6 +1,0 @@
-ethercat:
-  pdo_version: el5101_pdo_v0
-  product_code: 270807122
-  serial_number: 1005
-name: m3el5101_ec_ch0
-

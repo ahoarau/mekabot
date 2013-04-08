@@ -1,3 +1,0 @@
-<launch>
-    <include file="$(find uta_arm_navigation)/launch/move_right_arm.launch" />
-</launch>

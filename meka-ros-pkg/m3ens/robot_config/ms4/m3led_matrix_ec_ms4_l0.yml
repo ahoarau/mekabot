@@ -1,0 +1,12 @@
+ethercat:
+  pdo_version: led_matrix_pdo_v1
+  product_code: 1009
+  serial_number: 794
+name: m3led_matrix_ec_ms4_l0
+num_rows: 8
+num_cols: 16
+version: iss
+param:
+  slew_rate: 1000
+firmware: m3_controller_ledmdrv_s2r1
+invert_image: 1

@@ -1,0 +1,95 @@
+calib:
+  amp_control_input: pwm
+  amp_temp:
+    cb_bias: -45.020345052083329
+    cb_mV_at_25C: 750.0
+    cb_mV_per_C: 10.0
+    cb_scale: 1.0
+    name: Microchip TC1047
+    type: adc_linear_5V
+  angle_df:
+    theta_df:
+      cutoff_freq: 80
+      order: 3
+      type: butterworth
+    thetadot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+  current:
+    type: none
+  ext_temp:
+    cb_bias: 1.2874023437499993
+    cb_mV_at_25C: 750.0
+    cb_mV_per_C: 10.0
+    cb_scale: 1.0
+    name: Analog TMP36
+#    type: adc_linear_3V3
+    type: temp_25C
+  motor:
+    amplifier_resistance: 0.019
+    current_sensor_type: none
+    gear_ratio: 12.5
+    i_scale: 1.0
+    max_efficiency: 64.0
+    max_pwm_duty: 3186.0
+    max_winding_temp: 125.0
+    mechanical_time_constant: 20.0
+    model_type: model_v2
+    name: Maxon EC32 Flat 15W 24V 267121
+    no_load_current: 73.400000000000006
+    no_load_speed: 4390.0
+    nominal_current: 0.48999999999999999
+    nominal_speed: 2800.0
+    nominal_torque: 23.199999999999999
+    nominal_voltage: 24.0
+    rotor_inertia: 35.0
+    safe_thermal_pct: 0.80000000000000004
+    speed_constant: 195.0
+    speed_torque_gradient: 54.5
+    stall_torque: 85.0
+    starting_current: 1.75
+    temp_sensor_type: ambient
+    thermal_resistance_housing_ambient: 9.7400000000000002
+    thermal_resistance_rotor_housing: 4.6299999999999999
+    thermal_time_constant_motor: 108.0
+    thermal_time_constant_winding: 8.0999999999999996
+    torque_constant: 49.0
+    winding_inductance: 7.7300000000000004
+    winding_resistance: 13.699999999999999
+  theta:
+    cb_bias: 163
+    cb_scale: -1.0
+    name: ContElec VertX13
+    type: vertx_14bit
+  torque:
+    type: none
+  torquedot_df:
+    cutoff_freq: 100
+    order: 3
+    type: diff_butterworth
+calibration_date: Tue Jan 18 11:45:01 2011
+description: m3_hex4_v1.0
+ec_component: m3actuator_ec_ms4_j4
+ignore_bounds: 0
+joint_component: m3joint_ms4_j4
+name: m3actuator_ms4_j4
+param:
+  max_amp_current: 8800.0
+  max_amp_temp: 100.0
+  max_overload_time: 3.0
+  max_tq: 0.0
+  min_tq: 0.0
+  pid_current:
+    k_d: 0.0
+    k_i: 0.0
+    k_i_limit: 0.0
+    k_i_range: 0.0
+    k_p: 0.0
+safe_pwm_limit: 1
+version: iq

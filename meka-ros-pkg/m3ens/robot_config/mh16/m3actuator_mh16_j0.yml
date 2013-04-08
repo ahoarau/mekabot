@@ -1,0 +1,96 @@
+calib:
+  amp_temp:
+    cb_bias: 1.7743286132812628
+    cb_mV_at_25C: 750.0
+    cb_mV_per_C: 10.0
+    cb_scale: 1.0
+    name: Microchip TC1047
+    type: adc_linear_3V3
+  angle_df:
+    theta_df:
+      cutoff_freq: 80
+      order: 3
+      type: butterworth
+    thetadot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+  current:
+    type: none
+  ext_temp:
+    cb_bias: -11.45782470703125
+    cb_mV_at_25C: 750.0
+    cb_mV_per_C: 10.0
+    cb_scale: 1.0
+    name: Microchip TC1047
+    type: adc_linear_3V3
+  motor:
+    amplifier_resistance: 0.62
+    current_sensor_type: none
+    gear_ratio: 131.0
+    i_scale: 1.1000000000000001
+    max_efficiency: 62.0
+    max_pwm_duty: 3186.0
+    max_winding_temp: 155.0
+    mechanical_time_constant: 6.29
+    model_type: model_v1
+    name: Maxon EC13 6W 24V 305194
+    no_load_current: 45.799999999999997
+    no_load_speed: 27200.0
+    nominal_current: 0.32100000000000001
+    nominal_speed: 19300.0
+    nominal_torque: 2.1899999999999999
+    nominal_voltage: 24.0
+    rotor_inertia: 0.16500000000000001
+    safe_thermal_pct: 0.75
+    speed_constant: 1190
+    speed_torque_gradient: 3640
+    stall_torque: 7.8300000000000001
+    starting_current: 0.97599999999999998
+    temp_sensor_type: ambient
+    thermal_resistance_housing_ambient: 32.0
+    thermal_resistance_rotor_housing: 2.46
+    thermal_time_constant_motor: 188.0
+    thermal_time_constant_winding: 0.71999999999999997
+    torque_constant: 8.0299999999999994
+    winding_inductance: 0.35699999999999998
+    winding_resistance: 24.600000000000001
+  theta:
+    cb_bias: -26.818635823639276
+    cb_scale: 0.50526315789473686
+    name: US Digital MA3
+    type: ma3_12bit
+  torque:
+    cb_bias: 179.91745029886565
+    cb_inv_torque:
+    - 2.2151872853557433
+    - 1652.3158216694867
+    cb_scale: -1.0
+    cb_torque:
+    - 0.4514290988445282
+    - -745.9034423828125
+    name: Panasonic Potentiometer
+    type: adc_poly
+  torquedot_df:
+    cutoff_freq: 100
+    order: 3
+    type: diff_butterworth
+calibration_date: Mon Sep 24 16:16:48 2012
+description: hb2dig_v0.2_hb2amp_v0.2
+ec_component: m3actuator_ec_mh16_j0
+ignore_bounds: 0
+joint_component: m3joint_mh16_j0
+name: m3actuator_mh16_j0
+param:
+  max_amp_current: 1000.0
+  max_amp_temp: 70.0
+  max_overload_time: 3.0
+  max_tq: 200.0
+  min_tq: -200.0
+safe_pwm_limit: 1
+version: iss

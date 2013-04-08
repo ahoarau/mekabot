@@ -1,0 +1,36 @@
+act_component: m3actuator_ms4_j3
+name: m3ctrl_simple_ms4_j3
+param:
+  controller:
+    current_limit: 0.0
+  pid_theta:
+    k_d: 100.0
+    k_des_max: 0.0
+    k_des_min: 0.0
+    k_i: 0.0
+    k_i_limit: 0.0
+    k_i_range: 0.0
+    k_p: 12000.0
+    k_slew_max: 0.0
+  pid_torque:
+    k_d: 0.0
+    k_des_max: 0.0
+    k_des_min: 0.0
+    k_i: 0.0
+    k_i_limit: 0.0
+    k_i_range: 0.0
+    k_p: 0.0
+    k_slew_max: 0.0
+  traj_current:
+    amp: 0.0
+    freq: 0.0
+    zero: 0.0
+  traj_theta:
+    amp: 0.14000000000000001
+    freq: 0.40000000000000002
+    zero: 0.0
+  traj_torque:
+    amp: 0.0
+    freq: 0.0
+    zero: 0.0
+version: default

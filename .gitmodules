@@ -1,9 +1,18 @@
-[submodule "m3ens-tutos"]
-	path = m3ens-tutos
-	url = git://scm.gforge.inria.fr/m3ens-tutos/m3ens-tutos.git
+[submodule "m3core"]
+	path = m3core
+	url = git@bitbucket.org:ensta/m3core.git
+[submodule "m3meka"]
+	path = m3meka
+	url = git@bitbucket.org:ensta/m3meka.git
 [submodule "m3ens"]
 	path = m3ens
-	url = git://scm.gforge.inria.fr/m3ens/m3ens.git
+	url = git@bitbucket.org:ensta/m3ens.git
+[submodule "m3ens-tutos"]
+	path = m3ens-tutos
+	url = git@bitbucket.org:ensta/m3ens-tutos.git
+[submodule "m3ens-utils"]
+	path = m3ens-utils
+	url = git@bitbucket.org:ensta/m3ens.git
 [submodule "m3ens-demos"]
 	path = m3ens-demos
-	url = git://scm.gforge.inria.fr/m3ens-demos/m3ens-demos.git
+	url = git@bitbucket.org:ensta/m3ens-demos.git

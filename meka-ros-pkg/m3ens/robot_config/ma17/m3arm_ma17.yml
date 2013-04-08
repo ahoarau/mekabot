@@ -1,0 +1,14 @@
+dynamatics_component: m3dynamatics_right_ma17
+#dynamatics_component: m3dynamatics_right_h2R4_ma17
+joint_components:
+  J0: m3joint_ma17_j0
+  J1: m3joint_ma17_j1
+  J2: m3joint_ma17_j2
+  J3: m3joint_ma17_j3
+  J4: m3joint_ma17_j4
+  J5: m3joint_ma17_j5
+  J6: m3joint_ma17_j6
+limb_name: right_arm
+name: m3arm_ma17
+ndof: 7
+version: default

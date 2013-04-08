@@ -1,0 +1,8 @@
+ethercat:
+  pdo_version: pwr_pdo_v2
+  product_code: 1002
+  serial_number: 821
+name: m3pwr_ec_pwr028
+param:
+  config: 0
+version: iss

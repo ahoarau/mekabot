@@ -1,0 +1,19 @@
+chains:
+  head:
+    base_rotation_in_parent:
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.0
+    base_translation_in_parent:
+    - 0.0
+    - 0.0
+    - 0.077850000000000003
+    chain_component: m3head_ms4
+name: m3humanoid_head_mr12
+pwr_component: m3pwr_pwr028

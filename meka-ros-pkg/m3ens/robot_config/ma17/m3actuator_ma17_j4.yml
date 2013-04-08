@@ -1,0 +1,102 @@
+calib:
+  amp_temp:
+    cb_bias: -5.1000000000000014
+    cb_scale: 0.01
+    name: Microchip TC1047, converted at dsp
+    type: dsp_calib
+  angle_df:
+    theta_df:
+      cutoff_freq: 80
+      order: 3
+      type: butterworth
+    thetadot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    thetadotdot_df:
+      cutoff_freq: 20
+      order: 3
+      type: diff_butterworth
+    type: df_chain
+  current:
+    cb_bias: 0.0
+    cb_scale: 1.0
+    name: Allegro ACS714-5.0
+    type: dsp_calib
+  ext_temp:
+    cb_bias: -4.7800000000000011
+    cb_scale: 0.01
+    name: Microchip TC1047, converted at dsp
+    type: dsp_calib
+  motor:
+    amplifier_resistance: 0.019
+    current_sensor_type: measured
+    gear_ratio: 100.0
+    i_scale: 1.0
+    max_efficiency: 64.0
+    max_pwm_duty: 3186.0
+    max_winding_temp: 125.0
+    mechanical_time_constant: 20.0
+    model_type: model_v2
+    name: Maxon EC32 Flat 15W 24V 267121
+    no_load_current: 73.400000000000006
+    no_load_speed: 4390.0
+    nominal_current: 0.48999999999999999
+    nominal_speed: 2800.0
+    nominal_torque: 23.199999999999999
+    nominal_voltage: 24.0
+    rotor_inertia: 35.0
+    safe_thermal_pct: 0.80000000000000004
+    speed_constant: 195.0
+    speed_torque_gradient: 54.5
+    stall_torque: 85.0
+    starting_current: 1.75
+    temp_sensor_type: ambient
+    thermal_resistance_housing_ambient: 9.7400000000000002
+    thermal_resistance_rotor_housing: 4.6299999999999999
+    thermal_time_constant_motor: 108.0
+    thermal_time_constant_winding: 8.0999999999999996
+    torque_constant: 49.0
+    winding_inductance: 7.7300000000000004
+    winding_resistance: 13.699999999999999
+  theta:
+    cb_bias: 268.14319721662696
+    cb_scale: -1.0
+    name: ContElec VertX13
+    type: vertx_14bit
+  torque:
+    cb_bias: -9.5065600000000003
+    cb_inv_torque:
+    - 1.0
+    - 0.0
+    cb_scale: 1.0
+    cb_torque:
+    - 0.0012800000000000001
+    - 0.0
+    name: ContElec VertX13
+    type: sea_vertx_14bit
+  torquedot_df:
+    cutoff_freq: 100
+    order: 3
+    type: diff_butterworth
+calibration_date: Mon Mar  4 06:23:33 2013
+description: bmw_v1.0
+ec_component: m3actuator_ec_ma17_j4
+ignore_bounds: 0
+joint_component: m3joint_ma17_j4
+name: m3actuator_ma17_j4
+param:
+  max_amp_current: 3500.0
+  max_amp_temp: 100.0
+  max_i: 1.0
+  max_overload_time: 3.0
+  max_tq: 4000.0
+  min_tq: -4000.0
+  pid_current:
+    k_d: 0.0
+    k_i: 0.0
+    k_i_limit: 0.0
+    k_i_range: 0.0
+    k_p: 1.0
+safe_pwm_limit: 1
+version: iq

@@ -1,0 +1,36 @@
+act_component: m3actuator_ma17_j5
+name: m3ctrl_simple_ma17_j5
+param:
+  controller:
+    current_limit: 1000.0
+  pid_theta:
+    k_d: 0.02
+    k_des_max: 160
+    k_des_min: -160
+    k_i: 0.0
+    k_i_limit: 100.0
+    k_i_range: 1.0
+    k_p: 1.0
+    k_slew_max: 1200.0
+  pid_torque:
+    k_d: 0.0
+    k_des_max: 10000.0
+    k_des_min: -10000.0
+    k_i: 0.0
+    k_i_limit: 1.0
+    k_i_range: 15000.0
+    k_p: 1.25
+    k_slew_max: 0.0
+  traj_current:
+    amp: 2.0
+    freq: 100.0
+    zero: 0.0
+  traj_theta:
+    amp: 10.0
+    freq: 1.0
+    zero: 0.0
+  traj_torque:
+    amp: 1.0
+    freq: 1.0
+    zero: 0.0
+version: default

@@ -1,0 +1,11 @@
+joint_components:
+  J0: m3joint_mb2_j0
+  J1: m3joint_mb2_j1
+  J2: m3joint_mb2_j2
+  J3: m3joint_mb2_j3
+  J4: m3joint_mb2_j4
+  J5: m3joint_mb2_j5
+  J6: m3joint_mb2_j6
+  J7: m3joint_mb2_j7
+name: m3joint_array_mb2
+ndof: 8

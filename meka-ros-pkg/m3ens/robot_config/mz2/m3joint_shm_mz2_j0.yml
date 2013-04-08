@@ -1,0 +1,11 @@
+name: m3joint_shm_mz2_j0
+version: default
+# shm_id must be less than 5 char
+shm_id: ZSHM
+zlift_component: m3joint_mz2_j0
+#humanoid_component: m3humanoid_right_arm_mr13
+#right_loadx6_component: m3loadx6_ma18_l0
+#right_hand_component: m3hand_mh8
+#startup_motor_pwr_on: true
+# timeout in ms
+timeout: 200

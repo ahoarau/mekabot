@@ -1,0 +1,9 @@
+ethercat:
+  pdo_version: loadx6_pdo_v1
+  product_code: 1003
+  serial_number: 775
+firmware: m3_controller_loadx6_a2r3
+name: m3loadx6_ec_ma17_l0
+param:
+  config: 0
+version: iss

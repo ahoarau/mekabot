@@ -1,0 +1,15 @@
+holomni_pcv_config: mb2/pcv_meka_b2r2.yml.wood
+name: m3omnibase_mb2
+version: iss
+joint_array_component: m3joint_array_mb2
+pwr_component: m3pwr_pwr029
+param:
+  ks_p: -0.001
+  ks_d: 0.0
+  ks_i: -0.0001 #0.1
+  ks_i_limit: 20 #400.0
+  ks_i_range: 100 #90.0 
+  #ks_p: -0.1
+  #ks_i: -0.001
+  #ks_i_limit: 10
+  #ks_i_range: 1000

@@ -1,0 +1,9 @@
+joint_components:
+  J0: m3joint_mh16_j0
+  J1: m3joint_mh16_j1
+  J2: m3joint_mh16_j2
+  J3: m3joint_mh16_j3
+  J4: m3joint_mh16_j4
+limb_name: right_hand
+name: m3hand_mh16
+ndof: 5

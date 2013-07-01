@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- start up empty world -->
+  <!--<include file="$(find meka_gazebo)/launch/empty_world_paused.launch"/>-->
+  <include file="$(find meka_gazebo)/launch/empty_world.launch"/>
+
+  <include file="$(find meka_gazebo)/launch/meka_traj.launch"/>
+
+  <node pkg="rviz" type="rviz" respawn="false" output="screen" name="rviz" 
+    args="-d '$(find meka_bringup)/config/meka_rviz.vcg'"/>
+
+</launch>
+

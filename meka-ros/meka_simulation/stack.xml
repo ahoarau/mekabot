@@ -1,0 +1,18 @@
+<stack>
+  <description brief="meka_simulation">
+    
+  </description>
+  <author></author>
+  <license>Modified BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend stack="pr2_controllers" />
+  <depend stack="pr2_simulator" />
+  <depend stack="meka_common" /> 
+  <depend stack="robot_model" /> 
+  <depend stack="ros" />
+  <depend stack="ros_comm" /> 
+  <depend stack="simulator_gazebo" /> 
+  <depend stack="visualization_common" /> 
+
+</stack>

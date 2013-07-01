@@ -1,0 +1,16 @@
+<package>
+  <description brief="meka_bringup">
+     
+
+  </description>
+  <author></author>
+  <license>Modified BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+
+  <depend package="meka_description"/>  
+  <depend package="robot_state_publisher"/>
+
+</package>
+
+

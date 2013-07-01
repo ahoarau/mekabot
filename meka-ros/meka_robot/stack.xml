@@ -1,0 +1,11 @@
+<stack>
+  <description brief="meka_robot"></description>
+  <author></author>
+  <license>Modified BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend stack="meka_common" />
+  <depend stack="robot_model" />
+  <depend stack="ros" />
+
+</stack>

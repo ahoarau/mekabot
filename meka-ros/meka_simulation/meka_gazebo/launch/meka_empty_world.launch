@@ -1,9 +1,0 @@
-<launch>
-
-  <!-- start up empty world -->
-  <include file="$(find meka_gazebo)/empty_world_paused.launch"/>
-
-  <!-- start pr2 robot -->
-  <include file="$(find meka_gazebo)/meka.launch"/>
-
-</launch>

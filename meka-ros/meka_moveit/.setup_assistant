@@ -1,8 +1,0 @@
-moveit_setup_assistant_config:
-  URDF:
-    package: meka_description
-    relative_path: robots/meka.urdf.xacro
-  SRDF:
-    relative_path: config/meka.srdf
-  CONFIG:
-    generated_timestamp: 1369658628

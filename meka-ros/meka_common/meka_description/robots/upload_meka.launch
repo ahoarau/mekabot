@@ -1,4 +1,0 @@
-<launch>
-    <!-- send Reem urdf to param server -->
-    <param name="robot_description" command="$(find xacro)/xacro.py '$(find meka_description)/robots/meka.urdf.xacro'" />
-</launch>

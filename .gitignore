@@ -5,19 +5,3 @@ build
 .Trash*
 *.pyc
 *~
-Entering 'm3core'
-config.h.in~
-Entering 'm3ens'
-*~
-Entering 'm3ens-demos'
-*~
-Entering 'm3ens-tutos'
-*~
-Entering 'm3ens-utils'
-*~
-Entering 'm3meka'
-config.h.in~
-Entering 'm3qa'
-*~
-Entering 'meka-ros-pkg'
-*~

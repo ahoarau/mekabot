@@ -29,3 +29,6 @@
 [submodule "meka-ros-pkg"]
 	path = meka-ros-pkg
 	url = git@bitbucket.org:ensta/meka-ros-pkg.git
+[submodule "meka-ros"]
+	path = meka-ros
+	url = ssh://git@bitbucket.org/ensta/meka-ros.git

@@ -32,3 +32,6 @@
 [submodule "meka-ros"]
 	path = meka-ros
 	url = ssh://git@bitbucket.org/ensta/meka-ros.git
+[submodule "m3bash_scripts"]
+	path = m3bash_scripts
+	url = ssh://git@bitbucket.org/ensta/m3bash_scripts.git

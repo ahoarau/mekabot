@@ -35,3 +35,6 @@
 [submodule "m3bash_scripts"]
 	path = m3bash_scripts
 	url = ssh://git@bitbucket.org/ensta/m3bash_scripts.git
+[submodule "meka-cmake-modules"]
+	path = meka-cmake-modules
+	url = git@bitbucket.org:ensta/meka-cmake-modules.git

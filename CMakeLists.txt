@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(mekabot)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+set(PACKAGE_VERSION 1.8.0)
+add_subdirectory(m3core)
+add_subdirectory(m3meka)
+

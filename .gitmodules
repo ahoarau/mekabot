@@ -38,3 +38,6 @@
 [submodule "meka-cmake-modules"]
 	path = meka-cmake-modules
 	url = git@bitbucket.org:ensta/meka-cmake-modules.git
+[submodule "holomni_pcv"]
+	path = holomni_pcv
+	url = git@bitbucket.org:ensta/holomni_pcv.git

@@ -5,3 +5,5 @@ build
 .Trash*
 *.pyc
 *~
+*.kdev4
+.kdev4/

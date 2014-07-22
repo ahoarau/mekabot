@@ -22,22 +22,14 @@
 	path = m3ens-demos
 	url = git@bitbucket.org:ensta/m3ens-demos.git
 
-[submodule "m3qa"]
-	path = m3qa
-	url = git@bitbucket.org:ensta/m3qa.git
-
 [submodule "meka-ros-pkg"]
 	path = meka-ros-pkg
 	url = git@bitbucket.org:ensta/meka-ros-pkg.git
-[submodule "meka-ros"]
-	path = meka-ros
-	url = ssh://git@bitbucket.org/ensta/meka-ros.git
-[submodule "m3bash_scripts"]
-	path = m3bash_scripts
-	url = ssh://git@bitbucket.org/ensta/m3bash_scripts.git
+
 [submodule "meka-cmake-modules"]
 	path = meka-cmake-modules
 	url = git@bitbucket.org:ensta/meka-cmake-modules.git
+
 [submodule "holomni_pcv"]
 	path = holomni_pcv
 	url = git@bitbucket.org:ensta/holomni_pcv.git

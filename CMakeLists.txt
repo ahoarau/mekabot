@@ -19,10 +19,10 @@ if(RTAI AND NOT RTAI_FOUND)
 endif()
 
 # Compile in c++11
-OPTION(C++11 "Use c++11 " 0)
+OPTION(C++11 "Use c++11 " 1)
 
 if(C++11)
-	set(CMAKE_CXX_FLAGS "-Wall -std=c++0x")
+	set(CMAKE_CXX_FLAGS "-std=c++0x")
 	message("-- Using c++11")
 endif(C++11)
 

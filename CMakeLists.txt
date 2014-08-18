@@ -35,11 +35,12 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -ggdb")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # Include dirs to look for
-set(M3RT_SRC ${PROJECT_SOURCE_DIR}/m3core/src )
-set(M3_SRC ${PROJECT_SOURCE_DIR}/m3meka/src)
+set(M3RT_SRC ${CMAKE_BINARY_DIR}/m3core/src )
+set(M3_SRC ${CMAKE_BINARY_DIR}/m3meka/src)
 
 # HACK : Include this directory for the generated protobufs headers from m3core
 include_directories(
+    ${M3RT_SRC}
     ${CMAKE_BINARY_DIR}/m3core/src/m3rt/base 
 )
 

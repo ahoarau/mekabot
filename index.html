@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mekabot by ahoarau</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/ahoarau/mekabot">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/ahoarau/mekabot/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/ahoarau/mekabot/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Mekabot</h1>
+          <p>Mekabot M3 : open source realtime control system for the meka robots</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/ahoarau">ahoarau</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="m3-installation-instructions" class="anchor" href="#m3-installation-instructions"><span class="octicon octicon-link"></span></a>M3 Installation instructions</h1>
+
+<p>This wiki describes the full installation of m3 software to control/simulate the Meka robot at Ensta ParisTech.</p>
+
+<blockquote>
+<p><em>Author</em> : Antoine Hoarau <a href="mailto:hoarau.robotics@gmail.com">hoarau.robotics@gmail.com</a></p>
+</blockquote>
+
+<table>
+<thead><tr>
+<th align="left"><strong><em>OS Tested</em></strong></th>
+<th align="center"><strong><em>Status</em></strong></th>
+<th align="center"><strong><em>Notes</em></strong></th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">Ubuntu 12.04 x86</td>
+<td align="center">OK</td>
+<td align="center">Kinects might cause issues</td>
+</tr>
+<tr>
+<td align="left">Ubuntu 12.04 x64</td>
+<td align="center">OK</td>
+<td align="center">Kinects might cause issues</td>
+</tr>
+<tr>
+<td align="left">Ubuntu 12.10 x86</td>
+<td align="center">OK</td>
+<td align="center">On the Meka 04.04.14 -&gt; will update to 14.04 LTS when ready</td>
+</tr>
+<tr>
+<td align="left">Ubuntu 12.10 x64</td>
+<td align="center">OK</td>
+<td align="center">Now working 04.04.14</td>
+</tr>
+<tr>
+<td align="left">Ubuntu 13.04 x86</td>
+<td align="center">OK</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Ubuntu 13.04 x64</td>
+<td align="center">OK</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">Ubuntu 13.10 x86</td>
+<td align="center">OK</td>
+<td align="center">w ROS Indigo</td>
+</tr>
+<tr>
+<td align="left">Ubuntu 14.04 x64</td>
+<td align="center">OK</td>
+<td align="center">w ROS Indigo/MoveIt!</td>
+</tr>
+</tbody>
+</table><h2>
+<a name="ubuntu-1204---1404-x86x64-w-ros-hydroindigo" class="anchor" href="#ubuntu-1204---1404-x86x64-w-ros-hydroindigo"><span class="octicon octicon-link"></span></a>Ubuntu 12.04 - 14.04 (x86/x64) w/ ROS Hydro/Indigo</h2>
+
+<h3>
+<a name="prerequisites" class="anchor" href="#prerequisites"><span class="octicon octicon-link"></span></a>Prerequisites</h3>
+
+<h4>
+<a name="necessary" class="anchor" href="#necessary"><span class="octicon octicon-link"></span></a>Necessary</h4>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install cmake git libeigen3-dev libprotobuf-dev protobuf-compiler gnuplot-x11 libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip sip-dev swig python-pandas python-sympy python-nose python-numpy
+</pre></div>
+
+<h4>
+<a name="nice-to-have-to-maybe-compile-a-kernel-later" class="anchor" href="#nice-to-have-to-maybe-compile-a-kernel-later"><span class="octicon octicon-link"></span></a>Nice to have to maybe compile a kernel later</h4>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install libqt4-dev moc g++ libncurses5-dev kernel-package gcc-multilib libc6-dev libtool automake  openssh-server openssh-client
+</pre></div>
+
+<hr><h3>
+<a name="the-rtai-patched-kernel" class="anchor" href="#the-rtai-patched-kernel"><span class="octicon octicon-link"></span></a>The RTAI-patched kernel</h3>
+
+<h4>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h4>
+
+<div class="highlight highlight-bash"><pre><span class="c"># Determine if x86 or x64 (x86_x64)</span>
+<span class="nv">_platform</span><span class="o">=</span><span class="k">$(</span>uname -m<span class="k">)</span> 
+
+<span class="c"># Get the Rtai4.0 patched kernel headers</span>
+wget http://perso.ensta-paristech.fr/~hoarau/rtmeka-kern/<span class="nv">$_platform</span>/linux-headers-rt.deb
+
+<span class="c"># Get the Rtai4.0 patched kernel image</span>
+wget http://perso.ensta-paristech.fr/~hoarau/rtmeka-kern/<span class="nv">$_platform</span>/linux-image-rt.deb
+</pre></div>
+
+<h4>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h4>
+
+<div class="highlight highlight-bash"><pre>sudo dpkg -i linux-headers-rt.deb linux-image-rt.deb
+</pre></div>
+
+<p>Now <strong>boot</strong> on the new kernel using <strong>grub</strong> at <strong>startup</strong>. Please note the name of the kernel.</p>
+
+<blockquote>
+<p>Note : you might have to either hold sift on startup or update the grub config to boot on the rtai patched kernel: </p>
+
+<div class="highlight highlight-bash"><pre>sudo nano /etc/defaults/grub
+</pre></div>
+</blockquote>
+
+<h3>
+<a name="rtai-40-installation" class="anchor" href="#rtai-40-installation"><span class="octicon octicon-link"></span></a>RTAI 4.0 installation</h3>
+
+<h4>
+<a name="download-1" class="anchor" href="#download-1"><span class="octicon octicon-link"></span></a>Download</h4>
+
+<div class="highlight highlight-bash"><pre>wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-4.0.tar.bz2
+tar xjf rtai-4.0.tar.bz2
+</pre></div>
+
+<h4>
+<a name="installation-1" class="anchor" href="#installation-1"><span class="octicon octicon-link"></span></a>Installation</h4>
+
+<div class="highlight highlight-bash"><pre><span class="nb">cd </span>rtai-4.0
+mkdir build<span class="p">;</span> <span class="nb">cd </span>build
+../configure --disable-comedi-lxrt --enable-cpus<span class="o">=</span><span class="k">$(</span>nproc<span class="k">)</span> --enable-math-c99 --with-linux-dir<span class="o">=</span>/usr/src/linux-headers-3.8.13-rtmeka4.0
+make -j<span class="k">$(</span>nproc<span class="k">)</span>
+sudo make install
+</pre></div>
+
+<blockquote>
+<p><strong>Note</strong> : The --with-linux-dir option has to match the rtai-patched kernel</p>
+
+<hr>
+<p><strong>Know issues</strong> : On 64-bit CPUs, if an error regarding -mpreferred-cache-boundary=3 shows up, edit line 57 in /usr/src/linux/arch/x86/Makefile (where linux is your rtai patched kernel) to set this parameter to 4:</p>
+
+<div class="highlight highlight-bash"><pre>KBUILD_CFLAGS +<span class="o">=</span> <span class="k">$(</span>call cc-option,-mno-sse -mpreferred-stack-boundary<span class="o">=</span>4<span class="k">)</span>
+</pre></div>
+
+<p>Part of the explanation: <a href="http://mail.rtai.org/pipermail/rtai/2013-December/026198.html">http://mail.rtai.org/pipermail/rtai/2013-December/026198.html</a></p>
+
+<hr>
+<p><strong>Know issues</strong> : on 12.04 32 bits machines, rtai fails to compile (some header is missing)</p>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install gcc-multilib g++-multilib libc6-dev
+sudo ln -s /usr/include/i386-linux-gnu/gnu/stubs-32.h /usr/include/gnu/stubs-32.h
+</pre></div>
+</blockquote>
+
+<h3>
+<a name="post-install" class="anchor" href="#post-install"><span class="octicon octicon-link"></span></a>Post install</h3>
+
+<p>Update the ld library path to find rtai:</p>
+
+<div class="highlight highlight-bash"><pre>sudo -s
+<span class="nb">echo</span> /usr/realtime/lib/ &gt; /etc/ld.so.conf.d/rtai.conf
+<span class="nb">exit</span>
+sudo ldconfig
+</pre></div>
+
+<h2>
+<a name="install-ros" class="anchor" href="#install-ros"><span class="octicon octicon-link"></span></a>Install ROS</h2>
+
+<div class="highlight highlight-bash"><pre><span class="nv">codename</span><span class="o">=</span><span class="sb">`</span>cat /etc/lsb-release <span class="p">|</span> grep -m <span class="m">1</span> <span class="s2">"DISTRIB_CODENAME="</span> <span class="p">|</span> cut -d <span class="s2">"="</span> -f2<span class="sb">`</span>
+sudo sh -c <span class="s2">"echo 'deb http://packages.ros.org/ros/ubuntu $codename main' &gt; /etc/apt/sources.list.d/ros-latest.list"</span>
+</pre></div>
+
+<h4>
+<a name="for-ensta-people--use-local-repo-way-faster" class="anchor" href="#for-ensta-people--use-local-repo-way-faster"><span class="octicon octicon-link"></span></a>For Ensta people : use local repo (way faster)</h4>
+
+<div class="highlight highlight-bash"><pre><span class="nv">codename</span><span class="o">=</span><span class="sb">`</span>cat /etc/lsb-release <span class="p">|</span> grep -m <span class="m">1</span> <span class="s2">"DISTRIB_CODENAME="</span> <span class="p">|</span> cut -d <span class="s2">"="</span> -f2<span class="sb">`</span>
+sudo sh -c <span class="s2">"echo 'deb http://fermion.ensta.fr/ros/ubuntu $codename main' &gt; /etc/apt/sources.list.d/ros-latest.list"</span>
+</pre></div>
+
+<blockquote>
+<p>If on Ubuntu &lt; 13.10</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">ROS_DISTRO</span><span class="o">=</span>hydro
+</pre></div>
+
+<p>If on Ubuntu &gt; 13.10</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">ROS_DISTRO</span><span class="o">=</span>indigo
+</pre></div>
+</blockquote>
+
+<h4>
+<a name="ros--moveit--ros-control" class="anchor" href="#ros--moveit--ros-control"><span class="octicon octicon-link"></span></a>ROS + MoveIt! + ROS Control</h4>
+
+<div class="highlight highlight-bash"><pre>wget http://packages.ros.org/ros.key -O - <span class="p">|</span> sudo apt-key add -
+sudo apt-get update
+sudo apt-get install ros-<span class="nv">$ROS_DISTRO</span>-desktop-full ros-<span class="nv">$ROS_DISTRO</span>-moveit-* ros-<span class="nv">$ROS_DISTRO</span>-ros-control ros-<span class="nv">$ROS_DISTRO</span>-ros-controllers python-rosinstall python-pip
+</pre></div>
+
+<div class="highlight highlight-bash"><pre>sudo -E rosdep init
+rosdep update
+</pre></div>
+
+<h4>
+<a name="openni-ros-hydro-only" class="anchor" href="#openni-ros-hydro-only"><span class="octicon octicon-link"></span></a>Openni (ROS Hydro Only)</h4>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install ros-<span class="nv">$ROS_DISTRO</span>-openni*
+</pre></div>
+
+<h4>
+<a name="create-the-ros-workspace" class="anchor" href="#create-the-ros-workspace"><span class="octicon octicon-link"></span></a>Create the ROS-workspace</h4>
+
+<div class="highlight highlight-bash"><pre><span class="nb">source</span> /opt/ros/<span class="nv">$ROS_DISTRO</span>/setup.bash
+<span class="c">## Create the ROS-workspace</span>
+mkdir -p ~/catkin_ws/src
+<span class="nb">cd</span> ~/catkin_ws/src
+catkin_init_workspace
+<span class="nb">cd</span> ~/catkin_ws/
+catkin_make
+</pre></div>
+
+<h4>
+<a name="post-install-1" class="anchor" href="#post-install-1"><span class="octicon octicon-link"></span></a>Post-install</h4>
+
+<div class="highlight highlight-bash"><pre>sudo -s
+<span class="nb">echo</span> <span class="s1">'/usr/local/lib'</span> &gt;&gt; /etc/ld.so.conf
+<span class="nb">exit</span>
+sudo ldconfig
+</pre></div>
+
+<h3>
+<a name="workaround-for-kdl-issues" class="anchor" href="#workaround-for-kdl-issues"><span class="octicon octicon-link"></span></a>Workaround for KDL issues</h3>
+
+<p>The function SetPayload that allow to modify how much weight the robot carries requires a tiny patch on the KDL library. This is a temporary solution.</p>
+
+<div class="highlight highlight-bash"><pre><span class="c">#cd ~/catkin_ws/src</span>
+<span class="c">#git clone https://github.com/ahoarau/orocos_kinematics_dynamics</span>
+<span class="c">#cd orocos_kinematics_dynamics/orocos_kdl</span>
+<span class="c">#mkdir build;cd build; cmake ..</span>
+<span class="c">#make -j5</span>
+<span class="c">#sudo make install</span>
+<span class="c">#cd ../../python_orocos_kdl/</span>
+<span class="c">#mkdir build;cd build;cmake ..</span>
+<span class="c">#make -j5</span>
+<span class="c">#sudo make install </span>
+</pre></div>
+
+<blockquote>
+<p>Note : This issue has been fixed in june 2014, we now use the ros orocos kdl.</p>
+</blockquote>
+
+<h3>
+<a name="recommended-install-some-ides" class="anchor" href="#recommended-install-some-ides"><span class="octicon octicon-link"></span></a>(Recommended) Install some IDEs</h3>
+
+<h4>
+<a name="python-for-most-users-eclipse--pydev" class="anchor" href="#python-for-most-users-eclipse--pydev"><span class="octicon octicon-link"></span></a>Python (for most users): Eclipse + PyDev</h4>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install eclipse
+</pre></div>
+
+<h4>
+<a name="ros-and-c-real-time-advanced-users-qt-creator-andor-kdevelop" class="anchor" href="#ros-and-c-real-time-advanced-users-qt-creator-andor-kdevelop"><span class="octicon octicon-link"></span></a>ROS and C++ Real-time (Advanced users): Qt creator and/or Kdevelop</h4>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install qtcreator 
+sudo apt-get install kdevelop
+</pre></div>
+
+<h2>
+<a name="install-ensta-m3" class="anchor" href="#install-ensta-m3"><span class="octicon octicon-link"></span></a>Install ENSTA M3</h2>
+
+<h3>
+<a name="download-2" class="anchor" href="#download-2"><span class="octicon octicon-link"></span></a>Download</h3>
+
+<div class="highlight highlight-bash"><pre>git clone --recursive git@bitbucket.org:ensta/mekabot.git ~/mekabot
+<span class="nb">cd</span> ~/mekabot
+git submodule init
+git submodule update
+git submodule foreach git checkout master
+</pre></div>
+
+<h3>
+<a name="installation-2" class="anchor" href="#installation-2"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<h4>
+<a name="holomni-pcv-for-the-mobile-base" class="anchor" href="#holomni-pcv-for-the-mobile-base"><span class="octicon octicon-link"></span></a>Holomni PCV for the mobile base</h4>
+
+<blockquote>
+<p>If on Ubuntu 14.04 LTS:</p>
+
+<div class="highlight highlight-bash"><pre>sudo -E add-apt-repository ppa:hoarau-robotics/ppa
+sudo apt-get update
+sudo apt-get install holomni-pcv
+</pre></div>
+
+<p>If not :</p>
+
+<div class="highlight highlight-bash"><pre><span class="nb">cd</span> ~/mekabot
+<span class="nb">cd </span>holomni_pcv
+mkdir build<span class="p">;</span><span class="nb">cd </span>build
+cmake .. -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
+make -j5
+sudo make install
+</pre></div>
+</blockquote>
+
+<h4>
+<a name="mekabot" class="anchor" href="#mekabot"><span class="octicon octicon-link"></span></a>Mekabot</h4>
+
+<div class="highlight highlight-bash"><pre><span class="nb">cd</span> ~/mekabot
+mkdir build<span class="p">;</span><span class="nb">cd </span>build
+cmake .. -DETHERCAT<span class="o">=</span><span class="m">0</span> -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
+make -j5
+sudo make install
+</pre></div>
+
+<blockquote>
+<p>Note : future option -DVIRTUAL=1 will remove fake ethercat module synchronization to avoid overrruns</p>
+</blockquote>
+
+<h2>
+<a name="update-your-bashrc" class="anchor" href="#update-your-bashrc"><span class="octicon octicon-link"></span></a>Update your bashrc</h2>
+
+<div class="highlight highlight-bash"><pre>touch ~/.m3rc
+<span class="nb">echo</span> <span class="s1">'</span>
+<span class="s1">##################################################################</span>
+<span class="s1">## Meka</span>
+
+<span class="s1">#export M3_ROBOT=~/mekabot/m3ens/real_meka # Real meka config</span>
+<span class="s1">export M3_ROBOT=~/mekabot/m3ens/virtual_meka # Simulated Meka</span>
+<span class="s1">export MALLOC_CHECK_=0 # Some Hack for Python</span>
+<span class="s1">source /usr/local/share/m3/setup.bash</span>
+
+<span class="s1">##################################################################</span>
+<span class="s1">## ROS</span>
+
+<span class="s1">#export ROS_MASTER_URI=http://meka-moch:11311 # If on real Meka, roscore is launched from meka-moch</span>
+<span class="s1">#export ROS_IP=192.168.20.117 # Fix here your IP to avoid conflicts on Meka</span>
+<span class="s1">source /opt/ros/hydro/setup.bash # Can be Hydro or Indigo</span>
+
+<span class="s1">##################################################################</span>
+<span class="s1">## ROS-workspace</span>
+
+<span class="s1">source ~/catkin_ws/install_isolated/setup.bash</span>
+<span class="s1">source ~/catkin_ws/devel/setup.bash</span>
+
+<span class="s1">##################################################################</span>
+<span class="s1">## Additional Meka-stuff</span>
+
+<span class="s1">export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/mekabot/m3ens-demos/ros:~/mekabot/m3ens-tutos/ros:~/mekabot/m3ens-utils/ros:~/mekabot/meka-ros-pkg:~/mekabot/m3core/ros:~/mekabot/m3meka/ros</span>
+<span class="s1">export PYTHONPATH=$PYTHONPATH:~/mekabot/m3ens-demos/scripts:~/mekabot/m3ens-utils/scripts:~/mekabot/m3ens-utils/python:~/mekabot/m3ens-utils/ros</span>
+<span class="s1">'</span>&gt;&gt;~/.m3rc
+
+<span class="nb">echo</span> <span class="s1">'source ~/.m3rc'</span> &gt;&gt; ~/.bashrc
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+
+<h3>
+<a name="get-time-synchronization-for-ros-highly-recommended" class="anchor" href="#get-time-synchronization-for-ros-highly-recommended"><span class="octicon octicon-link"></span></a>Get time synchronization for ROS (HIGHLY RECOMMENDED)</h3>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install ntp
+sudo nano /etc/ntp.conf
+</pre></div>
+
+<p>Comment all the servers lines and add 'server ensta.ensta.fr'.
+It should look like that : </p>
+
+<div class="highlight highlight-bash"><pre><span class="c">#server 0.ubuntu.pool.ntp.org</span>
+<span class="c">#server 1.ubuntu.pool.ntp.org</span>
+<span class="c">#server 2.ubuntu.pool.ntp.org</span>
+<span class="c">#server 3.ubuntu.pool.ntp.org</span>
+server ensta.ensta.fr
+
+<span class="c"># Use Ubuntu's ntp server as a fallback (or not at ensta ;) )</span>
+server ntp.ubuntu.com
+</pre></div>
+
+<div class="highlight highlight-bash"><pre>sudo service ntp restart
+</pre></div>
+
+<blockquote>
+<p>(OPTIONAL) Force the time to update every day (can drift after long shutdown) </p>
+
+<div class="highlight highlight-bash"><pre>sudo -s
+touch /etc/cron.daily/ntpdate
+<span class="nb">echo</span> <span class="s1">'#!/bin/sh</span>
+<span class="s1">ntpdate ensta.ensta.fr'</span>&gt;&gt;/etc/cron.daily/ntpdate
+<span class="nb">exit</span>
+sudo chmod <span class="m">755</span> /etc/cron.daily/ntpdate
+</pre></div>
+</blockquote>
+
+<h3>
+<a name="optional-setup-robots-pcs-" class="anchor" href="#optional-setup-robots-pcs-"><span class="octicon octicon-link"></span></a>(OPTIONAL) Setup robot's Pcs :</h3>
+
+<div class="highlight highlight-bash"><pre>sudo -s
+<span class="nb">echo</span> <span class="s1">'192.168.20.117 meka-mob'</span>&gt;&gt;/etc/hosts
+<span class="nb">echo</span> <span class="s1">'192.168.20.118 meka-moch'</span>&gt;&gt;/etc/hosts
+<span class="nb">echo</span> <span class="s1">'192.168.20.119 meka-mud'</span>&gt;&gt;/etc/hosts
+<span class="nb">exit</span>
+</pre></div>
+
+<h2>
+<a name="update-the-hostname-virtual-installation" class="anchor" href="#update-the-hostname-virtual-installation"><span class="octicon octicon-link"></span></a>Update the hostname (virtual installation)</h2>
+
+<p>If you want to run a simulated robot, you need to be the realtime controller and client. To do so, open the robot_config :</p>
+
+<div class="highlight highlight-bash"><pre>gedit ~/mekabot/m3ens/robot_config/m3_config.yml
+</pre></div>
+
+<p>And change the host name to your computer's hostname.</p>
+
+<div class="highlight highlight-bash"><pre>more /etc/hostname
+</pre></div>
+
+<h2>
+<a name="run-the-server-and-visualize-the-robot-on-rviz" class="anchor" href="#run-the-server-and-visualize-the-robot-on-rviz"><span class="octicon octicon-link"></span></a>Run the server and visualize the robot on Rviz</h2>
+
+<div class="highlight highlight-bash"><pre>m3rt_server_run <span class="c"># run the realtime server</span>
+roslaunch meka_description m3ens_viz.launch <span class="c"># launch robot description, robot state publisher, joint state publisher and rviz</span>
+</pre></div>
+
+<h2>
+<a name="youre-done-" class="anchor" href="#youre-done-"><span class="octicon octicon-link"></span></a>You're done !</h2>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>

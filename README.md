@@ -187,7 +187,7 @@ sudo apt-get install kdevelop
 
 ### Download
 ```bash
-git clone --recursive git@bitbucket.org:ensta/mekabot.git ~/mekabot
+git clone https://github.com/ahoarau/mekabot.git ~/mekabot
 cd ~/mekabot
 git submodule init
 git submodule update

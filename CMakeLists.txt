@@ -5,17 +5,21 @@ set(CMAKE_MODULE_PATH
     "${CMAKE_SOURCE_DIR}/meka-cmake-modules/Modules/"
     ${CMAKE_MODULE_PATH}
 )
+OPTION(ETHERCAT "Enable/Disable EtherCAT (sim or not)" OFF)
 
-OPTION(VIRTUAL_MEKA "To be used on simulation or not" ON)
-if(NOT VIRTUAL_MEKA)
-add_definitions("-D__KERNEL_SYNC__")
-endif()
+OPTION(VIRTUAL_MEKA "Simulated robot (no hardware)" ON)
 
 # Option for Rtai, then check if available
 OPTION(RTAI "Enable/Disable RTAI (used for python proxy users only)" ON)
 
-if(RTAI)
+if(ETHERCAT)
+set(VIRTUAL_MEKA 0)
+endif()
+
+if(RTAI AND NOT ETHERCAT)
     find_package(RTAI)
+elseif(RTAI AND ETHERCAT)
+    find_package(RTAI REQUIRED)
 endif()
 
 if(RTAI AND NOT RTAI_FOUND)
@@ -50,5 +54,5 @@ add_subdirectory(m3meka)
 find_package(Holomni)
 if(NOT HOLOMNI_FOUND AND RTAI)
   add_subdirectory(holomni_pcv)
-endif(RTAI)
+endif()
 

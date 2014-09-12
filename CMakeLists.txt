@@ -35,8 +35,8 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -ggdb")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # Include dirs to look for
-set(M3RT_SRC ${CMAKE_BINARY_DIR}/m3core/src )
-set(M3_SRC ${CMAKE_BINARY_DIR}/m3meka/src)
+set(M3RT_SRC ${CMAKE_SOURCE_DIR}/m3core/src )
+set(M3_SRC ${CMAKE_SOURCE_DIR}/m3meka/src)
 
 # HACK : Include this directory for the generated protobufs headers from m3core
 include_directories(
@@ -47,8 +47,8 @@ include_directories(
 add_subdirectory(m3core)
 add_subdirectory(m3meka)
 
-
-#if(RTAI)
-#  add_subdirectory(holomni_pcv)
-#endif(RTAI)
+find_package(Holomni)
+if(NOT HOLOMNI_FOUND AND RTAI)
+  add_subdirectory(holomni_pcv)
+endif(RTAI)
 

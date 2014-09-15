@@ -66,8 +66,8 @@ tar xjf rtai-4.0.tar.bz2
 ```bash
 cd rtai-4.0
 mkdir build; cd build
-../configure --disable-comedi-lxrt --enable-cpus=$(nproc) --enable-math-c99 --with-linux-dir=/usr/src/linux-headers-3.8.13-rtmeka4.0
-make -j$(nproc)
+../configure --disable-comedi-lxrt --enable-cpus=$(nproc) --with-linux-dir=/usr/src/linux-headers-3.8.13-rtmeka4.0
+make -j$[$(nproc)+1]
 sudo make install
 ```
 > **Note** : The --with-linux-dir option has to match the rtai-patched kernel
@@ -75,7 +75,8 @@ sudo make install
 > ----
 > **Know issues** : On 64-bit CPUs, if an error regarding -mpreferred-cache-boundary=3 shows up, edit line 57 in /usr/src/linux/arch/x86/Makefile (where linux is your rtai patched kernel) to set this parameter to 4:
 ```bash
-KBUILD_CFLAGS += $(call cc-option,-mno-sse -mpreferred-stack-boundary=4)
+sudo gedit  /usr/src/linux/arch/x86/Makefile
+# 57: KBUILD_CFLAGS += $(call cc-option,-mno-sse -mpreferred-stack-boundary=4)
 ```
 Part of the explanation: http://mail.rtai.org/pipermail/rtai/2013-December/026198.html
 
@@ -98,13 +99,11 @@ sudo ldconfig
 
 ## Install ROS
 ```bash
-codename=`cat /etc/lsb-release | grep -m 1 "DISTRIB_CODENAME=" | cut -d "=" -f2`
-sudo sh -c "echo 'deb http://packages.ros.org/ros/ubuntu $codename main' > /etc/apt/sources.list.d/ros-latest.list"
+sudo sh -c "echo 'deb http://packages.ros.org/ros/ubuntu $(lsb_release -cs) main' > /etc/apt/sources.list.d/ros-latest.list"
 ```
 #### For Ensta people : use local repo (way faster)
 ```bash
-codename=`cat /etc/lsb-release | grep -m 1 "DISTRIB_CODENAME=" | cut -d "=" -f2`
-sudo sh -c "echo 'deb http://fermion.ensta.fr/ros/ubuntu $codename main' > /etc/apt/sources.list.d/ros-latest.list"
+sudo sh -c "echo 'deb http://fermion.ensta.fr/ros/ubuntu $(lsb_release -cs) main' > /etc/apt/sources.list.d/ros-latest.list"
 ```
 
 > If on Ubuntu < 13.10
@@ -180,7 +179,7 @@ cd ~/mekabot
 cd holomni_pcv
 mkdir build;cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j5
+make -j$[$(nproc)+1]
 sudo make install
 ```
 
@@ -189,8 +188,8 @@ sudo make install
 ```bash
 cd ~/mekabot
 mkdir build;cd build
-cmake .. -DETHERCAT=0 -DCMAKE_BUILD_TYPE=Release
-make -j5
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j$[$(nproc)+1]
 sudo make install
 ```
 
@@ -213,7 +212,7 @@ source /usr/local/share/m3/setup.bash
 
 #export ROS_MASTER_URI=http://meka-moch:11311 # If on real Meka, roscore is launched from meka-moch
 #export ROS_IP=192.168.20.117 # Fix here your IP to avoid conflicts on Meka
-source /opt/ros/hydro/setup.bash # Can be Hydro or Indigo
+source /opt/ros/indigo/setup.bash # Can be Hydro or Indigo
 
 ##################################################################
 ## ROS-workspace

@@ -31,6 +31,8 @@ sudo apt-get install libqt4-dev moc g++ libncurses5-dev kernel-package gcc-multi
 ```
 ------
 
+> Note : if you only want the **python** interface, jump to the "install Mekabot" section.
+
 ### The RTAI-patched kernel
 #### Download
 ```bash
@@ -155,7 +157,7 @@ sudo apt-get install qtcreator
 sudo apt-get install kdevelop
 ```
 
-##Install ENSTA M3
+##Install Mekabot M3
 
 ### Download
 ```bash

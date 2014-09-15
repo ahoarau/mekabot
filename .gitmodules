@@ -1,43 +1,23 @@
 [submodule "m3core"]
 	path = m3core
-	url = git@bitbucket.org:ensta/m3core.git
+	url = https://github.com/ahoarau/m3core.git
 
 [submodule "m3meka"]
 	path = m3meka
-	url = git@bitbucket.org:ensta/m3meka.git
+	url = https://github.com/ahoarau/m3meka.git
 
 [submodule "m3ens"]
 	path = m3ens
-	url = git@bitbucket.org:ensta/m3ens.git
-
-[submodule "m3ens-tutos"]
-	path = m3ens-tutos
-	url = git@bitbucket.org:ensta/m3ens-tutos.git
-
-[submodule "m3ens-utils"]
-	path = m3ens-utils
-	url = git@bitbucket.org:ensta/m3ens-utils.git
-
-[submodule "m3ens-demos"]
-	path = m3ens-demos
-	url = git@bitbucket.org:ensta/m3ens-demos.git
-
-[submodule "m3qa"]
-	path = m3qa
-	url = git@bitbucket.org:ensta/m3qa.git
+	url = https://github.com/ahoarau/m3ens.git
 
 [submodule "meka-ros-pkg"]
 	path = meka-ros-pkg
-	url = git@bitbucket.org:ensta/meka-ros-pkg.git
-[submodule "meka-ros"]
-	path = meka-ros
-	url = ssh://git@bitbucket.org/ensta/meka-ros.git
-[submodule "m3bash_scripts"]
-	path = m3bash_scripts
-	url = ssh://git@bitbucket.org/ensta/m3bash_scripts.git
+	url = https://github.com/ahoarau/meka-ros-pkg.git
+
 [submodule "meka-cmake-modules"]
 	path = meka-cmake-modules
-	url = git@bitbucket.org:ensta/meka-cmake-modules.git
+	url = https://github.com/ahoarau/meka-cmake-modules.git
+
 [submodule "holomni_pcv"]
 	path = holomni_pcv
-	url = git@bitbucket.org:ensta/holomni_pcv.git
+	url = https://github.com/ahoarau/holomni_pcv.git

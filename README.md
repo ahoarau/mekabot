@@ -143,38 +143,11 @@ cd ~/catkin_ws/
 catkin_make
 ```
 
-#### Post-install
-```bash
-sudo -s
-echo '/usr/local/lib' >> /etc/ld.so.conf
-exit
-sudo ldconfig
-```
-
-### Workaround for KDL issues
-
-The function SetPayload that allow to modify how much weight the robot carries requires a tiny patch on the KDL library. This is a temporary solution.
-
-```bash
-#cd ~/catkin_ws/src
-#git clone https://github.com/ahoarau/orocos_kinematics_dynamics
-#cd orocos_kinematics_dynamics/orocos_kdl
-#mkdir build;cd build; cmake ..
-#make -j5
-#sudo make install
-#cd ../../python_orocos_kdl/
-#mkdir build;cd build;cmake ..
-#make -j5
-#sudo make install 
-```
-
-> Note : This issue has been fixed in june 2014, we now use the ros orocos kdl.
-
 ### (Recommended) Install some IDEs
 
-#### Python (for most users): Eclipse + PyDev
+#### Python (for most users): Eclipse + PyDev or spyder
 ```bash
-sudo apt-get install eclipse
+sudo apt-get install eclipse spyder
 ```
 
 #### ROS and C++ Real-time (Advanced users): Qt creator and/or Kdevelop

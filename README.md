@@ -8,15 +8,13 @@ This wiki describes the full installation of m3 software to control/simulate the
 
 | ***OS Tested*** | ***Status*** | ***Notes***
 |:------------------|:----:|:---------------:
-| Ubuntu 12.04 x86 | OK | Kinects might cause issues 
-| Ubuntu 12.04 x64 | OK | Kinects might cause issues 
-| Ubuntu 12.10 x86 | OK | On the Meka 04.04.14 -> will update to 14.04 LTS when ready 
-| Ubuntu 12.10 x64 | OK | Now working 04.04.14 
-| Ubuntu 13.04 x86 | OK | 
-| Ubuntu 13.04 x64 | OK | 
+| Ubuntu 12.04 x86 | OK | w ROS Hydro 
+| Ubuntu 12.04 x64 | OK | w ROS Hydro
 | Ubuntu 13.10 x86 | OK | w ROS Indigo 
-| Ubuntu 14.04 x64 | OK | w ROS Indigo/MoveIt! 
+| **Ubuntu 14.04 x64**| OK | w ROS Indigo/MoveIt! 
 
+
+> Current version on the meka : Ubuntu 14.04LTS on kernel 3.10.32, rtai4.0, ethercat1.5.2, ROS Indigo/MoveIt!
 
 ## Ubuntu 12.04 - 14.04 (x86/x64) w/ ROS Hydro/Indigo
 

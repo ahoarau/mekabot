@@ -4,7 +4,7 @@ project(mekabot)
 ## Mekabot Version
 SET(MAJOR_VERSION "1")
 SET(MINOR_VERSION "9")
-SET(PATCH_VERSION "6")
+SET(PATCH_VERSION "7")
 set(M3_VERSION
   ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
   
@@ -94,8 +94,8 @@ message(STATUS "Debian architecture: ${CPACK_DEBIAN_PACKAGE_ARCHITECTURE}")
 #SET(CPACK_PACKAGING_INSTALL_PREFIX "/tmp")
 SET(CPACK_GENERATOR "DEB")
 
-SET(CPACK_PACKAGE_DESCRIPTION "Holomni PCV : control the holomni wheels")
-SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "This package is used to control the B1 base on the Meka robot")
+SET(CPACK_PACKAGE_DESCRIPTION "Mekabot M3 : open source realtime control system.")
+SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "M3 is a high performance open source realtime control system for the Meka robots.")
 
 SET(CPACK_PACKAGE_VENDOR "Meka Robotics LLC, Inria, Ensta ParisTech")
 SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Antoine Hoarau <hoarau.robotics@gmail.com>")

@@ -75,7 +75,7 @@ if(NOT ENABLE_PPA)
 endif()
 
 ######## Debian #######
-
+if(ENABLE_PPA)
 #### Package Generation
 execute_process (
   COMMAND          /usr/bin/dpkg --print-architecture
@@ -131,3 +131,4 @@ endif()
 
 ENDIF(EXISTS "${CMAKE_ROOT}/Modules/CPack.cmake")
 endif()
+endif(ENABLE_PPA)

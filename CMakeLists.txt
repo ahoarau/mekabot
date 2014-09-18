@@ -53,6 +53,7 @@ set(M3_SRC ${CMAKE_SOURCE_DIR}/m3meka/src)
 # HACK : Include this directory for the generated protobufs headers from m3core
 include_directories(
     ${M3RT_SRC}
+    ${CMAKE_BINARY_DIR}/m3core/src
     ${CMAKE_BINARY_DIR}/m3core/src/m3rt/base 
 )
 

@@ -1,0 +1,89 @@
+language: cpp
+
+compiler:
+  - gcc
+
+
+## Google drive not working on large files-> need shared folder id and complete file name
+#  - FILE_ID_HEADERS=0B6zWJ1Gzg1UTZTdVNkJWZG9QSk0
+#  - FILE_ID_IMAGE=0B6zWJ1Gzg1UTUWRKQldMZEZnWHc
+#  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_HEADERS" -O linux-headers.deb
+#  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_IMAGE" -O linux-image.deb
+
+before_install:
+  - CI_SOURCE_PATH=$(pwd)
+## Parameters
+#  - rtai_version=4.0
+  - kernel_name=3.10.32-rtai4.0_3.10.32-rtai4.0-10.00.Custom_amd64
+  - headers=linux-headers-$kernel_name.deb
+  - image=linux-image-$kernel_name.deb
+  - FOLDER_ID=0B6zWJ1Gzg1UTZWRnQ2lUYjVtWnM
+  - linuxx64patch=0B6zWJ1Gzg1UTblBtVGJWZ200eDQ
+## Prerequisites
+#=======  RT Kernel ========#
+  - cd
+  - wget https://googledrive.com/host/$FOLDER_ID/$headers
+  - wget https://googledrive.com/host/$FOLDER_ID/$image
+  - sudo dpkg -i --force-all $headers $image
+  - rtkernel=$(dpkg-deb --info $headers |grep Package -m 1 | grep -Po "linux-headers-\K(.*)")
+  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$linuxx64patch" -O ~/linux-x64.patch
+  - sudo ln -snf /usr/src/linux-headers-$rtkernel /usr/src/linux
+  - cd /usr/src/linux/arch/x86
+  - sudo patch < ~/linux-x64.patch
+#=======  RTAI ========#
+  - cd
+  - sudo apt-get install -qq cvs
+  - cvs -d:pserver:anonymous@cvs.gna.org:/cvs/rtai co magma
+#  - wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-$rtai_version.tar.bz2
+#  - tar xjf rtai-$rtai_version.tar.bz2
+#  - ln -snf rtai-$rtai_version magma 
+  - cd magma && mkdir build && cd build
+  - yes "" | make -f ../makefile config
+  - make -j$(nproc)
+  - sudo make install
+  - echo /usr/realtime/lib/ > rtai.conf
+  - sudo mv rtai.conf /etc/ld.so.conf.d/
+  - sudo ldconfig
+#=======  (OPTIONAL) YamlCpp 0.5 ========#
+  - cd
+  - sudo apt-get install -qq libboost-dev
+  - wget http://yaml-cpp.googlecode.com/files/yaml-cpp-0.5.1.tar.gz
+  - tar -xf yaml-cpp-0.5.1.tar.gz
+  - cd yaml-cpp-0.5.1
+  - mkdir build;cd build;
+  - cmake .. -DBUILD_SHARED_LIBS=1
+  - make -j$(nproc)
+  - sudo make install
+#=======  Required libraries ========#
+  - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip
+#=======  Orocos KDL ========#
+  - cd
+  - git clone https://github.com/orocos/orocos_kinematics_dynamics.git
+  - cd orocos_kinematics_dynamics/orocos_kdl
+  - mkdir build;cd build; cmake ..
+  - make -j$(nproc)
+  - sudo make install
+  - cd ../../python_orocos_kdl/
+  - mkdir build;cd build;cmake ..
+  - make -j$(nproc)
+  - sudo make install 
+
+install:
+  - cd $CI_SOURCE_PATH
+  - git submodule init && git submodule update
+  - git submodule foreach git pull origin master
+#====== Holomni PCV =======#
+  - cd holomni_pcv
+  - mkdir build;cd build
+  - cmake .. -DCMAKE_BUILD_TYPE=Release
+  - make -j$(nproc)
+  - sudo make install
+#====== Mekabot =======#
+  - cd $CI_SOURCE_PATH
+  - mkdir build
+  - cd build
+  - cmake -DKERNEL_NAME=$rtkernel ..
+  
+script:
+  - make -j$(nproc)
+  - sudo make install

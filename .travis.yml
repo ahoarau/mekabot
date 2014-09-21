@@ -31,12 +31,14 @@ before_install:
   - sudo patch < ~/linux-x64.patch
 #=======  RTAI ========#
   - cd
-  - wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-$rtai_version.tar.bz2
-  - tar xjf rtai-$rtai_version.tar.bz2
-  - ln -snf rtai-$rtai_version rtai
+  - sudo apt-get install -qq cvs
+  - cvs -d:pserver:anonymous@cvs.gna.org:/cvs/rtai co rtai
+#  - wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-$rtai_version.tar.bz2
+#  - tar xjf rtai-$rtai_version.tar.bz2
+#  - ln -snf rtai-$rtai_version rtai 
   - cd rtai && mkdir build && cd build
   - ../configure --disable-comedi-lxrt --with-linux-dir=/usr/src/linux-headers-$rtkernel
-  - make
+  - make -j$(nproc)
   - sudo make install
   - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip
 #=======  (OPTIONAL) YamlCpp 0.5 ========#
@@ -46,7 +48,7 @@ before_install:
   - cd yaml-cpp-0.5.1
   - mkdir build;cd build;
   - cmake .. -DBUILD_SHARED_LIBS=1
-  - make
+  - make -j$(nproc)
   - sudo make install
 
  
@@ -59,5 +61,5 @@ install:
   - cmake -DKERNEL_NAME=$rtkernel ..
   
 script:
-  - make
+  - make -j$(nproc)
   - sudo make install

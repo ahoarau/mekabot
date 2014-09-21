@@ -1,0 +1,50 @@
+language: cpp
+
+compiler:
+  - gcc
+
+env:
+  - rtai_version=4.0
+  - FILE_ID_HEADERS=0B6zWJ1Gzg1UTZTdVNkJWZG9QSk0
+  - FILE_ID_IMAGE=0B6zWJ1Gzg1UTUWRKQldMZEZnWHc
+  - linuxx64patch=0B6zWJ1Gzg1UTVko1ekk1Mk5sbDg
+
+before_install:
+  -  export CI_SOURCE_PATH=$(pwd)
+  -  wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_HEADERS" -O linux-headers.deb
+  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_IMAGE" -O linux-image.deb
+  - sudo dpkg -i --force-all linux-headers.deb linux-image.deb
+  - rtkernel=$(dpkg-deb --info linux-headers-rt.deb |grep Package -m 1 | grep -Po "linux-headers-\K(.*)")
+  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$linuxx64patch" -O ~/linux-x64.patch
+  - /usr/src/linux-headers-$rtkernel
+  - sudo patch -p1 -b < ~/linux-x64.patch
+  - cd
+  - wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-$rtai_version.tar.bz2
+  - tar xjf rtai-$rtai_version.tar.bz2
+  - ln -snf rtai-$rtai_version rtai
+  - cd rtai && mkdir build && cd build
+  - ../configure --disable-comedi-lxrt --enable-cpus=$(nproc) --with-linux-dir=/usr/src/linux-headers-$rtkernel
+  - make -j$(nproc)
+  - sudo make install
+  - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip
+  - export CI_SOURCE_PATH=$(pwd)
+  - wget http://yaml-cpp.googlecode.com/files/yaml-cpp-0.5.1.tar.gz
+  - tar -xf yaml-cpp-0.5.1.tar.gz
+  - cd yaml-cpp-0.5.1
+  - mkdir build;cd build;
+  - cmake .. -DBUILD_SHARED_LIBS=1
+  - make -j$(nproc)
+  - sudo make install
+
+ 
+install:
+  - cd $CI_SOURCE_PATH
+  - git submodule init && git submodule update
+  - git foreach git pull origin master
+  - mkdir build
+  - cd build
+  - cmake -DKERNEL_NAME=$rtkernel ..
+  
+script:
+  - make -j$(nproc)
+  - sudo make install

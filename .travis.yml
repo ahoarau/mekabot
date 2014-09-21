@@ -32,11 +32,11 @@ before_install:
 #=======  RTAI ========#
   - cd
   - sudo apt-get install -qq cvs
-  - cvs -d:pserver:anonymous@cvs.gna.org:/cvs/rtai co rtai
+  - cvs -d:pserver:anonymous@cvs.gna.org:/cvs/rtai co magma
 #  - wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-$rtai_version.tar.bz2
 #  - tar xjf rtai-$rtai_version.tar.bz2
-#  - ln -snf rtai-$rtai_version rtai 
-  - cd rtai && mkdir build && cd build
+#  - ln -snf rtai-$rtai_version magma 
+  - cd magma && mkdir build && cd build
   - ../configure --disable-comedi-lxrt --with-linux-dir=/usr/src/linux-headers-$rtkernel
   - make -j$(nproc)
   - sudo make install

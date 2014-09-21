@@ -35,7 +35,7 @@ before_install:
   - tar xjf rtai-$rtai_version.tar.bz2
   - ln -snf rtai-$rtai_version rtai
   - cd rtai && mkdir build && cd build
-  - ../configure --disable-comedi-lxrt --enable-cpus=$(nproc) --with-linux-dir=/usr/src/linux-headers-$rtkernel
+  - ../configure --disable-comedi-lxrt --with-linux-dir=/usr/src/linux-headers-$rtkernel
   - make -j$(nproc)
   - sudo make install
   - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip

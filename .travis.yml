@@ -5,13 +5,13 @@ compiler:
 
 env:
   - rtai_version=4.0
-  - FILE_ID_HEADERS=0B6zWJ1Gzg1UTZTdVNkJWZG9QSk0
-  - FILE_ID_IMAGE=0B6zWJ1Gzg1UTUWRKQldMZEZnWHc
-  - linuxx64patch=0B6zWJ1Gzg1UTVko1ekk1Mk5sbDg
 
 before_install:
   -  export CI_SOURCE_PATH=$(pwd)
-  -  wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_HEADERS" -O linux-headers.deb
+  - FILE_ID_HEADERS=0B6zWJ1Gzg1UTZTdVNkJWZG9QSk0
+  - FILE_ID_IMAGE=0B6zWJ1Gzg1UTUWRKQldMZEZnWHc
+  - linuxx64patch=0B6zWJ1Gzg1UTVko1ekk1Mk5sbDg
+  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_HEADERS" -O linux-headers.deb
   - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_IMAGE" -O linux-image.deb
   - sudo dpkg -i --force-all linux-headers.deb linux-image.deb
   - rtkernel=$(dpkg-deb --info linux-headers-rt.deb |grep Package -m 1 | grep -Po "linux-headers-\K(.*)")

@@ -13,7 +13,7 @@ compiler:
 before_install:
   - CI_SOURCE_PATH=$(pwd)
 ## Parameters
-  - rtai_version=4.0
+#  - rtai_version=4.0
   - kernel_name=3.10.32-rtai4.0_3.10.32-rtai4.0-10.00.Custom_amd64
   - headers=linux-headers-$kernel_name.deb
   - image=linux-image-$kernel_name.deb
@@ -37,7 +37,7 @@ before_install:
 #  - tar xjf rtai-$rtai_version.tar.bz2
 #  - ln -snf rtai-$rtai_version magma 
   - cd magma && mkdir build && cd build
-  - ../configure --disable-comedi-lxrt --with-linux-dir=/usr/src/linux-headers-$rtkernel
+  - ../configure --disable-comedi-lxrt --with-kconfig-file=/usr/src/linux-headers-$rtkernel/arch/x86/Kconfig --with-linux-dir=/usr/src/linux-headers-$rtkernel
   - make -j$(nproc)
   - sudo make install
   - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip

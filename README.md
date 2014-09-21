@@ -16,6 +16,8 @@ This wiki describes the full installation of m3 software to control/simulate the
 
 > Current version on the meka : Ubuntu 14.04LTS on kernel 3.10.32, rtai4.0, ethercat1.5.2, ROS Indigo/MoveIt!
 
+## Build Status
+[![Build Status](https://travis-ci.org/ahoarau/mekabot.svg?branch=master)](https://travis-ci.org/ahoarau/mekabot)
 ## Ubuntu 12.04 - 14.04 (x86/x64) w/ ROS Hydro/Indigo
 
 ### Prerequisites

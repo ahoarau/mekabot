@@ -32,7 +32,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="m3-installation-instructions" class="anchor" href="#m3-installation-instructions"><span class="octicon octicon-link"></span></a>M3 Installation instructions</h1>
+<a name="mekabot-m3-installation-instructions" class="anchor" href="#mekabot-m3-installation-instructions"><span class="octicon octicon-link"></span></a>Mekabot M3 Installation instructions</h1>
 
 <p>This wiki describes the full installation of m3 software to control/simulate the Meka robot at Ensta ParisTech.</p>
 
@@ -50,32 +50,12 @@
 <tr>
 <td align="left">Ubuntu 12.04 x86</td>
 <td align="center">OK</td>
-<td align="center">Kinects might cause issues</td>
+<td align="center">w ROS Hydro</td>
 </tr>
 <tr>
 <td align="left">Ubuntu 12.04 x64</td>
 <td align="center">OK</td>
-<td align="center">Kinects might cause issues</td>
-</tr>
-<tr>
-<td align="left">Ubuntu 12.10 x86</td>
-<td align="center">OK</td>
-<td align="center">On the Meka 04.04.14 -&gt; will update to 14.04 LTS when ready</td>
-</tr>
-<tr>
-<td align="left">Ubuntu 12.10 x64</td>
-<td align="center">OK</td>
-<td align="center">Now working 04.04.14</td>
-</tr>
-<tr>
-<td align="left">Ubuntu 13.04 x86</td>
-<td align="center">OK</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="left">Ubuntu 13.04 x64</td>
-<td align="center">OK</td>
-<td align="center"></td>
+<td align="center">w ROS Hydro</td>
 </tr>
 <tr>
 <td align="left">Ubuntu 13.10 x86</td>
@@ -83,12 +63,21 @@
 <td align="center">w ROS Indigo</td>
 </tr>
 <tr>
-<td align="left">Ubuntu 14.04 x64</td>
+<td align="left"><strong>Ubuntu 14.04 x64</strong></td>
 <td align="center">OK</td>
 <td align="center">w ROS Indigo/MoveIt!</td>
 </tr>
 </tbody>
-</table><h2>
+</table><blockquote>
+<p>Current version on the meka : Ubuntu 14.04LTS on kernel 3.10.32, rtai4.0, ethercat1.5.2, ROS Indigo/MoveIt!</p>
+</blockquote>
+
+<h2>
+<a name="build-status" class="anchor" href="#build-status"><span class="octicon octicon-link"></span></a>Build Status</h2>
+
+<p><a href="https://travis-ci.org/ahoarau/mekabot"><img src="https://travis-ci.org/ahoarau/mekabot.svg?branch=master" alt="Build Status"></a></p>
+
+<h2>
 <a name="ubuntu-1204---1404-x86x64-w-ros-hydroindigo" class="anchor" href="#ubuntu-1204---1404-x86x64-w-ros-hydroindigo"><span class="octicon octicon-link"></span></a>Ubuntu 12.04 - 14.04 (x86/x64) w/ ROS Hydro/Indigo</h2>
 
 <h3>
@@ -106,7 +95,11 @@
 <div class="highlight highlight-bash"><pre>sudo apt-get install libqt4-dev moc g++ libncurses5-dev kernel-package gcc-multilib libc6-dev libtool automake  openssh-server openssh-client
 </pre></div>
 
-<hr><h3>
+<hr><blockquote>
+<p>Note : if you only want the <strong>python</strong> interface, jump to the "install Mekabot" section.</p>
+</blockquote>
+
+<h3>
 <a name="the-rtai-patched-kernel" class="anchor" href="#the-rtai-patched-kernel"><span class="octicon octicon-link"></span></a>The RTAI-patched kernel</h3>
 
 <h4>
@@ -152,8 +145,8 @@ tar xjf rtai-4.0.tar.bz2
 
 <div class="highlight highlight-bash"><pre><span class="nb">cd </span>rtai-4.0
 mkdir build<span class="p">;</span> <span class="nb">cd </span>build
-../configure --disable-comedi-lxrt --enable-cpus<span class="o">=</span><span class="k">$(</span>nproc<span class="k">)</span> --enable-math-c99 --with-linux-dir<span class="o">=</span>/usr/src/linux-headers-3.8.13-rtmeka4.0
-make -j<span class="k">$(</span>nproc<span class="k">)</span>
+../configure --disable-comedi-lxrt --enable-cpus<span class="o">=</span><span class="k">$(</span>nproc<span class="k">)</span> --with-linux-dir<span class="o">=</span>/usr/src/linux-headers-3.8.13-rtmeka4.0
+make -j<span class="nv">$[</span><span class="k">$(</span>nproc<span class="k">)</span>+1<span class="o">]</span>
 sudo make install
 </pre></div>
 
@@ -163,7 +156,8 @@ sudo make install
 <hr>
 <p><strong>Know issues</strong> : On 64-bit CPUs, if an error regarding -mpreferred-cache-boundary=3 shows up, edit line 57 in /usr/src/linux/arch/x86/Makefile (where linux is your rtai patched kernel) to set this parameter to 4:</p>
 
-<div class="highlight highlight-bash"><pre>KBUILD_CFLAGS +<span class="o">=</span> <span class="k">$(</span>call cc-option,-mno-sse -mpreferred-stack-boundary<span class="o">=</span>4<span class="k">)</span>
+<div class="highlight highlight-bash"><pre>sudo gedit  /usr/src/linux/arch/x86/Makefile
+<span class="c"># 57: KBUILD_CFLAGS += $(call cc-option,-mno-sse -mpreferred-stack-boundary=4)</span>
 </pre></div>
 
 <p>Part of the explanation: <a href="http://mail.rtai.org/pipermail/rtai/2013-December/026198.html">http://mail.rtai.org/pipermail/rtai/2013-December/026198.html</a></p>
@@ -190,15 +184,13 @@ sudo ldconfig
 <h2>
 <a name="install-ros" class="anchor" href="#install-ros"><span class="octicon octicon-link"></span></a>Install ROS</h2>
 
-<div class="highlight highlight-bash"><pre><span class="nv">codename</span><span class="o">=</span><span class="sb">`</span>cat /etc/lsb-release <span class="p">|</span> grep -m <span class="m">1</span> <span class="s2">"DISTRIB_CODENAME="</span> <span class="p">|</span> cut -d <span class="s2">"="</span> -f2<span class="sb">`</span>
-sudo sh -c <span class="s2">"echo 'deb http://packages.ros.org/ros/ubuntu $codename main' &gt; /etc/apt/sources.list.d/ros-latest.list"</span>
+<div class="highlight highlight-bash"><pre>sudo sh -c <span class="s2">"echo 'deb http://packages.ros.org/ros/ubuntu $(lsb_release -cs) main' &gt; /etc/apt/sources.list.d/ros-latest.list"</span>
 </pre></div>
 
 <h4>
 <a name="for-ensta-people--use-local-repo-way-faster" class="anchor" href="#for-ensta-people--use-local-repo-way-faster"><span class="octicon octicon-link"></span></a>For Ensta people : use local repo (way faster)</h4>
 
-<div class="highlight highlight-bash"><pre><span class="nv">codename</span><span class="o">=</span><span class="sb">`</span>cat /etc/lsb-release <span class="p">|</span> grep -m <span class="m">1</span> <span class="s2">"DISTRIB_CODENAME="</span> <span class="p">|</span> cut -d <span class="s2">"="</span> -f2<span class="sb">`</span>
-sudo sh -c <span class="s2">"echo 'deb http://fermion.ensta.fr/ros/ubuntu $codename main' &gt; /etc/apt/sources.list.d/ros-latest.list"</span>
+<div class="highlight highlight-bash"><pre>sudo sh -c <span class="s2">"echo 'deb http://fermion.ensta.fr/ros/ubuntu $(lsb_release -cs) main' &gt; /etc/apt/sources.list.d/ros-latest.list"</span>
 </pre></div>
 
 <blockquote>
@@ -243,43 +235,13 @@ catkin_init_workspace
 catkin_make
 </pre></div>
 
-<h4>
-<a name="post-install-1" class="anchor" href="#post-install-1"><span class="octicon octicon-link"></span></a>Post-install</h4>
-
-<div class="highlight highlight-bash"><pre>sudo -s
-<span class="nb">echo</span> <span class="s1">'/usr/local/lib'</span> &gt;&gt; /etc/ld.so.conf
-<span class="nb">exit</span>
-sudo ldconfig
-</pre></div>
-
-<h3>
-<a name="workaround-for-kdl-issues" class="anchor" href="#workaround-for-kdl-issues"><span class="octicon octicon-link"></span></a>Workaround for KDL issues</h3>
-
-<p>The function SetPayload that allow to modify how much weight the robot carries requires a tiny patch on the KDL library. This is a temporary solution.</p>
-
-<div class="highlight highlight-bash"><pre><span class="c">#cd ~/catkin_ws/src</span>
-<span class="c">#git clone https://github.com/ahoarau/orocos_kinematics_dynamics</span>
-<span class="c">#cd orocos_kinematics_dynamics/orocos_kdl</span>
-<span class="c">#mkdir build;cd build; cmake ..</span>
-<span class="c">#make -j5</span>
-<span class="c">#sudo make install</span>
-<span class="c">#cd ../../python_orocos_kdl/</span>
-<span class="c">#mkdir build;cd build;cmake ..</span>
-<span class="c">#make -j5</span>
-<span class="c">#sudo make install </span>
-</pre></div>
-
-<blockquote>
-<p>Note : This issue has been fixed in june 2014, we now use the ros orocos kdl.</p>
-</blockquote>
-
 <h3>
 <a name="recommended-install-some-ides" class="anchor" href="#recommended-install-some-ides"><span class="octicon octicon-link"></span></a>(Recommended) Install some IDEs</h3>
 
 <h4>
-<a name="python-for-most-users-eclipse--pydev" class="anchor" href="#python-for-most-users-eclipse--pydev"><span class="octicon octicon-link"></span></a>Python (for most users): Eclipse + PyDev</h4>
+<a name="python-for-most-users-eclipse--pydev-or-spyder" class="anchor" href="#python-for-most-users-eclipse--pydev-or-spyder"><span class="octicon octicon-link"></span></a>Python (for most users): Eclipse + PyDev or spyder</h4>
 
-<div class="highlight highlight-bash"><pre>sudo apt-get install eclipse
+<div class="highlight highlight-bash"><pre>sudo apt-get install eclipse spyder
 </pre></div>
 
 <h4>
@@ -290,12 +252,12 @@ sudo apt-get install kdevelop
 </pre></div>
 
 <h2>
-<a name="install-ensta-m3" class="anchor" href="#install-ensta-m3"><span class="octicon octicon-link"></span></a>Install ENSTA M3</h2>
+<a name="install-mekabot-m3" class="anchor" href="#install-mekabot-m3"><span class="octicon octicon-link"></span></a>Install Mekabot M3</h2>
 
 <h3>
 <a name="download-2" class="anchor" href="#download-2"><span class="octicon octicon-link"></span></a>Download</h3>
 
-<div class="highlight highlight-bash"><pre>git clone --recursive git@bitbucket.org:ensta/mekabot.git ~/mekabot
+<div class="highlight highlight-bash"><pre>git clone https://github.com/ahoarau/mekabot.git ~/mekabot
 <span class="nb">cd</span> ~/mekabot
 git submodule init
 git submodule update
@@ -322,7 +284,7 @@ sudo apt-get install holomni-pcv
 <span class="nb">cd </span>holomni_pcv
 mkdir build<span class="p">;</span><span class="nb">cd </span>build
 cmake .. -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
-make -j5
+make -j<span class="nv">$[</span><span class="k">$(</span>nproc<span class="k">)</span>+1<span class="o">]</span>
 sudo make install
 </pre></div>
 </blockquote>
@@ -332,8 +294,8 @@ sudo make install
 
 <div class="highlight highlight-bash"><pre><span class="nb">cd</span> ~/mekabot
 mkdir build<span class="p">;</span><span class="nb">cd </span>build
-cmake .. -DETHERCAT<span class="o">=</span><span class="m">0</span> -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
-make -j5
+cmake .. -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
+make -j<span class="nv">$[</span><span class="k">$(</span>nproc<span class="k">)</span>+1<span class="o">]</span>
 sudo make install
 </pre></div>
 
@@ -359,7 +321,7 @@ sudo make install
 
 <span class="s1">#export ROS_MASTER_URI=http://meka-moch:11311 # If on real Meka, roscore is launched from meka-moch</span>
 <span class="s1">#export ROS_IP=192.168.20.117 # Fix here your IP to avoid conflicts on Meka</span>
-<span class="s1">source /opt/ros/hydro/setup.bash # Can be Hydro or Indigo</span>
+<span class="s1">source /opt/ros/indigo/setup.bash # Can be Hydro or Indigo</span>
 
 <span class="s1">##################################################################</span>
 <span class="s1">## ROS-workspace</span>

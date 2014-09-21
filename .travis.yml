@@ -3,21 +3,34 @@ language: cpp
 compiler:
   - gcc
 
-env:
-  - rtai_version=4.0
+
+## Google drive not working on large files-> need shared folder id and complete file name
+#  - FILE_ID_HEADERS=0B6zWJ1Gzg1UTZTdVNkJWZG9QSk0
+#  - FILE_ID_IMAGE=0B6zWJ1Gzg1UTUWRKQldMZEZnWHc
+#  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_HEADERS" -O linux-headers.deb
+#  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_IMAGE" -O linux-image.deb
+
 
 before_install:
-  -  export CI_SOURCE_PATH=$(pwd)
-  - FILE_ID_HEADERS=0B6zWJ1Gzg1UTZTdVNkJWZG9QSk0
-  - FILE_ID_IMAGE=0B6zWJ1Gzg1UTUWRKQldMZEZnWHc
+  - CI_SOURCE_PATH=$(pwd)
+## Parameters
+  - rtai_version=4.0
+  - kernel_name=3.10.32-rtai4.0_3.10.32-rtai4.0-10.00.Custom_amd64
+  - headers=linux-headers-$kernel_name.deb
+  - image=linux-image-$kernel_name.deb
+  - FOLDER_ID=0B6zWJ1Gzg1UTZWRnQ2lUYjVtWnM
   - linuxx64patch=0B6zWJ1Gzg1UTVko1ekk1Mk5sbDg
-  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_HEADERS" -O linux-headers.deb
-  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILE_ID_IMAGE" -O linux-image.deb
-  - sudo dpkg -i --force-all linux-headers.deb linux-image.deb
-  - rtkernel=$(dpkg-deb --info linux-headers-rt.deb |grep Package -m 1 | grep -Po "linux-headers-\K(.*)")
+## Prerequisites
+#=======  RT Kernel ========#
+  - cd
+  - wget https://googledrive.com/host/$FOLDER_ID/$headers
+  - wget https://googledrive.com/host/$FOLDER_ID/$image
+  - sudo dpkg -i --force-all $headers $image
+  - rtkernel=$(dpkg-deb --info $headers |grep Package -m 1 | grep -Po "linux-headers-\K(.*)")
   - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$linuxx64patch" -O ~/linux-x64.patch
-  - /usr/src/linux-headers-$rtkernel
+  - cd /usr/src/linux-headers-$rtkernel
   - sudo patch -p1 -b < ~/linux-x64.patch
+#=======  RTAI ========#
   - cd
   - wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-$rtai_version.tar.bz2
   - tar xjf rtai-$rtai_version.tar.bz2
@@ -27,7 +40,8 @@ before_install:
   - make -j$(nproc)
   - sudo make install
   - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip
-  - export CI_SOURCE_PATH=$(pwd)
+#=======  (OPTIONAL) YamlCpp 0.5 ========#
+  - cd
   - wget http://yaml-cpp.googlecode.com/files/yaml-cpp-0.5.1.tar.gz
   - tar -xf yaml-cpp-0.5.1.tar.gz
   - cd yaml-cpp-0.5.1

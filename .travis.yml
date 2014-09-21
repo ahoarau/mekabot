@@ -41,6 +41,9 @@ before_install:
   - yes "" | make -f ../makefile config
   - make -j$(nproc)
   - sudo make install
+  - echo /usr/realtime/lib/ > rtai.conf
+  - sudo mv rtai.conf /etc/ld.so.conf.d/
+  - sudo ldconfig
 #=======  (OPTIONAL) YamlCpp 0.5 ========#
   - cd
   - sudo apt-get install -qq libboost-dev
@@ -51,10 +54,6 @@ before_install:
   - cmake .. -DBUILD_SHARED_LIBS=1
   - make -j$(nproc)
   - sudo make install
-  - sudo -s
-  - echo /usr/realtime/lib/ > /etc/ld.so.conf.d/rtai.conf
-  - exit
-  - sudo ldconfig
 #=======  Required libraries ========#
   - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip
  

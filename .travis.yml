@@ -27,7 +27,8 @@ before_install:
   - sudo dpkg -i --force-all $headers $image
   - rtkernel=$(dpkg-deb --info $headers |grep Package -m 1 | grep -Po "linux-headers-\K(.*)")
   - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$linuxx64patch" -O ~/linux-x64.patch
-  - cd /usr/src/linux-headers-$rtkernel/arch/x86
+  - sudo ln -snf /usr/src/linux-headers-$rtkernel /usr/src/linux
+  - cd /usr/src/linux/arch/x86
   - sudo patch < ~/linux-x64.patch
 #=======  RTAI ========#
   - cd
@@ -37,12 +38,12 @@ before_install:
 #  - tar xjf rtai-$rtai_version.tar.bz2
 #  - ln -snf rtai-$rtai_version magma 
   - cd magma && mkdir build && cd build
-  - ../configure --disable-comedi-lxrt --with-kconfig-file=/usr/src/linux-headers-$rtkernel/arch/x86/Kconfig --with-linux-dir=/usr/src/linux-headers-$rtkernel
+  - yes "" | make -f ../makefile config
   - make -j$(nproc)
   - sudo make install
-  - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip
 #=======  (OPTIONAL) YamlCpp 0.5 ========#
   - cd
+  - sudo apt-get install -qq libboost-dev
   - wget http://yaml-cpp.googlecode.com/files/yaml-cpp-0.5.1.tar.gz
   - tar -xf yaml-cpp-0.5.1.tar.gz
   - cd yaml-cpp-0.5.1
@@ -50,7 +51,8 @@ before_install:
   - cmake .. -DBUILD_SHARED_LIBS=1
   - make -j$(nproc)
   - sudo make install
-
+#=======  Required libraries ========#
+  - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip
  
 install:
   - cd $CI_SOURCE_PATH

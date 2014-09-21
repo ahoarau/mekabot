@@ -51,13 +51,17 @@ before_install:
   - cmake .. -DBUILD_SHARED_LIBS=1
   - make -j$(nproc)
   - sudo make install
+  - sudo -s
+  - echo /usr/realtime/lib/ > /etc/ld.so.conf.d/rtai.conf
+  - exit
+  - sudo ldconfig
 #=======  Required libraries ========#
   - sudo apt-get install -qq swig moc cmake libeigen3-dev libprotobuf-dev protobuf-compiler libboost-dev python-dev python-protobuf python-matplotlib python-yaml python-gnuplot python-scipy python-sip-dev python-sip
  
 install:
   - cd $CI_SOURCE_PATH
   - git submodule init && git submodule update
-  - git foreach git pull origin master
+  - git submodule foreach git pull origin master
   - mkdir build
   - cd build
   - cmake -DKERNEL_NAME=$rtkernel ..

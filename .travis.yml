@@ -18,7 +18,6 @@ before_install:
   - headers=linux-headers-$kernel_name.deb
   - image=linux-image-$kernel_name.deb
   - FOLDER_ID=0B6zWJ1Gzg1UTZWRnQ2lUYjVtWnM
-  - linuxx64patch=0B6zWJ1Gzg1UTblBtVGJWZ200eDQ
 ## Prerequisites
 #=======  RT Kernel ========#
   - cd
@@ -26,7 +25,7 @@ before_install:
   - wget https://googledrive.com/host/$FOLDER_ID/$image
   - sudo dpkg -i --force-all $headers $image
   - rtkernel=$(dpkg-deb --info $headers |grep Package -m 1 | grep -Po "linux-headers-\K(.*)")
-  - wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$linuxx64patch" -O ~/linux-x64.patch
+  - wget https://googledrive.com/host/$FOLDER_ID/linux-x64.patch ~/linux-x64.patch
   - sudo ln -snf /usr/src/linux-headers-$rtkernel /usr/src/linux
   - cd /usr/src/linux/arch/x86
   - sudo patch < ~/linux-x64.patch

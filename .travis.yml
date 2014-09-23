@@ -84,5 +84,4 @@ install:
   - cmake -DKERNEL_NAME=$rtkernel ..
   
 script:
-  - make -j$(nproc)
-  - sudo make install
+  - make && sudo make install

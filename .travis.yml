@@ -26,9 +26,9 @@ before_install:
   - sudo dpkg -i --force-all $headers $image
   - rtkernel=$(dpkg-deb --info $headers |grep Package -m 1 | grep -Po "linux-headers-\K(.*)")
   - sudo ln -snf /usr/src/linux-headers-$rtkernel /usr/src/linux
+  - cd ~ && wget https://googledrive.com/host/$FOLDER_ID/linux-x64.patch
   - cd /usr/src/linux/arch/x86
-  - wget https://googledrive.com/host/$FOLDER_ID/linux-x64.patch
-  - sudo patch < linux-x64.patch
+  - sudo patch < ~/linux-x64.patch
 #=======  RTAI ========#
   - cd
   - sudo apt-get install -qq cvs

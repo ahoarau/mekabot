@@ -4,7 +4,7 @@ project(mekabot)
 ## Mekabot Version
 SET(MAJOR_VERSION "1")
 SET(MINOR_VERSION "9")
-SET(PATCH_VERSION "8")
+SET(PATCH_VERSION "9")
 set(M3_VERSION
   ${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION})
   
@@ -47,8 +47,9 @@ set(CMAKE_CXX_FLAGS_DEBUG "-O0 -ggdb")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # Include dirs to look for
-set(M3RT_SRC ${CMAKE_SOURCE_DIR}/m3core/src )
-set(M3_SRC ${CMAKE_SOURCE_DIR}/m3meka/src)
+set(MEKABOT ${CMAKE_SOURCE_DIR})
+set(M3RT_SRC ${MEKABOT}/m3core/src )
+set(M3_SRC ${MEKABOT}/m3meka/src)
 
 # HACK : Include this directory for the generated protobufs headers from m3core
 include_directories(
@@ -57,13 +58,13 @@ include_directories(
     ${CMAKE_BINARY_DIR}/m3core/src/m3rt/base 
 )
 
-
+configure_file(setup.bash.in ${CMAKE_CURRENT_BINARY_DIR}/setup.bash)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/setup.bash DESTINATION ${CMAKE_INSTALL_PREFIX}/share/m3)
 
 ## Enable PPA upload
 OPTION(ENABLE_PPA "Enable PPA creation" FALSE)
 OPTION(UPLOAD_PPA "Enable PPA upload" FALSE)
 OPTION(CHANGELOG_MESSAGE "Set the changelog message" OFF)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 if(NOT ENABLE_PPA)
         add_subdirectory(m3core)

@@ -195,7 +195,7 @@ make -j$[$(nproc)+1]
 sudo make install
 ```
 
-> Note : future option -DVIRTUAL=1 will remove fake ethercat module synchronization to avoid overrruns
+> Note : If you are running on real hardware, please add -DETHERCAT=1 and compile in release as above.
 
 ## Update your bashrc
 ```bash

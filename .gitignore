@@ -7,3 +7,7 @@ build
 *~
 *.kdev4
 .kdev4/
+.cproject
+.project
+CMakeLists.txt.user
+

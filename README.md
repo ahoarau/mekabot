@@ -204,10 +204,18 @@ echo '
 ##################################################################
 ## Meka
 
-#export M3_ROBOT=~/mekabot/m3ens/real_meka # Real meka config
-export M3_ROBOT=~/mekabot/m3ens/virtual_meka # Simulated Meka
-export MALLOC_CHECK_=0 # Some Hack for Python
+## The M3 Software environnement setup
 source /usr/local/share/m3/setup.bash
+
+## Meka config files location
+export M3_ROBOT=~/mekabot/m3ens/real_meka
+
+## Virtual Config onverlay
+#export M3_ROBOT=$M3_ROBOT:~/mekabot/m3ens/virtual_meka
+
+## Some python hacks
+export MALLOC_CHECK_=0
+
 
 ##################################################################
 ## ROS

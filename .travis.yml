@@ -38,7 +38,7 @@ before_install:
 #  - ln -snf rtai-$rtai_version magma 
   - cd magma && mkdir build && cd build
   - yes "" | make -f ../makefile config
-  - make -j$(nproc)
+  - make
   - sudo make install
   - echo /usr/realtime/lib/ > rtai.conf
   - sudo mv rtai.conf /etc/ld.so.conf.d/

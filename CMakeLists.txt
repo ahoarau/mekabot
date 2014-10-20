@@ -13,6 +13,11 @@ set(CMAKE_MODULE_PATH
     "${CMAKE_SOURCE_DIR}/meka-cmake-modules/Modules/"
     ${CMAKE_MODULE_PATH}
 )
+
+## M3 installs in /opt/m3
+#set(CMAKE_INSTALL_PREFIX /opt/m3)
+
+
 OPTION(ETHERCAT "Enable/Disable EtherCAT (sim or not)" OFF)
 
 OPTION(VIRTUAL_MEKA "Simulated robot (no hardware)" ON)
@@ -59,7 +64,7 @@ include_directories(
 )
 
 configure_file(setup.bash.in ${CMAKE_CURRENT_BINARY_DIR}/setup.bash)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/setup.bash DESTINATION ${CMAKE_INSTALL_PREFIX}/share/m3)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/setup.bash DESTINATION share)
 
 ## Enable PPA upload
 OPTION(ENABLE_PPA "Enable PPA creation" FALSE)

@@ -59,6 +59,20 @@ Now **boot** on the new kernel using **grub** at **startup**. Please note the na
 sudo nano /etc/defaults/grub
 ```
 
+#### (Recommended) Configure your kernel boot options
+```bash
+sudo nano /etc/defaults/grub
+# Then edit the following line: 
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+# To :
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lapic=notscdeadline hpet=disable i915.i915_enable_rc6=0 i915.powersave=0 intel_idle.max_cstate=0 processor.max_cstate=0 idle=poll"
+
+# Then apply the update:
+sudo update-grub
+sudo reboot
+```
+
+
 ### RTAI 4.0 installation 
 #### Download
 ```bash

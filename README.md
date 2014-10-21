@@ -3,9 +3,10 @@ Mekabot M3 Installation instructions
 ![Meka robot at Ensta Paristech](http://googledrive.com/host/0B6zWJ1Gzg1UTVkgtMWJaX1NCdVE/meka2.jpg)
 
 This wiki describes the full installation of m3 software to control/simulate the Meka robot at Ensta ParisTech.
-
->  *Author* : Antoine Hoarau <hoarau.robotics@gmail.com>
-
+This installation supports 3 versions, depending on your needs : 
+- Only the M3 python API for development
+- Real-time M3 (c++ and python) for development and simulation
+- Real-time M3 for Meka's real-time PC (same as above but with EtherCAT component)
 
 | ***OS Tested*** | ***Status*** | ***Notes***
 |:------------------|:----:|:---------------:
@@ -318,4 +319,6 @@ roslaunch meka_description m3ens_viz.launch # launch robot description, robot st
 ```
 
 ## You're done !
+
+>  *Maintainer* : Antoine Hoarau <hoarau.robotics@gmail.com>
 

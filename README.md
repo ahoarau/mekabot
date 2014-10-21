@@ -45,6 +45,8 @@ wget http://perso.ensta-paristech.fr/~hoarau/rtmeka-kern/$_platform/linux-header
 # Get the Rtai4.0 patched kernel image
 wget http://perso.ensta-paristech.fr/~hoarau/rtmeka-kern/$_platform/linux-image-rt.deb
 ```
+> Note: more rtai kernels are available [here](http://goo.gl/xFhHV6).
+
 #### Installation
 
 ```bash
@@ -60,19 +62,18 @@ sudo nano /etc/defaults/grub
 ### RTAI 4.0 installation 
 #### Download
 ```bash
-wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-4.0.tar.bz2
-tar xjf rtai-4.0.tar.bz2
+sudo apt-get install -qq cvs
+cvs -d:pserver:anonymous@cvs.gna.org:/cvs/rtai co magma
 ```
 
 #### Installation
 ```bash
-cd rtai-4.0
-mkdir build; cd build
-../configure --disable-comedi-lxrt --enable-cpus=$(nproc) --with-linux-dir=/usr/src/linux-headers-3.8.13-rtmeka4.0
-make -j$[$(nproc)+1]
+cd magma && mkdir build && cd build
+yes "" | make -f ../makefile config
+make
 sudo make install
 ```
-> **Note** : The --with-linux-dir option has to match the rtai-patched kernel
+> **Note** : I would recommend to to make -f ../makefile menuconfig and configure the number of cpus you have in Machine (x86 / x86_64) -> Number of Cpus
 
 > ----
 > **Know issues** : On 64-bit CPUs, if an error regarding -mpreferred-cache-boundary=3 shows up, edit line 57 in /usr/src/linux/arch/x86/Makefile (where linux is your rtai patched kernel) to set this parameter to 4:

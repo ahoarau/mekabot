@@ -1,5 +1,6 @@
 Mekabot M3 Installation instructions
 ==============
+![Meka robot at Ensta Paristech](http://googledrive.com/host/0B6zWJ1Gzg1UTVkgtMWJaX1NCdVE/meka2.jpg)
 
 This wiki describes the full installation of m3 software to control/simulate the Meka robot at Ensta ParisTech.
 

@@ -16,7 +16,7 @@ This installation supports 3 versions, depending on your needs :
 | **Ubuntu 14.04 x64**| OK | w ROS Indigo/MoveIt! 
 
 
-> Current version on the meka : Ubuntu 14.04LTS on kernel 3.10.32, rtai4.0, ethercat1.5.2, ROS Indigo/MoveIt!
+> Current version on the Meka : Ubuntu 14.04LTS on kernel 3.10.32, rtai4.0 (magma branch from the [cvs](https://gna.org/cvs/?group=rtai)), Igh EtherCAT master 1.5.2, ROS Indigo+MoveIt!
 
 ## Build Status
 [![Build Status](https://travis-ci.org/ahoarau/mekabot.svg?branch=master)](https://travis-ci.org/ahoarau/mekabot)
@@ -211,8 +211,9 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j$[$(nproc)+1]
 sudo make install
 ```
-
-> Note : If you are running on real hardware, please add -DETHERCAT=1 and compile in release as above.
+> Note : 
+> * Compiling in Release makes the M3 system **twice** as fast (Essentially due to KDL). 
+> * If you are running on real hardware, please add -DETHERCAT=1 and compile in release as above.
 
 ## Update your bashrc
 ```bash

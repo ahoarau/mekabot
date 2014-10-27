@@ -39,20 +39,38 @@ sudo apt-get install libqt4-dev moc g++ libncurses5-dev kernel-package gcc-multi
 #### Download
 ```bash
 # Determine if x86 or x64 (x86_x64)
-_platform=$(uname -m) 
+uname -m
+```
+#### x86_64 (64bits)
+```
+folder_id=0B6zWJ1Gzg1UTZWRnQ2lUYjVtWnM
+kernel_name=3.10.32-rtwar3_3.10.32-rtwar3-10.00.Custom_amd64
+```
+
+
+#### x86 (32bits)
+```
+folder_id=0B6zWJ1Gzg1UTaWgwX01VOHNwX28
+kernel_name=3.8.13-rtmeka4.0_3.8.13-rtmeka4.0-10.00.Custom_i386.deb
+```
+
+### Download
+```
+headers=linux-headers-$kernel_name.deb
+image=linux-image-$kernel_name.deb
 
 # Get the Rtai4.0 patched kernel headers
-wget http://perso.ensta-paristech.fr/~hoarau/rtmeka-kern/$_platform/linux-headers-rt.deb
+wget https://googledrive.com/host/$FOLDER_ID/$headers
 
 # Get the Rtai4.0 patched kernel image
-wget http://perso.ensta-paristech.fr/~hoarau/rtmeka-kern/$_platform/linux-image-rt.deb
+wget https://googledrive.com/host/$FOLDER_ID/$image
 ```
 > Note: more rtai kernels are available [here](http://goo.gl/xFhHV6).
 
 #### Installation
 
 ```bash
-sudo dpkg -i linux-headers-rt.deb linux-image-rt.deb
+sudo dpkg -i --force-all $headers $image
 ```
 
 Now **boot** on the new kernel using **grub** at **startup**. Please note the name of the kernel.
@@ -322,4 +340,3 @@ roslaunch meka_description m3ens_viz.launch # launch robot description, robot st
 ## You're done !
 
 >  *Maintainer* : Antoine Hoarau <hoarau.robotics@gmail.com>
-

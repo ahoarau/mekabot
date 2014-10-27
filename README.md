@@ -96,19 +96,19 @@ sudo reboot
 ### RTAI 4.0 installation 
 #### Download
 ```bash
-sudo apt-get install -qq cvs
-cvs -d:pserver:anonymous@cvs.gna.org:/cvs/rtai co magma
+sudo apt-get install automake
+git clone https://github.com/ShabbyX/RTAI.git ~/RTAI
 ```
 
 #### Installation
 ```bash
-cd magma && mkdir build && cd build
-yes "" | make -f ../makefile config
+cd ~/RTAI
+ ./autogen.sh
 make
+# You can also make menuconfig to configure some options, but ./autogen.sh should do that for you
 sudo make install
 ```
-> **Note** : I would recommend to to make -f ../makefile menuconfig and configure the number of cpus you have in Machine (x86 / x86_64) -> Number of Cpus
-
+> Notes: Rtai libraries, modules headers etc should be installed in /usr/realtime/, and that makes everyone's life easier.
 > ----
 > **Know issues** : On 64-bit CPUs, if an error regarding -mpreferred-cache-boundary=3 shows up, edit line 57 in /usr/src/linux/arch/x86/Makefile (where linux is your rtai patched kernel) to set this parameter to 4:
 ```bash

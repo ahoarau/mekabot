@@ -60,10 +60,10 @@ headers=linux-headers-$kernel_name.deb
 image=linux-image-$kernel_name.deb
 
 # Get the Rtai4.0 patched kernel headers
-wget https://googledrive.com/host/$FOLDER_ID/$headers
+wget https://googledrive.com/host/$folder_id/$headers
 
 # Get the Rtai4.0 patched kernel image
-wget https://googledrive.com/host/$FOLDER_ID/$image
+wget https://googledrive.com/host/$folder_id/$image
 ```
 > Note: more rtai kernels are available [here](http://goo.gl/xFhHV6).
 

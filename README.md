@@ -231,7 +231,7 @@ sudo make install
 ```
 > Note : 
 > * Compiling in Release makes the M3 system **twice** as fast (Essentially due to KDL). 
-> * If you are running on real hardware, please add -DETHERCAT=1 and compile in release as above.
+> * If you are running on real hardware, install [EtherCAT](https://github.com/ahoarau/ethercat-drivers) first, then compile Mekabot with -DETHERCAT=1 and in release as above.
 
 ## Update your bashrc
 ```bash
@@ -247,7 +247,7 @@ source /usr/local/share/m3/setup.bash
 export M3_ROBOT=~/mekabot/m3ens/real_meka
 
 ## Virtual Config onverlay
-#export M3_ROBOT=$M3_ROBOT:~/mekabot/m3ens/virtual_meka
+export M3_ROBOT=$M3_ROBOT:~/mekabot/m3ens/virtual_meka
 
 ## Some python hacks
 export MALLOC_CHECK_=0
@@ -277,7 +277,7 @@ echo 'source ~/.m3rc' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### Get time synchronization for ROS (HIGHLY RECOMMENDED)
+### Get time synchronization for ROS (Highly recommended for Ensta users)
 ```bash
 sudo apt-get install ntp
 sudo nano /etc/ntp.conf

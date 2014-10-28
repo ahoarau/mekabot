@@ -268,10 +268,9 @@ source /opt/ros/indigo/setup.bash # Can be Hydro or Indigo
 
 ##################################################################
 ## ROS-workspace
-
-source ~/catkin_ws/install_isolated/setup.bash
-source ~/catkin_ws/devel_isolated/setup.bash
 source ~/catkin_ws/devel/setup.bash
+source ~/catkin_ws/devel_isolated/setup.bash
+source ~/catkin_ws/install_isolated/setup.bash
 
 ##################################################################
 ## Additional Meka-stuff
@@ -289,7 +288,9 @@ cd ~/catkin_ws/src
 ln -snf ~/mekabot/m3core/ros m3core_ros
 ln -snf ~/mekabot/m3meka/ros m3meka_ros
 cd ~/catkin_ws
-catkin_make_isolated --install
+catkin_make_isolated
+catkin_make_isolated
+catkin_make
 ```
 
 

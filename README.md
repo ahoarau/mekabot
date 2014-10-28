@@ -270,6 +270,7 @@ source /opt/ros/indigo/setup.bash # Can be Hydro or Indigo
 ## ROS-workspace
 
 source ~/catkin_ws/install_isolated/setup.bash
+source ~/catkin_ws/devel_isolated/setup.bash
 source ~/catkin_ws/devel/setup.bash
 
 ##################################################################

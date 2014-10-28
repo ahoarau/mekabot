@@ -288,7 +288,7 @@ cd ~/catkin_ws/src
 ln -snf ~/mekabot/m3core/ros m3core_ros
 ln -snf ~/mekabot/m3meka/ros m3meka_ros
 cd ~/catkin_ws
-catkin_make_isolated
+catkin_make_isolated --install
 ```
 
 

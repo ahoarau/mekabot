@@ -201,6 +201,12 @@ cd ~/mekabot
 git submodule init
 git submodule update
 git submodule foreach git checkout master
+
+## ros_control for the meka robot
+cd m3meka/ros/m3ros_control
+git pull origin master
+git checkout master
+git submodule init && git submodule update
 ```
 ### Installation
 #### Holomni PCV for the mobile base
@@ -276,6 +282,14 @@ export PYTHONPATH=$PYTHONPATH:~/mekabot/m3ens-demos/scripts:~/mekabot/m3ens-util
 echo 'source ~/.m3rc' >> ~/.bashrc
 source ~/.bashrc
 ```
+### (Recommended) Compile Legacy shared memory ROS + ros_control
+```
+cd ~/catkin_ws/src
+ln -snf ~/mekabot/m3core/ros m3core_ros
+ln -snf ~/mekabot/m3meka/ros m3meka_ros
+
+```
+
 
 ### Get time synchronization for ROS (Highly recommended for Ensta users)
 ```bash

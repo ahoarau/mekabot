@@ -1,10 +1,12 @@
 Mekabot M3 Installation instructions
 ==============
+![Meka robot at Ensta Paristech](http://googledrive.com/host/0B6zWJ1Gzg1UTVkgtMWJaX1NCdVE/meka2.jpg)
 
 This wiki describes the full installation of m3 software to control/simulate the Meka robot at Ensta ParisTech.
-
->  *Author* : Antoine Hoarau <hoarau.robotics@gmail.com>
-
+This installation supports 3 versions, depending on your needs : 
+- Only the M3 python API for development
+- Real-time M3 (c++ and python) for development and simulation
+- Real-time M3 for Meka's real-time PC (same as above but with EtherCAT component)
 
 | ***OS Tested*** | ***Status*** | ***Notes***
 |:------------------|:----:|:---------------:
@@ -14,7 +16,7 @@ This wiki describes the full installation of m3 software to control/simulate the
 | **Ubuntu 14.04 x64**| OK | w ROS Indigo/MoveIt! 
 
 
-> Current version on the meka : Ubuntu 14.04LTS on kernel 3.10.32, rtai4.0, ethercat1.5.2, ROS Indigo/MoveIt!
+> Current version on the Meka : Ubuntu 14.04LTS on kernel 3.10.32, rtai4.0 (magma branch from the [cvs](https://gna.org/cvs/?group=rtai)), Igh EtherCAT master 1.5.2, ROS Indigo+MoveIt!
 
 ## Build Status
 [![Build Status](https://travis-ci.org/ahoarau/mekabot.svg?branch=master)](https://travis-ci.org/ahoarau/mekabot)
@@ -37,18 +39,38 @@ sudo apt-get install libqt4-dev moc g++ libncurses5-dev kernel-package gcc-multi
 #### Download
 ```bash
 # Determine if x86 or x64 (x86_x64)
-_platform=$(uname -m) 
+uname -m
+```
+#### x86_64 (64bits)
+```
+folder_id=0B6zWJ1Gzg1UTZWRnQ2lUYjVtWnM
+kernel_name=3.10.32-rtwar3_3.10.32-rtwar3-10.00.Custom_amd64
+```
+
+
+#### x86 (32bits)
+```
+folder_id=0B6zWJ1Gzg1UTaWgwX01VOHNwX28
+kernel_name=3.8.13-rtmeka4.0_3.8.13-rtmeka4.0-10.00.Custom_i386.deb
+```
+
+### Download
+```
+headers=linux-headers-$kernel_name.deb
+image=linux-image-$kernel_name.deb
 
 # Get the Rtai4.0 patched kernel headers
-wget http://perso.ensta-paristech.fr/~hoarau/rtmeka-kern/$_platform/linux-headers-rt.deb
+wget https://googledrive.com/host/$folder_id/$headers
 
 # Get the Rtai4.0 patched kernel image
-wget http://perso.ensta-paristech.fr/~hoarau/rtmeka-kern/$_platform/linux-image-rt.deb
+wget https://googledrive.com/host/$folder_id/$image
 ```
+> Note: more rtai kernels are available [here](http://goo.gl/xFhHV6).
+
 #### Installation
 
 ```bash
-sudo dpkg -i linux-headers-rt.deb linux-image-rt.deb
+sudo dpkg -i --force-all $headers $image
 ```
 
 Now **boot** on the new kernel using **grub** at **startup**. Please note the name of the kernel.
@@ -57,23 +79,36 @@ Now **boot** on the new kernel using **grub** at **startup**. Please note the na
 sudo nano /etc/defaults/grub
 ```
 
+#### (Recommended) Configure your kernel boot options
+```bash
+sudo nano /etc/defaults/grub
+# Then edit the following line: 
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+# To :
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lapic=notscdeadline hpet=disable i915.i915_enable_rc6=0 i915.powersave=0 intel_idle.max_cstate=0 processor.max_cstate=0 idle=poll"
+
+# Then apply the update:
+sudo update-grub
+sudo reboot
+```
+
+
 ### RTAI 4.0 installation 
 #### Download
 ```bash
-wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-4.0.tar.bz2
-tar xjf rtai-4.0.tar.bz2
+sudo apt-get install automake
+git clone https://github.com/ShabbyX/RTAI.git ~/RTAI
 ```
 
 #### Installation
 ```bash
-cd rtai-4.0
-mkdir build; cd build
-../configure --disable-comedi-lxrt --enable-cpus=$(nproc) --with-linux-dir=/usr/src/linux-headers-3.8.13-rtmeka4.0
-make -j$[$(nproc)+1]
+cd ~/RTAI
+ ./autogen.sh
+make
+# You can also make menuconfig to configure some options, but ./autogen.sh should do that for you
 sudo make install
 ```
-> **Note** : The --with-linux-dir option has to match the rtai-patched kernel
-
+> Notes: Rtai libraries, modules headers etc should be installed in /usr/realtime/, and that makes everyone's life easier.
 > ----
 > **Know issues** : On 64-bit CPUs, if an error regarding -mpreferred-cache-boundary=3 shows up, edit line 57 in /usr/src/linux/arch/x86/Makefile (where linux is your rtai patched kernel) to set this parameter to 4:
 ```bash
@@ -166,6 +201,12 @@ cd ~/mekabot
 git submodule init
 git submodule update
 git submodule foreach git checkout master
+
+## ros_control for the meka robot
+cd m3meka/ros/m3ros_control
+git pull origin master
+git checkout master
+git submodule init && git submodule update
 ```
 ### Installation
 #### Holomni PCV for the mobile base
@@ -194,8 +235,9 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 make -j$[$(nproc)+1]
 sudo make install
 ```
-
-> Note : If you are running on real hardware, please add -DETHERCAT=1 and compile in release as above.
+> Note : 
+> * Compiling in Release makes the M3 system **twice** as fast (Essentially due to KDL). 
+> * If you are running on real hardware, install [EtherCAT](https://github.com/ahoarau/ethercat-drivers) first, then compile Mekabot with -DETHERCAT=1 and in release as above.
 
 ## Update your bashrc
 ```bash
@@ -211,7 +253,7 @@ source /usr/local/share/m3/setup.bash
 export M3_ROBOT=~/mekabot/m3ens/real_meka
 
 ## Virtual Config onverlay
-#export M3_ROBOT=$M3_ROBOT:~/mekabot/m3ens/virtual_meka
+export M3_ROBOT=$M3_ROBOT:~/mekabot/m3ens/virtual_meka
 
 ## Some python hacks
 export MALLOC_CHECK_=0
@@ -226,9 +268,9 @@ source /opt/ros/indigo/setup.bash # Can be Hydro or Indigo
 
 ##################################################################
 ## ROS-workspace
-
-source ~/catkin_ws/install_isolated/setup.bash
 source ~/catkin_ws/devel/setup.bash
+source ~/catkin_ws/devel_isolated/setup.bash
+source ~/catkin_ws/install_isolated/setup.bash
 
 ##################################################################
 ## Additional Meka-stuff
@@ -240,8 +282,19 @@ export PYTHONPATH=$PYTHONPATH:~/mekabot/m3ens-demos/scripts:~/mekabot/m3ens-util
 echo 'source ~/.m3rc' >> ~/.bashrc
 source ~/.bashrc
 ```
+### (Recommended) Compile Legacy shared memory ROS + ros_control
+```
+cd ~/catkin_ws/src
+ln -snf ~/mekabot/m3core/ros m3core_ros
+ln -snf ~/mekabot/m3meka/ros m3meka_ros
+cd ~/catkin_ws
+catkin_make_isolated
+catkin_make_isolated
+catkin_make
+```
 
-### Get time synchronization for ROS (HIGHLY RECOMMENDED)
+
+### Get time synchronization for ROS (Highly recommended for Ensta users)
 ```bash
 sudo apt-get install ntp
 sudo nano /etc/ntp.conf
@@ -303,3 +356,4 @@ roslaunch meka_description m3ens_viz.launch # launch robot description, robot st
 
 ## You're done !
 
+>  *Maintainer* : Antoine Hoarau <hoarau.robotics@gmail.com>

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This file configures the environement variables for ${PROJECT_NAME}
 export M3_CMAKE_MODULES=${CMAKE_MODULE_PATH}
-export PATH=${CMAKE_INSTALL_PREFIX}/bin/m3/:$PATH
+export PATH=${CMAKE_INSTALL_PREFIX}/bin:$PATH
 export LD_LIBRARY_PATH=${CMAKE_INSTALL_PREFIX}/lib:$LD_LIBRARY_PATH
-export PYTHONPATH=${CMAKE_INSTALL_PREFIX}/${M3CORE_PYTHON_DIR}:${CMAKE_INSTALL_PREFIX}/${M3MEKA_PYTHON_DIR}:$PYTHONPATH
+export PYTHONPATH=${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages:${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/m3:${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/m3rt:${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/m3qa:$PYTHONPATH

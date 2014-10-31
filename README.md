@@ -104,11 +104,13 @@ git clone https://github.com/ShabbyX/RTAI.git ~/RTAI
 ```bash
 cd ~/RTAI
  ./autogen.sh
+make menuconfig
+# Configure the Number of cpus you have, and uncheck oneshot timer
 make
-# You can also make menuconfig to configure some options, but ./autogen.sh should do that for you
 sudo make install
 ```
 > Notes: Rtai libraries, modules headers etc should be installed in /usr/realtime/, and that makes everyone's life easier.
+
 > ----
 > **Know issues** : On 64-bit CPUs, if an error regarding -mpreferred-cache-boundary=3 shows up, edit line 57 in /usr/src/linux/arch/x86/Makefile (where linux is your rtai patched kernel) to set this parameter to 4:
 ```bash
@@ -201,12 +203,6 @@ cd ~/mekabot
 git submodule init
 git submodule update
 git submodule foreach git checkout master
-
-## ros_control for the meka robot
-cd m3meka/ros/m3ros_control
-git pull origin master
-git checkout master
-git submodule init && git submodule update
 ```
 ### Installation
 #### Holomni PCV for the mobile base

@@ -278,7 +278,7 @@ export PYTHONPATH=$PYTHONPATH:~/mekabot/m3ens-demos/scripts:~/mekabot/m3ens-util
 echo 'source ~/.m3rc' >> ~/.bashrc
 source ~/.bashrc
 ```
-### (Recommended) Compile Legacy shared memory ROS + ros_control
+### (Recommended) Compile Legacy shared memory ROS
 ```
 cd ~/catkin_ws/src
 ln -snf ~/mekabot/m3core/ros m3core_ros

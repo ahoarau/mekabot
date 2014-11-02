@@ -332,22 +332,20 @@ echo '192.168.20.119 meka-mud'>>/etc/hosts
 exit
 ```
 
-## Update the hostname (virtual installation)
-If you want to run a simulated robot, you need to be the realtime controller and client. To do so, open the robot_config :
+## Configure your virtual installation
+This scripts just updates the hostname in your m3_config.yml, that tells which computer is running the m3rt_server. On the meka it's meka-mob, but for vitual installtions, it's your computer!
 
 ```bash
-gedit ~/mekabot/m3ens/robot_config/m3_config.yml
+configure_robot_config_virtual.py
 ```
 
-And change the host name to your computer's hostname.
-
+## Run the server and visualize the robot on Rviz (virtual installation)
 ```bash
-more /etc/hostname
-```
-## Run the server and visualize the robot on Rviz
-```bash
-m3rt_server_run # run the realtime server
-roslaunch meka_description m3ens_viz.launch # launch robot description, robot state publisher, joint state publisher and rviz
+# run the realtime server
+m3rt_server_run 
+# In another terminal :
+# Launch roscore, robot description, robot state publisher, joint state publisher and rviz
+roslaunch meka_description m3ens_viz.launch 
 ```
 
 ## You're done !

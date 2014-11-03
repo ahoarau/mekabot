@@ -350,4 +350,7 @@ roslaunch meka_description m3ens_viz.launch
 
 ## You're done !
 
+Checkout the [wiki](https://github.com/ahoarau/mekabot/wiki) for more info !
+
+
 >  *Maintainer* : Antoine Hoarau <hoarau.robotics@gmail.com>

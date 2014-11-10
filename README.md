@@ -36,7 +36,7 @@ sudo apt-get install libqt4-dev moc g++ libncurses5-dev kernel-package gcc-multi
 > Note : if you only want the **python** interface, jump to the "install Mekabot" section.
 
 ### The RTAI-patched kernel
-#### Download
+#### Preparation
 ```bash
 # Determine if x86 or x64 (x86_x64)
 uname -m
@@ -94,6 +94,10 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lapic=notscdeadline hpet=disable i915.i
 # intel_idle.max_cstate=0, processor.max_cstate=0 :  same as above
 # i915.powersave=0 : disable the power management, i.e less interruptions.
 # idle=poll : Poll forces a polling idle loop that can slightly improve the performance of waking up a idle CPU, but will use a lot of power and make the system run hot. Set CPU fan to maximum all the time (in bios). 
+
+# Theses option will provide you ~300 nanosecond latencies (which is very low, so, very good).
+
+
 
 # Then apply the update:
 sudo update-grub

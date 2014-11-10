@@ -81,11 +81,19 @@ sudo nano /etc/defaults/grub
 
 #### (Recommended) Configure your kernel boot options
 ```bash
-sudo nano /etc/defaults/grub
+sudo nano /etc/default/grub
 # Then edit the following line: 
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 # To :
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash lapic=notscdeadline hpet=disable i915.i915_enable_rc6=0 i915.powersave=0 intel_idle.max_cstate=0 processor.max_cstate=0 idle=poll"
+
+## Explanation
+# lapic=notscdeadline : usefull for i5 and i7 processors, reduces latency by a factor of 10 on the meka-mob
+# hpet=disable : rtai does not like hpet, so disable it to make sure it never uses it (it should not). Not mandatory as rtai is smart enough to not use it.
+# i915.i915_enable_rc6=0 : disable deep sleep for processor, we want max power.
+# intel_idle.max_cstate=0, processor.max_cstate=0 :  same as above
+# i915.powersave=0 : disable the power management, i.e less interruptions.
+# idle=poll : Poll forces a polling idle loop that can slightly improve the performance of waking up a idle CPU, but will use a lot of power and make the system run hot. Set CPU fan to maximum all the time (in bios). 
 
 # Then apply the update:
 sudo update-grub

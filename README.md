@@ -174,6 +174,10 @@ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install ros-$ROS_DISTRO-desktop-full ros-$ROS_DISTRO-moveit-* ros-$ROS_DISTRO-ros-control ros-$ROS_DISTRO-ros-controllers python-rosinstall python-pip
 ```
+
+You can check the ros_control implementation in the [wiki](https://github.com/ahoarau/mekabot/wiki).
+
+
 ```bash
 sudo -E rosdep init
 rosdep update
@@ -192,19 +196,6 @@ cd ~/catkin_ws/src
 catkin_init_workspace
 cd ~/catkin_ws/
 catkin_make
-```
-
-### (Recommended) Install some IDEs
-
-#### Python (for most users): Eclipse + PyDev or spyder
-```bash
-sudo apt-get install eclipse spyder
-```
-
-#### ROS and C++ Real-time (Advanced users): Qt creator and/or Kdevelop
-```bash
-sudo apt-get install qtcreator 
-sudo apt-get install kdevelop
 ```
 
 ##Install Mekabot M3
@@ -334,6 +325,19 @@ exit
 sudo chmod 755 /etc/cron.daily/ntpdate
 ```
 
+
+### (Recommended) Install some IDEs
+
+#### Python (for most users): Eclipse + PyDev or spyder
+```bash
+sudo apt-get install eclipse spyder
+```
+
+#### ROS and C++ Real-time (Advanced users): Qt creator and/or Kdevelop
+```bash
+sudo apt-get install qtcreator 
+sudo apt-get install kdevelop
+```
 
 
 ### (OPTIONAL) Setup robot's Pcs :

@@ -247,7 +247,7 @@ echo '
 ## Meka
 
 ## The M3 Software environnement setup
-source /usr/local/share/m3/setup.bash
+source /usr/local/share/setup.bash
 
 ## Meka config files location
 export M3_ROBOT=~/mekabot/m3ens/real_meka

@@ -31,8 +31,12 @@ before_install:
   - sudo patch < ~/linux-x64.patch
 #=======  RTAI ========#
   - cd
-  - sudo apt-get install -qq cvs
-  - cvs -d:pserver:anonymous@cvs.gna.org:/cvs/rtai co magma
+  - RTAI_FOLDER=0B6zWJ1Gzg1UTWl9vUGQ5aWxCTmc
+  - wget https://googledrive.com/host/$RTAI_FOLDER/rtai_cvs_magma.tar.gz
+  - tar xvf rtai_cvs_magma.tar.gz
+## Rtai 4.1 Release is not compiling yet
+#  - sudo apt-get install -qq cvs
+#  - cvs -d:pserver:anonymous@cvs.gna.org:/cvs/rtai co magma
 #  - wget --no-check-certificate https://www.rtai.org/userfiles/downloads/RTAI/rtai-$rtai_version.tar.bz2
 #  - tar xjf rtai-$rtai_version.tar.bz2
 #  - ln -snf rtai-$rtai_version magma 

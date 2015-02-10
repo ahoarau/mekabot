@@ -66,6 +66,7 @@ wget https://googledrive.com/host/$folder_id/$headers
 wget https://googledrive.com/host/$folder_id/$image
 ```
 > Note: more rtai kernels are available [here](http://goo.gl/xFhHV6).
+> You can also [compile your own kernel](https://github.com/ahoarau/m3installation/blob/master/rtai-kernel-build.md)
 
 #### Installation
 

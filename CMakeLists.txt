@@ -78,6 +78,7 @@ if(NOT ENABLE_PPA)
         if(NOT HOLOMNI_FOUND AND RTAI)
           add_subdirectory(holomni_pcv)
         endif()
+        add_subdirectory(meka_omnibase_control)
 endif()
 
 ######## Debian #######

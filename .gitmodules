@@ -23,4 +23,4 @@
 	url = https://github.com/ahoarau/holomni_pcv.git
 [submodule "meka_omnibase_control"]
 	path = meka_omnibase_control
-	url = git@github.com:francoisferland/meka_omnibase_control.git
+	url = https://github.com/francoisferland/meka_omnibase_control.git

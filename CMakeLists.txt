@@ -61,6 +61,7 @@ include_directories(
     ${M3RT_SRC}
     ${CMAKE_BINARY_DIR}/m3core/src
     ${CMAKE_BINARY_DIR}/m3core/src/m3rt/base 
+    ${CMAKE_BINARY_DIR}/m3/src
 )
 
 configure_file(setup.bash.in ${CMAKE_CURRENT_BINARY_DIR}/setup.bash)

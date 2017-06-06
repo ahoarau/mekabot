@@ -1,6 +1,7 @@
 Mekabot M3 Installation instructions
 ==============
-![Meka robot at Ensta Paristech](http://googledrive.com/host/0B6zWJ1Gzg1UTVkgtMWJaX1NCdVE/meka2.jpg)
+
+<img src="https://drive.google.com/uc?export=view&id=0B6zWJ1Gzg1UTSmJwcVczTGJmSE0" style="width: 500px; max-width: 100%; height: auto" title="Meka Robot M3 Ensta ParisTech" /></a>
 
 This wiki describes the full installation of m3 software to control/simulate the Meka robot at Ensta ParisTech.
 This installation supports 3 versions, depending on your needs : 
@@ -35,43 +36,26 @@ sudo apt-get install libqt4-dev moc g++ libncurses5-dev kernel-package gcc-multi
 
 > Note : if you only want the **python** interface, jump to the "install Mekabot" section.
 
-### The RTAI-patched kernel
-#### Preparation
-```bash
-# Determine if x86 or x64 (x86_x64)
-uname -m
-```
-#### x86_64 (64bits)
-```
-folder_id=0B6zWJ1Gzg1UTZWRnQ2lUYjVtWnM
-kernel_name=3.10.32-rtwar3_3.10.32-rtwar3-10.00.Custom_amd64
-```
-
-
-#### x86 (32bits)
-```
-folder_id=0B6zWJ1Gzg1UTaWgwX01VOHNwX28
-kernel_name=3.8.13-rtmeka4.0_3.8.13-rtmeka4.0-10.00.Custom_i386.deb
-```
+### The RTAI-patched kernel (x64)
 
 ### Download
-```
-headers=linux-headers-$kernel_name.deb
-image=linux-image-$kernel_name.deb
 
+The recommended way is to compile your own kernel, but you can try this one if you like : 
+
+```
 # Get the Rtai4.0 patched kernel headers
-wget https://googledrive.com/host/$folder_id/$headers
+https://drive.google.com/open?id=0ByavWcVYC8lWWExlSlBLMjRaSW8
 
 # Get the Rtai4.0 patched kernel image
-wget https://googledrive.com/host/$folder_id/$image
+https://drive.google.com/open?id=0ByavWcVYC8lWdERoazdNU285V2s
 ```
-> Note: more rtai kernels are available [here](http://goo.gl/xFhHV6).
-> You can also [compile your own kernel](https://github.com/ahoarau/m3installation/blob/master/rtai-kernel-build.md)
+
+> It is always best to [compile your own kernel](https://github.com/ahoarau/m3installation/blob/master/rtai-kernel-build.md)
 
 #### Installation
 
 ```bash
-sudo dpkg -i --force-all $headers $image
+sudo dpkg -i linux-headers-3.10.32-rtwar4_3.10.32-rtwar4-10.00.Custom_amd64 linux-image-3.10.32-rtwar4_3.10.32-rtwar4-10.00.Custom_amd64
 ```
 
 Now **boot** on the new kernel using **grub** at **startup**. Please note the name of the kernel.

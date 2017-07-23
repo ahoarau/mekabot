@@ -182,7 +182,7 @@ cd ~/catkin_ws/
 catkin_make
 ```
 
-##Install Mekabot M3
+## Install Mekabot M3
 
 ### Download
 ```bash
@@ -206,7 +206,7 @@ cd ~/mekabot
 cd holomni_pcv
 mkdir build;cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$[$(nproc)+1]
+make -j$(nproc)
 sudo make install
 ```
 
@@ -216,7 +216,7 @@ sudo make install
 cd ~/mekabot
 mkdir build;cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$[$(nproc)+1]
+make -j$(nproc)
 sudo make install
 ```
 > Note : 
@@ -334,7 +334,7 @@ exit
 ```
 
 ## Configure your virtual installation
-This scripts just updates the hostname in your m3_config.yml, that tells which computer is running the m3rt_server. On the meka it's meka-mob, but for vitual installtions, it's your computer!
+This scripts just updates the hostname in your m3_config.yml, that tells which computer is running the m3rt_server. On the meka it's meka-mob, but for vitual installations, it's your computer!
 
 ```bash
 configure_robot_config_virtual.py
